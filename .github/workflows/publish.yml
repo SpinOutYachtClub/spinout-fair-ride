@@ -21,6 +21,10 @@ jobs:
 
       - run: python plan_generator.py
 
+      # --- THIS IS THE NEW DEBUGGING STEP ---
+      - name: List files to debug
+        run: ls -R
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
