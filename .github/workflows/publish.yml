@@ -1,167 +1,39 @@
-# plan_generator.py - VERSION 2.0 (with real weather data)
-import json
-import math
-import os
-from datetime import datetime, timedelta
-from zoneinfo import ZoneInfo
-import requests  # For making API calls
+name: Publish plan.json
 
-# --- CONSTANTS ---
-TZ = ZoneInfo("America/Los_Angeles")
-P40 = (37.7835, -122.3883)
-P39 = (37.8087, -122.4098)
-CLIPPER = (37.8270, -122.3694)
-TIBURON = (37.8735, -122.4565)
-CAVALLO = (37.8357, -122.4771)
+on:
+  schedule:
+    - cron: "0 11 * * *" # Runs daily around 4 AM Pacific
+  workflow_dispatch: # Allows manual runs
 
-ROUTES = [
-    {"id":"p40-p39", "name":"Pier 40 to Pier 39", "stops":["Pier 39"], "legs":[(P40, P39), (P39, P40)]},
-    {"id":"p40-clipper", "name":"Pier 40 to Clipper Cove", "stops":["Clipper Cove"], "legs":[(P40, CLIPPER), (CLIPPER, P40)]},
-    {"id":"p40-tiburon", "name":"Pier 40 to Tiburon", "stops":["Tiburon"], "legs":[(P40, TIBURON), (TIBURON, P40)]},
-    {"id":"p40-cavallo", "name":"Pier 40 to Cavallo Point", "stops":["Cavallo Point"], "legs":[(P40, CAVALLO), (CAVALLO, P40)]},
-]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
 
-# --- HELPER FUNCTIONS ---
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-def haversine_miles(a, b):
-    R = 3958.761
-    lat1, lon1 = a
-    lat2, lon2 = b
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    dphi = math.radians(lat2 - lat1)
-    dl = math.radians(lon2 - lon1)
-    x = math.sin(dphi/2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(dl/2)**2
-    return 2 * R * math.atan2(math.sqrt(x), math.sqrt(1 - x))
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-def route_distance_miles(route):
-    return sum(haversine_miles(a, b) for a, b in route["legs"])
+      - name: Run script to generate plan
+        env:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+        run: python plan_generator.py
 
-def classify(duration_hours, gust_mph):
-    # Updated to use mph (1 kt ≈ 1.15 mph)
-    if gust_mph > 28: return "No-Go"  # ~25 kt
-    if duration_hours <= 3 and gust_mph <= 17: return "Easy"  # ~15 kt
-    if duration_hours <= 6 and gust_mph <= 23: return "Moderate"  # ~20 kt
-    return "Challenging"
-
-def why_line(route_id, difficulty, gust_mph):
-    gust_kt = round(gust_mph / 1.15) # Convert back to knots for the explanation
-    if route_id == "p40-p39":
-        return "Not recommended as a stand-alone out-and-back because it does not meet the two hour minimum under current club rules."
-    if route_id == "p40-clipper":
-        return f"Easy; mostly sheltered behind Treasure Island, gusts ≤ {gust_kt} kt, and the round trip is under 3 hours."
-    if route_id == "p40-tiburon":
-        return f"Moderate; the route is exposed across the Central Bay, but gusts are manageable at ≤ {gust_kt} kt."
-    if route_id == "p40-cavallo":
-        return f"Moderate; Raccoon Strait gives some lee but the approach to the Golden Gate is exposed; gusts are manageable at ≤ {gust_kt} kt."
-    return "General recommendation based on forecast."
-
-# --- NEW: WEATHER API FUNCTION ---
-
-def get_weather_forecast():
-    """Fetches 8-day weather forecast from OpenWeatherMap."""
-    api_key = os.getenv("WEATHER_API_KEY")
-    if not api_key:
-        print("CRITICAL: WEATHER_API_KEY secret not found. Cannot fetch real weather.")
-        return None
-    
-    lat, lon = P40
-    # API Documentation: https://openweathermap.org/api/one-call-3
-    url = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=current,minutely,hourly,alerts&appid={api_key}&units=imperial"
-    
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # This will raise an error for bad responses (like 401 Unauthorized)
-        weather_data = response.json()
-        print(f"Successfully fetched weather data for {len(weather_data.get('daily', []))} days.")
-        return weather_data.get('daily', [])
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching weather data: {e}")
-        return None
-
-# --- MAIN SCRIPT EXECUTION ---
-
-def main():
-    rider_preset = "Casual"
-    base_speed_mph = 3.0
-    wind_penalty_mph = 0.3
-    
-    # Get real data instead of simulating
-    print("Attempting to fetch real weather forecast from OpenWeatherMap...")
-    daily_forecasts = get_weather_forecast()
-
-    if not daily_forecasts:
-        print("Could not retrieve real forecast. The script will now exit.")
-        # We could generate a simulated plan here as a fallback, but for now we just stop.
-        return
-
-    payload = {
-        "generated_at": datetime.now(TZ).isoformat(),
-        "timezone": "America/Los_Angeles",
-        "rider_preset": rider_preset,
-        "version": "0.3.0-real-weather",
-        "days": [],
-        "disclaimer": "Advisory only. Conditions change on the water. Final go or no-go is made on site by the captain."
-    }
-
-    # Use the number of days from the forecast, typically 8
-    for d, day_forecast in enumerate(daily_forecasts):
-        the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ)
-        sunrise = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ)
-        sunset = datetime.fromtimestamp(day_forecast['sunset'], tz=TZ)
-        
-        # Extract REAL wind data from the forecast (in MPH because of `units=imperial`)
-        wind_mph = day_forecast.get('wind_speed', 0)
-        gust_mph = day_forecast.get('wind_gust', wind_mph) # Use wind_speed as a fallback if no gust data
-
-        print(f"Processing Day {d+1} ({the_date.strftime('%Y-%m-%d')}): Wind={wind_mph:.1f} mph, Gusts={gust_mph:.1f} mph")
-        
-        day_obj = {
-            "date_local": the_date.strftime('%Y-%m-%d'),
-            "sunrise": sunrise.isoformat(),
-            "sunset": sunset.isoformat(),
-            "recommendations": []
-        }
-        
-        # Candidate start time: one hour after sunrise
-        start = sunrise + timedelta(hours=1)
-        
-        for r in ROUTES:
-            dist = route_distance_miles(r)
-            veff = max(1.2, base_speed_mph - wind_penalty_mph)
-            duration = dist / veff
-            
-            # Use real gust_mph for classification and a confidence score based on the day
-            diff = classify(duration, gust_mph)
-            confidence = "High" if d < 3 else "Medium" if d < 6 else "Low"
-
-            if r["id"] == "p40-p39":
-                rec = {
-                    "route_id": r["id"], "name": r["name"], "stops": r["stops"],
-                    "start_local": sunrise.isoformat(), "end_local": sunset.isoformat(),
-                    "duration_hours": 0.0, "distance_miles": 0.0,
-                    "difficulty": "No-Go", "confidence": confidence,
-                    "why": why_line(r["id"], diff, gust_mph),
-                    "no_go_reason": "Route too short to meet two-hour minimum.",
-                    "notes": f"Admin rule. Wind forecast: {wind_mph:.1f} mph, gusts to {gust_mph:.1f} mph."
-                }
-            else:
-                end = start + timedelta(hours=duration)
-                rec = {
-                    "route_id": r["id"], "name": r["name"], "stops": r["stops"],
-                    "start_local": start.isoformat(), "end_local": end.isoformat(),
-                    "duration_hours": round(duration, 2), "distance_miles": round(dist, 2),
-                    "difficulty": diff, "confidence": confidence,
-                    "why": why_line(r["id"], diff, gust_mph),
-                    "notes": f"Forecast: Wind {wind_mph:.1f} mph, gusts to {gust_mph:.1f} mph. Real conditions may differ."
-                }
-            day_obj["recommendations"].append(rec)
-        payload["days"].append(day_obj)
-
-    # Write the updated plan to the file
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/plan.json", "w") as f:
-        json.dump(payload, f, indent=2)
-    print("Successfully wrote new plan to docs/plan.json")
-
-if __name__ == "__main__":
-    main()
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/plan.json
+          # Commit only if there are changes
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Automated: update plan.json with real weather"
+            git push
+          else
+            echo "No changes to commit."
+          fi
