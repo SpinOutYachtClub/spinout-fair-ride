@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 5.0 (Revert to Known-Good State)
+# plan_generator.py - VERSION 6.0 (SMART TIDES)
 import json
 import math
 import os
@@ -55,13 +55,19 @@ def main():
     tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions")
     current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions")
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "5.0.0-revert", "days": [], "disclaimer": "Advisory only..."}
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "6.0.0-smart-tides", "days": [], "disclaimer": "Advisory only..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
         the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
         
         day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "recommendations": []}
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
+
+        todays_tide_events = []
+        if tide_data and 'predictions' in tide_data:
+            try:
+                todays_tide_events = [p for p in tide_data['predictions'] if 'type' in p and datetime.strptime(p['t'], '%Y-%m-%d %H:%M').date() == the_date]
+            except Exception as e: print(f"WARN: Could not parse day's tide events. Error: {e}")
 
         for r in ROUTES:
             dist = route_distance_miles(r) 
@@ -74,17 +80,25 @@ def main():
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
             wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
             
-            # Original, simpler Tide/Current Logic
+            # FINAL SMART TIDE LOGIC
             tide_summary, current_summary = "", ""
             try:
-                if current_data and 'current_predictions' in current_data and 'cp' in current_data['current_predictions']:
-                    currents = [p for p in current_data['current_predictions']['cp'] if 'Time' in p and 'Velocity_Major' in p and start_time <= datetime.strptime(p['Time'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
+                if todays_tide_events:
+                    prev_tide = next((p for p in reversed(todays_tide_events) if datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < start_time), None)
+                    next_tide = next((p for p in todays_tide_events if datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) >= start_time), None)
+                    if prev_tide and next_tide:
+                        prev_type = "Low" if prev_tide['type'] == 'L' else 'High'
+                        next_type = "Low" if next_tide['type'] == 'L' else 'High'
+                        tide_summary = f"After {prev_type}, approaching {next_type}"
+
+                if current_data and 'data' in current_data:
+                    currents = [p for p in current_data['data'] if 't' in p and 's' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
                     if currents:
-                        min_c=min(float(p['Velocity_Major']) for p in currents); max_c=max(float(p['Velocity_Major']) for p in currents)
-                        direction="Flood" if float(currents[0]['Velocity_Major']) > 0 else "Ebb"
+                        min_c=min(float(p['s']) for p in currents); max_c=max(float(p['s']) for p in currents)
+                        direction="Flood" if float(currents[0]['s']) > 0 else "Ebb"
                         current_summary = f"{direction} {abs(min_c):.1f}-{abs(max_c):.1f} kts"
             except Exception as e:
-                print(f"WARN: Handled a current data parsing error: {e}")
+                print(f"WARN: Handled a tide/current parsing error for a trip. Error: {e}")
 
             rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "distance_miles": round(dist, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "notes": f"Max gusts to {max_gust:.1f} mph."}
             if r["id"] == "p40-p39": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "distance_miles": round(dist, 1), "no_go_reason": "Route too short."})
@@ -94,7 +108,7 @@ def main():
 
     os.makedirs("docs", exist_ok=True)
     with open("docs/plan.json", "w") as f: json.dump(payload, f, indent=2)
-    print("Successfully reverted plan to known-good state.")
+    print("Successfully wrote new plan with smart tides.")
 
 if __name__ == "__main__":
     main()
