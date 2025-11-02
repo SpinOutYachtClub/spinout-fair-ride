@@ -2,8 +2,8 @@ name: Publish plan.json
 
 on:
   schedule:
-    - cron: "0 11 * * *"
-  workflow_dispatch:
+    - cron: "0 11 * * *" # Runs daily around 4 AM Pacific
+  workflow_dispatch: # Allows manual runs
 
 jobs:
   build:
@@ -17,9 +17,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - run: python plan_generator.py
+      - name: Run script to generate plan
+        env:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+        run: python plan_generator.py
 
       - name: Commit and push changes
         run: |
@@ -28,7 +32,7 @@ jobs:
           git add docs/plan.json
           # Commit only if there are changes
           if ! git diff-index --quiet HEAD; then
-            git commit -m "Automated: update plan.json"
+            git commit -m "Automated: update plan.json with real weather"
             git push
           else
             echo "No changes to commit."
