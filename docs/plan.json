@@ -1,7 +1,7 @@
 {
-  "generated_at": "2025-11-01T22:15:37.133764-07:00",
+  "generated_at": "2025-11-01T23:09:16.778983-07:00",
   "rider_preset": "Casual",
-  "version": "6.0.0-smart-tides",
+  "version": "7.1.0-echo-fix",
   "days": [
     {
       "date_local": "2025-11-01",
@@ -16,7 +16,7 @@
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "",
+          "tide_summary": "High at 9:10AM",
           "current_summary": "",
           "notes": "Max gusts to 8.7 mph.",
           "no_go_reason": "Route too short."
@@ -31,7 +31,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "",
+          "tide_summary": "High at 9:10AM",
           "current_summary": "",
           "notes": "Max gusts to 8.7 mph."
         },
@@ -45,7 +45,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "",
+          "tide_summary": "High at 9:10AM",
           "current_summary": "",
           "notes": "Max gusts to 8.7 mph."
         },
@@ -59,7 +59,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "",
+          "tide_summary": "High at 9:10AM",
           "current_summary": "",
           "notes": "Max gusts to 8.7 mph."
         }
@@ -78,7 +78,7 @@
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "3-3",
-          "tide_summary": "",
+          "tide_summary": "High at 8:39AM",
           "current_summary": "",
           "notes": "Max gusts to 2.9 mph.",
           "no_go_reason": "Route too short."
@@ -93,7 +93,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "3-3",
-          "tide_summary": "",
+          "tide_summary": "High at 8:39AM",
           "current_summary": "",
           "notes": "Max gusts to 2.9 mph."
         },
@@ -107,7 +107,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "2-5",
-          "tide_summary": "",
+          "tide_summary": "High at 8:39AM",
           "current_summary": "",
           "notes": "Max gusts to 4.2 mph."
         },
@@ -121,7 +121,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "2-5",
-          "tide_summary": "",
+          "tide_summary": "High at 8:39AM",
           "current_summary": "",
           "notes": "Max gusts to 4.2 mph."
         }
@@ -140,7 +140,7 @@
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "5-7",
-          "tide_summary": "",
+          "tide_summary": "High at 9:09AM",
           "current_summary": "",
           "notes": "Max gusts to 8.3 mph.",
           "no_go_reason": "Route too short."
@@ -155,7 +155,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "5-7",
-          "tide_summary": "",
+          "tide_summary": "High at 9:09AM",
           "current_summary": "",
           "notes": "Max gusts to 8.3 mph."
         },
@@ -169,7 +169,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "5-9",
-          "tide_summary": "",
+          "tide_summary": "High at 9:09AM",
           "current_summary": "",
           "notes": "Max gusts to 9.5 mph."
         },
@@ -183,7 +183,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "5-9",
-          "tide_summary": "",
+          "tide_summary": "High at 9:09AM",
           "current_summary": "",
           "notes": "Max gusts to 9.5 mph."
         }
@@ -217,7 +217,7 @@
           "difficulty": "Challenging",
           "confidence": "Medium",
           "wind_range": "13-13",
-          "tide_summary": "",
+          "tide_summary": "High at 9:42AM",
           "current_summary": "",
           "notes": "Max gusts to 24.9 mph."
         },
@@ -231,7 +231,7 @@
           "difficulty": "Challenging",
           "confidence": "Medium",
           "wind_range": "13-13",
-          "tide_summary": "",
+          "tide_summary": "High at 9:42AM",
           "current_summary": "",
           "notes": "Max gusts to 24.9 mph."
         },
@@ -245,7 +245,7 @@
           "difficulty": "Challenging",
           "confidence": "Medium",
           "wind_range": "13-13",
-          "tide_summary": "",
+          "tide_summary": "High at 9:42AM",
           "current_summary": "",
           "notes": "Max gusts to 24.9 mph."
         }
@@ -293,7 +293,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "26-26",
-          "tide_summary": "",
+          "tide_summary": "High at 10:18AM",
           "current_summary": "",
           "notes": "Max gusts to 40.6 mph."
         },
@@ -307,7 +307,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "26-26",
-          "tide_summary": "",
+          "tide_summary": "High at 10:18AM",
           "current_summary": "",
           "notes": "Max gusts to 40.6 mph."
         }
@@ -355,7 +355,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "7-7",
-          "tide_summary": "",
+          "tide_summary": "High at 10:58AM",
           "current_summary": "",
           "notes": "Max gusts to 8.2 mph."
         },
@@ -369,7 +369,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "7-7",
-          "tide_summary": "",
+          "tide_summary": "High at 10:58AM",
           "current_summary": "",
           "notes": "Max gusts to 8.2 mph."
         }
@@ -417,7 +417,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "7-7",
-          "tide_summary": "",
+          "tide_summary": "High at 11:42AM",
           "current_summary": "",
           "notes": "Max gusts to 8.5 mph."
         },
@@ -431,7 +431,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "7-7",
-          "tide_summary": "",
+          "tide_summary": "High at 11:42AM",
           "current_summary": "",
           "notes": "Max gusts to 8.5 mph."
         }
@@ -500,5 +500,5 @@
       ]
     }
   ],
-  "disclaimer": "Advisory only..."
+  "disclaimer": "Advisory only. Verify local conditions and official guidance before going out."
 }
