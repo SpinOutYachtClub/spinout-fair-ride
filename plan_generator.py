@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 2.5 (Time-Corrected NOAA Calls)
+# plan_generator.py - VERSION 2.6 (Adds Distance to Output)
 import json
 import math
 import os
@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import requests
 
-# --- CONSTANTS ---
+# --- CONSTANTS (Unchanged) ---
 TZ = ZoneInfo("America/Los_Angeles")
 P40 = (37.7835, -122.3883)
 P39 = (37.8087, -122.4098); CLIPPER = (37.8270, -122.3694); TIBURON = (37.8735, -122.4565); CAVALLO = (37.8357, -122.4771)
@@ -51,20 +51,15 @@ def main():
     daily_forecasts, hourly_forecasts = get_weather_forecast()
     if not daily_forecasts: print("Exiting due to weather API failure."); return
 
-    # --- THIS IS THE FIX: Get the REAL today's date ---
     real_today = datetime.now(TZ).date()
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.5.3-time-fixed", "days": [], "disclaimer": "Advisory only..."}
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.6.0-with-distance", "days": [], "disclaimer": "..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
-        # We use the OpenWeather date for display, but the REAL date for NOAA calls.
         display_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
-        
-        # --- FIX: Calculate the correct date for the NOAA API call ---
         noaa_date_for_loop = real_today + timedelta(days=d)
         noaa_date_str = noaa_date_for_loop.strftime('%Y%m%d')
 
-        # Now, these calls will use a real-world date like "20240518" instead of "20251101"
         tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", noaa_date_str)
         current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", noaa_date_str)
         
@@ -72,33 +67,12 @@ def main():
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
 
         for r in ROUTES:
-            duration = route_distance_miles(r) / 2.7
+            dist = route_distance_miles(r) # Distance is calculated here
+            duration = dist / 2.7
             end_time = start_time + timedelta(hours=duration)
             
-            # Wind Logic (remains the same)
+            # Wind Logic
             hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'],tz=TZ) < end_time] if hourly_forecasts else []
             max_gust = max((h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window), default=day_forecast.get('wind_gust',0))
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
-            wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
-            
-            # Tide/Current Parsing Logic (remains the same, but now it will have data to parse)
-            tide_events_in_window = [p for p in tide_data.get('predictions',[]) if 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if tide_data else []
-            tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events_in_window])
-            
-            currents_in_window = [p for p in current_data.get('data',[]) if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if current_data else []
-            current_summary = ""
-            if currents_in_window:
-                min_current=min(float(p['s']) for p in currents_in_window); max_current=max(float(p['s']) for p in currents_in_window); direction="Flood" if float(currents_in_window[0]['s']) > 0 else "Ebb"; current_summary=f"{direction} {abs(min_current):.1f}-{abs(max_current):.1f} kts"
-
-            rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "notes": f"Max gusts to {max_gust:.1f} mph."}
-            if r["id"] == "p40-p39": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "no_go_reason": "Route too short."})
-            
-            day_obj["recommendations"].append(rec)
-        payload["days"].append(day_obj)
-
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/plan.json", "w") as f: json.dump(payload, f, indent=2)
-    print("Successfully wrote new plan with corrected NOAA dates.")
-
-if __name__ == "__main__":
-    main()
+            wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))
