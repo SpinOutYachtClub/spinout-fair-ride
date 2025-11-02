@@ -1,3 +1,83 @@
+# Add these new imports at the top of your file
+import os
+import requests
+
+# ... (keep your existing imports and constants like P40, TZ, etc.)
+
+def get_weather_forecast():
+    """Fetches 8-day weather forecast from OpenWeatherMap."""
+    
+    # Safely get the API key from GitHub Secrets
+    api_key = os.getenv("WEATHER_API_KEY")
+    if not api_key:
+        print("Error: WEATHER_API_KEY not found in environment variables.")
+        return None # Or you could return a default/simulated forecast
+
+    # Use Pier 40's coordinates
+    lat, lon = P40
+    
+    # Construct the API URL
+    url = f"https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=current,minutely,hourly,alerts&appid={api_key}&units=imperial"
+    
+    try:
+        response = requests.get(url)
+        # This will raise an exception for bad responses (4xx or 5xx)
+        response.raise_for_status() 
+        
+        weather_data = response.json()
+        
+        # We only care about the 'daily' forecast part
+        return weather_data.get('daily', [])
+        
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching weather data: {e}")
+        return None
+
+# --- In your main() function, you will replace the simulated wind ---
+# --- values with a call to this new function. ---
+
+def main():
+    # --- START of new code for main() ---
+    
+    print("Fetching real weather forecast...")
+    daily_forecasts = get_weather_forecast()
+
+    if not daily_forecasts:
+        print("Could not retrieve forecast. Exiting.")
+        return # Stop the script if the API call fails
+    
+    # --- END of new code for main() ---
+
+    rider_preset = "Casual"
+    # DELETED: base_speed = 3.0 (this should be defined per-route or rider)
+    # DELETED: wind = 10; gust = 15  (we now get this from the API!)
+    days_out = 8 # The API provides 8 days of data
+
+    payload = {
+        # ... (your payload structure)
+    }
+
+    # Now, loop through the REAL forecast data
+    # The 'enumerate' function gives us an index 'd' and the 'day_forecast' data
+    for d, day_forecast in enumerate(daily_forecasts):
+        # The API gives dates in a 'dt' timestamp format, we need to convert it
+        the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
+
+        # Extract real wind and gust data!
+        # Wind speed from knots to mph is roughly 1.15, but OWM `imperial` gives mph directly
+        wind_mph = day_forecast['wind_speed']
+        
+        # Gusts are not always present, so we use .get() with a fallback
+        gust_mph = day_forecast.get('wind_gust', wind_mph) 
+
+        print(f"Processing forecast for {the_date}: Wind={wind_mph:.1f} mph, Gust={gust_mph:.1f} mph")
+        
+        # ... from here, you continue your loop to build the day_obj,
+        # but instead of the old hardcoded wind/gust, you use these new variables.
+        # You will also need to convert your logic from knots to mph if necessary.
+        
+    # ... (rest of your script)
+
 # plan_generator.py
 import json, math, os
 from datetime import datetime, timedelta
