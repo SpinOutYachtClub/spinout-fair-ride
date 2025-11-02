@@ -1,743 +1,485 @@
 {
-  "generated_at": "2025-11-01T19:05:51.380268-07:00",
-  "timezone": "America/Los_Angeles",
+  "generated_at": "2025-11-01T19:55:23.606700-07:00",
   "rider_preset": "Casual",
-  "version": "0.2.1",
+  "version": "0.5.0-tides",
   "days": [
     {
       "date_local": "2025-11-01",
-      "sunrise": "2025-11-01T07:35:34.946316-07:00",
-      "sunset": "2025-11-01T18:10:06.101708-07:00",
+      "sunrise": 1762007713,
+      "sunset": 1762045855,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-01T08:35:34.946316-07:00",
-          "end_local": "2025-11-01T10:35:34.946316-07:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-01T08:35:13-07:00",
+          "end_local": "2025-11-01T10:08:32.699498-07:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "High",
+          "wind_range": "8-8",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.7 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-01T08:35:34.946316-07:00",
-          "end_local": "2025-11-01T11:05:34.946316-07:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 17 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-01T08:35:13-07:00",
+          "end_local": "2025-11-01T10:56:26.937606-07:00",
+          "duration_hours": 2.4,
+          "difficulty": "Easy",
+          "confidence": "High",
+          "wind_range": "8-8",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.7 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-01T08:35:34.946316-07:00",
-          "end_local": "2025-11-01T14:20:34.946316-07:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
+          "start_local": "2025-11-01T08:35:13-07:00",
+          "end_local": "2025-11-01T13:57:18.733039-07:00",
+          "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 19 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "High",
+          "wind_range": "8-8",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.7 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-01T08:35:34.946316-07:00",
-          "end_local": "2025-11-01T13:20:34.946316-07:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
+          "start_local": "2025-11-01T08:35:13-07:00",
+          "end_local": "2025-11-01T13:03:44.837172-07:00",
+          "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "High",
+          "wind_range": "8-8",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.7 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-02",
-      "sunrise": "2025-11-02T06:36:37.773222-08:00",
-      "sunset": "2025-11-02T17:09:02.349178-08:00",
+      "sunrise": 1762094176,
+      "sunset": 1762132192,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-02T07:36:37.773222-08:00",
-          "end_local": "2025-11-02T09:36:37.773222-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-02T07:36:16-08:00",
+          "end_local": "2025-11-02T09:09:35.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "High",
+          "wind_range": "3-3",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 2.9 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-02T07:36:37.773222-08:00",
-          "end_local": "2025-11-02T10:06:37.773222-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
+          "start_local": "2025-11-02T07:36:16-08:00",
+          "end_local": "2025-11-02T09:57:29.937606-08:00",
+          "duration_hours": 2.4,
           "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "High",
+          "wind_range": "3-3",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 2.9 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-02T07:36:37.773222-08:00",
-          "end_local": "2025-11-02T13:21:37.773222-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
+          "start_local": "2025-11-02T07:36:16-08:00",
+          "end_local": "2025-11-02T12:58:21.733039-08:00",
+          "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "High",
+          "wind_range": "2-5",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 4.2 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-02T07:36:37.773222-08:00",
-          "end_local": "2025-11-02T12:21:37.773222-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
+          "start_local": "2025-11-02T07:36:16-08:00",
+          "end_local": "2025-11-02T12:04:47.837172-08:00",
+          "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "High",
+          "wind_range": "2-5",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 4.2 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-03",
-      "sunrise": "2025-11-03T06:37:40.843022-08:00",
-      "sunset": "2025-11-03T17:08:00.017634-08:00",
+      "sunrise": 1762180640,
+      "sunset": 1762218529,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-03T07:37:40.843022-08:00",
-          "end_local": "2025-11-03T09:37:40.843022-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-03T07:37:20-08:00",
+          "end_local": "2025-11-03T09:10:39.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "5-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.3 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-03T07:37:40.843022-08:00",
-          "end_local": "2025-11-03T10:07:40.843022-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
+          "start_local": "2025-11-03T07:37:20-08:00",
+          "end_local": "2025-11-03T09:58:33.937606-08:00",
+          "duration_hours": 2.4,
           "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "5-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.3 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-03T07:37:40.843022-08:00",
-          "end_local": "2025-11-03T13:22:40.843022-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
+          "start_local": "2025-11-03T07:37:20-08:00",
+          "end_local": "2025-11-03T12:59:25.733039-08:00",
+          "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "5-9",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 9.5 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-03T07:37:40.843022-08:00",
-          "end_local": "2025-11-03T12:22:40.843022-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
+          "start_local": "2025-11-03T07:37:20-08:00",
+          "end_local": "2025-11-03T12:05:51.837172-08:00",
+          "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "5-9",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 9.5 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-04",
-      "sunrise": "2025-11-04T06:38:44.137705-08:00",
-      "sunset": "2025-11-04T17:06:59.140093-08:00",
+      "sunrise": 1762267104,
+      "sunset": 1762304869,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-04T07:38:44.137705-08:00",
-          "end_local": "2025-11-04T09:38:44.137705-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-04T07:38:24-08:00",
+          "end_local": "2025-11-04T09:11:43.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "13-13",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 24.9 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-04T07:38:44.137705-08:00",
-          "end_local": "2025-11-04T10:08:44.137705-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-04T07:38:24-08:00",
+          "end_local": "2025-11-04T09:59:37.937606-08:00",
+          "duration_hours": 2.4,
+          "difficulty": "Challenging",
+          "confidence": "Medium",
+          "wind_range": "13-13",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 24.9 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-04T07:38:44.137705-08:00",
-          "end_local": "2025-11-04T13:23:44.137705-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-04T07:38:24-08:00",
+          "end_local": "2025-11-04T13:00:29.733039-08:00",
+          "duration_hours": 5.4,
+          "difficulty": "Challenging",
+          "confidence": "Medium",
+          "wind_range": "13-13",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 24.9 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-04T07:38:44.137705-08:00",
-          "end_local": "2025-11-04T12:23:44.137705-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-04T07:38:24-08:00",
+          "end_local": "2025-11-04T12:06:55.837172-08:00",
+          "duration_hours": 4.5,
+          "difficulty": "Challenging",
+          "confidence": "Medium",
+          "wind_range": "13-13",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 24.9 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-05",
-      "sunrise": "2025-11-05T06:39:47.637739-08:00",
-      "sunset": "2025-11-05T17:05:59.749293-08:00",
+      "sunrise": 1762353569,
+      "sunset": 1762391209,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-05T07:39:47.637739-08:00",
-          "end_local": "2025-11-05T09:39:47.637739-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-05T07:39:29-08:00",
+          "end_local": "2025-11-05T09:12:48.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "26-26",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 40.6 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-05T07:39:47.637739-08:00",
-          "end_local": "2025-11-05T10:09:47.637739-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-05T07:39:29-08:00",
+          "end_local": "2025-11-05T10:00:42.937606-08:00",
+          "duration_hours": 2.4,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "26-26",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 40.6 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-05T07:39:47.637739-08:00",
-          "end_local": "2025-11-05T13:24:47.637739-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-05T07:39:29-08:00",
+          "end_local": "2025-11-05T13:01:34.733039-08:00",
+          "duration_hours": 5.4,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "26-26",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 40.6 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-05T07:39:47.637739-08:00",
-          "end_local": "2025-11-05T12:24:47.637739-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-05T07:39:29-08:00",
+          "end_local": "2025-11-05T12:08:00.837172-08:00",
+          "duration_hours": 4.5,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "26-26",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 40.6 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-06",
-      "sunrise": "2025-11-06T06:40:51.322061-08:00",
-      "sunset": "2025-11-06T17:05:01.877656-08:00",
+      "sunrise": 1762440033,
+      "sunset": 1762477551,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-06T07:40:51.322061-08:00",
-          "end_local": "2025-11-06T09:40:51.322061-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-06T07:40:33-08:00",
+          "end_local": "2025-11-06T09:13:52.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.2 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-06T07:40:51.322061-08:00",
-          "end_local": "2025-11-06T10:10:51.322061-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
+          "start_local": "2025-11-06T07:40:33-08:00",
+          "end_local": "2025-11-06T10:01:46.937606-08:00",
+          "duration_hours": 2.4,
           "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.2 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-06T07:40:51.322061-08:00",
-          "end_local": "2025-11-06T13:25:51.322061-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
+          "start_local": "2025-11-06T07:40:33-08:00",
+          "end_local": "2025-11-06T13:02:38.733039-08:00",
+          "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.2 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-06T07:40:51.322061-08:00",
-          "end_local": "2025-11-06T12:25:51.322061-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
+          "start_local": "2025-11-06T07:40:33-08:00",
+          "end_local": "2025-11-06T12:09:04.837172-08:00",
+          "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.2 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-07",
-      "sunrise": "2025-11-07T06:41:55.168055-08:00",
-      "sunset": "2025-11-07T17:04:05.557251-08:00",
+      "sunrise": 1762526498,
+      "sunset": 1762563895,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-07T07:41:55.168055-08:00",
-          "end_local": "2025-11-07T09:41:55.168055-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-07T07:41:38-08:00",
+          "end_local": "2025-11-07T09:14:57.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.5 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-07T07:41:55.168055-08:00",
-          "end_local": "2025-11-07T10:11:55.168055-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
+          "start_local": "2025-11-07T07:41:38-08:00",
+          "end_local": "2025-11-07T10:02:51.937606-08:00",
+          "duration_hours": 2.4,
           "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.5 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-07T07:41:55.168055-08:00",
-          "end_local": "2025-11-07T13:26:55.168055-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
+          "start_local": "2025-11-07T07:41:38-08:00",
+          "end_local": "2025-11-07T13:03:43.733039-08:00",
+          "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.5 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-07T07:41:55.168055-08:00",
-          "end_local": "2025-11-07T12:26:55.168055-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
+          "start_local": "2025-11-07T07:41:38-08:00",
+          "end_local": "2025-11-07T12:10:09.837172-08:00",
+          "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.5 mph."
         }
       ]
     },
     {
       "date_local": "2025-11-08",
-      "sunrise": "2025-11-08T06:42:59.151546-08:00",
-      "sunset": "2025-11-08T17:03:10.819750-08:00",
+      "sunrise": 1762612963,
+      "sunset": 1762650240,
       "recommendations": [
         {
           "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-08T07:42:59.151546-08:00",
-          "end_local": "2025-11-08T09:42:59.151546-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "start_local": "2025-11-08T07:42:43-08:00",
+          "end_local": "2025-11-08T09:16:02.699498-08:00",
+          "duration_hours": 0.0,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.1 mph.",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-08T07:42:59.151546-08:00",
-          "end_local": "2025-11-08T10:12:59.151546-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
+          "start_local": "2025-11-08T07:42:43-08:00",
+          "end_local": "2025-11-08T10:03:56.937606-08:00",
+          "duration_hours": 2.4,
           "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.1 mph."
         },
         {
           "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-08T07:42:59.151546-08:00",
-          "end_local": "2025-11-08T13:27:59.151546-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
+          "start_local": "2025-11-08T07:42:43-08:00",
+          "end_local": "2025-11-08T13:04:48.733039-08:00",
+          "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.1 mph."
         },
         {
           "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-08T07:42:59.151546-08:00",
-          "end_local": "2025-11-08T12:27:59.151546-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
+          "start_local": "2025-11-08T07:42:43-08:00",
+          "end_local": "2025-11-08T12:11:14.837172-08:00",
+          "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        }
-      ]
-    },
-    {
-      "date_local": "2025-11-09",
-      "sunrise": "2025-11-09T06:44:03.246792-08:00",
-      "sunset": "2025-11-09T17:02:17.696391-08:00",
-      "recommendations": [
-        {
-          "route_id": "p40-p39",
-          "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-09T07:44:03.246792-08:00",
-          "end_local": "2025-11-09T09:44:03.246792-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-clipper",
-          "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-09T07:44:03.246792-08:00",
-          "end_local": "2025-11-09T10:14:03.246792-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 13 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-tiburon",
-          "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-09T07:44:03.246792-08:00",
-          "end_local": "2025-11-09T13:29:03.246792-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-cavallo",
-          "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-09T07:44:03.246792-08:00",
-          "end_local": "2025-11-09T12:29:03.246792-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        }
-      ]
-    },
-    {
-      "date_local": "2025-11-10",
-      "sunrise": "2025-11-10T06:45:07.426483-08:00",
-      "sunset": "2025-11-10T17:01:26.217935-08:00",
-      "recommendations": [
-        {
-          "route_id": "p40-p39",
-          "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-10T07:45:07.426483-08:00",
-          "end_local": "2025-11-10T09:45:07.426483-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-clipper",
-          "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-10T07:45:07.426483-08:00",
-          "end_local": "2025-11-10T10:15:07.426483-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 17 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-tiburon",
-          "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-10T07:45:07.426483-08:00",
-          "end_local": "2025-11-10T13:30:07.426483-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-cavallo",
-          "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-10T07:45:07.426483-08:00",
-          "end_local": "2025-11-10T12:30:07.426483-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        }
-      ]
-    },
-    {
-      "date_local": "2025-11-11",
-      "sunrise": "2025-11-11T06:46:11.661743-08:00",
-      "sunset": "2025-11-11T17:00:36.414622-08:00",
-      "recommendations": [
-        {
-          "route_id": "p40-p39",
-          "name": "Pier 40 to Pier 39",
-          "stops": [
-            "Pier 39"
-          ],
-          "start_local": "2025-11-11T07:46:11.661743-08:00",
-          "end_local": "2025-11-11T09:46:11.661743-08:00",
-          "duration_hours": 2.0,
-          "distance_miles": 4.2,
-          "difficulty": "Easy",
-          "confidence": "Low",
-          "why": "Not recommended as a stand alone out and back under the two hour minimum.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-clipper",
-          "name": "Pier 40 to Clipper Cove",
-          "stops": [
-            "Clipper Cove"
-          ],
-          "start_local": "2025-11-11T07:46:11.661743-08:00",
-          "end_local": "2025-11-11T10:16:11.661743-08:00",
-          "duration_hours": 2.5,
-          "distance_miles": 6.36,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Easy; mostly sheltered behind Treasure Island, gusts \u2264 17 kt, morning timing avoids the breeziest hours.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-tiburon",
-          "name": "Pier 40 to Tiburon",
-          "stops": [
-            "Tiburon"
-          ],
-          "start_local": "2025-11-11T07:46:11.661743-08:00",
-          "end_local": "2025-11-11T13:31:11.661743-08:00",
-          "duration_hours": 5.75,
-          "distance_miles": 14.49,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; cross Bay exposure with average headwind ~4 kt, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
-        },
-        {
-          "route_id": "p40-cavallo",
-          "name": "Pier 40 to Cavallo Point",
-          "stops": [
-            "Cavallo Point"
-          ],
-          "start_local": "2025-11-11T07:46:11.661743-08:00",
-          "end_local": "2025-11-11T12:31:11.661743-08:00",
-          "duration_hours": 4.75,
-          "distance_miles": 12.08,
-          "difficulty": "Moderate",
-          "confidence": "Low",
-          "why": "Moderate; some lee near Raccoon Strait, Golden Gate approach is exposed, gusts \u2264 17 kt.",
-          "notes": "Simulated time of day winds; replace with real forecasts for higher confidence."
+          "confidence": "Medium",
+          "wind_range": "7-7",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 8.1 mph."
         }
       ]
     }
