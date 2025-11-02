@@ -1,0 +1,11 @@
+name: Smoke
+
+on:
+  workflow_dispatch: {}      # adds the Run button
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Runner is alive ✅"
