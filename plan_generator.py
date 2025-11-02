@@ -53,7 +53,7 @@ def main():
 
     real_today = datetime.now(TZ).date()
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.6.0-with-distance", "days": [], "disclaimer": "..."}
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.6.0-with-distance", "days": [], "disclaimer": "Advisory only..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
         display_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
@@ -67,12 +67,32 @@ def main():
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
 
         for r in ROUTES:
-            dist = route_distance_miles(r) # Distance is calculated here
+            dist = route_distance_miles(r) 
             duration = dist / 2.7
             end_time = start_time + timedelta(hours=duration)
             
-            # Wind Logic
             hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'],tz=TZ) < end_time] if hourly_forecasts else []
             max_gust = max((h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window), default=day_forecast.get('wind_gust',0))
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
-            wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))
+            wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
+            
+            tide_events_in_window = [p for p in tide_data.get('predictions',[]) if 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if tide_data else []
+            tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events_in_window])
+            
+            currents_in_window = [p for p in current_data.get('data',[]) if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if current_data else []
+            current_summary = ""
+            if currents_in_window:
+                min_current=min(float(p['s']) for p in currents_in_window); max_current=max(float(p['s']) for p in currents_in_window); direction="Flood" if float(currents_in_window[0]['s']) > 0 else "Ebb"; current_summary=f"{direction} {abs(min_current):.1f}-{abs(max_current):.1f} kts"
+            
+            rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "distance_miles": round(dist, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "notes": f"Max gusts to {max_gust:.1f} mph."}
+            if r["id"] == "p40-p39": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "distance_miles": 0.0, "no_go_reason": "Route too short."})
+            
+            day_obj["recommendations"].append(rec)
+        payload["days"].append(day_obj)
+
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/plan.json", "w") as f: json.dump(payload, f, indent=2)
+    print("Successfully wrote new plan including distance data.")
+
+if __name__ == "__main__":
+    main()
