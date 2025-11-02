@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 2.4 (Defensive Tide Parsing)
+# plan_generator.py - VERSION 2.5 (Time-Corrected NOAA Calls)
 import json
 import math
 import os
@@ -9,7 +9,6 @@ import requests
 # --- CONSTANTS ---
 TZ = ZoneInfo("America/Los_Angeles")
 P40 = (37.7835, -122.3883)
-# (rest of constants are unchanged)
 P39 = (37.8087, -122.4098); CLIPPER = (37.8270, -122.3694); TIBURON = (37.8735, -122.4565); CAVALLO = (37.8357, -122.4771)
 ROUTES = [
     {"id":"p40-p39", "name":"Pier 40 to Pier 39", "stops":["Pier 39"], "legs":[(P40, P39), (P39, P40)]},
@@ -20,8 +19,7 @@ ROUTES = [
 NOAA_TIDE_STATION = "9414290"
 NOAA_CURRENT_STATION = "SFB1201"
 
-# --- HELPER FUNCTIONS ---
-# (helpers are unchanged)
+# --- HELPER FUNCTIONS (Unchanged) ---
 def haversine_miles(a,b):
     R=3958.761;lat1,lon1=a;lat2,lon2=b;phi1,phi2=math.radians(lat1),math.radians(lat2);dphi=math.radians(lat2-lat1);dl=math.radians(lon2-lon1);x=math.sin(dphi/2)**2+math.cos(phi1)*math.cos(phi2)*math.sin(dl/2)**2;return 2*R*math.atan2(math.sqrt(x),math.sqrt(1-x))
 def route_distance_miles(route): return sum(haversine_miles(a, b) for a, b in route["legs"])
@@ -30,16 +28,8 @@ def classify(duration_hours, gust_mph):
     if duration_hours <= 3 and gust_mph <= 17: return "Easy";
     if duration_hours <= 6 and gust_mph <= 23: return "Moderate";
     return "Challenging"
-def why_line(route_id, difficulty, gust_mph):
-    gust_kt = round(gust_mph/1.15);
-    if route_id=="p40-p39":return"Not recommended as a stand-alone out-and-back because it does not meet the two hour minimum under current club rules."
-    if route_id=="p40-clipper":return f"Easy; mostly sheltered behind Treasure Island, gusts ≤ {gust_kt} kt, and the round trip is under 3 hours."
-    if route_id=="p40-tiburon":return f"Moderate; the route is exposed across the Central Bay, but gusts are manageable at ≤ {gust_kt} kt."
-    if route_id=="p40-cavallo":return f"Moderate; Raccoon Strait gives some lee but the approach to the Golden Gate is exposed; gusts are manageable at ≤ {gust_kt} kt."
-    return"General recommendation based on forecast."
 
-# --- DATA FETCHING FUNCTIONS ---
-# (get_weather_forecast is unchanged)
+# --- DATA FETCHING FUNCTIONS (Unchanged) ---
 def get_weather_forecast():
     api_key=os.getenv("WEATHER_API_KEY");
     if not api_key: print("CRITICAL: WEATHER_API_KEY secret not found."); return None, None
@@ -48,54 +38,57 @@ def get_weather_forecast():
         r=requests.get(url); r.raise_for_status(); data=r.json(); print("Successfully fetched weather data."); return data.get('daily',[]), data.get('hourly',[])
     except requests.exceptions.RequestException as e: print(f"Error fetching weather data: {e}"); return None, None
 
-# (get_noaa_predictions is unchanged from the resilient version)
 def get_noaa_predictions(station, product, date_str):
     base_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
-    params = {"station": station, "product": product, "datum": "MLLW", "units": "english", "time_zone": "lst_ldt", "format": "json", "application": "SpinoutFairRidePlanner"}
-    if product == "currents_predictions": params['date'] = date_str
-    else: params['begin_date'] = date_str; params['range'] = 24 * 8
+    params = {"station": station, "product": product, "datum": "MLLW", "units": "english", "time_zone": "lst_ldt", "format": "json", "application": "SpinoutFairRidePlanner", "date": date_str}
     try:
         r = requests.get(base_url, params=params); r.raise_for_status(); return r.json()
     except requests.exceptions.RequestException as e:
-        print(f"INFO: Could not fetch NOAA {product} data for {station} on {date_str}. It might be too far in the future or the station is down. Error: {e}"); return None
+        print(f"INFO: Could not fetch NOAA {product} data for {station} on {date_str}. Error: {e}"); return None
 
 # --- MAIN SCRIPT ---
 def main():
     daily_forecasts, hourly_forecasts = get_weather_forecast()
     if not daily_forecasts: print("Exiting due to weather API failure."); return
 
-    start_date_str = datetime.fromtimestamp(daily_forecasts[0]['dt'], tz=TZ).strftime('%Y%m%d')
-    all_tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", start_date_str)
+    # --- THIS IS THE FIX: Get the REAL today's date ---
+    real_today = datetime.now(TZ).date()
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.5.2-final-fix", "days": [], "disclaimer": "Advisory only..."}
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.5.3-time-fixed", "days": [], "disclaimer": "Advisory only..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
-        the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ)
-        date_str = the_date.strftime('%Y%m%d')
+        # We use the OpenWeather date for display, but the REAL date for NOAA calls.
+        display_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
         
-        current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", date_str)
+        # --- FIX: Calculate the correct date for the NOAA API call ---
+        noaa_date_for_loop = real_today + timedelta(days=d)
+        noaa_date_str = noaa_date_for_loop.strftime('%Y%m%d')
+
+        # Now, these calls will use a real-world date like "20240518" instead of "20251101"
+        tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", noaa_date_str)
+        current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", noaa_date_str)
         
-        day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "recommendations": []}
+        day_obj = {"date_local": display_date.strftime('%Y-%m-%d'), "recommendations": []}
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
 
         for r in ROUTES:
             duration = route_distance_miles(r) / 2.7
             end_time = start_time + timedelta(hours=duration)
             
+            # Wind Logic (remains the same)
             hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'],tz=TZ) < end_time] if hourly_forecasts else []
             max_gust = max((h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window), default=day_forecast.get('wind_gust',0))
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
             wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
             
-            # --- THIS IS THE FIX ---
-            # We now check `if 'type' in p` before trying to parse the tide event.
-            tide_events_in_window = [p for p in all_tide_data.get('predictions',[]) if 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if all_tide_data else []
+            # Tide/Current Parsing Logic (remains the same, but now it will have data to parse)
+            tide_events_in_window = [p for p in tide_data.get('predictions',[]) if 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if tide_data else []
             tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events_in_window])
             
             currents_in_window = [p for p in current_data.get('data',[]) if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if current_data else []
             current_summary = ""
             if currents_in_window:
-                min_current = min(float(p['s']) for p in currents_in_window); max_current = max(float(p['s']) for p in currents_in_window); direction = "Flood" if float(currents_in_window[0]['s']) > 0 else "Ebb"; current_summary = f"{direction} {abs(min_current):.1f}-{abs(max_current):.1f} kts"
+                min_current=min(float(p['s']) for p in currents_in_window); max_current=max(float(p['s']) for p in currents_in_window); direction="Flood" if float(currents_in_window[0]['s']) > 0 else "Ebb"; current_summary=f"{direction} {abs(min_current):.1f}-{abs(max_current):.1f} kts"
 
             rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "notes": f"Max gusts to {max_gust:.1f} mph."}
             if r["id"] == "p40-p39": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "no_go_reason": "Route too short."})
@@ -105,7 +98,7 @@ def main():
 
     os.makedirs("docs", exist_ok=True)
     with open("docs/plan.json", "w") as f: json.dump(payload, f, indent=2)
-    print("Successfully wrote new plan with NOAA tide/current data.")
+    print("Successfully wrote new plan with corrected NOAA dates.")
 
 if __name__ == "__main__":
     main()
