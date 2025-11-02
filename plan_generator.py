@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 5.0 (Correct JSON Parsing)
+# plan_generator.py - VERSION 6.0 (SMART TIDES)
 import json
 import math
 import os
@@ -39,9 +39,8 @@ def get_weather_forecast():
     except requests.exceptions.RequestException as e: print(f"Error fetching weather data: {e}"); return None, None
 
 def get_noaa_predictions(station, product):
-    # NOAA API is not date-dependent in the same way, we ask for data around today.
     today_str = datetime.now(TZ).strftime('%Y%m%d')
-    url = f"https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date={today_str}&range=168&station={station}&product={product}&datum=MLLW&units=english&time_zone=lst_ldt&format=json&application=SpinoutFairRide"
+    url = f"https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date={today_str}&range=192&station={station}&product={product}&datum=MLLW&units=english&time_zone=lst_ldt&format=json&application=SpinoutFairRide"
     headers = {'User-Agent': 'SpinoutFairRide/1.0 (https://github.com/SpinOutYachtClub/spinout-fair-ride)'}
     try:
         r = requests.get(url, headers=headers); r.raise_for_status(); return r.json()
@@ -56,13 +55,20 @@ def main():
     tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions")
     current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions")
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "5.0.0-true-parsing", "days": [], "disclaimer": "Advisory only..."}
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "6.0.0-smart-tides", "days": [], "disclaimer": "Advisory only..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
         the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
         
         day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "recommendations": []}
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
+
+        # Get all of today's tide events (Highs and Lows)
+        todays_tide_events = []
+        if tide_data and 'predictions' in tide_data:
+            try:
+                todays_tide_events = [p for p in tide_data['predictions'] if 'type' in p and datetime.strptime(p['t'], '%Y-%m-%d %H:%M').date() == the_date]
+            except Exception as e: print(f"WARN: Could not parse day's tide events. Error: {e}")
 
         for r in ROUTES:
             dist = route_distance_miles(r) 
@@ -75,24 +81,26 @@ def main():
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
             wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
             
-            # --- FINAL PARSING LOGIC BASED ON REAL RAW DATA ---
+            # --- FINAL SMART TIDE LOGIC ---
             tide_summary, current_summary = "", ""
             try:
-                if tide_data and 'predictions' in tide_data:
-                    tide_events = [p for p in tide_data['predictions'] if 't' in p and 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
-                    tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events])
-            except Exception as e: print(f"WARN: Handled a tide data parsing error: {e}")
-                
-            try:
-                # Correctly navigate the current JSON structure
-                if current_data and 'current_predictions' in current_data and 'cp' in current_data['current_predictions']:
-                    currents = [p for p in current_data['current_predictions']['cp'] if 'Time' in p and 'Velocity_Major' in p and start_time <= datetime.strptime(p['Time'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
+                if todays_tide_events:
+                    # Find last event before start and next event after start
+                    prev_tide = next((p for p in reversed(todays_tide_events) if datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < start_time), None)
+                    next_tide = next((p for p in todays_tide_events if datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) >= start_time), None)
+                    if prev_tide and next_tide:
+                        prev_type = "Low" if prev_tide['type'] == 'L' else 'High'
+                        next_type = "Low" if next_tide['type'] == 'L' else 'High'
+                        tide_summary = f"After {prev_type}, approaching {next_type}"
+
+                if current_data and 'data' in current_data:
+                    currents = [p for p in current_data['data'] if 't' in p and 's' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
                     if currents:
-                        min_c=min(float(p['Velocity_Major']) for p in currents); max_c=max(float(p['Velocity_Major']) for p in currents)
-                        # Flood is positive velocity, Ebb is negative
-                        direction = "Flood" if float(currents[0]['Velocity_Major']) > 0 else "Ebb"
+                        min_c=min(float(p['s']) for p in currents); max_c=max(float(p['s']) for p in currents)
+                        direction="Flood" if float(currents[0]['s']) > 0 else "Ebb"
                         current_summary = f"{direction} {abs(min_c):.1f}-{abs(max_c):.1f} kts"
-            except Exception as e: print(f"WARN: Handled a current data parsing error: {e}")
+            except Exception as e:
+                print(f"WARN: Handled a tide/current parsing error for a trip. Error: {e}")
 
             rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "distance_miles": round(dist, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "notes": f"Max gusts to {max_gust:.1f} mph."}
             if r["id"] == "p40-p39": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "distance_miles": round(dist, 1), "no_go_reason": "Route too short."})
@@ -102,7 +110,7 @@ def main():
 
     os.makedirs("docs", exist_ok=True)
     with open("docs/plan.json", "w") as f: json.dump(payload, f, indent=2)
-    print("Successfully wrote new plan with final correct parsers.")
+    print("Successfully wrote new plan with smart tides.")
 
 if __name__ == "__main__":
     main()
