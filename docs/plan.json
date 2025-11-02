@@ -1,70 +1,8 @@
 {
-  "generated_at": "2025-11-01T23:23:14.872901-07:00",
+  "generated_at": "2025-11-02T03:23:46.104366-08:00",
   "rider_preset": "Casual",
   "version": "7.2.0-echo-fix",
   "days": [
-    {
-      "date_local": "2025-11-01",
-      "recommendations": [
-        {
-          "route_id": "p40-p39",
-          "name": "Pier 40 to Pier 39",
-          "start_local": "2025-11-01T08:35:13-07:00",
-          "end_local": "2025-11-01T10:08:32.699498-07:00",
-          "duration_hours": 0.0,
-          "distance_miles": 4.2,
-          "difficulty": "No-Go",
-          "confidence": "High",
-          "wind_range": "8-8",
-          "tide_summary": "High at 9:10AM",
-          "current_summary": "",
-          "notes": "Max gusts to 8.7 mph.",
-          "no_go_reason": "Route too short."
-        },
-        {
-          "route_id": "p40-clipper",
-          "name": "Pier 40 to Clipper Cove",
-          "start_local": "2025-11-01T08:35:13-07:00",
-          "end_local": "2025-11-01T10:56:26.937606-07:00",
-          "duration_hours": 2.4,
-          "distance_miles": 6.4,
-          "difficulty": "Easy",
-          "confidence": "High",
-          "wind_range": "8-8",
-          "tide_summary": "High at 9:10AM",
-          "current_summary": "",
-          "notes": "Max gusts to 8.7 mph."
-        },
-        {
-          "route_id": "p40-tiburon",
-          "name": "Pier 40 to Tiburon",
-          "start_local": "2025-11-01T08:35:13-07:00",
-          "end_local": "2025-11-01T13:57:18.733039-07:00",
-          "duration_hours": 5.4,
-          "distance_miles": 14.5,
-          "difficulty": "Moderate",
-          "confidence": "High",
-          "wind_range": "8-8",
-          "tide_summary": "High at 9:10AM",
-          "current_summary": "",
-          "notes": "Max gusts to 8.7 mph."
-        },
-        {
-          "route_id": "p40-cavallo",
-          "name": "Pier 40 to Cavallo Point",
-          "start_local": "2025-11-01T08:35:13-07:00",
-          "end_local": "2025-11-01T13:03:44.837172-07:00",
-          "duration_hours": 4.5,
-          "distance_miles": 12.1,
-          "difficulty": "Moderate",
-          "confidence": "High",
-          "wind_range": "8-8",
-          "tide_summary": "High at 9:10AM",
-          "current_summary": "",
-          "notes": "Max gusts to 8.7 mph."
-        }
-      ]
-    },
     {
       "date_local": "2025-11-02",
       "recommendations": [
@@ -139,10 +77,10 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "5-7",
+          "wind_range": "6-6",
           "tide_summary": "High at 9:09AM",
           "current_summary": "",
-          "notes": "Max gusts to 8.3 mph.",
+          "notes": "Max gusts to 7.1 mph.",
           "no_go_reason": "Route too short."
         },
         {
@@ -154,10 +92,10 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "5-7",
+          "wind_range": "6-6",
           "tide_summary": "High at 9:09AM",
           "current_summary": "",
-          "notes": "Max gusts to 8.3 mph."
+          "notes": "Max gusts to 7.1 mph."
         },
         {
           "route_id": "p40-tiburon",
@@ -168,10 +106,10 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-9",
+          "wind_range": "6-9",
           "tide_summary": "High at 9:09AM",
           "current_summary": "",
-          "notes": "Max gusts to 9.5 mph."
+          "notes": "Max gusts to 9.4 mph."
         },
         {
           "route_id": "p40-cavallo",
@@ -182,10 +120,10 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-9",
+          "wind_range": "6-9",
           "tide_summary": "High at 9:09AM",
           "current_summary": "",
-          "notes": "Max gusts to 9.5 mph."
+          "notes": "Max gusts to 9.4 mph."
         }
       ]
     },
@@ -200,11 +138,11 @@
           "duration_hours": 0.0,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
-          "confidence": "Medium",
-          "wind_range": "13-13",
+          "confidence": "High",
+          "wind_range": "15-15",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 24.9 mph.",
+          "notes": "Max gusts to 28.6 mph.",
           "no_go_reason": "Route too short."
         },
         {
@@ -214,12 +152,12 @@
           "end_local": "2025-11-04T09:59:37.937606-08:00",
           "duration_hours": 2.4,
           "distance_miles": 6.4,
-          "difficulty": "Challenging",
-          "confidence": "Medium",
-          "wind_range": "13-13",
+          "difficulty": "No-Go",
+          "confidence": "High",
+          "wind_range": "15-15",
           "tide_summary": "High at 9:42AM",
           "current_summary": "",
-          "notes": "Max gusts to 24.9 mph."
+          "notes": "Max gusts to 28.6 mph."
         },
         {
           "route_id": "p40-tiburon",
@@ -228,12 +166,12 @@
           "end_local": "2025-11-04T13:00:29.733039-08:00",
           "duration_hours": 5.4,
           "distance_miles": 14.5,
-          "difficulty": "Challenging",
-          "confidence": "Medium",
-          "wind_range": "13-13",
+          "difficulty": "No-Go",
+          "confidence": "High",
+          "wind_range": "15-15",
           "tide_summary": "High at 9:42AM",
           "current_summary": "",
-          "notes": "Max gusts to 24.9 mph."
+          "notes": "Max gusts to 28.6 mph."
         },
         {
           "route_id": "p40-cavallo",
@@ -242,12 +180,12 @@
           "end_local": "2025-11-04T12:06:55.837172-08:00",
           "duration_hours": 4.5,
           "distance_miles": 12.1,
-          "difficulty": "Challenging",
-          "confidence": "Medium",
-          "wind_range": "13-13",
+          "difficulty": "No-Go",
+          "confidence": "High",
+          "wind_range": "15-15",
           "tide_summary": "High at 9:42AM",
           "current_summary": "",
-          "notes": "Max gusts to 24.9 mph."
+          "notes": "Max gusts to 28.6 mph."
         }
       ]
     },
@@ -263,10 +201,10 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "26-26",
+          "wind_range": "30-30",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 40.6 mph.",
+          "notes": "Max gusts to 44.0 mph.",
           "no_go_reason": "Route too short."
         },
         {
@@ -278,10 +216,10 @@
           "distance_miles": 6.4,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "26-26",
+          "wind_range": "30-30",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 40.6 mph."
+          "notes": "Max gusts to 44.0 mph."
         },
         {
           "route_id": "p40-tiburon",
@@ -292,10 +230,10 @@
           "distance_miles": 14.5,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "26-26",
+          "wind_range": "30-30",
           "tide_summary": "High at 10:18AM",
           "current_summary": "",
-          "notes": "Max gusts to 40.6 mph."
+          "notes": "Max gusts to 44.0 mph."
         },
         {
           "route_id": "p40-cavallo",
@@ -306,10 +244,10 @@
           "distance_miles": 12.1,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "26-26",
+          "wind_range": "30-30",
           "tide_summary": "High at 10:18AM",
           "current_summary": "",
-          "notes": "Max gusts to 40.6 mph."
+          "notes": "Max gusts to 44.0 mph."
         }
       ]
     },
@@ -328,7 +266,7 @@
           "wind_range": "7-7",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.2 mph.",
+          "notes": "Max gusts to 7.8 mph.",
           "no_go_reason": "Route too short."
         },
         {
@@ -343,7 +281,7 @@
           "wind_range": "7-7",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.2 mph."
+          "notes": "Max gusts to 7.8 mph."
         },
         {
           "route_id": "p40-tiburon",
@@ -357,7 +295,7 @@
           "wind_range": "7-7",
           "tide_summary": "High at 10:58AM",
           "current_summary": "",
-          "notes": "Max gusts to 8.2 mph."
+          "notes": "Max gusts to 7.8 mph."
         },
         {
           "route_id": "p40-cavallo",
@@ -371,7 +309,7 @@
           "wind_range": "7-7",
           "tide_summary": "High at 10:58AM",
           "current_summary": "",
-          "notes": "Max gusts to 8.2 mph."
+          "notes": "Max gusts to 7.8 mph."
         }
       ]
     },
@@ -387,10 +325,10 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.5 mph.",
+          "notes": "Max gusts to 6.7 mph.",
           "no_go_reason": "Route too short."
         },
         {
@@ -402,10 +340,10 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.5 mph."
+          "notes": "Max gusts to 6.7 mph."
         },
         {
           "route_id": "p40-tiburon",
@@ -416,10 +354,10 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "High at 11:42AM",
           "current_summary": "",
-          "notes": "Max gusts to 8.5 mph."
+          "notes": "Max gusts to 6.7 mph."
         },
         {
           "route_id": "p40-cavallo",
@@ -430,10 +368,10 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "High at 11:42AM",
           "current_summary": "",
-          "notes": "Max gusts to 8.5 mph."
+          "notes": "Max gusts to 6.7 mph."
         }
       ]
     },
@@ -449,10 +387,10 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.1 mph.",
+          "notes": "Max gusts to 6.3 mph.",
           "no_go_reason": "Route too short."
         },
         {
@@ -464,10 +402,10 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.1 mph."
+          "notes": "Max gusts to 6.3 mph."
         },
         {
           "route_id": "p40-tiburon",
@@ -478,10 +416,10 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "7-7",
-          "tide_summary": "",
+          "wind_range": "5-5",
+          "tide_summary": "High at 12:31PM",
           "current_summary": "",
-          "notes": "Max gusts to 8.1 mph."
+          "notes": "Max gusts to 6.3 mph."
         },
         {
           "route_id": "p40-cavallo",
@@ -492,10 +430,72 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "7-7",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "",
-          "notes": "Max gusts to 8.1 mph."
+          "notes": "Max gusts to 6.3 mph."
+        }
+      ]
+    },
+    {
+      "date_local": "2025-11-09",
+      "recommendations": [
+        {
+          "route_id": "p40-p39",
+          "name": "Pier 40 to Pier 39",
+          "start_local": "2025-11-09T07:43:48-08:00",
+          "end_local": "2025-11-09T09:17:07.699498-08:00",
+          "duration_hours": 0.0,
+          "distance_miles": 4.2,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "12-12",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 19.5 mph.",
+          "no_go_reason": "Route too short."
+        },
+        {
+          "route_id": "p40-clipper",
+          "name": "Pier 40 to Clipper Cove",
+          "start_local": "2025-11-09T07:43:48-08:00",
+          "end_local": "2025-11-09T10:05:01.937606-08:00",
+          "duration_hours": 2.4,
+          "distance_miles": 6.4,
+          "difficulty": "Moderate",
+          "confidence": "Medium",
+          "wind_range": "12-12",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 19.5 mph."
+        },
+        {
+          "route_id": "p40-tiburon",
+          "name": "Pier 40 to Tiburon",
+          "start_local": "2025-11-09T07:43:48-08:00",
+          "end_local": "2025-11-09T13:05:53.733039-08:00",
+          "duration_hours": 5.4,
+          "distance_miles": 14.5,
+          "difficulty": "Moderate",
+          "confidence": "Medium",
+          "wind_range": "12-12",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 19.5 mph."
+        },
+        {
+          "route_id": "p40-cavallo",
+          "name": "Pier 40 to Cavallo Point",
+          "start_local": "2025-11-09T07:43:48-08:00",
+          "end_local": "2025-11-09T12:12:19.837172-08:00",
+          "duration_hours": 4.5,
+          "distance_miles": 12.1,
+          "difficulty": "Moderate",
+          "confidence": "Medium",
+          "wind_range": "12-12",
+          "tide_summary": "",
+          "current_summary": "",
+          "notes": "Max gusts to 19.5 mph."
         }
       ]
     }
