@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 3.0 (Robust NOAA Parsing & Final Fixes)
+# plan_generator.py - VERSION 3.1 (Corrects NOAA Date Mismatch)
 import json
 import math
 import os
@@ -31,36 +31,35 @@ def classify(duration_hours, gust_mph):
 
 # --- DATA FETCHING FUNCTIONS ---
 def get_weather_forecast():
-    api_key=os.getenv("WEATHER_API_KEY")
+    api_key=os.getenv("WEATHER_API_KEY");
     if not api_key: print("CRITICAL: WEATHER_API_KEY not found."); return None, None
     url=f"https://api.openweathermap.org/data/3.0/onecall?lat={P40[0]}&lon={P40[1]}&exclude=current,minutely,alerts&appid={api_key}&units=imperial"
     try:
         r=requests.get(url); r.raise_for_status(); data=r.json(); print("Successfully fetched weather data."); return data.get('daily',[]), data.get('hourly',[])
     except requests.exceptions.RequestException as e: print(f"Error fetching weather data: {e}"); return None, None
 
-def get_noaa_predictions(station, product, date_str):
-    url = f"https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date={date_str}&station={station}&product={product}&datum=MLLW&units=english&time_zone=lst_ldt&format=json&application=SpinoutFairRide"
+def get_noaa_predictions(station, product, start_date_str, days):
+    url = f"https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date={start_date_str}&range={days*24}&station={station}&product={product}&datum=MLLW&units=english&time_zone=lst_ldt&format=json&application=SpinoutFairRide"
     try:
         r = requests.get(url); r.raise_for_status(); return r.json()
     except requests.exceptions.RequestException as e:
-        print(f"INFO: Could not fetch NOAA {product} for {station} on {date_str}. Error: {e}"); return None
+        print(f"INFO: Could not fetch NOAA {product} for {station}. Error: {e}"); return None
 
 # --- MAIN SCRIPT ---
 def main():
     daily_forecasts, hourly_forecasts = get_weather_forecast()
     if not daily_forecasts: print("Exiting due to weather API failure."); return
 
-    real_today = datetime.now(TZ).date()
+    real_today_str = datetime.now(TZ).strftime('%Y%m%d')
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "3.0.0-final", "days": [], "disclaimer": "Advisory only..."}
+    # Fetch all data for the next 8 days in one call for each product
+    tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", real_today_str, 8)
+    current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", real_today_str, 8)
+    
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "3.1.0-date-fixed", "days": [], "disclaimer": "Advisory only..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
         display_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
-        noaa_date_for_loop = real_today + timedelta(days=d)
-        noaa_date_str = noaa_date_for_loop.strftime('%Y%m%d')
-
-        tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", noaa_date_str)
-        current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", noaa_date_str)
         
         day_obj = {"date_local": display_date.strftime('%Y-%m-%d'), "recommendations": []}
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
@@ -79,11 +78,13 @@ def main():
             # Bulletproof Tide/Current Parsing
             tide_summary, current_summary = "", ""
             try:
+                # Filter for the correct day before processing
+                correct_day = real_today + timedelta(days=d)
                 if tide_data and 'predictions' in tide_data:
-                    tide_events = [p for p in tide_data['predictions'] if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
+                    tide_events = [p for p in tide_data['predictions'] if datetime.strptime(p['t'], '%Y-%-m-%d %H:%M').date() == correct_day and start_time.time() <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').time() < end_time.time()]
                     tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events])
                 if current_data and 'data' in current_data:
-                    currents = [p for p in current_data['data'] if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
+                    currents = [p for p in current_data['data'] if datetime.strptime(p['t'], '%Y-%m-%d %H:%M').date() == correct_day and start_time.time() <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').time() < end_time.time()]
                     if currents:
                         min_c=min(float(p['s']) for p in currents); max_c=max(float(p['s']) for p in currents)
                         direction="Flood" if float(currents[0]['s']) > 0 else "Ebb"
