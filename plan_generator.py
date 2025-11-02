@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 2.2 (with NOAA Tide & Current Data)
+# plan_generator.py - VERSION 2.3 (Resilient NOAA Calls)
 import json
 import math
 import os
@@ -9,6 +9,7 @@ import requests
 # --- CONSTANTS ---
 TZ = ZoneInfo("America/Los_Angeles")
 P40 = (37.7835, -122.3883)
+# (rest of constants are unchanged)
 P39 = (37.8087, -122.4098); CLIPPER = (37.8270, -122.3694); TIBURON = (37.8735, -122.4565); CAVALLO = (37.8357, -122.4771)
 ROUTES = [
     {"id":"p40-p39", "name":"Pier 40 to Pier 39", "stops":["Pier 39"], "legs":[(P40, P39), (P39, P40)]},
@@ -16,10 +17,11 @@ ROUTES = [
     {"id":"p40-tiburon", "name":"Pier 40 to Tiburon", "stops":["Tiburon"], "legs":[(P40, TIBURON), (TIBURON, P40)]},
     {"id":"p40-cavallo", "name":"Pier 40 to Cavallo Point", "stops":["Cavallo Point"], "legs":[(P40, CAVALLO), (CAVALLO, P40)]},
 ]
-NOAA_TIDE_STATION = "9414290"  # San Francisco, CA
-NOAA_CURRENT_STATION = "SFB1201" # SF Bay Bridge
+NOAA_TIDE_STATION = "9414290"
+NOAA_CURRENT_STATION = "SFB1201"
 
 # --- HELPER FUNCTIONS ---
+# (helpers are unchanged)
 def haversine_miles(a,b):
     R=3958.761;lat1,lon1=a;lat2,lon2=b;phi1,phi2=math.radians(lat1),math.radians(lat2);dphi=math.radians(lat2-lat1);dl=math.radians(lon2-lon1);x=math.sin(dphi/2)**2+math.cos(phi1)*math.cos(phi2)*math.sin(dl/2)**2;return 2*R*math.atan2(math.sqrt(x),math.sqrt(1-x))
 def route_distance_miles(route): return sum(haversine_miles(a, b) for a, b in route["legs"])
@@ -37,6 +39,7 @@ def why_line(route_id, difficulty, gust_mph):
     return"General recommendation based on forecast."
 
 # --- DATA FETCHING FUNCTIONS ---
+# (get_weather_forecast is unchanged)
 def get_weather_forecast():
     api_key=os.getenv("WEATHER_API_KEY");
     if not api_key: print("CRITICAL: WEATHER_API_KEY secret not found."); return None, None
@@ -46,39 +49,66 @@ def get_weather_forecast():
     except requests.exceptions.RequestException as e: print(f"Error fetching weather data: {e}"); return None, None
 
 def get_noaa_predictions(station, product, date_str):
-    url = f"https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date={date_str}&station={station}&product={product}&datum=MLLW&units=english&time_zone=lst_ldt&format=json"
+    # NOAA is particular about date ranges. For currents, it's safest to ask for just one day.
+    base_url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
+    params = {
+        "station": station,
+        "product": product,
+        "datum": "MLLW",
+        "units": "english",
+        "time_zone": "lst_ldt",
+        "format": "json",
+        "application": "SpinoutFairRidePlanner"
+    }
+    # For currents, NOAA only provides a few days. We'll ask for one day at a time.
+    if product == "currents_predictions":
+        params['date'] = date_str
+    else: # For tides, we can ask for a longer range
+        params['begin_date'] = date_str
+        params['range'] = 24 * 8 # 8 days in hours
+
     try:
-        r = requests.get(url); r.raise_for_status(); return r.json()
-    except requests.exceptions.RequestException as e: print(f"Error fetching NOAA {product} data for {station}: {e}"); return None
+        r = requests.get(base_url, params=params)
+        r.raise_for_status()
+        return r.json()
+    except requests.exceptions.RequestException as e:
+        print(f"INFO: Could not fetch NOAA {product} data for {station} on {date_str}. It might be too far in the future. Error: {e}")
+        return None # Return None gracefully
 
 # --- MAIN SCRIPT ---
 def main():
     daily_forecasts, hourly_forecasts = get_weather_forecast()
     if not daily_forecasts: print("Exiting due to weather API failure."); return
 
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.5.0-tides", "days": [], "disclaimer": "Advisory only. Conditions change on the water. Final go or no-go is made on site by the captain."}
+    # --- NEW: Fetch all tide data for the week in ONE call ---
+    start_date_str = datetime.fromtimestamp(daily_forecasts[0]['dt'], tz=TZ).strftime('%Y%m%d')
+    all_tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", start_date_str)
+    
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "0.5.1-resilient", "days": [], "disclaimer": "..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
         the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ)
         date_str = the_date.strftime('%Y%m%d')
         
-        tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", date_str)
+        # --- NEW: Fetch current data DAY BY DAY ---
         current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", date_str)
-
-        day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "sunrise": day_forecast['sunrise'], "sunset": day_forecast['sunset'], "recommendations": []}
+        
+        day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "recommendations": []}
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
 
         for r in ROUTES:
             duration = route_distance_miles(r) / 2.7
             end_time = start_time + timedelta(hours=duration)
             
+            # Wind Logic (unchanged)
             hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'],tz=TZ) < end_time] if hourly_forecasts else []
             max_gust = max(h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window) if hourly_in_window else day_forecast.get('wind_gust',0)
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
             wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
             
-            tide_events_in_window = [p for p in tide_data.get('predictions',[]) if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if tide_data else []
-            tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events_in_window])
+            # --- UPDATED: More resilient parsing ---
+            tide_events_in_window = [p for p in all_tide_data.get('predictions',[]) if start_time.strftime('%Y-%m-%d') == datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%Y-%m-%d') and start_time.time() <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').time() < end_time.time()] if all_tide_data else []
+            tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events_in_window]) or ""
             
             currents_in_window = [p for p in current_data.get('data',[]) if start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time] if current_data else []
             current_summary = ""
