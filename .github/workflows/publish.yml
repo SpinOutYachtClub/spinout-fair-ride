@@ -2,8 +2,8 @@ name: Publish plan.json
 
 on:
   schedule:
-    - cron: "0 11 * * *" # Runs daily around 4 AM Pacific
-  workflow_dispatch: # Allows manual runs
+    - cron: "0 11 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: actions-python/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -33,6 +33,7 @@ jobs:
           # Commit only if there are changes
           if ! git diff-index --quiet HEAD; then
             git commit -m "Automated: update plan.json with real weather"
+            git pull --rebase  # <-- THIS IS THE NEW, FIXING LINE
             git push
           else
             echo "No changes to commit."
