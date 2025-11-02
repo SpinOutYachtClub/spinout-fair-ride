@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 6.0 (SMART TIDES)
+# plan_generator.py - VERSION 6.01 (SMART TIDES)
 import json
 import math
 import os
