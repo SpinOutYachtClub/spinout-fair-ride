@@ -1,12 +1,10 @@
 {
-  "generated_at": "2025-11-01T19:55:23.606700-07:00",
+  "generated_at": "2025-11-01T20:12:54.039014-07:00",
   "rider_preset": "Casual",
-  "version": "0.5.0-tides",
+  "version": "0.5.2-final-fix",
   "days": [
     {
       "date_local": "2025-11-01",
-      "sunrise": 1762007713,
-      "sunset": 1762045855,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -65,8 +63,6 @@
     },
     {
       "date_local": "2025-11-02",
-      "sunrise": 1762094176,
-      "sunset": 1762132192,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -125,8 +121,6 @@
     },
     {
       "date_local": "2025-11-03",
-      "sunrise": 1762180640,
-      "sunset": 1762218529,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -135,7 +129,7 @@
           "end_local": "2025-11-03T09:10:39.699498-08:00",
           "duration_hours": 0.0,
           "difficulty": "No-Go",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "5-7",
           "tide_summary": "",
           "current_summary": "",
@@ -149,7 +143,7 @@
           "end_local": "2025-11-03T09:58:33.937606-08:00",
           "duration_hours": 2.4,
           "difficulty": "Easy",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "5-7",
           "tide_summary": "",
           "current_summary": "",
@@ -162,7 +156,7 @@
           "end_local": "2025-11-03T12:59:25.733039-08:00",
           "duration_hours": 5.4,
           "difficulty": "Moderate",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "5-9",
           "tide_summary": "",
           "current_summary": "",
@@ -175,7 +169,7 @@
           "end_local": "2025-11-03T12:05:51.837172-08:00",
           "duration_hours": 4.5,
           "difficulty": "Moderate",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "5-9",
           "tide_summary": "",
           "current_summary": "",
@@ -185,8 +179,6 @@
     },
     {
       "date_local": "2025-11-04",
-      "sunrise": 1762267104,
-      "sunset": 1762304869,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -245,8 +237,6 @@
     },
     {
       "date_local": "2025-11-05",
-      "sunrise": 1762353569,
-      "sunset": 1762391209,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -305,8 +295,6 @@
     },
     {
       "date_local": "2025-11-06",
-      "sunrise": 1762440033,
-      "sunset": 1762477551,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -365,8 +353,6 @@
     },
     {
       "date_local": "2025-11-07",
-      "sunrise": 1762526498,
-      "sunset": 1762563895,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -425,8 +411,6 @@
     },
     {
       "date_local": "2025-11-08",
-      "sunrise": 1762612963,
-      "sunset": 1762650240,
       "recommendations": [
         {
           "route_id": "p40-p39",
@@ -484,5 +468,5 @@
       ]
     }
   ],
-  "disclaimer": "Advisory only. Conditions change on the water. Final go or no-go is made on site by the captain."
+  "disclaimer": "Advisory only..."
 }
