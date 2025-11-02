@@ -21,12 +21,15 @@ jobs:
 
       - run: python plan_generator.py
 
-      # --- THIS IS THE NEW DEBUGGING STEP ---
-      - name: List files to debug
-        run: ls -R
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "docs/plan.json"
-          message: "Automated: update plan.json"
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/plan.json
+          # Commit only if there are changes
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Automated: update plan.json"
+            git push
+          else
+            echo "No changes to commit."
+          fi
