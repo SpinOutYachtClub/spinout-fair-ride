@@ -13,7 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions-python/setup-python@v5
+      # --- THIS LINE HAS BEEN CORRECTED ---
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -33,7 +34,7 @@ jobs:
           # Commit only if there are changes
           if ! git diff-index --quiet HEAD; then
             git commit -m "Automated: update plan.json with real weather"
-            git pull --rebase  # <-- THIS IS THE NEW, FIXING LINE
+            git pull --rebase
             git push
           else
             echo "No changes to commit."
