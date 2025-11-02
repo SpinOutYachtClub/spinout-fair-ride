@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 7.1 (ECHO fix: tz handling + currents direction)
+# plan_generator.py - VERSION 7.2 (ECHO: currents fallback, small logs)
 import json
 import math
 import os
@@ -48,6 +48,60 @@ def classify(duration_hours, gust_mph):
         return "Moderate"
     return "Challenging"
 
+def parse_noaa_local(tstr: str) -> datetime:
+    # NOAA returns local times when time_zone=lst_ldt; attach the TZ rather than convert
+    return datetime.strptime(tstr, "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+
+def summarize_currents(current_data: dict, start_time: datetime, end_time: datetime) -> str:
+    if not current_data or "data" not in current_data:
+        return ""
+    # Collect all points with timestamps
+    pts = []
+    for p in current_data["data"]:
+        if "t" not in p or "s" not in p:
+            continue
+        try:
+            dt = parse_noaa_local(p["t"])
+            s = float(p["s"])
+            pts.append((dt, s))
+        except Exception:
+            continue
+
+    def make_summary(sample):
+        if not sample:
+            return ""
+        speeds = [s for _, s in sample]
+        if not speeds:
+            return ""
+        min_c = min(speeds)
+        max_c = max(speeds)
+        first_nonzero = next((s for s in speeds if abs(s) >= 0.05), 0.0)
+        if first_nonzero > 0:
+            direction = "Flood"
+        elif first_nonzero < 0:
+            direction = "Ebb"
+        else:
+            direction = "Slack"
+        return f"{direction} {abs(min_c):.1f}-{abs(max_c):.1f} kts"
+
+    # 1) Inside the window
+    in_window = [(dt, s) for dt, s in pts if start_time <= dt < end_time]
+    summary = make_summary(in_window)
+    if summary:
+        return summary
+
+    # 2) Fallback: ±2h around the window
+    pad = timedelta(hours=2)
+    near = [(dt, s) for dt, s in pts if (start_time - pad) <= dt < (end_time + pad)]
+    summary = make_summary(near)
+    if summary:
+        return summary + " (near window)"
+
+    # 3) Fallback: first 3h after start
+    after = [(dt, s) for dt, s in pts if start_time <= dt < start_time + timedelta(hours=3)]
+    summary = make_summary(after)
+    return summary or "No current samples"
+
 # --- DATA FETCH ---
 def get_weather_forecast():
     api_key = os.getenv("WEATHER_API_KEY")
@@ -74,23 +128,28 @@ def get_noaa_predictions(station, product, date_str):
         "station": station,
         "product": product,
         "datum": "MLLW",
-        "units": "english",            # knots for currents, feet for tides
+        "units": "english",     # knots for currents, feet for tides
         "time_zone": "lst_ldt",
         "format": "json",
         "application": "SpinoutFairRide",
         "begin_date": date_str,
-        "range": "168"                 # 7 days
+        "range": "168"          # 7 days
     }
     if product == "predictions":
-        # High/Low events so entries include 'type' = 'H'/'L'
-        params["interval"] = "hilo"
+        params["interval"] = "hilo"  # ensure 'type' field
 
     url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
     headers = {"User-Agent": "SpinoutFairRide/1.0 (https://github.com/SpinOutYachtClub/spinout-fair-ride)"}
     try:
         r = requests.get(url, params=params, headers=headers, timeout=30)
         r.raise_for_status()
-        return r.json()
+        obj = r.json()
+        # small logs
+        if product == "predictions":
+            print(f"NOAA tides: {len(obj.get('predictions', []))} rows")
+        if product == "currents_predictions":
+            print(f"NOAA currents: {len(obj.get('data', []))} rows")
+        return obj
     except requests.exceptions.RequestException as e:
         print(f"INFO: Could not fetch NOAA {product} for {station}. Error: {e}")
         return None
@@ -109,7 +168,7 @@ def main():
     payload = {
         "generated_at": datetime.now(TZ).isoformat(),
         "rider_preset": "Casual",
-        "version": "7.1.0-echo-fix",
+        "version": "7.2.0-echo-fix",
         "days": [],
         "disclaimer": "Advisory only. Verify local conditions and official guidance before going out."
     }
@@ -135,16 +194,15 @@ def main():
             wind_speeds = [h.get("wind_speed", 0) for h in hourly_in_window] or [day_forecast.get("wind_speed", 0)]
             wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
 
-            tide_summary, current_summary = "", ""
-
-            # --- TIDES: use hilo events, attach TZ rather than astimezone on naive ---
+            # Tides (hilo events already include 'type')
+            tide_summary = ""
             try:
                 if tide_data and "predictions" in tide_data:
                     events_in_window = []
                     for p in tide_data["predictions"]:
                         if "t" not in p:
                             continue
-                        dt_local = datetime.strptime(p["t"], "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
+                        dt_local = parse_noaa_local(p["t"])
                         if start_time <= dt_local < end_time:
                             events_in_window.append(p)
                     tide_summary = ", ".join(
@@ -155,31 +213,10 @@ def main():
             except Exception as e:
                 print(f"WARN: Handled a tide parsing error: {e}")
 
-            # --- CURRENTS: choose first non-zero speed for Flood/Ebb, else Slack ---
+            # Currents with fallbacks
+            current_summary = ""
             try:
-                if current_data and "data" in current_data:
-                    points = []
-                    for p in current_data["data"]:
-                        if "t" not in p or "s" not in p:
-                            continue
-                        dt_local = datetime.strptime(p["t"], "%Y-%m-%d %H:%M").replace(tzinfo=TZ)
-                        if start_time <= dt_local < end_time:
-                            points.append(p)
-
-                    if points:
-                        speeds = [float(p["s"]) for p in points if "s" in p]
-                        if speeds:
-                            min_c = min(speeds)
-                            max_c = max(speeds)
-                            # pick first non-zero to infer direction
-                            first_nonzero = next((s for s in speeds if abs(s) >= 0.05), 0.0)
-                            if first_nonzero > 0:
-                                direction = "Flood"
-                            elif first_nonzero < 0:
-                                direction = "Ebb"
-                            else:
-                                direction = "Slack"
-                            current_summary = f"{direction} {abs(min_c):.1f}-{abs(max_c):.1f} kts"
+                current_summary = summarize_currents(current_data, start_time, end_time)
             except Exception as e:
                 print(f"WARN: Handled a current parsing error: {e}")
 
@@ -213,7 +250,7 @@ def main():
     os.makedirs("docs", exist_ok=True)
     with open("docs/plan.json", "w") as f:
         json.dump(payload, f, indent=2)
-    print("Successfully wrote new plan with ECHO v7.1 fix.")
+    print("Successfully wrote new plan with ECHO v7.2 currents fallback.")
 
 if __name__ == "__main__":
     main()
