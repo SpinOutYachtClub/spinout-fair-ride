@@ -1,0 +1,24 @@
+# data/geography.yaml
+# Defines the primary compass direction for each leg of a route.
+# Direction is degrees from North.
+leg_bearings:
+  # Pier 40 <-> Pier 39 is mostly North-South
+  "Pier 40-Pier 39": 350 # North-North-West
+  "Pier 39-Pier 40": 170 # South-South-East
+
+  # Pier 40 <-> Clipper Cove crosses the bay
+  "Pier 40-Clipper Cove": 20 # North-North-East
+  "Clipper Cove-Pier 40": 200 # South-South-West
+
+  # Pier 40 <-> Tiburon is mostly across the bay
+  "Pier 40-Tiburon": 330 # North-West
+  "Tiburon-Pier 40": 150 # South-East
+  
+  # Pier 40 <-> Cavallo is similar to Tiburon but more West
+  "Pier 40-Cavallo Point": 320 # North-West
+  "Cavallo Point-Pier 40": 140 # South-East
+
+# Defines the primary Ebb/Flood direction in degrees for key areas.
+current_vectors:
+  default_ebb: 270 # West, towards the Gate
+  default_flood: 90 # East, away from the Gate
