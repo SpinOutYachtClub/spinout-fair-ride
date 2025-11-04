@@ -1,0 +1,21 @@
+version: 1.1
+
+# General rules for all trips
+trip_rules:
+  min_trip_duration_h: 1.0  # NEW: The minimum trip duration is now 1 hour.
+  min_daylight_left_on_return_min: 30
+
+# Skill-level specific thresholds
+pod_levels:
+  Casual:
+    max_wind_gust: 16 # mph
+
+# Scoring weights (simplified for now)
+safety_score_weights:
+  wind_gust_mph: 0.80
+  daylight_buffer_min: 0.20
+
+# Badge thresholds
+badges:
+  green_min: 80
+  yellow_min: 60
