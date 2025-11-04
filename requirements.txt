@@ -1,3 +1,4 @@
 astral==2.2
 pytz==2024.1
 requests
+PyYAML
