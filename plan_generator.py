@@ -1,4 +1,4 @@
-# plan_generator.py - VERSION 9.0 (Correct Tidal Engine)
+# plan_generator.py - VERSION 8.0 (STABLE MILESTONE: Wind, Dist, Current OK)
 import json
 import math
 import os
@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 import requests
 import yaml
 
-# --- CONSTANTS & HELPERS (Unchanged) ---
+# --- CONSTANTS & HELPERS ---
 TZ = ZoneInfo("America/Los_Angeles")
 P40 = (37.7835, -122.3883); P39 = (37.8087, -122.4098); CLIPPER = (37.8270, -122.3694); TIBURON = (37.8735, -122.4565); CAVALLO = (37.8357, -122.4771)
 ROUTES = [
@@ -27,7 +27,6 @@ def classify(duration_hours, gust_mph):
 
 # --- DATA FETCHING FUNCTIONS ---
 def get_weather_forecast():
-    # This function is correct and unchanged.
     api_key=os.getenv("WEATHER_API_KEY");
     if not api_key: print("CRITICAL: WEATHER_API_KEY not found."); return None, None
     url=f"https://api.openweathermap.org/data/3.0/onecall?lat={P40[0]}&lon={P40[1]}&exclude=current,minutely,alerts&appid={api_key}&units=imperial"
@@ -35,22 +34,13 @@ def get_weather_forecast():
         r=requests.get(url); r.raise_for_status(); data=r.json(); print("Successfully fetched weather data."); return data.get('daily',[]), data.get('hourly',[])
     except requests.exceptions.RequestException as e: print(f"Error fetching weather data: {e}"); return None, None
 
-# --- NEW: DEDICATED AND CORRECT NOAA FUNCTIONS ---
-def get_tide_predictions(station, date_str):
-    # This function is specialized for TIDES, using begin_date and range.
-    params = {"station": station, "product": "predictions", "datum": "MLLW", "units": "english", "time_zone": "lst_ldt", "format": "json", "application": "SpinoutFairRide", "begin_date": date_str, "range": "192", "interval": "hilo"}
-    url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
+def get_noaa_predictions(station, product, date_str):
+    params = {"begin_date": date_str, "range": "192", "station": station, "product": product, "datum": "MLLW", "units": "english", "time_zone": "lst_ldt", "format": "json", "application": "SpinoutFairRide"}
+    if product == "predictions": params["interval"] = "hilo"
+    url = f"https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
     try:
         r = requests.get(url, params=params); r.raise_for_status(); return r.json()
-    except requests.exceptions.RequestException as e: print(f"INFO: Could not fetch NOAA Tide data. Error: {e}"); return None
-
-def get_current_predictions(station, date_str):
-    # This function is specialized for CURRENTS, using only the 'date' param.
-    params = {"station": station, "product": "currents_predictions", "datum": "MLLW", "units": "english", "time_zone": "lst_ldt", "format": "json", "application": "SpinoutFairRide", "date": date_str}
-    url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
-    try:
-        r = requests.get(url, params=params); r.raise_for_status(); return r.json()
-    except requests.exceptions.RequestException as e: print(f"INFO: Could not fetch NOAA Current data for {date_str}. Error: {e}"); return None
+    except requests.exceptions.RequestException as e: print(f"INFO: Could not fetch NOAA {product}. Error: {e}"); return None
 
 # --- MAIN SCRIPT ---
 def main():
@@ -58,17 +48,13 @@ def main():
     if not daily_forecasts: print("Exiting due to weather API failure."); return
 
     today_str = datetime.now(TZ).strftime('%Y%m%d')
-    all_tide_data = get_tide_predictions(NOAA_TIDE_STATION, today_str) # Fetch all tide data for the week once.
+    tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions", today_str)
+    current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions", today_str)
     
-    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "9.0-tidal-engine-fix", "days": [], "disclaimer": "Advisory only..."}
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "8.0-stable-revert", "days": [], "disclaimer": "Advisory only..."}
 
     for d, day_forecast in enumerate(daily_forecasts):
         the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
-        date_str_for_currents = the_date.strftime('%Y%m%d') # Use the correct date for the loop
-        
-        # Fetch current data for each specific day inside the loop.
-        current_data_for_day = get_current_predictions(NOAA_CURRENT_STATION, date_str_for_currents)
-
         day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "recommendations": []}
         start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
 
@@ -77,38 +63,16 @@ def main():
             duration = dist / 2.7
             end_time = start_time + timedelta(hours=duration)
             
-            # Wind Logic
             hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'],tz=TZ) < end_time] if hourly_forecasts else []
             max_gust = max((h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window), default=day_forecast.get('wind_gust',0))
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]
             wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
             
-            # Final, Corrected Parsing Logic
             tide_summary, current_summary = "", ""
-            try:
-                if all_tide_data and 'predictions' in all_tide_data:
-                    tide_events = [p for p in all_tide_data['predictions'] if p and 't' in p and 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
+            try: # Tide parsing (known to be slightly buggy, but won't crash)
+                if tide_data and 'predictions' in tide_data:
+                    tide_events = [p for p in tide_data['predictions'] if p and 'type' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
                     tide_summary = ", ".join([f"{'High' if p['type']=='H' else 'Low'} at {datetime.strptime(p['t'], '%Y-%m-%d %H:%M').strftime('%-I:%M%p')}" for p in tide_events])
             except Exception as e: print(f"WARN: Handled a tide parsing error: {e}")
                 
-            try:
-                if current_data_for_day and 'data' in current_data_for_day:
-                    currents = [p for p in current_data_for_day['data'] if 't' in p and 's' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
-                    if currents:
-                        min_c=min(float(p['s']) for p in currents); max_c=max(float(p['s']) for p in currents)
-                        direction="Flood" if float(currents[0]['s']) > 0 else "Ebb"
-                        current_summary = f"{direction} {abs(min_c):.1f}-{abs(max_c):.1f} kts"
-            except Exception as e: print(f"WARN: Handled a current parsing error: {e}")
-
-            rec = {"name": r['name'], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "distance_miles": round(dist, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary}
-            if r["id"] == "p40-p39" and duration < 2.0: rec.update({"difficulty": "No-Go"})
-            
-            day_obj["recommendations"].append(rec)
-        payload["days"].append(day_obj)
-
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/plan.json", "w") as f: json.dump(payload, f, indent=2)
-    print("Successfully wrote new plan with corrected NOAA logic.")
-
-if __name__ == "__main__":
-    main()
+            try: # Current parsing (this
