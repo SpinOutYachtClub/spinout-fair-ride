@@ -1,90 +1,24 @@
 {
-  "generated_at": "2025-11-03T05:48:31.135196-08:00",
+  "generated_at": "2025-11-04T03:30:54.087475-08:00",
   "rider_preset": "Casual",
-  "version": "7.2.0-echo-fix",
+  "version": "8.1-stable-revert",
   "days": [
-    {
-      "date_local": "2025-11-03",
-      "recommendations": [
-        {
-          "route_id": "p40-p39",
-          "name": "Pier 40 to Pier 39",
-          "start_local": "2025-11-03T07:37:20-08:00",
-          "end_local": "2025-11-03T09:10:39.699498-08:00",
-          "duration_hours": 0.0,
-          "distance_miles": 4.2,
-          "difficulty": "No-Go",
-          "confidence": "High",
-          "wind_range": "7-9",
-          "tide_summary": "High at 9:09AM",
-          "current_summary": "",
-          "notes": "Max gusts to 11.3 mph.",
-          "no_go_reason": "Route too short."
-        },
-        {
-          "route_id": "p40-clipper",
-          "name": "Pier 40 to Clipper Cove",
-          "start_local": "2025-11-03T07:37:20-08:00",
-          "end_local": "2025-11-03T09:58:33.937606-08:00",
-          "duration_hours": 2.4,
-          "distance_miles": 6.4,
-          "difficulty": "Easy",
-          "confidence": "High",
-          "wind_range": "7-9",
-          "tide_summary": "High at 9:09AM",
-          "current_summary": "",
-          "notes": "Max gusts to 11.3 mph."
-        },
-        {
-          "route_id": "p40-tiburon",
-          "name": "Pier 40 to Tiburon",
-          "start_local": "2025-11-03T07:37:20-08:00",
-          "end_local": "2025-11-03T12:59:25.733039-08:00",
-          "duration_hours": 5.4,
-          "distance_miles": 14.5,
-          "difficulty": "Moderate",
-          "confidence": "High",
-          "wind_range": "7-9",
-          "tide_summary": "High at 9:09AM",
-          "current_summary": "",
-          "notes": "Max gusts to 11.6 mph."
-        },
-        {
-          "route_id": "p40-cavallo",
-          "name": "Pier 40 to Cavallo Point",
-          "start_local": "2025-11-03T07:37:20-08:00",
-          "end_local": "2025-11-03T12:05:51.837172-08:00",
-          "duration_hours": 4.5,
-          "distance_miles": 12.1,
-          "difficulty": "Moderate",
-          "confidence": "High",
-          "wind_range": "7-9",
-          "tide_summary": "High at 9:09AM",
-          "current_summary": "",
-          "notes": "Max gusts to 11.6 mph."
-        }
-      ]
-    },
     {
       "date_local": "2025-11-04",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-04T07:38:24-08:00",
           "end_local": "2025-11-04T09:11:43.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 5.3 mph.",
-          "no_go_reason": "Route too short."
+          "wind_range": "3-3",
+          "tide_summary": "Low at 4:14PM",
+          "current_summary": "Ebb 3.7-2.0 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-04T07:38:24-08:00",
           "end_local": "2025-11-04T09:59:37.937606-08:00",
@@ -92,13 +26,11 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "4-4",
-          "tide_summary": "High at 9:42AM",
-          "current_summary": "",
-          "notes": "Max gusts to 5.3 mph."
+          "wind_range": "3-3",
+          "tide_summary": "Low at 4:14PM",
+          "current_summary": "Ebb 3.7-0.8 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-04T07:38:24-08:00",
           "end_local": "2025-11-04T13:00:29.733039-08:00",
@@ -106,13 +38,11 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-6",
-          "tide_summary": "High at 9:42AM",
-          "current_summary": "",
-          "notes": "Max gusts to 11.0 mph."
+          "wind_range": "2-5",
+          "tide_summary": "Low at 4:14PM",
+          "current_summary": "Ebb 3.7-2.9 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-04T07:38:24-08:00",
           "end_local": "2025-11-04T12:06:55.837172-08:00",
@@ -120,10 +50,9 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-6",
-          "tide_summary": "High at 9:42AM",
-          "current_summary": "",
-          "notes": "Max gusts to 8.6 mph."
+          "wind_range": "2-4",
+          "tide_summary": "Low at 4:14PM",
+          "current_summary": "Ebb 3.7-2.2 kts"
         }
       ]
     },
@@ -131,22 +60,18 @@
       "date_local": "2025-11-05",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-05T07:39:29-08:00",
           "end_local": "2025-11-05T09:12:48.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "30-30",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 44.7 mph.",
-          "no_go_reason": "Route too short."
+          "wind_range": "27-29",
+          "tide_summary": "Low at 5:01PM",
+          "current_summary": "Ebb 4.5-2.9 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-05T07:39:29-08:00",
           "end_local": "2025-11-05T10:00:42.937606-08:00",
@@ -154,13 +79,11 @@
           "distance_miles": 6.4,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "30-30",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 44.7 mph."
+          "wind_range": "27-29",
+          "tide_summary": "Low at 5:01PM",
+          "current_summary": "Ebb 4.5-1.8 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-05T07:39:29-08:00",
           "end_local": "2025-11-05T13:01:34.733039-08:00",
@@ -168,13 +91,11 @@
           "distance_miles": 14.5,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "30-30",
-          "tide_summary": "High at 10:18AM",
-          "current_summary": "",
-          "notes": "Max gusts to 44.7 mph."
+          "wind_range": "20-29",
+          "tide_summary": "Low at 5:01PM",
+          "current_summary": "Ebb 4.5-2.5 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-05T07:39:29-08:00",
           "end_local": "2025-11-05T12:08:00.837172-08:00",
@@ -182,10 +103,9 @@
           "distance_miles": 12.1,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "30-30",
-          "tide_summary": "High at 10:18AM",
-          "current_summary": "",
-          "notes": "Max gusts to 44.7 mph."
+          "wind_range": "24-29",
+          "tide_summary": "Low at 5:01PM",
+          "current_summary": "Ebb 4.5-1.2 kts"
         }
       ]
     },
@@ -193,61 +113,52 @@
       "date_local": "2025-11-06",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-06T07:40:33-08:00",
           "end_local": "2025-11-06T09:13:52.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "8-8",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 9.9 mph.",
-          "no_go_reason": "Route too short."
+          "current_summary": "Ebb 4.9-3.9 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-06T07:40:33-08:00",
           "end_local": "2025-11-06T10:01:46.937606-08:00",
           "duration_hours": 2.4,
           "distance_miles": 6.4,
           "difficulty": "Easy",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 9.9 mph."
+          "tide_summary": "Low at 5:50PM",
+          "current_summary": "Ebb 4.9-2.9 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-06T07:40:33-08:00",
           "end_local": "2025-11-06T13:02:38.733039-08:00",
           "duration_hours": 5.4,
           "distance_miles": 14.5,
           "difficulty": "Moderate",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "High at 10:58AM",
-          "current_summary": "",
-          "notes": "Max gusts to 9.9 mph."
+          "tide_summary": "Low at 5:50PM",
+          "current_summary": "Ebb 4.9-1.3 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-06T07:40:33-08:00",
           "end_local": "2025-11-06T12:09:04.837172-08:00",
           "duration_hours": 4.5,
           "distance_miles": 12.1,
           "difficulty": "Moderate",
-          "confidence": "Medium",
+          "confidence": "High",
           "wind_range": "8-8",
-          "tide_summary": "High at 10:58AM",
-          "current_summary": "",
-          "notes": "Max gusts to 9.9 mph."
+          "tide_summary": "Low at 5:50PM",
+          "current_summary": "Ebb 4.9-0.1 kts"
         }
       ]
     },
@@ -255,22 +166,18 @@
       "date_local": "2025-11-07",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T09:14:57.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 7.5 mph.",
-          "no_go_reason": "Route too short."
+          "current_summary": "Ebb 4.8-4.5 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T10:02:51.937606-08:00",
@@ -278,13 +185,11 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 7.5 mph."
+          "current_summary": "Ebb 4.8-3.8 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T13:03:43.733039-08:00",
@@ -292,13 +197,11 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "6-6",
-          "tide_summary": "High at 11:42AM",
-          "current_summary": "",
-          "notes": "Max gusts to 7.5 mph."
+          "wind_range": "7-7",
+          "tide_summary": "Low at 6:41PM",
+          "current_summary": "Ebb 4.8-0.1 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T12:10:09.837172-08:00",
@@ -306,10 +209,9 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "6-6",
-          "tide_summary": "High at 11:42AM",
-          "current_summary": "",
-          "notes": "Max gusts to 7.5 mph."
+          "wind_range": "7-7",
+          "tide_summary": "Low at 6:41PM",
+          "current_summary": "Ebb 4.8-1.1 kts"
         }
       ]
     },
@@ -317,22 +219,18 @@
       "date_local": "2025-11-08",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T09:16:02.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 7.0 mph.",
-          "no_go_reason": "Route too short."
+          "current_summary": "Ebb 4.5-3.8 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T10:03:56.937606-08:00",
@@ -342,11 +240,9 @@
           "confidence": "Medium",
           "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 7.0 mph."
+          "current_summary": "Ebb 4.5-3.8 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T13:04:48.733039-08:00",
@@ -355,12 +251,10 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "High at 12:31PM",
-          "current_summary": "",
-          "notes": "Max gusts to 7.0 mph."
+          "tide_summary": "Low at 7:36PM",
+          "current_summary": "Ebb 4.5-1.1 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T12:11:14.837172-08:00",
@@ -369,9 +263,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 7.0 mph."
+          "tide_summary": "Low at 7:36PM",
+          "current_summary": "Ebb 4.5-2.2 kts"
         }
       ]
     },
@@ -379,22 +272,18 @@
       "date_local": "2025-11-09",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T09:17:07.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 6.4 mph.",
-          "no_go_reason": "Route too short."
+          "current_summary": "Ebb 3.8-2.4 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T10:05:01.937606-08:00",
@@ -404,11 +293,9 @@
           "confidence": "Medium",
           "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 6.4 mph."
+          "current_summary": "Ebb 4.1-2.4 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T13:05:53.733039-08:00",
@@ -417,12 +304,10 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 6.4 mph."
+          "tide_summary": "Low at 8:36PM",
+          "current_summary": "Ebb 4.1-2.1 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T12:12:19.837172-08:00",
@@ -432,8 +317,7 @@
           "confidence": "Medium",
           "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 6.4 mph."
+          "current_summary": "Ebb 4.1-2.4 kts"
         }
       ]
     },
@@ -441,22 +325,18 @@
       "date_local": "2025-11-10",
       "recommendations": [
         {
-          "route_id": "p40-p39",
           "name": "Pier 40 to Pier 39",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T09:18:12.699498-08:00",
-          "duration_hours": 0.0,
+          "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "5-5",
+          "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 4.7 mph.",
-          "no_go_reason": "Route too short."
+          "current_summary": "Ebb 2.6-0.8 kts"
         },
         {
-          "route_id": "p40-clipper",
           "name": "Pier 40 to Clipper Cove",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T10:06:06.937606-08:00",
@@ -464,13 +344,11 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "5-5",
+          "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 4.7 mph."
+          "current_summary": "Ebb 3.2-0.8 kts"
         },
         {
-          "route_id": "p40-tiburon",
           "name": "Pier 40 to Tiburon",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T13:06:58.733039-08:00",
@@ -478,13 +356,11 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "5-5",
+          "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 4.7 mph."
+          "current_summary": "Ebb 3.5-0.8 kts"
         },
         {
-          "route_id": "p40-cavallo",
           "name": "Pier 40 to Cavallo Point",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T12:13:24.837172-08:00",
@@ -492,13 +368,65 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "5-5",
+          "wind_range": "6-6",
           "tide_summary": "",
-          "current_summary": "",
-          "notes": "Max gusts to 4.7 mph."
+          "current_summary": "Ebb 3.5-0.8 kts"
+        }
+      ]
+    },
+    {
+      "date_local": "2025-11-11",
+      "recommendations": [
+        {
+          "name": "Pier 40 to Pier 39",
+          "start_local": "2025-11-11T07:45:58-08:00",
+          "end_local": "2025-11-11T09:19:17.699498-08:00",
+          "duration_hours": 1.6,
+          "distance_miles": 4.2,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "6-6",
+          "tide_summary": "",
+          "current_summary": ""
+        },
+        {
+          "name": "Pier 40 to Clipper Cove",
+          "start_local": "2025-11-11T07:45:58-08:00",
+          "end_local": "2025-11-11T10:07:11.937606-08:00",
+          "duration_hours": 2.4,
+          "distance_miles": 6.4,
+          "difficulty": "Easy",
+          "confidence": "Medium",
+          "wind_range": "6-6",
+          "tide_summary": "",
+          "current_summary": ""
+        },
+        {
+          "name": "Pier 40 to Tiburon",
+          "start_local": "2025-11-11T07:45:58-08:00",
+          "end_local": "2025-11-11T13:08:03.733039-08:00",
+          "duration_hours": 5.4,
+          "distance_miles": 14.5,
+          "difficulty": "Moderate",
+          "confidence": "Medium",
+          "wind_range": "6-6",
+          "tide_summary": "",
+          "current_summary": ""
+        },
+        {
+          "name": "Pier 40 to Cavallo Point",
+          "start_local": "2025-11-11T07:45:58-08:00",
+          "end_local": "2025-11-11T12:14:29.837172-08:00",
+          "duration_hours": 4.5,
+          "distance_miles": 12.1,
+          "difficulty": "Moderate",
+          "confidence": "Medium",
+          "wind_range": "6-6",
+          "tide_summary": "",
+          "current_summary": ""
         }
       ]
     }
   ],
-  "disclaimer": "Advisory only. Verify local conditions and official guidance before going out."
+  "disclaimer": "Advisory only..."
 }
