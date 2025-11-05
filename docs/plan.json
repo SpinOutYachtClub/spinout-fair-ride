@@ -1,61 +1,8 @@
 {
-  "generated_at": "2025-11-04T03:30:54.087475-08:00",
+  "generated_at": "2025-11-05T03:33:15.590913-08:00",
   "rider_preset": "Casual",
   "version": "8.1-stable-revert",
   "days": [
-    {
-      "date_local": "2025-11-04",
-      "recommendations": [
-        {
-          "name": "Pier 40 to Pier 39",
-          "start_local": "2025-11-04T07:38:24-08:00",
-          "end_local": "2025-11-04T09:11:43.699498-08:00",
-          "duration_hours": 1.6,
-          "distance_miles": 4.2,
-          "difficulty": "No-Go",
-          "confidence": "High",
-          "wind_range": "3-3",
-          "tide_summary": "Low at 4:14PM",
-          "current_summary": "Ebb 3.7-2.0 kts"
-        },
-        {
-          "name": "Pier 40 to Clipper Cove",
-          "start_local": "2025-11-04T07:38:24-08:00",
-          "end_local": "2025-11-04T09:59:37.937606-08:00",
-          "duration_hours": 2.4,
-          "distance_miles": 6.4,
-          "difficulty": "Easy",
-          "confidence": "High",
-          "wind_range": "3-3",
-          "tide_summary": "Low at 4:14PM",
-          "current_summary": "Ebb 3.7-0.8 kts"
-        },
-        {
-          "name": "Pier 40 to Tiburon",
-          "start_local": "2025-11-04T07:38:24-08:00",
-          "end_local": "2025-11-04T13:00:29.733039-08:00",
-          "duration_hours": 5.4,
-          "distance_miles": 14.5,
-          "difficulty": "Moderate",
-          "confidence": "High",
-          "wind_range": "2-5",
-          "tide_summary": "Low at 4:14PM",
-          "current_summary": "Ebb 3.7-2.9 kts"
-        },
-        {
-          "name": "Pier 40 to Cavallo Point",
-          "start_local": "2025-11-04T07:38:24-08:00",
-          "end_local": "2025-11-04T12:06:55.837172-08:00",
-          "duration_hours": 4.5,
-          "distance_miles": 12.1,
-          "difficulty": "Moderate",
-          "confidence": "High",
-          "wind_range": "2-4",
-          "tide_summary": "Low at 4:14PM",
-          "current_summary": "Ebb 3.7-2.2 kts"
-        }
-      ]
-    },
     {
       "date_local": "2025-11-05",
       "recommendations": [
@@ -67,7 +14,7 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "27-29",
+          "wind_range": "27-31",
           "tide_summary": "Low at 5:01PM",
           "current_summary": "Ebb 4.5-2.9 kts"
         },
@@ -79,7 +26,7 @@
           "distance_miles": 6.4,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "27-29",
+          "wind_range": "25-31",
           "tide_summary": "Low at 5:01PM",
           "current_summary": "Ebb 4.5-1.8 kts"
         },
@@ -91,7 +38,7 @@
           "distance_miles": 14.5,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "20-29",
+          "wind_range": "21-31",
           "tide_summary": "Low at 5:01PM",
           "current_summary": "Ebb 4.5-2.5 kts"
         },
@@ -103,7 +50,7 @@
           "distance_miles": 12.1,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "24-29",
+          "wind_range": "22-31",
           "tide_summary": "Low at 5:01PM",
           "current_summary": "Ebb 4.5-1.2 kts"
         }
@@ -120,7 +67,7 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "8-8",
+          "wind_range": "2-3",
           "tide_summary": "",
           "current_summary": "Ebb 4.9-3.9 kts"
         },
@@ -132,7 +79,7 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "8-8",
+          "wind_range": "2-3",
           "tide_summary": "Low at 5:50PM",
           "current_summary": "Ebb 4.9-2.9 kts"
         },
@@ -144,7 +91,7 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "8-8",
+          "wind_range": "2-5",
           "tide_summary": "Low at 5:50PM",
           "current_summary": "Ebb 4.9-1.3 kts"
         },
@@ -156,7 +103,7 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "8-8",
+          "wind_range": "2-3",
           "tide_summary": "Low at 5:50PM",
           "current_summary": "Ebb 4.9-0.1 kts"
         }
@@ -172,8 +119,8 @@
           "duration_hours": 1.6,
           "distance_miles": 4.2,
           "difficulty": "No-Go",
-          "confidence": "Medium",
-          "wind_range": "7-7",
+          "confidence": "High",
+          "wind_range": "8-8",
           "tide_summary": "",
           "current_summary": "Ebb 4.8-4.5 kts"
         },
@@ -184,8 +131,8 @@
           "duration_hours": 2.4,
           "distance_miles": 6.4,
           "difficulty": "Easy",
-          "confidence": "Medium",
-          "wind_range": "7-7",
+          "confidence": "High",
+          "wind_range": "8-8",
           "tide_summary": "",
           "current_summary": "Ebb 4.8-3.8 kts"
         },
@@ -196,8 +143,8 @@
           "duration_hours": 5.4,
           "distance_miles": 14.5,
           "difficulty": "Moderate",
-          "confidence": "Medium",
-          "wind_range": "7-7",
+          "confidence": "High",
+          "wind_range": "8-8",
           "tide_summary": "Low at 6:41PM",
           "current_summary": "Ebb 4.8-0.1 kts"
         },
@@ -208,8 +155,8 @@
           "duration_hours": 4.5,
           "distance_miles": 12.1,
           "difficulty": "Moderate",
-          "confidence": "Medium",
-          "wind_range": "7-7",
+          "confidence": "High",
+          "wind_range": "8-8",
           "tide_summary": "Low at 6:41PM",
           "current_summary": "Ebb 4.8-1.1 kts"
         }
@@ -332,7 +279,7 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "Ebb 2.6-0.8 kts"
         },
@@ -344,7 +291,7 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "Ebb 3.2-0.8 kts"
         },
@@ -356,7 +303,7 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "Ebb 3.5-0.8 kts"
         },
@@ -368,7 +315,7 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "5-5",
           "tide_summary": "",
           "current_summary": "Ebb 3.5-0.8 kts"
         }
@@ -385,9 +332,9 @@
           "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "9-9",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "Flood 1.1-0.5 kts"
         },
         {
           "name": "Pier 40 to Clipper Cove",
@@ -397,9 +344,9 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "9-9",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "Flood 1.9-0.5 kts"
         },
         {
           "name": "Pier 40 to Tiburon",
@@ -409,9 +356,9 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "9-9",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "Flood 3.1-0.5 kts"
         },
         {
           "name": "Pier 40 to Cavallo Point",
@@ -421,7 +368,60 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "6-6",
+          "wind_range": "9-9",
+          "tide_summary": "",
+          "current_summary": "Flood 3.1-0.5 kts"
+        }
+      ]
+    },
+    {
+      "date_local": "2025-11-12",
+      "recommendations": [
+        {
+          "name": "Pier 40 to Pier 39",
+          "start_local": "2025-11-12T07:47:03-08:00",
+          "end_local": "2025-11-12T09:20:22.699498-08:00",
+          "duration_hours": 1.6,
+          "distance_miles": 4.2,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "17-17",
+          "tide_summary": "",
+          "current_summary": ""
+        },
+        {
+          "name": "Pier 40 to Clipper Cove",
+          "start_local": "2025-11-12T07:47:03-08:00",
+          "end_local": "2025-11-12T10:08:16.937606-08:00",
+          "duration_hours": 2.4,
+          "distance_miles": 6.4,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "17-17",
+          "tide_summary": "",
+          "current_summary": ""
+        },
+        {
+          "name": "Pier 40 to Tiburon",
+          "start_local": "2025-11-12T07:47:03-08:00",
+          "end_local": "2025-11-12T13:09:08.733039-08:00",
+          "duration_hours": 5.4,
+          "distance_miles": 14.5,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "17-17",
+          "tide_summary": "",
+          "current_summary": ""
+        },
+        {
+          "name": "Pier 40 to Cavallo Point",
+          "start_local": "2025-11-12T07:47:03-08:00",
+          "end_local": "2025-11-12T12:15:34.837172-08:00",
+          "duration_hours": 4.5,
+          "distance_miles": 12.1,
+          "difficulty": "No-Go",
+          "confidence": "Medium",
+          "wind_range": "17-17",
           "tide_summary": "",
           "current_summary": ""
         }
