@@ -236,5 +236,3 @@ Include a before/after diff of plan.json on at least one historical day.
 License
 
 TBD
-
-Want me to drop this into your repo structure (and add a matching `.env.example`, `stations.yml`, `thresholds.yml`, and `publish.yml` skeletons), or keep it as-is for you to paste?
