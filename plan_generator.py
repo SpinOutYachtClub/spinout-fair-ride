@@ -8,12 +8,14 @@ import requests
 
 # --- CONSTANTS ---
 TZ = ZoneInfo("America/Los_Angeles")
+# Original Locations
 P40 = (37.7835, -122.3883)
 P39 = (37.8087, -122.4098)
 CLIPPER = (37.8270, -122.3694)
 TIBURON = (37.8735, -122.4565)
 CAVALLO = (37.8357, -122.4771)
 
+# NEW LOCATIONS
 SFYH = (37.8070, -122.4430)
 AQ_PARK = (37.8081, -122.4223)
 TORPEDO = (37.8285, -122.4645)
@@ -25,10 +27,12 @@ BERKELEY = (37.8631, -122.3168)
 SCHOONMAKER = (37.8546, -122.4764)
 
 ROUTES = [
+    # Original Routes
     {"id":"p40-p39", "name":"Pier 40 to Pier 39", "stops":["Pier 39"], "legs":[(P40, P39), (P39, P40)]},
     {"id":"p40-clipper", "name":"Pier 40 to Clipper Cove", "stops":["Clipper Cove"], "legs":[(P40, CLIPPER), (CLIPPER, P40)]},
     {"id":"p40-tiburon", "name":"Pier 40 to Tiburon", "stops":["Tiburon"], "legs":[(P40, TIBURON), (TIBURON, P40)]},
     {"id":"p40-cavallo", "name":"Pier 40 to Cavallo Point", "stops":["Cavallo Point"], "legs":[(P40, CAVALLO), (CAVALLO, P40)]},
+    # NEW ROUTES
     {"id":"p40-sfyh", "name":"Pier 40 to SF Yacht Harbor", "stops":["SF Yacht Harbor"], "legs":[(P40, SFYH), (SFYH, P40)]},
     {"id":"p40-aqpark", "name":"Pier 40 to Aquatic Park", "stops":["Aquatic Park"], "legs":[(P40, AQ_PARK), (AQ_PARK, P40)]},
     {"id":"p40-torpedo", "name":"Pier 40 to Torpedo Wharf", "stops":["Torpedo Wharf"], "legs":[(P40, TORPEDO), (TORPEDO, P40)]},
@@ -54,15 +58,15 @@ def classify(duration_hours, gust_mph):
     return "Challenging"
 def why_line(route_id, difficulty, gust_mph):
     gust_kt = round(gust_mph / 1.15);
-    if route_id == "p40-p39": return "Not recommended as a stand-alone out-and-back because it does not meet the two hour minimum under current club rules."
-    if route_id == "p40-clipper": return f"Easy; mostly sheltered behind Treasure Island, gusts ≤ {gust_kt} kt, and the round trip is under 3 hours."
-    if route_id == "p40-tiburon": return f"Moderate; the route is exposed across the Central Bay, but gusts are manageable at ≤ {gust_kt} kt."
-    if route_id == "p40-cavallo": return f"Moderate; Raccoon Strait gives some lee but the approach to the Golden Gate is exposed; gusts are manageable at ≤ {gust_kt} kt."
-    return f"General recommendation based on a forecast of {gust_kt} kt gusts."
+    if route_id == "p40-p39": return "Route too short to meet 2hr min."
+    if route_id == "p40-clipper": return f"Easy trip, gusts ≤ {gust_kt} kt."
+    if route_id == "p40-tiburon": return f"Exposed crossing, gusts ≤ {gust_kt} kt."
+    if route_id == "p40-cavallo": return f"Exposed near GG Bridge, gusts ≤ {gust_kt} kt."
+    return f"Forecast: {gust_kt} kt gusts."
 
 # --- DATA FETCHING FUNCTIONS ---
 def get_weather_forecast():
-    api_key=os.getenv("WEATHER_API_KEY");
+    api_key=os.getenv("WEATHER_API_KEY")
     if not api_key: print("CRITICAL: WEATHER_API_KEY not found."); return None, None
     url=f"https://api.openweathermap.org/data/3.0/onecall?lat={P40[0]}&lon={P40[1]}&exclude=current,minutely,alerts&appid={api_key}&units=imperial"
     try:
@@ -86,3 +90,46 @@ def main():
 
     tide_data = get_noaa_predictions(NOAA_TIDE_STATION, "predictions")
     current_data = get_noaa_predictions(NOAA_CURRENT_STATION, "currents_predictions")
+    
+    payload = {"generated_at": datetime.now(TZ).isoformat(), "rider_preset": "Casual", "version": "8.2.1-fix", "days": [], "disclaimer": "Advisory only..."}
+
+    for d, day_forecast in enumerate(daily_forecasts):
+        the_date = datetime.fromtimestamp(day_forecast['dt'], tz=TZ).date()
+        day_obj = {"date_local": the_date.strftime('%Y-%m-%d'), "recommendations": []}
+        start_time = datetime.fromtimestamp(day_forecast['sunrise'], tz=TZ) + timedelta(hours=1)
+
+        for r in ROUTES:
+            dist = route_distance_miles(r)
+            duration = dist / 2.7
+            end_time = start_time + timedelta(hours=duration)
+            
+            hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'], tz=TZ) < end_time] if hourly_forecasts else []
+            max_gust = max((h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window), default=day_forecast.get('wind_gust', 0))
+            wind_speeds = [h.get('wind_speed', 0) for h in hourly_in_window] or [day_forecast.get('wind_speed', 0)]
+            wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
+            
+            tide_summary, current_summary = "", ""
+            try:
+                if current_data and 'data' in current_data:
+                    currents = [p for p in current_data['data'] if 't' in p and 's' in p and start_time <= datetime.strptime(p['t'], '%Y-%m-%d %H:%M').astimezone(TZ) < end_time]
+                    if currents:
+                        min_c=min(float(p['s']) for p in currents); max_c=max(float(p['s']) for p in currents)
+                        direction="Flood" if float(currents[0]['s']) > 0 else "Ebb"
+                        current_summary = f"{direction} {abs(min_c):.1f}-{abs(max_c):.1f} kts"
+            except Exception as e:
+                print(f"WARN: Handled a current data parsing error: {e}")
+
+            rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "distance_miles": round(dist, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "notes": why_line(r['id'], 'difficulty', max_gust) }
+            if r["id"] == "p40-p39":
+                rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "distance_miles": 0.0, "notes": "Route too short to meet 2hr min."})
+            
+            day_obj["recommendations"].append(rec)
+        payload["days"].append(day_obj)
+
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/plan.json", "w") as f:
+        json.dump(payload, f, indent=2)
+    print("Successfully wrote new plan with expanded locations.")
+
+if __name__ == "__main__":
+    main()
