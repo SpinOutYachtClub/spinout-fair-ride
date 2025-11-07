@@ -1,5 +1,3 @@
-Here’s a clean, ready-to-paste README.md for spinout-fair-ride (no “Project Nautilus” anywhere):
-
 # Spinout Fair Ride — Automated Daily Planner
 
 **Automated planner that generates daily sailing recommendations for Spinout Fair Ride.**  
