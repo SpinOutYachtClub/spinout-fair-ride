@@ -25,7 +25,13 @@ SCHOONMAKER = (37.8546, -122.4764)
 
 # --- THIS IS THE FIX: Explicitly define legs for clarity and robustness ---
 ROUTES = [
-    {"id":"p40-p39", "name":"Pier 40 to Pier 39", "legs":[(P40, P39)]},
+    # The original Pier 39 route, now marked as a 'no-go' intentionally.
+    # We can even remove this later if we don't want to show it at all.
+    {"id":"p40-p39-short", "name":"Pier 40 to Pier 39 (Direct)", "legs":[(P40, P39)]},
+    
+    # --- NEW HARBOR LOOP VERSION ---
+    # Note the new 'id' and 'name'. The 'bonus_miles' is a special key we'll use.
+    {"id":"p40-p39-loop", "name":"Pier 40 to Pier 39 (Harbor Loop)", "legs":[(P40, P39)], "bonus_miles": 1.5},
     {"id":"p40-clipper", "name":"Pier 40 to Clipper Cove", "legs":[(P40, CLIPPER)]},
     {"id":"p40-tiburon", "name":"Pier 40 to Tiburon", "legs":[(P40, TIBURON)]},
     {"id":"p40-cavallo", "name":"Pier 40 to Cavallo Point", "legs":[(P40, CAVALLO)]},
