@@ -1,7 +1,7 @@
 {
-  "generated_at": "2025-11-07T13:59:11.484070-08:00",
+  "generated_at": "2025-11-07T19:53:52.458792-08:00",
   "rider_preset": "Casual",
-  "version": "8.2.1-fix",
+  "version": "8.3.0",
   "days": [
     {
       "date_local": "2025-11-07",
@@ -12,13 +12,12 @@
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T09:14:57.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -30,9 +29,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 8 kt."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -43,10 +41,9 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 8 kt."
+          "wind_range": "7-7",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -58,9 +55,8 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 8 kt."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -72,9 +68,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -86,9 +81,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -100,9 +94,8 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -114,9 +107,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -128,13 +120,12 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T12:28:43.024749-08:00",
           "duration_hours": 4.8,
@@ -142,9 +133,8 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -156,9 +146,8 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -170,13 +159,12 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T12:47:09.285891-08:00",
           "duration_hours": 5.1,
@@ -184,9 +172,8 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 8 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         }
       ]
     },
@@ -199,13 +186,12 @@
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T09:16:02.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -217,9 +203,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 6 kt."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -230,10 +215,9 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 7 kt."
+          "wind_range": "3-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -244,10 +228,9 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-5",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 7 kt."
+          "wind_range": "3-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -259,9 +242,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -273,9 +255,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 4 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -286,10 +267,9 @@
           "distance_miles": 10.4,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "3-4",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -301,9 +281,8 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 4 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -314,24 +293,22 @@
           "distance_miles": 13.9,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-5",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 7 kt gusts."
+          "wind_range": "3-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T12:29:48.024749-08:00",
           "duration_hours": 4.8,
           "distance_miles": 12.9,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-5",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 7 kt gusts."
+          "wind_range": "3-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -342,10 +319,9 @@
           "distance_miles": 14.3,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 7 kt gusts."
+          "wind_range": "3-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -356,24 +332,22 @@
           "distance_miles": 13.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-5",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 7 kt gusts."
+          "wind_range": "3-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T12:48:14.285891-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.7,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "4-5",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 7 kt gusts."
+          "wind_range": "3-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         }
       ]
     },
@@ -386,13 +360,12 @@
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T09:17:07.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -403,10 +376,9 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 6 kt."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -417,10 +389,9 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 6 kt."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -431,10 +402,9 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 6 kt."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -445,10 +415,9 @@
           "distance_miles": 6.8,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -459,10 +428,9 @@
           "distance_miles": 5.0,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -473,10 +441,9 @@
           "distance_miles": 10.4,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -487,10 +454,9 @@
           "distance_miles": 2.1,
           "difficulty": "Easy",
           "confidence": "High",
-          "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -501,24 +467,22 @@
           "distance_miles": 13.9,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T12:30:53.024749-08:00",
           "duration_hours": 4.8,
           "distance_miles": 12.9,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -529,10 +493,9 @@
           "distance_miles": 14.3,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -543,24 +506,22 @@
           "distance_miles": 13.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T12:49:19.285891-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.7,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "5-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "wind_range": "4-6",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         }
       ]
     },
@@ -573,13 +534,12 @@
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T09:18:12.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -591,9 +551,8 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 6 kt."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -605,9 +564,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 6 kt."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -619,9 +577,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 6 kt."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -633,9 +590,8 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -647,9 +603,8 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -661,9 +616,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -675,9 +629,8 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -689,13 +642,12 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T12:31:58.024749-08:00",
           "duration_hours": 4.8,
@@ -703,9 +655,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -717,9 +668,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -731,13 +681,12 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T12:50:24.285891-08:00",
           "duration_hours": 5.1,
@@ -745,9 +694,8 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 6 kt gusts."
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         }
       ]
     },
@@ -760,13 +708,12 @@
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T09:19:17.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -777,10 +724,9 @@
           "distance_miles": 6.4,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 5 kt."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -791,10 +737,9 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 5 kt."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -805,10 +750,9 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 5 kt."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -819,10 +763,9 @@
           "distance_miles": 6.8,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -833,10 +776,9 @@
           "distance_miles": 5.0,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -847,10 +789,9 @@
           "distance_miles": 10.4,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -861,10 +802,9 @@
           "distance_miles": 2.1,
           "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -875,24 +815,22 @@
           "distance_miles": 13.9,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T12:33:03.024749-08:00",
           "duration_hours": 4.8,
           "distance_miles": 12.9,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -903,10 +841,9 @@
           "distance_miles": 14.3,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -917,24 +854,22 @@
           "distance_miles": 13.5,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T12:51:29.285891-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.7,
           "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 5 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After H, approaching L",
+          "current_summary": ""
         }
       ]
     },
@@ -947,13 +882,12 @@
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T09:20:22.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -962,12 +896,11 @@
           "end_local": "2025-11-12T10:08:16.937606-08:00",
           "duration_hours": 2.4,
           "distance_miles": 6.4,
-          "difficulty": "Challenging",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 23 kt."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -976,12 +909,11 @@
           "end_local": "2025-11-12T13:09:08.733039-08:00",
           "duration_hours": 5.4,
           "distance_miles": 14.5,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 23 kt."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -990,12 +922,11 @@
           "end_local": "2025-11-12T12:15:34.837172-08:00",
           "duration_hours": 4.5,
           "distance_miles": 12.1,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 23 kt."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -1004,12 +935,11 @@
           "end_local": "2025-11-12T10:18:07.955503-08:00",
           "duration_hours": 2.5,
           "distance_miles": 6.8,
-          "difficulty": "Challenging",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -1018,12 +948,11 @@
           "end_local": "2025-11-12T09:38:54.789937-08:00",
           "duration_hours": 1.9,
           "distance_miles": 5.0,
-          "difficulty": "Challenging",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -1032,12 +961,11 @@
           "end_local": "2025-11-12T11:37:51.905575-08:00",
           "duration_hours": 3.8,
           "distance_miles": 10.4,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -1046,12 +974,11 @@
           "end_local": "2025-11-12T08:33:00.206611-08:00",
           "duration_hours": 0.8,
           "distance_miles": 2.1,
-          "difficulty": "Challenging",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -1060,26 +987,24 @@
           "end_local": "2025-11-12T12:55:37.681955-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.9,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T12:34:08.024749-08:00",
           "duration_hours": 4.8,
           "distance_miles": 12.9,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -1088,12 +1013,11 @@
           "end_local": "2025-11-12T13:04:58.014092-08:00",
           "duration_hours": 5.3,
           "distance_miles": 14.3,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -1102,26 +1026,24 @@
           "end_local": "2025-11-12T12:46:45.893703-08:00",
           "duration_hours": 5.0,
           "distance_miles": 13.5,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T12:52:34.285891-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.7,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "16-16",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "5-5",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         }
       ]
     },
@@ -1134,13 +1056,12 @@
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T09:21:27.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -1149,12 +1070,11 @@
           "end_local": "2025-11-13T10:09:21.937606-08:00",
           "duration_hours": 2.4,
           "distance_miles": 6.4,
-          "difficulty": "No-Go",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 27 kt."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -1163,12 +1083,11 @@
           "end_local": "2025-11-13T13:10:13.733039-08:00",
           "duration_hours": 5.4,
           "distance_miles": 14.5,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 27 kt."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -1177,12 +1096,11 @@
           "end_local": "2025-11-13T12:16:39.837172-08:00",
           "duration_hours": 4.5,
           "distance_miles": 12.1,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 27 kt."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -1191,12 +1109,11 @@
           "end_local": "2025-11-13T10:19:12.955503-08:00",
           "duration_hours": 2.5,
           "distance_miles": 6.8,
-          "difficulty": "No-Go",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -1205,12 +1122,11 @@
           "end_local": "2025-11-13T09:39:59.789937-08:00",
           "duration_hours": 1.9,
           "distance_miles": 5.0,
-          "difficulty": "No-Go",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -1219,12 +1135,11 @@
           "end_local": "2025-11-13T11:38:56.905575-08:00",
           "duration_hours": 3.8,
           "distance_miles": 10.4,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -1233,12 +1148,11 @@
           "end_local": "2025-11-13T08:34:05.206611-08:00",
           "duration_hours": 0.8,
           "distance_miles": 2.1,
-          "difficulty": "No-Go",
+          "difficulty": "Easy",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -1247,26 +1161,24 @@
           "end_local": "2025-11-13T12:56:42.681955-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.9,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T12:35:13.024749-08:00",
           "duration_hours": 4.8,
           "distance_miles": 12.9,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -1275,12 +1187,11 @@
           "end_local": "2025-11-13T13:06:03.014092-08:00",
           "duration_hours": 5.3,
           "distance_miles": 14.3,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -1289,26 +1200,24 @@
           "end_local": "2025-11-13T12:47:50.893703-08:00",
           "duration_hours": 5.0,
           "distance_miles": 13.5,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T12:53:39.285891-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.7,
-          "difficulty": "No-Go",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "17-17",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 27 kt gusts."
+          "wind_range": "4-4",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         }
       ]
     },
@@ -1321,13 +1230,12 @@
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T09:22:32.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Route too short to meet 2hr min."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-clipper",
@@ -1336,12 +1244,11 @@
           "end_local": "2025-11-14T10:10:26.937606-08:00",
           "duration_hours": 2.4,
           "distance_miles": 6.4,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Easy trip, gusts \u2264 23 kt."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-tiburon",
@@ -1350,12 +1257,11 @@
           "end_local": "2025-11-14T13:11:18.733039-08:00",
           "duration_hours": 5.4,
           "distance_miles": 14.5,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed crossing, gusts \u2264 23 kt."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cavallo",
@@ -1364,12 +1270,11 @@
           "end_local": "2025-11-14T12:17:44.837172-08:00",
           "duration_hours": 4.5,
           "distance_miles": 12.1,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Exposed near GG Bridge, gusts \u2264 23 kt."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-sfyh",
@@ -1378,12 +1283,11 @@
           "end_local": "2025-11-14T10:20:17.955503-08:00",
           "duration_hours": 2.5,
           "distance_miles": 6.8,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-aqpark",
@@ -1392,12 +1296,11 @@
           "end_local": "2025-11-14T09:41:04.789937-08:00",
           "duration_hours": 1.9,
           "distance_miles": 5.0,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-torpedo",
@@ -1406,12 +1309,11 @@
           "end_local": "2025-11-14T11:40:01.905575-08:00",
           "duration_hours": 3.8,
           "distance_miles": 10.4,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-cranecove",
@@ -1420,12 +1322,11 @@
           "end_local": "2025-11-14T08:35:10.206611-08:00",
           "duration_hours": 0.8,
           "distance_miles": 2.1,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brisbane",
@@ -1434,26 +1335,24 @@
           "end_local": "2025-11-14T12:57:47.681955-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.9,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Square",
+          "name": "Pier 40 to Jack London Sq",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T12:36:18.024749-08:00",
           "duration_hours": 4.8,
           "distance_miles": 12.9,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-brooklyn",
@@ -1462,12 +1361,11 @@
           "end_local": "2025-11-14T13:07:08.014092-08:00",
           "duration_hours": 5.3,
           "distance_miles": 14.3,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-berkeley",
@@ -1476,29 +1374,26 @@
           "end_local": "2025-11-14T12:48:55.893703-08:00",
           "duration_hours": 5.0,
           "distance_miles": 13.5,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker Beach",
+          "name": "Pier 40 to Schoonmaker",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T12:54:44.285891-08:00",
           "duration_hours": 5.1,
           "distance_miles": 13.7,
-          "difficulty": "Challenging",
+          "difficulty": "Moderate",
           "confidence": "Medium",
-          "wind_range": "18-18",
-          "tide_summary": "",
-          "current_summary": "",
-          "notes": "Forecast: 23 kt gusts."
+          "wind_range": "12-12",
+          "tide_summary": "After L, approaching H",
+          "current_summary": ""
         }
       ]
     }
-  ],
-  "disclaimer": "Advisory only..."
+  ]
 }
