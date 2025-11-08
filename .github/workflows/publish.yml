@@ -1,4 +1,4 @@
-name: Build and Deploy Fair Ride Plan
+name: Generate Daily Sailing Plan
 
 on:
   push:
