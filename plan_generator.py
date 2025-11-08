@@ -90,7 +90,7 @@ def main():
         todays_tide_events = [p for p in tide_data.get('predictions', []) if 't' in p and datetime.strptime(p['t'], '%Y-%m-%d %H:%M').date() == the_date] if tide_data else []
         all_currents_today = [p for p in current_data.get('data',[]) if 't' in p and 's' in p and datetime.strptime(p['t'], '%Y-%m-%d %H:%M').date() == the_date] if current_data else []
         for r in ROUTES:
-            dist = route_distance_miles(r); duration = dist / 2.7; end_time = start_time + timedelta(hours=duration)
+            dist = route_distance_miles(r) + r.get("bonus_miles", 0); duration = dist / 2.7; end_time = start_time + timedelta(hours=duration)
             hourly_in_window = [h for h in hourly_forecasts if start_time <= datetime.fromtimestamp(h['dt'],tz=TZ) < end_time] if hourly_forecasts else []
             max_gust = max((h.get('wind_gust', h.get('wind_speed', 0)) for h in hourly_in_window), default=day_forecast.get('wind_gust',0))
             wind_speeds = [h.get('wind_speed',0) for h in hourly_in_window] or [day_forecast.get('wind_speed',0)]; wind_range = f"{round(min(wind_speeds))}-{round(max(wind_speeds))}"
@@ -115,7 +115,7 @@ def main():
             except Exception as e: print(f"WARN: Handled a parsing error: {e}")
 
             rec = {"route_id": r["id"], "name": r["name"], "start_local": start_time.isoformat(), "end_local": end_time.isoformat(), "duration_hours": round(duration, 1), "distance_miles": round(dist, 1), "difficulty": classify(duration, max_gust), "confidence": "High" if d < 3 else "Medium", "wind_range": wind_range, "tide_summary": tide_summary, "current_summary": current_summary, "current_effect": current_effect}
-            if r["name"] == "Pier 40 to Pier 39": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "distance_miles": round(dist, 1), "no_go_reason": "Route too short.", "current_summary":"N/A", "current_effect":"N/A"})
+            if r["name"] == "Pier 40 to Pier 39 (Direct)": rec.update({"difficulty": "No-Go", "duration_hours": 0.0, "distance_miles": round(dist, 1), "no_go_reason": "Route too short.", "current_summary":"N/A", "current_effect":"N/A"})
             day_obj["recommendations"].append(rec)
         payload["days"].append(day_obj)
     
