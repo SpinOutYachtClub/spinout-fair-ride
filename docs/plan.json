@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-07T21:40:18.362782-08:00",
+  "generated_at": "2025-11-07T22:29:57.139064-08:00",
   "rider_preset": "Casual",
   "version": "11.0.0-final",
   "days": [
@@ -232,7 +232,7 @@
           "distance_miles": 14.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-6",
+          "wind_range": "4-7",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -246,7 +246,7 @@
           "distance_miles": 12.1,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-5",
+          "wind_range": "4-6",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -288,7 +288,7 @@
           "distance_miles": 10.4,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-4",
+          "wind_range": "4-5",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -316,7 +316,7 @@
           "distance_miles": 13.9,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-5",
+          "wind_range": "4-6",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -330,7 +330,7 @@
           "distance_miles": 12.9,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-5",
+          "wind_range": "4-6",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -344,7 +344,7 @@
           "distance_miles": 14.3,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-6",
+          "wind_range": "4-7",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -358,7 +358,7 @@
           "distance_miles": 13.5,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-5",
+          "wind_range": "4-6",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
@@ -372,7 +372,7 @@
           "distance_miles": 13.7,
           "difficulty": "Moderate",
           "confidence": "High",
-          "wind_range": "3-5",
+          "wind_range": "4-6",
           "tide_summary": "N/A",
           "current_summary": "N/A",
           "current_effect": "N/A"
