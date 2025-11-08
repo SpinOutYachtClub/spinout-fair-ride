@@ -1,7 +1,7 @@
 {
-  "generated_at": "2025-11-07T20:49:09.792948-08:00",
+  "generated_at": "2025-11-07T21:02:37.999106-08:00",
   "rider_preset": "Casual",
-  "version": "9.0.0-data-rich-tides",
+  "version": "9.1.0-windowed-tides",
   "days": [
     {
       "date_local": "2025-11-07",
@@ -16,7 +16,7 @@
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -29,7 +29,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -42,7 +42,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -55,7 +55,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -68,7 +68,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -81,7 +81,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -94,7 +94,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -107,7 +107,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -120,7 +120,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -133,7 +133,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -146,7 +146,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -159,7 +159,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         },
         {
@@ -172,7 +172,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "H 11:42AM, 6.97ft \u2192 L 6:41PM, -1.50ft (-8.47ft)",
+          "tide_summary": "L 6:41PM, -1.50ft",
           "current_summary": ""
         }
       ]
@@ -190,7 +190,7 @@
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -203,7 +203,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -216,7 +216,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-6",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         },
         {
@@ -229,7 +229,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         },
         {
@@ -242,7 +242,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -255,7 +255,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -268,7 +268,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-4",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -281,7 +281,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -294,7 +294,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         },
         {
@@ -307,7 +307,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         },
         {
@@ -320,7 +320,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-6",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         },
         {
@@ -333,7 +333,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         },
         {
@@ -346,7 +346,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "H 12:31PM, 6.74ft \u2192 L 7:36PM, -1.27ft (-8.01ft)",
+          "tide_summary": "L 7:36PM, -1.27ft",
           "current_summary": ""
         }
       ]
@@ -364,7 +364,7 @@
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -377,7 +377,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -390,7 +390,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "L 8:36PM, -0.91ft",
           "current_summary": ""
         },
         {
@@ -403,7 +403,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -416,7 +416,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -429,7 +429,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -442,7 +442,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -455,7 +455,7 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -468,7 +468,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "L 8:36PM, -0.91ft",
           "current_summary": ""
         },
         {
@@ -481,7 +481,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -494,7 +494,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "L 8:36PM, -0.91ft",
           "current_summary": ""
         },
         {
@@ -507,7 +507,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "L 8:36PM, -0.91ft",
           "current_summary": ""
         },
         {
@@ -520,7 +520,7 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "H 1:26PM, 6.34ft \u2192 L 8:36PM, -0.91ft (-7.25ft)",
+          "tide_summary": "L 8:36PM, -0.91ft",
           "current_summary": ""
         }
       ]
@@ -538,7 +538,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -551,7 +551,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -564,7 +564,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -577,7 +577,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -590,7 +590,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -603,7 +603,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -616,7 +616,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -629,7 +629,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -642,7 +642,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -655,7 +655,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -668,7 +668,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -681,7 +681,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -694,7 +694,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "H 2:28PM, 5.82ft \u2192 L 9:39PM, -0.50ft (-6.32ft)",
+          "tide_summary": "",
           "current_summary": ""
         }
       ]
@@ -712,7 +712,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -725,7 +725,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -738,7 +738,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -751,7 +751,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -764,7 +764,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -777,7 +777,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -790,7 +790,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -803,7 +803,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -816,7 +816,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -829,7 +829,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -842,7 +842,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -855,7 +855,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -868,7 +868,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 3:39PM, 5.27ft \u2192 L 10:44PM, -0.09ft (-5.37ft)",
+          "tide_summary": "",
           "current_summary": ""
         }
       ]
@@ -886,7 +886,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -899,7 +899,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -912,7 +912,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -925,7 +925,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -938,7 +938,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -951,7 +951,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -964,7 +964,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -977,7 +977,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -990,7 +990,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -1003,7 +1003,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -1016,7 +1016,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -1029,7 +1029,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         },
         {
@@ -1042,7 +1042,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "L 11:38AM, 2.78ft \u2192 H 4:58PM, 4.80ft (+2.02ft)",
+          "tide_summary": "H 4:58PM, 4.80ft",
           "current_summary": ""
         }
       ]
@@ -1060,7 +1060,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1073,7 +1073,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1086,7 +1086,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1099,7 +1099,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1112,7 +1112,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1125,7 +1125,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1138,7 +1138,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1151,7 +1151,7 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1164,7 +1164,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1177,7 +1177,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1190,7 +1190,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1203,7 +1203,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         },
         {
@@ -1216,7 +1216,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "L 12:48PM, 2.19ft \u2192 H 6:19PM, 4.49ft (+2.30ft)",
+          "tide_summary": "H 6:19PM, 4.49ft",
           "current_summary": ""
         }
       ]
@@ -1234,7 +1234,7 @@
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1247,7 +1247,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1260,7 +1260,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1273,7 +1273,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1286,7 +1286,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1299,7 +1299,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1312,7 +1312,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1325,7 +1325,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "",
           "current_summary": ""
         },
         {
@@ -1338,7 +1338,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1351,7 +1351,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1364,7 +1364,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1377,7 +1377,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         },
         {
@@ -1390,7 +1390,7 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "L 1:45PM, 1.56ft \u2192 H 7:35PM, 4.35ft (+2.79ft)",
+          "tide_summary": "H 7:35PM, 4.35ft",
           "current_summary": ""
         }
       ]
