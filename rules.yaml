@@ -18,5 +18,5 @@ safety_score_weights:
 # Badge thresholds
 badges:
   green_min: 80
-  yellow_min: 70
-  red_min: 60
+  yellow_min: 65
+  red_min: 50
