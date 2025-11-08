@@ -1,7 +1,7 @@
 {
-  "generated_at": "2025-11-07T21:02:37.999106-08:00",
+  "generated_at": "2025-11-07T21:40:18.362782-08:00",
   "rider_preset": "Casual",
-  "version": "9.1.0-windowed-tides",
+  "version": "11.0.0-final",
   "days": [
     {
       "date_local": "2025-11-07",
@@ -12,12 +12,14 @@
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T09:14:57.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -30,7 +32,8 @@
           "confidence": "High",
           "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -42,8 +45,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -55,12 +59,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T10:12:42.955503-08:00",
           "duration_hours": 2.5,
@@ -69,11 +74,12 @@
           "confidence": "High",
           "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T09:33:29.789937-08:00",
           "duration_hours": 1.9,
@@ -82,11 +88,12 @@
           "confidence": "High",
           "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T11:32:26.905575-08:00",
           "duration_hours": 3.8,
@@ -94,12 +101,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T08:27:35.206611-08:00",
           "duration_hours": 0.8,
@@ -108,7 +116,8 @@
           "confidence": "High",
           "wind_range": "7-7",
           "tide_summary": "",
-          "current_summary": ""
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -120,12 +129,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T12:28:43.024749-08:00",
           "duration_hours": 4.8,
@@ -133,8 +143,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -146,8 +157,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -159,12 +171,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-07T07:41:38-08:00",
           "end_local": "2025-11-07T12:47:09.285891-08:00",
           "duration_hours": 5.1,
@@ -172,8 +185,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "7-7",
-          "tide_summary": "L 6:41PM, -1.50ft",
-          "current_summary": ""
+          "tide_summary": "L @ 6:41PM",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -186,12 +200,14 @@
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T09:16:02.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -203,8 +219,9 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -216,8 +233,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-6",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -229,12 +247,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T10:13:47.955503-08:00",
           "duration_hours": 2.5,
@@ -242,12 +261,13 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T09:34:34.789937-08:00",
           "duration_hours": 1.9,
@@ -255,12 +275,13 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T11:33:31.905575-08:00",
           "duration_hours": 3.8,
@@ -268,12 +289,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T08:28:40.206611-08:00",
           "duration_hours": 0.8,
@@ -281,8 +303,9 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -294,12 +317,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T12:29:48.024749-08:00",
           "duration_hours": 4.8,
@@ -307,8 +331,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -320,8 +345,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-6",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -333,12 +359,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-08T07:42:43-08:00",
           "end_local": "2025-11-08T12:48:14.285891-08:00",
           "duration_hours": 5.1,
@@ -346,8 +373,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "3-5",
-          "tide_summary": "L 7:36PM, -1.27ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -360,12 +388,14 @@
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T09:17:07.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -377,8 +407,9 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -390,8 +421,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "L 8:36PM, -0.91ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -403,12 +435,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T10:14:52.955503-08:00",
           "duration_hours": 2.5,
@@ -416,12 +449,13 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T09:35:39.789937-08:00",
           "duration_hours": 1.9,
@@ -429,12 +463,13 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T11:34:36.905575-08:00",
           "duration_hours": 3.8,
@@ -442,12 +477,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T08:29:45.206611-08:00",
           "duration_hours": 0.8,
@@ -455,8 +491,9 @@
           "difficulty": "Easy",
           "confidence": "High",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -468,12 +505,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "L 8:36PM, -0.91ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T12:30:53.024749-08:00",
           "duration_hours": 4.8,
@@ -481,8 +519,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -494,8 +533,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "L 8:36PM, -0.91ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -507,12 +547,13 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "L 8:36PM, -0.91ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-09T07:43:48-08:00",
           "end_local": "2025-11-09T12:49:19.285891-08:00",
           "duration_hours": 5.1,
@@ -520,8 +561,9 @@
           "difficulty": "Moderate",
           "confidence": "High",
           "wind_range": "4-6",
-          "tide_summary": "L 8:36PM, -0.91ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -534,12 +576,14 @@
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T09:18:12.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -551,8 +595,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -564,8 +609,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -577,12 +623,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T10:15:57.955503-08:00",
           "duration_hours": 2.5,
@@ -590,12 +637,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T09:36:44.789937-08:00",
           "duration_hours": 1.9,
@@ -603,12 +651,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T11:35:41.905575-08:00",
           "duration_hours": 3.8,
@@ -616,12 +665,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T08:30:50.206611-08:00",
           "duration_hours": 0.8,
@@ -629,8 +679,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -642,12 +693,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T12:31:58.024749-08:00",
           "duration_hours": 4.8,
@@ -655,8 +707,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -668,8 +721,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -681,12 +735,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-10T07:44:53-08:00",
           "end_local": "2025-11-10T12:50:24.285891-08:00",
           "duration_hours": 5.1,
@@ -694,8 +749,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "6-6",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -708,12 +764,14 @@
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T09:19:17.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -725,8 +783,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -738,8 +797,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -751,12 +811,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T10:17:02.955503-08:00",
           "duration_hours": 2.5,
@@ -764,12 +825,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T09:37:49.789937-08:00",
           "duration_hours": 1.9,
@@ -777,12 +839,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T11:36:46.905575-08:00",
           "duration_hours": 3.8,
@@ -790,12 +853,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T08:31:55.206611-08:00",
           "duration_hours": 0.8,
@@ -803,8 +867,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -816,12 +881,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T12:33:03.024749-08:00",
           "duration_hours": 4.8,
@@ -829,8 +895,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -842,8 +909,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -855,12 +923,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-11T07:45:58-08:00",
           "end_local": "2025-11-11T12:51:29.285891-08:00",
           "duration_hours": 5.1,
@@ -868,8 +937,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -882,12 +952,14 @@
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T09:20:22.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -899,8 +971,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -912,8 +985,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -925,12 +999,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T10:18:07.955503-08:00",
           "duration_hours": 2.5,
@@ -938,12 +1013,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T09:38:54.789937-08:00",
           "duration_hours": 1.9,
@@ -951,12 +1027,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T11:37:51.905575-08:00",
           "duration_hours": 3.8,
@@ -964,12 +1041,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T08:33:00.206611-08:00",
           "duration_hours": 0.8,
@@ -977,8 +1055,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -990,12 +1069,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T12:34:08.024749-08:00",
           "duration_hours": 4.8,
@@ -1003,8 +1083,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -1016,8 +1097,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -1029,12 +1111,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-12T07:47:03-08:00",
           "end_local": "2025-11-12T12:52:34.285891-08:00",
           "duration_hours": 5.1,
@@ -1042,8 +1125,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "5-5",
-          "tide_summary": "H 4:58PM, 4.80ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -1056,12 +1140,14 @@
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T09:21:27.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -1073,8 +1159,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -1086,8 +1173,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -1099,12 +1187,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T10:19:12.955503-08:00",
           "duration_hours": 2.5,
@@ -1112,12 +1201,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T09:39:59.789937-08:00",
           "duration_hours": 1.9,
@@ -1125,12 +1215,13 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T11:38:56.905575-08:00",
           "duration_hours": 3.8,
@@ -1138,12 +1229,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T08:34:05.206611-08:00",
           "duration_hours": 0.8,
@@ -1151,8 +1243,9 @@
           "difficulty": "Easy",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -1164,12 +1257,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T12:35:13.024749-08:00",
           "duration_hours": 4.8,
@@ -1177,8 +1271,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -1190,8 +1285,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -1203,12 +1299,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-13T07:48:08-08:00",
           "end_local": "2025-11-13T12:53:39.285891-08:00",
           "duration_hours": 5.1,
@@ -1216,8 +1313,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "4-4",
-          "tide_summary": "H 6:19PM, 4.49ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     },
@@ -1230,12 +1328,14 @@
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T09:22:32.699498-08:00",
           "duration_hours": 0.0,
-          "distance_miles": 0.0,
+          "distance_miles": 4.2,
           "difficulty": "No-Go",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A",
+          "no_go_reason": "Route too short."
         },
         {
           "route_id": "p40-clipper",
@@ -1247,8 +1347,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-tiburon",
@@ -1260,8 +1361,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cavallo",
@@ -1273,12 +1375,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-sfyh",
-          "name": "Pier 40 to SF Yacht Harbor",
+          "name": "Pier 40 to San Francisco Yacht Harbor",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T10:20:17.955503-08:00",
           "duration_hours": 2.5,
@@ -1286,12 +1389,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-aqpark",
-          "name": "Pier 40 to Aquatic Park",
+          "name": "Pier 40 to San Francisco Aquatic Park",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T09:41:04.789937-08:00",
           "duration_hours": 1.9,
@@ -1299,12 +1403,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-torpedo",
-          "name": "Pier 40 to Torpedo Wharf",
+          "name": "Pier 40 to Torpedo Warf",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T11:40:01.905575-08:00",
           "duration_hours": 3.8,
@@ -1312,12 +1417,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-cranecove",
-          "name": "Pier 40 to Crane Cove",
+          "name": "Pier 40 to Crane Cove Park",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T08:35:10.206611-08:00",
           "duration_hours": 0.8,
@@ -1325,8 +1431,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brisbane",
@@ -1338,12 +1445,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-jacklondon",
-          "name": "Pier 40 to Jack London Sq",
+          "name": "Pier 40 to Jack London Square Marina",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T12:36:18.024749-08:00",
           "duration_hours": 4.8,
@@ -1351,8 +1459,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-brooklyn",
@@ -1364,8 +1473,9 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-berkeley",
@@ -1377,12 +1487,13 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         },
         {
           "route_id": "p40-schoonmaker",
-          "name": "Pier 40 to Schoonmaker",
+          "name": "Pier 40 to Schoonmaker Beach",
           "start_local": "2025-11-14T07:49:13-08:00",
           "end_local": "2025-11-14T12:54:44.285891-08:00",
           "duration_hours": 5.1,
@@ -1390,11 +1501,11 @@
           "difficulty": "Moderate",
           "confidence": "Medium",
           "wind_range": "12-12",
-          "tide_summary": "H 7:35PM, 4.35ft",
-          "current_summary": ""
+          "tide_summary": "N/A",
+          "current_summary": "N/A",
+          "current_effect": "N/A"
         }
       ]
     }
-  ],
-  "disclaimer": "Advisory only..."
+  ]
 }
