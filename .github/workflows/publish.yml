@@ -1,32 +1,29 @@
-name: Generate Daily Sailing Plan
+name: Daily Plan Generator
 
+# Runs every morning and publishes docs/plan.json for the website widget.
+# Cron is UTC. 13:00 UTC is ~5am PST / 6am PDT. Adjust if you want a
+# different local time; a fixed cron drifts by one hour across DST.
 on:
-  push:
-    branches: ["main"]
   schedule:
-    - cron: "0 11 * * *"
-  workflow_dispatch:
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}   # lets you trigger a run by hand from the Actions tab
 
+# Needed so the workflow can push the regenerated plan back to the repo.
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: daily-plan
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-plan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -34,16 +31,33 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run script to generate plan
+      - name: Generate plan.json
         env:
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: python plan_generator.py
+          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+        run: python plan_generator.py --date today --skill intermediate --out docs/plan.json
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './docs'
+      - name: Validate output
+        run: |
+          python - <<'PY'
+          import json
+          d = json.load(open("docs/plan.json"))
+          assert d.get("routes"), "no routes in plan.json"
+          assert d.get("safety_weight") == 0.40, "safety weight drifted from 0.40"
+          for r in d["routes"]:
+              assert r["status"] in ("green", "yellow", "red"), r["id"]
+          print("plan.json OK:", len(d["routes"]), "routes,", d["day"])
+          PY
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # Silent Failures fix: commit with direct git, never a third-party action.
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/plan.json docs/windows.csv
+          if git diff --staged --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Daily plan: $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin ${GITHUB_REF_NAME}
+            git push origin ${GITHUB_REF_NAME}
+          fi
