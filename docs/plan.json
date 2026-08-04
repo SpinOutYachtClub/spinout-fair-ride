@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-03T18:42:38.490234-07:00",
-  "version": "2.1.1",
+  "generated_at": "2026-08-03T19:05:46.446420-07:00",
+  "version": "2.1.2",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-03",
   "skill_default": "intermediate",
@@ -49,7 +49,7 @@
         "expert": "yellow"
       },
       "skill": "intermediate",
-      "effort": 7,
+      "effort": 6,
       "windows": [],
       "exposure": [
         "Golden Gate mouth",
@@ -73,25 +73,17 @@
       "status_by_skill": {
         "casual": "red",
         "intermediate": "yellow",
-        "expert": "yellow"
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 6,
+      "effort": 5,
       "windows": [
         {
           "start": "2026-08-03T06:30:00-07:00",
-          "end": "2026-08-03T07:00:00-07:00",
+          "end": "2026-08-03T09:30:00-07:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 14 mph, gust 19"
-          ]
-        },
-        {
-          "start": "2026-08-03T15:30:00-07:00",
-          "end": "2026-08-03T16:00:00-07:00",
-          "reasons": [
-            "near slack water",
-            "wind 14 mph, gust 19"
+            "wind 11 mph, gust 15"
           ]
         },
         {
@@ -131,12 +123,11 @@
       "effort": 5,
       "windows": [
         {
-          "start": "2026-08-03T08:30:00-07:00",
-          "end": "2026-08-03T16:30:00-07:00",
+          "start": "2026-08-03T06:30:00-07:00",
+          "end": "2026-08-03T13:00:00-07:00",
           "reasons": [
-            "near slack water",
-            "wind 14 mph, gust 19",
-            "inside a ferry window, expect traffic"
+            "ebb current 1.0 kts, 0.3 adverse",
+            "wind 11 mph, gust 15"
           ]
         }
       ],
@@ -157,7 +148,7 @@
   ],
   "data_quality": {
     "tide": "live",
-    "wind": "live",
+    "wind": "estimated",
     "advisory": "live",
     "notes": "Estimated sources are modeled fallbacks. Guides make the final call."
   }
