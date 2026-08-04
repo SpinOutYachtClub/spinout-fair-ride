@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-03T19:05:46.446420-07:00",
+  "generated_at": "2026-08-04T08:24:02.913459-07:00",
   "version": "2.1.2",
   "timezone": "America/Los_Angeles",
-  "day": "2026-08-03",
+  "day": "2026-08-04",
   "skill_default": "intermediate",
   "skills": [
     "casual",
@@ -15,15 +15,25 @@
     {
       "id": "p40-tiburon",
       "name": "Pier 40 to Tiburon",
-      "status": "red",
+      "status": "yellow",
       "status_by_skill": {
-        "casual": "red",
-        "intermediate": "red",
+        "casual": "yellow",
+        "intermediate": "yellow",
         "expert": "yellow"
       },
       "skill": "intermediate",
-      "effort": 6,
-      "windows": [],
+      "effort": 5,
+      "windows": [
+        {
+          "start": "2026-08-04T09:30:00-07:00",
+          "end": "2026-08-04T13:00:00-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 9 mph, gust 10",
+            "inside a ferry window, expect traffic"
+          ]
+        }
+      ],
       "exposure": [
         "Crissy (WNW)",
         "Raccoon Strait (flood)"
@@ -34,23 +44,32 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-03T06:14:26.387088-07:00",
-        "sunset": "2026-08-03T20:17:26.326486-07:00"
+        "sunrise": "2026-08-04T06:15:18.040230-07:00",
+        "sunset": "2026-08-04T20:16:25.772718-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Mind posted ferry windows and verify on-site conditions before launch."
     },
     {
       "id": "p40-cavallo",
       "name": "Pier 40 to Cavallo Point",
-      "status": "red",
+      "status": "yellow",
       "status_by_skill": {
         "casual": "red",
-        "intermediate": "red",
+        "intermediate": "yellow",
         "expert": "yellow"
       },
       "skill": "intermediate",
-      "effort": 6,
-      "windows": [],
+      "effort": 5,
+      "windows": [
+        {
+          "start": "2026-08-04T09:30:00-07:00",
+          "end": "2026-08-04T13:00:00-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 9 mph, gust 10"
+          ]
+        }
+      ],
       "exposure": [
         "Golden Gate mouth",
         "Horseshoe Bay eddy"
@@ -61,37 +80,37 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-03T06:14:26.387088-07:00",
-        "sunset": "2026-08-03T20:17:26.326486-07:00"
+        "sunrise": "2026-08-04T06:15:18.040230-07:00",
+        "sunset": "2026-08-04T20:16:25.772718-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "p40-clipper",
       "name": "Pier 40 to Clipper Cove",
       "status": "yellow",
       "status_by_skill": {
-        "casual": "red",
+        "casual": "yellow",
         "intermediate": "yellow",
         "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 5,
+      "effort": 4,
       "windows": [
         {
-          "start": "2026-08-03T06:30:00-07:00",
-          "end": "2026-08-03T09:30:00-07:00",
+          "start": "2026-08-04T06:30:00-07:00",
+          "end": "2026-08-04T11:00:00-07:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 11 mph, gust 15"
+            "wind 9 mph, gust 10"
           ]
         },
         {
-          "start": "2026-08-03T19:00:00-07:00",
-          "end": "2026-08-03T19:47:26.326486-07:00",
+          "start": "2026-08-04T19:00:00-07:00",
+          "end": "2026-08-04T19:46:25.772718-07:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 14 mph, gust 19"
+            "wind 13 mph, gust 16"
           ]
         }
       ],
@@ -105,29 +124,37 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-03T06:14:26.387088-07:00",
-        "sunset": "2026-08-03T20:17:26.326486-07:00"
+        "sunrise": "2026-08-04T06:15:18.040230-07:00",
+        "sunset": "2026-08-04T20:16:25.772718-07:00"
       },
       "notes": "Mind posted ferry windows and verify on-site conditions before launch."
     },
     {
       "id": "p40-p39",
       "name": "Pier 40 to Pier 39",
-      "status": "yellow",
+      "status": "green",
       "status_by_skill": {
-        "casual": "red",
-        "intermediate": "yellow",
-        "expert": "yellow"
+        "casual": "yellow",
+        "intermediate": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 5,
+      "effort": 4,
       "windows": [
         {
-          "start": "2026-08-03T06:30:00-07:00",
-          "end": "2026-08-03T13:00:00-07:00",
+          "start": "2026-08-04T06:30:00-07:00",
+          "end": "2026-08-04T16:00:00-07:00",
+          "reasons": [
+            "ebb current 1.0 kts, 0.4 adverse",
+            "wind 9 mph, gust 10"
+          ]
+        },
+        {
+          "start": "2026-08-04T19:00:00-07:00",
+          "end": "2026-08-04T19:30:00-07:00",
           "reasons": [
             "ebb current 1.0 kts, 0.3 adverse",
-            "wind 11 mph, gust 15"
+            "wind 13 mph, gust 16"
           ]
         }
       ],
@@ -140,15 +167,15 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-03T06:14:26.387088-07:00",
-        "sunset": "2026-08-03T20:17:26.326486-07:00"
+        "sunrise": "2026-08-04T06:15:18.040230-07:00",
+        "sunset": "2026-08-04T20:16:25.772718-07:00"
       },
       "notes": "Mind posted ferry windows and verify on-site conditions before launch."
     }
   ],
   "data_quality": {
     "tide": "live",
-    "wind": "estimated",
+    "wind": "live",
     "advisory": "live",
     "notes": "Estimated sources are modeled fallbacks. Guides make the final call."
   }
