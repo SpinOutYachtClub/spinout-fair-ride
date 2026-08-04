@@ -6,7 +6,9 @@ name: Daily Plan Generator
 on:
   schedule:
     - cron: "0 13 * * *"
-  workflow_dispatch: {}   # lets you trigger a run by hand from the Actions tab
+  workflow_dispatch: {}
+  push:
+    branches: [main]
 
 # Needed so the workflow can push the regenerated plan back to the repo.
 permissions:
