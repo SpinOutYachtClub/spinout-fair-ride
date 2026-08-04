@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Waterbike AI - Daily Plan Generator
-Version: 2.1.1  (verified rebuild of the 2.1.0 fix package)
+Version: 2.1.2  (wind interpolation fix)
 
 Generates a daily plan.json of safety-scored ride windows for SF Bay
 waterbike routes. Pure Python standard library only, so it runs on a
@@ -39,7 +39,7 @@ from zoneinfo import ZoneInfo
 # Constants
 # ----------------------------------------------------------------------------
 
-VERSION = "2.1.1"
+VERSION = "2.1.2"
 APP_ID = "WaterbikeAI"                       # NOAA courtesy identifier
 TZ = ZoneInfo("America/Los_Angeles")         # single source of local time
 SAFETY_WEIGHT = 0.40                         # immutable; see module docstring
@@ -260,6 +260,53 @@ def current_at(when, tide_events, current_scale):
 # Wind (OpenWeatherMap) + seasonal fallback
 # ----------------------------------------------------------------------------
 
+def _seasonal_hour(date, hour):
+    """Modeled SF Bay wind for one hour: calm mornings, windy afternoons."""
+    base = SEASONAL_WIND[date.month]
+    if hour < 10:
+        factor = 0.6
+    elif hour < 13:
+        factor = 0.85
+    elif hour < 18:
+        factor = 1.15   # classic Bay afternoon westerly
+    else:
+        factor = 0.8
+    wind = round(base * factor)
+    return {"wind": wind, "gust": round(wind * 1.35)}
+
+
+def _interpolate_hours(points):
+    """Fill all 24 hours from sparse (hour, wind, gust) samples.
+
+    OpenWeatherMap's free 5-day endpoint reports every 3 hours, so a plain
+    exact-hour lookup finds data for only 8 of 24 hours. Linearly interpolate
+    between samples and clamp at the ends, so every hour reflects real
+    forecast data rather than a hardcoded placeholder.
+    """
+    if not points:
+        return {}
+    pts = sorted(points, key=lambda p: p[0])
+    hourly = {}
+    for h in range(24):
+        before = None
+        after = None
+        for p in pts:
+            if p[0] <= h:
+                before = p
+            if p[0] >= h and after is None:
+                after = p
+        if before and after and before[0] != after[0]:
+            span = after[0] - before[0]
+            frac = (h - before[0]) / span
+            wind = before[1] + (after[1] - before[1]) * frac
+            gust = before[2] + (after[2] - before[2]) * frac
+        else:
+            src = before or after
+            wind, gust = src[1], src[2]
+        hourly[f"{h:02d}"] = {"wind": round(wind), "gust": round(gust)}
+    return hourly
+
+
 def fetch_wind(date, owm_key):
     """Return (hourly, live). hourly maps 'HH' -> {'wind': mph, 'gust': mph}."""
     lat, lon = STATIONS["wind_owm"]
@@ -267,7 +314,7 @@ def fetch_wind(date, owm_key):
         params = {"lat": lat, "lon": lon, "appid": owm_key, "units": "imperial"}
         data, ok = _get(OWM_FORECAST, params)
         if ok and isinstance(data, dict) and data.get("list"):
-            hourly = {}
+            samples = []
             for slot in data["list"]:
                 try:
                     t = datetime.fromtimestamp(slot["dt"], tz=timezone.utc).astimezone(TZ)
@@ -275,26 +322,17 @@ def fetch_wind(date, owm_key):
                         continue
                     wind = float(slot["wind"]["speed"])
                     gust = float(slot["wind"].get("gust", wind * 1.3))
-                    hourly[t.strftime("%H")] = {"wind": round(wind), "gust": round(gust)}
+                    samples.append((t.hour, wind, gust))
                 except (KeyError, ValueError):
                     continue
-            if hourly:
-                return hourly, True
+            # Require at least 3 real samples before trusting the day as live.
+            # Fewer than that (e.g. a late-evening run near the forecast edge)
+            # means most of the day would be extrapolated from one point.
+            if len(samples) >= 3:
+                return _interpolate_hours(samples), True
 
     # Fallback: seasonal diurnal curve. Mornings calmer, afternoons windier.
-    base = SEASONAL_WIND[date.month]
-    hourly = {}
-    for h in range(24):
-        if h < 10:
-            factor = 0.6
-        elif h < 13:
-            factor = 0.85
-        elif h < 18:
-            factor = 1.15   # classic Bay afternoon westerly
-        else:
-            factor = 0.8
-        wind = round(base * factor)
-        hourly[f"{h:02d}"] = {"wind": wind, "gust": round(wind * 1.35)}
+    hourly = {f"{h:02d}": _seasonal_hour(date, h) for h in range(24)}
     return hourly, False
 
 
@@ -425,7 +463,10 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
                 step += timedelta(minutes=STEP_MIN)
                 continue
             hh = step.strftime("%H")
-            w = wind_hourly.get(hh, wind_hourly.get(f"{int(hh):02d}", {"wind": 14, "gust": 19}))
+            # No silent placeholder: if an hour is somehow absent, use the
+            # seasonal curve for that hour rather than a fixed number that
+            # would look like a real measurement.
+            w = wind_hourly.get(hh) or _seasonal_hour(date, int(hh))
             phase, speed = current_at(step, tides, route["current_scale"])
             score, reasons, nogo = score_step(route, step, w["wind"], w["gust"], phase, speed, skill, advisory)
             day_best = max(day_best, 0 if nogo else score)
