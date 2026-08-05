@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Waterbike AI - Daily Plan Generator
-Version: 2.1.2  (wind interpolation fix)
+Version: 2.1.3  (per-skill windows)
 
 Generates a daily plan.json of safety-scored ride windows for SF Bay
 waterbike routes. Pure Python standard library only, so it runs on a
@@ -39,7 +39,7 @@ from zoneinfo import ZoneInfo
 # Constants
 # ----------------------------------------------------------------------------
 
-VERSION = "2.1.2"
+VERSION = "2.1.3"
 APP_ID = "WaterbikeAI"                       # NOAA courtesy identifier
 TZ = ZoneInfo("America/Los_Angeles")         # single source of local time
 SAFETY_WEIGHT = 0.40                         # immutable; see module docstring
@@ -449,6 +449,8 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
     last_launch = sunset - timedelta(minutes=MIN_DAYLIGHT_RETURN_MIN)
 
     status_by_skill = {}
+    windows_by_skill = {}
+    effort_by_skill = {}
     windows_default = []
     best_effort = 5
 
@@ -485,6 +487,15 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
             skill_windows.append(open_win)
 
         status_by_skill[skill] = badge(day_best, day_best == 0)
+        effort_by_skill[skill] = _effort_from_score(day_best)
+        windows_by_skill[skill] = [
+            {
+                "start": w["start"].isoformat(),
+                "end": w["end"].isoformat(),
+                "reasons": w["reasons"],
+            }
+            for w in skill_windows
+        ]
         if skill == default_skill:
             windows_default = skill_windows
             best_effort = _effort_from_score(day_best)
@@ -496,6 +507,11 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
         "status_by_skill": status_by_skill,
         "skill": default_skill,
         "effort": best_effort,
+        # Per-skill windows. A Casual rider must never be shown Intermediate
+        # times: the badge and the listed windows have to agree.
+        "windows_by_skill": windows_by_skill,
+        "effort_by_skill": effort_by_skill,
+        # Retained for any consumer still reading the flat list.
         "windows": [
             {
                 "start": w["start"].isoformat(),
