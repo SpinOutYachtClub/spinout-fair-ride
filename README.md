@@ -147,12 +147,22 @@ on every build. A drift fails the job and blocks publication.
 | NWS marine | PZZ545 | Advisories | No-Go if unavailable |
 | OpenWeatherMap | n/a | Forecast wind | Seasonal SF Bay defaults, disclosed |
 
-Fallbacks are always labeled in the output. The system never presents a
-modeled value as a measurement. An active advisory forces Red regardless of
-every other input.
+Fallback status is reported in the `data_quality` block of every plan. The
+system does not present a modeled value as a measurement. An active advisory
+forces Red regardless of every other input.
 
-**Known issue:** NOAA migrated its cloud infrastructure in early 2026 and
-broke several endpoints. A fix is in progress.
+**Current status as of the 2026-08-04 plan:**
+
+| Source | Status |
+|--------|--------|
+| Tides | Live |
+| Advisory | Live |
+| Wind | Estimated, running on modeled fallback |
+| Currents | Not reported in `data_quality` |
+
+Wind has been on fallback rather than live OpenWeatherMap data. Currents are
+not currently reported in `data_quality` at all, so a fallback there would be
+invisible to a reader. Both are open items.
 
 ---
 
@@ -174,47 +184,107 @@ live. This is intentional. A stale plan is safer than a wrong one.
 
 ## Output Format
 
-`docs/plan.json`, simplified:
+`docs/plan.json`, schema version 2.1.2. One route shown, abridged.
 
 ```json
 {
-  "generated_at": "2026-08-04T07:10:00-07:00",
+  "generated_at": "2026-08-04T23:56:50.859142-07:00",
+  "version": "2.1.2",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-04",
-  "safety_weight": 0.40,
+  "skill_default": "intermediate",
+  "skills": ["casual", "intermediate", "expert"],
+  "safety_weight": 0.4,
+  "advisory": "none",
   "routes": [
     {
-      "id": "p40-tiburon",
-      "name": "Pier 40 to Tiburon",
+      "id": "p40-clipper",
+      "name": "Pier 40 to Clipper Cove",
       "status": "yellow",
+      "status_by_skill": {
+        "casual": "red",
+        "intermediate": "yellow",
+        "expert": "green"
+      },
       "skill": "intermediate",
-      "effort": 6,
+      "effort": 5,
       "windows": [
         {
-          "start": "2026-08-04T09:40:00-07:00",
-          "end": "2026-08-04T12:10:00-07:00",
+          "start": "2026-08-04T06:30:00-07:00",
+          "end": "2026-08-04T10:00:00-07:00",
           "reasons": [
-            "slack approx 10:12",
-            "wind 9 to 14 mph, gust 18",
-            "current max 1.2 kts, aiding outbound"
+            "ebb current aiding outbound",
+            "wind 11 mph, gust 15"
           ]
         }
       ],
-      "exposure": ["Crissy WNW", "Raccoon Strait flood"],
-      "data_sources": { "tide": "9414290", "current": "SFB1201" },
-      "notes": "Avoid ferry window 11:20 to 11:40"
+      "exposure": ["Bay Bridge shadow", "Yerba Buena chop"],
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-04T06:15:18.040230-07:00",
+        "sunset": "2026-08-04T20:16:25.772718-07:00"
+      },
+      "notes": "Mind posted ferry windows and verify on-site conditions before launch."
     }
-  ]
+  ],
+  "data_quality": {
+    "tide": "live",
+    "wind": "estimated",
+    "advisory": "live",
+    "notes": "Estimated sources are modeled fallbacks. Guides make the final call."
+  }
 }
 ```
 
-Badge meanings:
+### Top-level fields
+
+| Field | Notes |
+|-------|-------|
+| `version` | Schema version. Consumers should check this. |
+| `day` | The date the plan applies to, local time |
+| `safety_weight` | Always 0.4. Asserted on every build. |
+| `advisory` | `none`, or the active NWS marine advisory |
+| `skills` | Profiles graded in `status_by_skill` |
+| `data_quality` | Per-source `live` or `estimated`. See below. |
+
+### Per-route fields
+
+| Field | Notes |
+|-------|-------|
+| `status` | Badge for `skill_default` |
+| `status_by_skill` | Badge for every profile. A route can be green for expert and red for casual on the same day. |
+| `windows` | Empty array means hold. Not an error. |
+| `daylight` | Sunrise and sunset. Windows close 30 minutes before sunset. |
+| `exposure` | Named hazard zones on the route |
+
+### Badge meanings
 
 | Badge | Meaning |
 |-------|---------|
 | Green | Within profile thresholds. Windows provided. |
 | Yellow | Manageable with caution. Tighter windows, exposure noted. |
 | Red | Hold. Outside thresholds, advisory active, or required data missing. |
+
+An empty `windows` array with a red status is a correct and expected output.
+It means the day does not clear thresholds for that profile. Consumers must
+render this as a hold, never as missing data.
+
+Timestamps are emitted at full precision, including microseconds on
+sunrise, sunset, and any window boundary derived from them. A window ending
+at `19:45:23.816309-07:00` is sunset minus the 30 minute return buffer.
+Consumers must format these for display. Never render a raw timestamp to a
+rider.
+
+### Reading data_quality
+
+`live` means the value came from the named source. `estimated` means the
+source was unavailable and a modeled fallback was substituted. Any consumer
+displaying a plan must surface `estimated` to the rider. A modeled wind speed
+must never be presented as a measurement.
 
 Any change to this schema is a breaking change for downstream consumers, even
 when it looks additive.
