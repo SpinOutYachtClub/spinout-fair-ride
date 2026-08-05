@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-05T00:12:18.505801-07:00",
-  "version": "2.1.2",
+  "generated_at": "2026-08-05T01:02:43.518398-07:00",
+  "version": "2.1.3",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-05",
   "skill_default": "intermediate",
@@ -23,6 +23,52 @@
       },
       "skill": "intermediate",
       "effort": 5,
+      "windows_by_skill": {
+        "casual": [
+          {
+            "start": "2026-08-05T10:30:00-07:00",
+            "end": "2026-08-05T12:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-05T10:00:00-07:00",
+            "end": "2026-08-05T14:00:00-07:00",
+            "reasons": [
+              "ebb current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-05T09:30:00-07:00",
+            "end": "2026-08-05T16:00:00-07:00",
+            "reasons": [
+              "ebb current 0.9 kts, 0.6 adverse",
+              "wind 8 mph, gust 9",
+              "inside a ferry window, expect traffic"
+            ]
+          },
+          {
+            "start": "2026-08-05T19:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 17"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "casual": 5,
+        "intermediate": 5,
+        "expert": 4
+      },
       "windows": [
         {
           "start": "2026-08-05T10:00:00-07:00",
@@ -59,6 +105,51 @@
       },
       "skill": "intermediate",
       "effort": 5,
+      "windows_by_skill": {
+        "casual": [
+          {
+            "start": "2026-08-05T10:30:00-07:00",
+            "end": "2026-08-05T12:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-05T10:00:00-07:00",
+            "end": "2026-08-05T13:00:00-07:00",
+            "reasons": [
+              "ebb current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-05T09:30:00-07:00",
+            "end": "2026-08-05T17:00:00-07:00",
+            "reasons": [
+              "ebb current 1.1 kts, 0.8 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          },
+          {
+            "start": "2026-08-05T18:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 15 mph, gust 18"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "casual": 6,
+        "intermediate": 5,
+        "expert": 4
+      },
       "windows": [
         {
           "start": "2026-08-05T10:00:00-07:00",
@@ -95,6 +186,68 @@
       },
       "skill": "intermediate",
       "effort": 4,
+      "windows_by_skill": {
+        "casual": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T11:00:00-07:00",
+            "reasons": [
+              "ebb current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T12:00:00-07:00",
+            "reasons": [
+              "ebb current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          },
+          {
+            "start": "2026-08-05T19:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 17"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T13:00:00-07:00",
+            "reasons": [
+              "ebb current aiding outbound",
+              "wind 8 mph, gust 9"
+            ]
+          },
+          {
+            "start": "2026-08-05T15:30:00-07:00",
+            "end": "2026-08-05T16:00:00-07:00",
+            "reasons": [
+              "flood current 0.8 kts, 0.8 adverse",
+              "wind 14 mph, gust 17"
+            ]
+          },
+          {
+            "start": "2026-08-05T16:30:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "flood current 0.3 kts, 0.3 adverse",
+              "wind 15 mph, gust 18",
+              "inside a ferry window, expect traffic"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "casual": 5,
+        "intermediate": 4,
+        "expert": 4
+      },
       "windows": [
         {
           "start": "2026-08-05T06:30:00-07:00",
@@ -139,6 +292,60 @@
       },
       "skill": "intermediate",
       "effort": 4,
+      "windows_by_skill": {
+        "casual": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T07:30:00-07:00",
+            "reasons": [
+              "ebb current 0.8 kts, 0.3 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          },
+          {
+            "start": "2026-08-05T08:30:00-07:00",
+            "end": "2026-08-05T14:00:00-07:00",
+            "reasons": [
+              "ebb current 0.9 kts, 0.3 adverse",
+              "wind 7 mph, gust 9",
+              "inside a ferry window, expect traffic"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T16:00:00-07:00",
+            "reasons": [
+              "ebb current 0.8 kts, 0.3 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          },
+          {
+            "start": "2026-08-05T19:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 17"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "ebb current 0.8 kts, 0.3 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "casual": 4,
+        "intermediate": 4,
+        "expert": 3
+      },
       "windows": [
         {
           "start": "2026-08-05T06:30:00-07:00",
