@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Waterbike AI - Daily Plan Generator
-Version: 2.1.3  (per-skill windows)
+Version: 2.2.0  (four-tier skill ladder)
 
 Generates a daily plan.json of safety-scored ride windows for SF Bay
 waterbike routes. Pure Python standard library only, so it runs on a
@@ -39,7 +39,7 @@ from zoneinfo import ZoneInfo
 # Constants
 # ----------------------------------------------------------------------------
 
-VERSION = "2.1.3"
+VERSION = "2.2.0"
 APP_ID = "WaterbikeAI"                       # NOAA courtesy identifier
 TZ = ZoneInfo("America/Los_Angeles")         # single source of local time
 SAFETY_WEIGHT = 0.40                         # immutable; see module docstring
@@ -59,14 +59,67 @@ STATIONS = {
     "wind_owm": (37.806, -122.465),  # near Fort Point for wind lat/lon
 }
 
-# Skill profiles. Mirrors config/thresholds.yml so guides can externalize
-# these to YAML later without touching scoring logic.
+# Skill profiles. Canonical four-tier ladder, matching Safety Canon v1.2 and
+# data_contracts.csv. Night Expert is a certification overlay, not a fifth
+# condition tier: it carries Expert's environmental limits and adds the
+# qualification to operate in darkness. It is therefore absent here, since
+# this engine emits daylight-only plans.
+#
+# Ceilings are the Canon's, not the older thresholds_example.yaml, which
+# allowed 35 mph at Expert. Advanced is interpolated between Intermediate
+# and Expert. Any change to these numbers requires operator sign off.
 THRESHOLDS = {
-    "casual":       {"max_wind": 12, "max_gust": 16, "max_adverse_current": 0.6},
+    "beginner":     {"max_wind": 12, "max_gust": 16, "max_adverse_current": 0.6},
     "intermediate": {"max_wind": 16, "max_gust": 22, "max_adverse_current": 1.0},
+    "advanced":     {"max_wind": 19, "max_gust": 26, "max_adverse_current": 1.2},
     "expert":       {"max_wind": 22, "max_gust": 30, "max_adverse_current": 1.5},
 }
-SKILLS = ["casual", "intermediate", "expert"]
+SKILLS = ["beginner", "intermediate", "advanced", "expert"]
+
+# Optional external config. JSON rather than YAML because this engine is
+# standard library only and stdlib has no YAML parser. If the file is absent,
+# unreadable, or malformed, the defaults above stand and the run continues:
+# a config problem must never stop a safety plan from being generated.
+CONFIG_PATH = "config/thresholds.json"
+THRESHOLD_SOURCE = "built-in defaults"
+
+
+def load_thresholds():
+    """Overlay config/thresholds.json onto the built-in tier limits."""
+    global THRESHOLDS, SKILLS, THRESHOLD_SOURCE
+    try:
+        with open(CONFIG_PATH, encoding="utf-8") as fh:
+            cfg = json.load(fh)
+    except FileNotFoundError:
+        return
+    except Exception as exc:  # noqa: BLE001 - defensive by design
+        sys.stderr.write(f"[config] {CONFIG_PATH} unusable ({exc}); using defaults\n")
+        return
+
+    merged = {tier: dict(limits) for tier, limits in THRESHOLDS.items()}
+    for tier, limits in (cfg.get("thresholds") or {}).items():
+        if not isinstance(limits, dict):
+            continue
+        base = dict(merged.get(tier, THRESHOLDS["intermediate"]))
+        for key in ("max_wind", "max_gust", "max_adverse_current"):
+            if key in limits:
+                try:
+                    base[key] = float(limits[key])
+                except (TypeError, ValueError):
+                    sys.stderr.write(f"[config] {tier}.{key} not a number; kept default\n")
+        merged[tier] = base
+
+    tiers = cfg.get("planning_tiers")
+    if isinstance(tiers, list) and tiers:
+        known = [t for t in tiers if t in merged]
+        if known:
+            SKILLS = known
+
+    THRESHOLDS = merged
+    THRESHOLD_SOURCE = CONFIG_PATH
+
+
+load_thresholds()
 
 # Route table. current_scale approximates how strongly the Golden Gate
 # flood/ebb is felt on this route (1.0 = full Gate strength, lower = more
@@ -561,6 +614,8 @@ def build_plan(date, owm_key, default_skill):
         "safety_weight": SAFETY_WEIGHT,
         "advisory": advisory,
         "routes": routes,
+        "thresholds": THRESHOLDS,
+        "thresholds_source": THRESHOLD_SOURCE,
         "data_quality": {
             "tide": "live" if tides_live else "estimated",
             "wind": "live" if wind_live else "estimated",
