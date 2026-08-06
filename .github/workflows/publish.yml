@@ -1,8 +1,10 @@
 name: Daily Plan Generator
 
-# Runs every morning and publishes docs/plan.json for the website widget.
-# Cron is UTC. 13:00 UTC is ~5am PST / 6am PDT. Adjust if you want a
-# different local time; a fixed cron drifts by one hour across DST.
+# Generates docs/plan.json every morning and commits it. GitHub Pages serves
+# /docs from main, so the commit is the publish step.
+#
+# Cron is UTC and does not shift with DST. 13:00 UTC is 6am PDT in summer,
+# 5am PST in winter.
 on:
   schedule:
     - cron: "0 13 * * *"
@@ -10,7 +12,6 @@ on:
   push:
     branches: [main]
 
-# Needed so the workflow can push the regenerated plan back to the repo.
 permissions:
   contents: write
 
@@ -33,6 +34,61 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # Safety gates run before generation. If the envelope has drifted we
+      # want to know before a plan is published, not after.
+      - name: Assert safety invariants
+        run: |
+          python - <<'PY'
+          import json, re, sys
+
+          fails = []
+          src = open("plan_generator.py", encoding="utf-8").read()
+
+          # 1. Safety weight is immutable (Canon principle 1).
+          if not re.search(r"^SAFETY_WEIGHT\s*=\s*0\.40\b", src, re.M):
+              fails.append("SAFETY_WEIGHT is not 0.40 in plan_generator.py")
+
+          # 2. Canon section 2 tier parity. Names and limits must match
+          #    exactly; config drift is a change to the safety envelope.
+          CANON = {
+              "beginner":     {"max_wind": 12, "max_gust": 16, "max_adverse_current": 0.6},
+              "intermediate": {"max_wind": 16, "max_gust": 22, "max_adverse_current": 1.0},
+              "advanced":     {"max_wind": 19, "max_gust": 26, "max_adverse_current": 1.2},
+              "expert":       {"max_wind": 22, "max_gust": 30, "max_adverse_current": 1.5},
+          }
+          try:
+              cfg = json.load(open("config/thresholds.json", encoding="utf-8"))
+          except Exception as exc:
+              fails.append(f"config/thresholds.json unreadable: {exc}")
+              cfg = {}
+
+          tiers = cfg.get("planning_tiers") or []
+          if tiers != list(CANON):
+              fails.append(f"planning_tiers {tiers} != canon {list(CANON)}")
+
+          for tier, limits in CANON.items():
+              got = (cfg.get("thresholds") or {}).get(tier)
+              if not got:
+                  fails.append(f"tier {tier} missing from config")
+                  continue
+              for key, want in limits.items():
+                  if float(got.get(key, -1)) != float(want):
+                      fails.append(f"{tier}.{key} is {got.get(key)}, canon says {want}")
+
+          # 3. No hardcoded wind placeholder. A fixed fallback number reads
+          #    as a measurement to a guide; the frozen 14/19 bug was exactly
+          #    this and must not return.
+          if re.search(r'"wind":\s*14\s*,\s*"gust":\s*19', src):
+              fails.append("hardcoded 14/19 wind placeholder is back")
+
+          if fails:
+              print("SAFETY GATE FAILED")
+              for f in fails:
+                  print("  -", f)
+              sys.exit(1)
+          print("safety gates passed: weight 0.40, four tiers match canon v1.2")
+          PY
+
       - name: Generate plan.json
         env:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
@@ -41,16 +97,51 @@ jobs:
       - name: Validate output
         run: |
           python - <<'PY'
-          import json
-          d = json.load(open("docs/plan.json"))
-          assert d.get("routes"), "no routes in plan.json"
-          assert d.get("safety_weight") == 0.40, "safety weight drifted from 0.40"
-          for r in d["routes"]:
-              assert r["status"] in ("green", "yellow", "red"), r["id"]
-          print("plan.json OK:", len(d["routes"]), "routes,", d["day"])
+          import json, sys
+
+          d = json.load(open("docs/plan.json", encoding="utf-8"))
+          fails = []
+
+          if d.get("safety_weight") != 0.40:
+              fails.append(f"safety_weight is {d.get('safety_weight')}, must be 0.40")
+          if not d.get("routes"):
+              fails.append("no routes in plan.json")
+
+          expected = ["beginner", "intermediate", "advanced", "expert"]
+          if d.get("skills") != expected:
+              fails.append(f"skills {d.get('skills')} != {expected}")
+
+          for r in d.get("routes", []):
+              if r.get("status") not in ("green", "yellow", "red"):
+                  fails.append(f"{r.get('id')}: bad status {r.get('status')}")
+              wbs = r.get("windows_by_skill") or {}
+              for tier in expected:
+                  if tier not in wbs:
+                      fails.append(f"{r.get('id')}: missing windows for {tier}")
+                      continue
+                  # A tier badged red must show no windows, and a tier with a
+                  # go or caution badge must show at least one. Guides read
+                  # the badge and the times together; they cannot disagree.
+                  badge = (r.get("status_by_skill") or {}).get(tier)
+                  n = len(wbs[tier])
+                  if badge == "red" and n:
+                      fails.append(f"{r.get('id')}/{tier}: red badge with {n} windows")
+                  if badge in ("green", "yellow") and not n:
+                      fails.append(f"{r.get('id')}/{tier}: {badge} badge with no windows")
+
+          if fails:
+              print("OUTPUT VALIDATION FAILED")
+              for f in fails:
+                  print("  -", f)
+              sys.exit(1)
+
+          q = d.get("data_quality", {})
+          print(f"plan.json OK: {len(d['routes'])} routes, {d['day']}, v{d['version']}")
+          print(f"data quality: tide={q.get('tide')} wind={q.get('wind')} advisory={q.get('advisory')}")
           PY
 
-      # Silent Failures fix: commit with direct git, never a third-party action.
+      # Direct git, never a third party commit action: one failed silently in
+      # production and left the site stale for months.
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
