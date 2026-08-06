@@ -1,0 +1,49 @@
+{
+  "_comment": [
+    "Waterbike AI skill tier limits. Read at runtime by plan_generator.py.",
+    "This file is the single source of truth for tier limits. If it is",
+    "missing or malformed the engine falls back to identical built-in",
+    "defaults and logs a warning, so a bad edit degrades rather than breaks.",
+    "",
+    "Governed by Safety Canon v1.2 section 2. Changing any number here is a",
+    "change to the safety envelope and requires operator sign off.",
+    "",
+    "night_expert is listed for reference but is deliberately absent from",
+    "planning_tiers: it is a credential to operate in darkness, not a higher",
+    "daytime tolerance. The engine emits daylight-only plans."
+  ],
+  "canon_version": "1.2",
+  "planning_tiers": ["beginner", "intermediate", "advanced", "expert"],
+  "thresholds": {
+    "beginner": {
+      "max_wind": 12,
+      "max_gust": 16,
+      "max_adverse_current": 0.6
+    },
+    "intermediate": {
+      "max_wind": 16,
+      "max_gust": 22,
+      "max_adverse_current": 1.0
+    },
+    "advanced": {
+      "max_wind": 19,
+      "max_gust": 26,
+      "max_adverse_current": 1.2
+    },
+    "expert": {
+      "max_wind": 22,
+      "max_gust": 30,
+      "max_adverse_current": 1.5
+    },
+    "night_expert": {
+      "max_wind": 22,
+      "max_gust": 30,
+      "max_adverse_current": 1.5
+    }
+  },
+  "units": {
+    "max_wind": "mph sustained",
+    "max_gust": "mph",
+    "max_adverse_current": "knots opposing the outbound leg"
+  }
+}
