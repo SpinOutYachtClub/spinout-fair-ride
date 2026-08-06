@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T08:12:48.395725-07:00",
+  "generated_at": "2026-08-05T22:09:00.930930-07:00",
   "version": "2.1.3",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-05",
@@ -15,71 +15,42 @@
     {
       "id": "p40-tiburon",
       "name": "Pier 40 to Tiburon",
-      "status": "yellow",
+      "status": "red",
       "status_by_skill": {
-        "casual": "yellow",
-        "intermediate": "yellow",
+        "casual": "red",
+        "intermediate": "red",
         "expert": "yellow"
       },
       "skill": "intermediate",
-      "effort": 5,
+      "effort": 6,
       "windows_by_skill": {
-        "casual": [
-          {
-            "start": "2026-08-05T10:30:00-07:00",
-            "end": "2026-08-05T12:00:00-07:00",
-            "reasons": [
-              "flood current aiding outbound",
-              "wind 9 mph, gust 9"
-            ]
-          }
-        ],
-        "intermediate": [
-          {
-            "start": "2026-08-05T10:00:00-07:00",
-            "end": "2026-08-05T14:00:00-07:00",
-            "reasons": [
-              "ebb current aiding outbound",
-              "wind 9 mph, gust 9"
-            ]
-          }
-        ],
+        "casual": [],
+        "intermediate": [],
         "expert": [
           {
-            "start": "2026-08-05T09:30:00-07:00",
-            "end": "2026-08-05T16:00:00-07:00",
+            "start": "2026-08-05T10:30:00-07:00",
+            "end": "2026-08-05T13:00:00-07:00",
             "reasons": [
-              "ebb current 0.9 kts, 0.6 adverse",
-              "wind 9 mph, gust 9",
-              "inside a ferry window, expect traffic"
+              "flood current aiding outbound",
+              "wind 15 mph, gust 20"
             ]
           },
           {
-            "start": "2026-08-05T18:00:00-07:00",
+            "start": "2026-08-05T19:00:00-07:00",
             "end": "2026-08-05T19:45:23.816309-07:00",
             "reasons": [
               "near slack water",
-              "wind 14 mph, gust 18",
-              "inside a ferry window, expect traffic"
+              "wind 14 mph, gust 19"
             ]
           }
         ]
       },
       "effort_by_skill": {
-        "casual": 6,
-        "intermediate": 5,
-        "expert": 4
+        "casual": 10,
+        "intermediate": 6,
+        "expert": 6
       },
-      "windows": [
-        {
-          "start": "2026-08-05T10:00:00-07:00",
-          "end": "2026-08-05T14:00:00-07:00",
-          "reasons": [
-            "ebb current aiding outbound",
-            "wind 9 mph, gust 9"
-          ]
-        }
-      ],
+      "windows": [],
       "exposure": [
         "Crissy (WNW)",
         "Raccoon Strait (flood)"
@@ -93,57 +64,47 @@
         "sunrise": "2026-08-05T06:16:09.815558-07:00",
         "sunset": "2026-08-05T20:15:23.816309-07:00"
       },
-      "notes": "Mind posted ferry windows and verify on-site conditions before launch."
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
     {
       "id": "p40-cavallo",
       "name": "Pier 40 to Cavallo Point",
-      "status": "yellow",
+      "status": "red",
       "status_by_skill": {
         "casual": "red",
-        "intermediate": "yellow",
+        "intermediate": "red",
         "expert": "yellow"
       },
       "skill": "intermediate",
-      "effort": 5,
+      "effort": 7,
       "windows_by_skill": {
         "casual": [],
-        "intermediate": [
-          {
-            "start": "2026-08-05T10:00:00-07:00",
-            "end": "2026-08-05T13:00:00-07:00",
-            "reasons": [
-              "ebb current aiding outbound",
-              "wind 9 mph, gust 9"
-            ]
-          }
-        ],
+        "intermediate": [],
         "expert": [
           {
-            "start": "2026-08-05T09:30:00-07:00",
+            "start": "2026-08-05T10:30:00-07:00",
+            "end": "2026-08-05T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 15 mph, gust 20"
+            ]
+          },
+          {
+            "start": "2026-08-05T18:00:00-07:00",
             "end": "2026-08-05T19:45:23.816309-07:00",
             "reasons": [
-              "ebb current 1.1 kts, 0.8 adverse",
-              "wind 9 mph, gust 9"
+              "near slack water",
+              "wind 14 mph, gust 19"
             ]
           }
         ]
       },
       "effort_by_skill": {
-        "casual": 6,
-        "intermediate": 5,
-        "expert": 4
+        "casual": 10,
+        "intermediate": 7,
+        "expert": 6
       },
-      "windows": [
-        {
-          "start": "2026-08-05T10:00:00-07:00",
-          "end": "2026-08-05T13:00:00-07:00",
-          "reasons": [
-            "ebb current aiding outbound",
-            "wind 9 mph, gust 9"
-          ]
-        }
-      ],
+      "windows": [],
       "exposure": [
         "Golden Gate mouth",
         "Horseshoe Bay eddy"
@@ -157,37 +118,28 @@
         "sunrise": "2026-08-05T06:16:09.815558-07:00",
         "sunset": "2026-08-05T20:15:23.816309-07:00"
       },
-      "notes": "Verify on-site conditions before launch."
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
     {
       "id": "p40-clipper",
       "name": "Pier 40 to Clipper Cove",
-      "status": "green",
+      "status": "yellow",
       "status_by_skill": {
-        "casual": "yellow",
-        "intermediate": "green",
+        "casual": "red",
+        "intermediate": "yellow",
         "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 4,
+      "effort": 5,
       "windows_by_skill": {
-        "casual": [
-          {
-            "start": "2026-08-05T06:30:00-07:00",
-            "end": "2026-08-05T11:00:00-07:00",
-            "reasons": [
-              "ebb current aiding outbound",
-              "wind 9 mph, gust 9"
-            ]
-          }
-        ],
+        "casual": [],
         "intermediate": [
           {
             "start": "2026-08-05T06:30:00-07:00",
-            "end": "2026-08-05T12:00:00-07:00",
+            "end": "2026-08-05T10:00:00-07:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 9 mph, gust 9"
+              "wind 11 mph, gust 15"
             ]
           },
           {
@@ -195,50 +147,42 @@
             "end": "2026-08-05T19:45:23.816309-07:00",
             "reasons": [
               "near slack water",
-              "wind 13 mph, gust 17"
+              "wind 14 mph, gust 19"
             ]
           }
         ],
         "expert": [
           {
             "start": "2026-08-05T06:30:00-07:00",
-            "end": "2026-08-05T13:00:00-07:00",
+            "end": "2026-08-05T11:30:00-07:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 9 mph, gust 9"
+              "wind 11 mph, gust 15"
             ]
           },
           {
-            "start": "2026-08-05T15:30:00-07:00",
-            "end": "2026-08-05T16:00:00-07:00",
-            "reasons": [
-              "flood current 0.8 kts, 0.8 adverse",
-              "wind 14 mph, gust 16"
-            ]
-          },
-          {
-            "start": "2026-08-05T16:30:00-07:00",
+            "start": "2026-08-05T18:00:00-07:00",
             "end": "2026-08-05T19:45:23.816309-07:00",
             "reasons": [
-              "flood current 0.3 kts, 0.3 adverse",
-              "wind 15 mph, gust 17",
+              "near slack water",
+              "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
           }
         ]
       },
       "effort_by_skill": {
-        "casual": 5,
-        "intermediate": 4,
+        "casual": 6,
+        "intermediate": 5,
         "expert": 4
       },
       "windows": [
         {
           "start": "2026-08-05T06:30:00-07:00",
-          "end": "2026-08-05T12:00:00-07:00",
+          "end": "2026-08-05T10:00:00-07:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 9 mph, gust 9"
+            "wind 11 mph, gust 15"
           ]
         },
         {
@@ -246,7 +190,7 @@
           "end": "2026-08-05T19:45:23.816309-07:00",
           "reasons": [
             "near slack water",
-            "wind 13 mph, gust 17"
+            "wind 14 mph, gust 19"
           ]
         }
       ],
@@ -268,41 +212,32 @@
     {
       "id": "p40-p39",
       "name": "Pier 40 to Pier 39",
-      "status": "green",
+      "status": "yellow",
       "status_by_skill": {
-        "casual": "yellow",
-        "intermediate": "green",
-        "expert": "green"
+        "casual": "red",
+        "intermediate": "yellow",
+        "expert": "yellow"
       },
       "skill": "intermediate",
-      "effort": 4,
+      "effort": 5,
       "windows_by_skill": {
-        "casual": [
-          {
-            "start": "2026-08-05T06:30:00-07:00",
-            "end": "2026-08-05T07:00:00-07:00",
-            "reasons": [
-              "ebb current 0.8 kts, 0.3 adverse",
-              "wind 9 mph, gust 9"
-            ]
-          },
-          {
-            "start": "2026-08-05T09:30:00-07:00",
-            "end": "2026-08-05T14:00:00-07:00",
-            "reasons": [
-              "ebb current aiding outbound",
-              "wind 9 mph, gust 9",
-              "inside a ferry window, expect traffic"
-            ]
-          }
-        ],
+        "casual": [],
         "intermediate": [
           {
             "start": "2026-08-05T06:30:00-07:00",
-            "end": "2026-08-05T16:00:00-07:00",
+            "end": "2026-08-05T07:30:00-07:00",
             "reasons": [
               "ebb current 0.8 kts, 0.3 adverse",
-              "wind 9 mph, gust 9"
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-05T08:00:00-07:00",
+            "end": "2026-08-05T13:00:00-07:00",
+            "reasons": [
+              "ebb current 1.0 kts, 0.3 adverse",
+              "wind 11 mph, gust 15",
+              "inside a ferry window, expect traffic"
             ]
           },
           {
@@ -310,7 +245,7 @@
             "end": "2026-08-05T19:45:23.816309-07:00",
             "reasons": [
               "near slack water",
-              "wind 14 mph, gust 18",
+              "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
           }
@@ -318,26 +253,44 @@
         "expert": [
           {
             "start": "2026-08-05T06:30:00-07:00",
-            "end": "2026-08-05T19:45:23.816309-07:00",
+            "end": "2026-08-05T16:00:00-07:00",
             "reasons": [
               "ebb current 0.8 kts, 0.3 adverse",
-              "wind 9 mph, gust 9"
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-05T18:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19",
+              "inside a ferry window, expect traffic"
             ]
           }
         ]
       },
       "effort_by_skill": {
-        "casual": 5,
-        "intermediate": 4,
-        "expert": 3
+        "casual": 7,
+        "intermediate": 5,
+        "expert": 4
       },
       "windows": [
         {
           "start": "2026-08-05T06:30:00-07:00",
-          "end": "2026-08-05T16:00:00-07:00",
+          "end": "2026-08-05T07:30:00-07:00",
           "reasons": [
             "ebb current 0.8 kts, 0.3 adverse",
-            "wind 9 mph, gust 9"
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-05T08:00:00-07:00",
+          "end": "2026-08-05T13:00:00-07:00",
+          "reasons": [
+            "ebb current 1.0 kts, 0.3 adverse",
+            "wind 11 mph, gust 15",
+            "inside a ferry window, expect traffic"
           ]
         },
         {
@@ -345,7 +298,7 @@
           "end": "2026-08-05T19:45:23.816309-07:00",
           "reasons": [
             "near slack water",
-            "wind 14 mph, gust 18",
+            "wind 14 mph, gust 19",
             "inside a ferry window, expect traffic"
           ]
         }
@@ -367,7 +320,7 @@
   ],
   "data_quality": {
     "tide": "live",
-    "wind": "live",
+    "wind": "estimated",
     "advisory": "live",
     "notes": "Estimated sources are modeled fallbacks. Guides make the final call."
   }

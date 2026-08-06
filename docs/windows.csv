@@ -1,7 +1,8 @@
 route,status,skill,window_start,window_end
-p40-tiburon,yellow,intermediate,2026-08-05T10:00:00-07:00,2026-08-05T14:00:00-07:00
-p40-cavallo,yellow,intermediate,2026-08-05T10:00:00-07:00,2026-08-05T13:00:00-07:00
-p40-clipper,green,intermediate,2026-08-05T06:30:00-07:00,2026-08-05T12:00:00-07:00
-p40-clipper,green,intermediate,2026-08-05T19:00:00-07:00,2026-08-05T19:45:23.816309-07:00
-p40-p39,green,intermediate,2026-08-05T06:30:00-07:00,2026-08-05T16:00:00-07:00
-p40-p39,green,intermediate,2026-08-05T18:00:00-07:00,2026-08-05T19:45:23.816309-07:00
+p40-tiburon,red,intermediate,,
+p40-cavallo,red,intermediate,,
+p40-clipper,yellow,intermediate,2026-08-05T06:30:00-07:00,2026-08-05T10:00:00-07:00
+p40-clipper,yellow,intermediate,2026-08-05T19:00:00-07:00,2026-08-05T19:45:23.816309-07:00
+p40-p39,yellow,intermediate,2026-08-05T06:30:00-07:00,2026-08-05T07:30:00-07:00
+p40-p39,yellow,intermediate,2026-08-05T08:00:00-07:00,2026-08-05T13:00:00-07:00
+p40-p39,yellow,intermediate,2026-08-05T18:00:00-07:00,2026-08-05T19:45:23.816309-07:00
