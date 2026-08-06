@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-08-05T22:09:00.930930-07:00",
-  "version": "2.1.3",
+  "generated_at": "2026-08-05T22:13:56.299267-07:00",
+  "version": "2.2.0",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-05",
   "skill_default": "intermediate",
   "skills": [
-    "casual",
+    "beginner",
     "intermediate",
+    "advanced",
     "expert"
   ],
   "safety_weight": 0.4,
@@ -17,15 +18,17 @@
       "name": "Pier 40 to Tiburon",
       "status": "red",
       "status_by_skill": {
-        "casual": "red",
+        "beginner": "red",
         "intermediate": "red",
+        "advanced": "red",
         "expert": "yellow"
       },
       "skill": "intermediate",
       "effort": 6,
       "windows_by_skill": {
-        "casual": [],
+        "beginner": [],
         "intermediate": [],
+        "advanced": [],
         "expert": [
           {
             "start": "2026-08-05T10:30:00-07:00",
@@ -46,8 +49,9 @@
         ]
       },
       "effort_by_skill": {
-        "casual": 10,
+        "beginner": 10,
         "intermediate": 6,
+        "advanced": 6,
         "expert": 6
       },
       "windows": [],
@@ -71,15 +75,17 @@
       "name": "Pier 40 to Cavallo Point",
       "status": "red",
       "status_by_skill": {
-        "casual": "red",
+        "beginner": "red",
         "intermediate": "red",
+        "advanced": "red",
         "expert": "yellow"
       },
       "skill": "intermediate",
       "effort": 7,
       "windows_by_skill": {
-        "casual": [],
+        "beginner": [],
         "intermediate": [],
+        "advanced": [],
         "expert": [
           {
             "start": "2026-08-05T10:30:00-07:00",
@@ -100,8 +106,9 @@
         ]
       },
       "effort_by_skill": {
-        "casual": 10,
+        "beginner": 10,
         "intermediate": 7,
+        "advanced": 6,
         "expert": 6
       },
       "windows": [],
@@ -125,14 +132,15 @@
       "name": "Pier 40 to Clipper Cove",
       "status": "yellow",
       "status_by_skill": {
-        "casual": "red",
+        "beginner": "red",
         "intermediate": "yellow",
+        "advanced": "yellow",
         "expert": "green"
       },
       "skill": "intermediate",
       "effort": 5,
       "windows_by_skill": {
-        "casual": [],
+        "beginner": [],
         "intermediate": [
           {
             "start": "2026-08-05T06:30:00-07:00",
@@ -148,6 +156,25 @@
             "reasons": [
               "near slack water",
               "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T11:00:00-07:00",
+            "reasons": [
+              "ebb current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-05T18:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19",
+              "inside a ferry window, expect traffic"
             ]
           }
         ],
@@ -172,8 +199,9 @@
         ]
       },
       "effort_by_skill": {
-        "casual": 6,
+        "beginner": 6,
         "intermediate": 5,
+        "advanced": 4,
         "expert": 4
       },
       "windows": [
@@ -214,14 +242,15 @@
       "name": "Pier 40 to Pier 39",
       "status": "yellow",
       "status_by_skill": {
-        "casual": "red",
+        "beginner": "red",
         "intermediate": "yellow",
+        "advanced": "yellow",
         "expert": "yellow"
       },
       "skill": "intermediate",
       "effort": 5,
       "windows_by_skill": {
-        "casual": [],
+        "beginner": [],
         "intermediate": [
           {
             "start": "2026-08-05T06:30:00-07:00",
@@ -238,6 +267,25 @@
               "ebb current 1.0 kts, 0.3 adverse",
               "wind 11 mph, gust 15",
               "inside a ferry window, expect traffic"
+            ]
+          },
+          {
+            "start": "2026-08-05T18:00:00-07:00",
+            "end": "2026-08-05T19:45:23.816309-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19",
+              "inside a ferry window, expect traffic"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-05T06:30:00-07:00",
+            "end": "2026-08-05T13:00:00-07:00",
+            "reasons": [
+              "ebb current 0.8 kts, 0.3 adverse",
+              "wind 11 mph, gust 15"
             ]
           },
           {
@@ -271,8 +319,9 @@
         ]
       },
       "effort_by_skill": {
-        "casual": 7,
+        "beginner": 7,
         "intermediate": 5,
+        "advanced": 5,
         "expert": 4
       },
       "windows": [
@@ -318,6 +367,34 @@
       "notes": "Mind posted ferry windows and verify on-site conditions before launch."
     }
   ],
+  "thresholds": {
+    "beginner": {
+      "max_wind": 12.0,
+      "max_gust": 16.0,
+      "max_adverse_current": 0.6
+    },
+    "intermediate": {
+      "max_wind": 16.0,
+      "max_gust": 22.0,
+      "max_adverse_current": 1.0
+    },
+    "advanced": {
+      "max_wind": 19.0,
+      "max_gust": 26.0,
+      "max_adverse_current": 1.2
+    },
+    "expert": {
+      "max_wind": 22.0,
+      "max_gust": 30.0,
+      "max_adverse_current": 1.5
+    },
+    "night_expert": {
+      "max_wind": 22.0,
+      "max_gust": 30.0,
+      "max_adverse_current": 1.5
+    }
+  },
+  "thresholds_source": "config/thresholds.json",
   "data_quality": {
     "tide": "live",
     "wind": "estimated",
