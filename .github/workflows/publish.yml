@@ -51,10 +51,18 @@ jobs:
           # 2. Canon section 2 tier parity. Names and limits must match
           #    exactly; config drift is a change to the safety envelope.
           CANON = {
-              "beginner":     {"max_wind": 12, "max_gust": 16, "max_adverse_current": 0.6},
-              "intermediate": {"max_wind": 16, "max_gust": 22, "max_adverse_current": 1.0},
-              "advanced":     {"max_wind": 19, "max_gust": 26, "max_adverse_current": 1.2},
-              "expert":       {"max_wind": 22, "max_gust": 30, "max_adverse_current": 1.5},
+              "beginner":     {"comfort_wind": 10, "max_wind": 14, "max_gust": 20,
+                               "squall_tolerance": 6, "max_adverse_current": 0.6,
+                               "max_exposure": 1.0, "max_leg_mi": 1.5, "max_total_mi": 4},
+              "intermediate": {"comfort_wind": 14, "max_wind": 18, "max_gust": 22,
+                               "squall_tolerance": 6, "max_adverse_current": 1.0,
+                               "max_exposure": 1.5, "max_leg_mi": 4, "max_total_mi": 12},
+              "advanced":     {"comfort_wind": 16, "max_wind": 20, "max_gust": 26,
+                               "squall_tolerance": 7, "max_adverse_current": 1.2,
+                               "max_exposure": 1.8, "max_leg_mi": 8, "max_total_mi": 25},
+              "expert":       {"comfort_wind": 18, "max_wind": 22, "max_gust": 30,
+                               "squall_tolerance": 8, "max_adverse_current": 1.5,
+                               "max_exposure": 2.0, "max_leg_mi": 10, "max_total_mi": 50},
           }
           try:
               cfg = json.load(open("config/thresholds.json", encoding="utf-8"))
@@ -75,7 +83,57 @@ jobs:
                   if float(got.get(key, -1)) != float(want):
                       fails.append(f"{tier}.{key} is {got.get(key)}, canon says {want}")
 
-          # 3. No hardcoded wind placeholder. A fixed fallback number reads
+          # 3. Every tier needs a usable Caution band. A band under 3 mph
+          #    makes the tier jump from Go straight to Hold, which reads as
+          #    a cliff to riders and hides the warning state entirely.
+          for tier, limits in CANON.items():
+              band = limits["max_wind"] - limits["comfort_wind"]
+              if band < 3:
+                  fails.append(f"{tier} caution band is {band} mph, minimum 3")
+
+          # 4. Limits must rise monotonically across the tier ladder. A lower
+          #    tier permitted more than a higher one is always a config error.
+          order = list(CANON)
+          for key in ("comfort_wind", "max_wind", "max_gust", "max_exposure",
+                      "max_leg_mi", "max_total_mi", "max_adverse_current"):
+              vals = [CANON[t][key] for t in order]
+              if vals != sorted(vals):
+                  fails.append(f"{key} not monotonic across tiers: {vals}")
+
+          # 5. Route catalog integrity. Coordinates inside the central Bay
+          #    footprint, every leg resolvable, exposure in range, min_tier
+          #    a known tier, and no route without a bailout. A bad route
+          #    record must fail the build, not publish a wrong plan.
+          try:
+              locs = json.load(open("config/locations.json", encoding="utf-8"))["locations"]
+              rts = json.load(open("config/routes.json", encoding="utf-8"))["routes"]
+          except Exception as exc:
+              fails.append(f"route config unreadable: {exc}")
+              locs, rts = {}, []
+
+          for lid, l in locs.items():
+              lat, lon = l.get("lat"), l.get("lon")
+              if lat is None or lon is None:
+                  fails.append(f"location {lid} missing coordinates")
+                  continue
+              if not (37.70 <= lat <= 37.90 and -122.55 <= lon <= -122.30):
+                  fails.append(f"location {lid} outside central Bay footprint")
+
+          tiers = list(CANON)
+          for r in rts:
+              if r.get("min_tier") not in tiers:
+                  fails.append(f"route {r.get('id')} min_tier {r.get('min_tier')} unknown")
+              if not r.get("bailouts"):
+                  fails.append(f"route {r.get('id')} has no bailout")
+              for leg in r.get("legs") or []:
+                  e = leg.get("exposure_index")
+                  if e is None or not (0.5 <= float(e) <= 2.0):
+                      fails.append(f"route {r.get('id')} leg exposure {e} out of 0.5-2.0")
+                  for end in ("from", "to"):
+                      if leg.get(end) and leg[end] not in locs:
+                          fails.append(f"route {r.get('id')} leg {end} {leg[end]} not a known location")
+
+          # 6. No hardcoded wind placeholder. A fixed fallback number reads
           #    as a measurement to a guide; the frozen 14/19 bug was exactly
           #    this and must not return.
           if re.search(r'"wind":\s*14\s*,\s*"gust":\s*19', src):
@@ -86,7 +144,7 @@ jobs:
               for f in fails:
                   print("  -", f)
               sys.exit(1)
-          print("safety gates passed: weight 0.40, four tiers match canon v1.2")
+          print("safety gates passed: weight 0.40, four tiers match canon v1.3")
           PY
 
       - name: Generate plan.json
@@ -108,6 +166,11 @@ jobs:
               fails.append("no routes in plan.json")
 
           expected = ["beginner", "intermediate", "advanced", "expert"]
+          # Canon section 11 requires an aborting group to reach a safe
+          # landing, so a published route without one is a defect.
+          for r in d.get("routes", []):
+              if not r.get("bailouts"):
+                  fails.append(f"{r.get('id')}: published with no bailout")
           if d.get("skills") != expected:
               fails.append(f"skills {d.get('skills')} != {expected}")
 
