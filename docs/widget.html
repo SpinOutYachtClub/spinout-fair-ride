@@ -1,0 +1,700 @@
+<!-- Waterbike AI - Today on the Bay (widget v3)
+     Compatible with plan_generator.py v2.6+.
+     Paste this entire file into a Squarespace Code Block.
+     Self-contained: no external scripts, fonts, or build step. -->
+
+<div id="wbai" data-state="loading">
+  <header class="wb-head">
+    <p class="wb-eyebrow">SF Bay <span class="wb-sep">/</span> Central Bay Route Planner</p>
+    <div class="wb-head-row">
+      <div>
+        <h2 class="wb-title">Today on the Bay</h2>
+        <p class="wb-stamp" id="wb-stamp">Loading conditions</p>
+      </div>
+      <p class="wb-count" id="wb-route-count" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <section class="wb-controls" id="wb-controls" hidden aria-label="Route controls">
+    <label class="wb-field wb-field-route">
+      <span class="wb-ctl-label">Choose a route</span>
+      <select class="wb-select" id="wb-route-select"></select>
+    </label>
+
+    <div class="wb-field">
+      <span class="wb-ctl-label" id="wb-skill-label">Riding as</span>
+      <div class="wb-seg wb-skill-seg" role="group" aria-labelledby="wb-skill-label" id="wb-skill"></div>
+    </div>
+
+    <div class="wb-field">
+      <span class="wb-ctl-label" id="wb-view-label">View</span>
+      <div class="wb-seg" role="group" aria-labelledby="wb-view-label" id="wb-view">
+        <button type="button" class="wb-seg-btn is-on" data-view="cards" aria-pressed="true">Routes</button>
+        <button type="button" class="wb-seg-btn" data-view="compare" aria-pressed="false">Compare</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="wb-advisory" class="wb-notice wb-advisory" hidden></div>
+  <div id="wb-estimated" class="wb-notice wb-estimated" hidden></div>
+  <div id="wb-compat" class="wb-notice wb-compat" hidden></div>
+
+  <section class="wb-summary" id="wb-summary" hidden aria-label="Route summary"></section>
+  <main id="wb-body" aria-live="polite"></main>
+
+  <footer class="wb-foot" id="wb-foot" hidden>
+    <p class="wb-foot-line">
+      Daylight routes only. Conditions can change quickly. The trained guide on site makes the final decision.
+    </p>
+    <p class="wb-foot-meta" id="wb-foot-meta"></p>
+  </footer>
+</div>
+
+<style>
+  #wbai {
+    --paper: #f3f7f9;
+    --card: #ffffff;
+    --ink: #0b2230;
+    --ink-soft: #4a6470;
+    --rule: #c6d5db;
+    --go: #14705a;
+    --caution: #9a5b00;
+    --hold: #b4126b;
+    --effort-green: #27854b;
+    --effort-yellow: #c6a400;
+    --effort-orange: #dc741c;
+    --effort-red: #c73636;
+    --effort-purple: #71368a;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 4px 0 10px;
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.45;
+    overflow-x: clip;
+  }
+  #wbai *, #wbai *::before, #wbai *::after { box-sizing: border-box; }
+  #wbai p, #wbai h2, #wbai h3, #wbai h4, #wbai ol, #wbai ul { margin: 0; }
+  #wbai ol, #wbai ul { padding: 0; }
+  #wbai button, #wbai select { font: inherit; }
+  #wbai button:focus-visible, #wbai select:focus-visible, #wbai summary:focus-visible {
+    outline: 2px solid var(--hold); outline-offset: 2px;
+  }
+
+  .wb-head { border-bottom: 2px solid var(--ink); padding-bottom: 12px; }
+  .wb-head-row { display: flex; justify-content: space-between; align-items: end; gap: 18px; }
+  .wb-eyebrow, .wb-stamp, .wb-count, .wb-ctl-label, .wb-foot-meta {
+    font-family: var(--mono);
+  }
+  .wb-eyebrow {
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .wb-sep { opacity: .45; padding: 0 4px; }
+  .wb-title {
+    margin-top: 2px; font-size: clamp(26px, 4.8vw, 38px); font-weight: 760;
+    letter-spacing: -.025em; line-height: 1.05;
+  }
+  .wb-stamp { margin-top: 5px; font-size: 12px; color: var(--ink-soft); }
+  .wb-count { font-size: 12px; color: var(--ink-soft); text-align: right; }
+
+  .wb-controls {
+    display: grid; grid-template-columns: minmax(260px, 1.4fr) auto auto;
+    gap: 14px 22px; align-items: end; padding: 16px 0 6px;
+  }
+  .wb-field { min-width: 0; }
+  .wb-ctl-label {
+    display: block; margin-bottom: 5px; font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  .wb-select {
+    display: block; width: 100%; min-width: 0; border: 1px solid var(--rule); border-radius: 4px;
+    background: var(--card); color: var(--ink); padding: 9px 34px 9px 10px; font-size: 14px;
+  }
+  .wb-seg { display: inline-flex; max-width: 100%; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+  .wb-seg-btn {
+    appearance: none; border: 0; border-right: 1px solid var(--rule); background: transparent;
+    color: var(--ink-soft); cursor: pointer; padding: 8px 12px; font-family: var(--mono);
+    font-size: 11px; letter-spacing: .035em; white-space: nowrap;
+  }
+  .wb-seg-btn:last-child { border-right: 0; }
+  .wb-seg-btn:hover { background: #e7eef1; color: var(--ink); }
+  .wb-seg-btn.is-on { background: var(--ink); color: #fff; }
+
+  .wb-notice { margin-top: 12px; padding: 10px 13px; border-left: 4px solid; font-size: 13px; }
+  .wb-advisory { border-color: var(--hold); background: #fdeef5; color: #7d0b4a; font-weight: 650; }
+  .wb-estimated { border-color: var(--caution); background: #fdf4e6; color: #744600; }
+  .wb-compat { border-color: var(--ink-soft); background: #eaf0f3; color: var(--ink); }
+
+  .wb-summary {
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 14px;
+  }
+  .wb-summary-item { border: 1px solid var(--rule); background: var(--card); padding: 9px 10px; min-width: 0; }
+  .wb-summary-item b { display: block; font-size: 19px; line-height: 1.05; }
+  .wb-summary-item span { display: block; margin-top: 3px; color: var(--ink-soft); font-size: 11px; }
+
+  .wb-cards { display: grid; gap: 13px; margin-top: 14px; }
+  .wb-card { background: var(--card); border: 1px solid var(--rule); border-radius: 5px; padding: 16px 18px; min-width: 0; }
+  .wb-card-top { display: flex; justify-content: space-between; align-items: start; gap: 14px; }
+  .wb-route { font-size: 19px; line-height: 1.2; letter-spacing: -.012em; overflow-wrap: anywhere; }
+  .wb-route-meta { margin-top: 5px; color: var(--ink-soft); font-family: var(--mono); font-size: 11px; }
+
+  .wb-chip {
+    display: inline-flex; align-items: center; gap: 7px; flex: none; padding: 5px 9px;
+    border-radius: 3px; color: #fff; font-family: var(--mono); font-size: 11px; font-weight: 750;
+    letter-spacing: .09em; text-transform: uppercase; white-space: nowrap;
+  }
+  .wb-chip .mk { width: 8px; height: 8px; background: currentColor; flex: none; }
+  .c-go { background: var(--go); }
+  .c-go .mk { border-radius: 50%; }
+  .c-caution { background: var(--caution); }
+  .c-caution .mk { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .c-hold { background: var(--hold); }
+  .c-hold .mk { border-radius: 1px; }
+
+  .wb-facts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+  .wb-tag {
+    border: 1px solid var(--rule); border-radius: 3px; background: var(--paper); color: var(--ink-soft);
+    padding: 3px 7px; font-family: var(--mono); font-size: 10px; letter-spacing: .025em;
+  }
+  .wb-tag-warn { border-color: #e0b072; background: #fff4e6; color: #754300; }
+
+  .wb-effort-box { margin-top: 14px; }
+  .wb-effort-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .wb-effort-head b { font-size: 13px; }
+  .wb-effort-head span { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+  .wb-effort-track {
+    position: relative; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 2px;
+    margin-top: 7px; height: 12px;
+  }
+  .wb-effort-seg { border-radius: 1px; }
+  .wb-effort-seg:nth-child(-n+3) { background: var(--effort-green); }
+  .wb-effort-seg:nth-child(n+4):nth-child(-n+5) { background: var(--effort-yellow); }
+  .wb-effort-seg:nth-child(n+6):nth-child(-n+7) { background: var(--effort-orange); }
+  .wb-effort-seg:nth-child(n+8):nth-child(-n+9) { background: var(--effort-red); }
+  .wb-effort-seg:nth-child(10) { background: var(--effort-purple); }
+  .wb-effort-marker {
+    position: absolute; top: -4px; left: calc(var(--effort-pct) * 1%); width: 3px; height: 20px;
+    transform: translateX(-1px); background: var(--ink); border: 1px solid #fff; box-shadow: 0 0 0 1px var(--ink);
+  }
+  .wb-effort-ticks { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); margin-top: 5px; }
+  .wb-effort-ticks span { font-family: var(--mono); font-size: 9px; color: var(--ink-soft); text-align: center; }
+  .wb-effort-ticks span:first-child { text-align: left; }
+  .wb-effort-ticks span:last-child { text-align: right; }
+
+  .wb-tl { margin: 15px 0 4px; }
+  .wb-tl-track { position: relative; height: 23px; overflow: hidden; border: 1px solid var(--rule); border-radius: 3px; background: #e7eef1; }
+  .wb-tl-hour { position: absolute; top: 0; bottom: 0; width: 1px; background: #d3e0e5; }
+  .wb-tl-win { position: absolute; top: 0; bottom: 0; background: var(--go); opacity: .94; }
+  .wb-tl-win[data-b="yellow"] { background: var(--caution); }
+  .wb-tl-empty {
+    position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-soft);
+    font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .wb-tl-scale { display: flex; justify-content: space-between; margin-top: 4px; color: var(--ink-soft); font-family: var(--mono); font-size: 10px; }
+
+  .wb-wins { margin-top: 10px; border-top: 1px solid var(--rule); }
+  .wb-win { display: grid; grid-template-columns: minmax(120px, 150px) 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px solid #e7eef1; }
+  .wb-win:last-child { border-bottom: 0; }
+  .wb-win-time { font-family: var(--mono); font-size: 13px; font-weight: 750; }
+  .wb-why { list-style: none; font-size: 12px; color: var(--ink-soft); min-width: 0; }
+  .wb-why li { display: inline; }
+  .wb-why li + li::before { content: " \00b7 "; opacity: .55; }
+  .wb-hold-note { margin-top: 10px; font-size: 14px; font-weight: 650; color: var(--hold); }
+
+  .wb-details { margin-top: 12px; border-top: 1px solid var(--rule); padding-top: 9px; }
+  .wb-details + .wb-details { margin-top: 8px; }
+  .wb-details summary {
+    cursor: pointer; color: var(--ink-soft); font-family: var(--mono); font-size: 11px;
+    letter-spacing: .085em; text-transform: uppercase;
+  }
+  .wb-details summary:hover { color: var(--ink); }
+
+  .wb-point-list { list-style: none; margin-top: 9px; counter-reset: point; }
+  .wb-point {
+    position: relative; display: grid; grid-template-columns: 25px minmax(0, 1fr); gap: 8px;
+    padding: 7px 0; border-bottom: 1px solid #e7eef1;
+  }
+  .wb-point:last-child { border-bottom: 0; }
+  .wb-point-num {
+    display: grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--rule);
+    border-radius: 50%; font-family: var(--mono); font-size: 10px; color: var(--ink-soft);
+  }
+  .wb-point b { font-size: 13px; }
+  .wb-point small { display: block; margin-top: 2px; color: var(--ink-soft); font-size: 11px; overflow-wrap: anywhere; }
+
+  .wb-leg-list { list-style: none; margin-top: 9px; }
+  .wb-leg { display: grid; grid-template-columns: 25px minmax(0, 1fr) auto; gap: 8px; padding: 7px 0; border-bottom: 1px solid #e7eef1; align-items: start; }
+  .wb-leg:last-child { border-bottom: 0; }
+  .wb-leg-seq { color: var(--ink-soft); font-family: var(--mono); font-size: 10px; padding-top: 2px; }
+  .wb-leg b { display: block; font-size: 12px; overflow-wrap: anywhere; }
+  .wb-leg small { display: block; margin-top: 2px; color: var(--ink-soft); font-size: 10px; }
+  .wb-leg-dist { font-family: var(--mono); font-size: 11px; white-space: nowrap; }
+
+  .wb-bail-list { list-style: none; margin-top: 8px; }
+  .wb-bail-list li { padding: 6px 0; border-bottom: 1px solid #e7eef1; font-size: 12px; }
+  .wb-bail-list li:last-child { border-bottom: 0; }
+  .wb-bail-list i { font-style: normal; color: var(--ink-soft); font-family: var(--mono); font-size: 10px; }
+  .wb-bail-list span { display: block; margin-top: 2px; color: var(--ink-soft); font-size: 11px; }
+
+  .wb-blocked { margin-top: 12px; padding: 10px; border: 1px dashed var(--rule); color: var(--ink-soft); font-family: var(--mono); font-size: 11px; text-align: center; }
+  .wb-msg { margin-top: 16px; padding: 17px; border: 1px dashed var(--rule); border-radius: 4px; color: var(--ink-soft); font-size: 14px; }
+  .wb-msg b { display: block; margin-bottom: 4px; color: var(--ink); }
+
+  .wb-compare { margin-top: 14px; border: 1px solid var(--rule); background: var(--card); }
+  .wb-compare-head, .wb-compare-row {
+    display: grid; grid-template-columns: minmax(210px, 2fr) 100px 75px 105px 95px 105px;
+    align-items: center; gap: 10px;
+  }
+  .wb-compare-head {
+    padding: 9px 11px; border-bottom: 2px solid var(--ink); color: var(--ink-soft);
+    font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .wb-compare-row {
+    width: 100%; border: 0; border-bottom: 1px solid var(--rule); background: transparent;
+    color: var(--ink); text-align: left; padding: 11px; cursor: pointer;
+  }
+  .wb-compare-row:last-child { border-bottom: 0; }
+  .wb-compare-row:hover { background: var(--paper); }
+  .wb-compare-name b { display: block; font-size: 13px; }
+  .wb-compare-name small { display: block; color: var(--ink-soft); font-size: 10px; margin-top: 2px; }
+  .wb-compare-cell { font-family: var(--mono); font-size: 11px; }
+  .wb-mini-effort { display: flex; align-items: center; gap: 6px; }
+  .wb-mini-track { position: relative; width: 62px; height: 7px; background: linear-gradient(90deg, var(--effort-green) 0 30%, var(--effort-yellow) 30% 50%, var(--effort-orange) 50% 70%, var(--effort-red) 70% 90%, var(--effort-purple) 90% 100%); }
+  .wb-mini-marker { position: absolute; top: -2px; bottom: -2px; left: calc(var(--effort-pct) * 1%); width: 2px; background: var(--ink); }
+
+  .wb-foot { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule); }
+  .wb-foot-line { color: var(--ink-soft); font-size: 12px; }
+  .wb-foot-meta { margin-top: 6px; color: var(--ink-soft); font-size: 9px; letter-spacing: .07em; text-transform: uppercase; }
+
+  .wb-card, .wb-compare { animation: wb-rise .24s ease both; }
+  @keyframes wb-rise { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .wb-card, .wb-compare { animation: none; } }
+
+  @media (max-width: 760px) {
+    .wb-controls { grid-template-columns: 1fr 1fr; }
+    .wb-field-route { grid-column: 1 / -1; }
+    .wb-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .wb-summary-item:nth-child(n+4) { grid-column: span 1; }
+    .wb-compare-head { display: none; }
+    .wb-compare { border: 0; background: transparent; display: grid; gap: 9px; }
+    .wb-compare-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; border: 1px solid var(--rule);
+      border-radius: 4px; background: var(--card); padding: 12px;
+    }
+    .wb-compare-name { grid-column: 1 / -1; }
+    .wb-compare-cell::before {
+      content: attr(data-label); display: block; color: var(--ink-soft); font-size: 8px;
+      letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .wb-head-row { align-items: start; flex-direction: column; gap: 6px; }
+    .wb-count { text-align: left; }
+    .wb-controls { grid-template-columns: 1fr; gap: 12px; }
+    .wb-field-route { grid-column: auto; }
+    .wb-seg { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; overflow: visible; border: 0; gap: 5px; }
+    .wb-seg-btn { border: 1px solid var(--rule) !important; border-radius: 3px; padding: 9px 6px; }
+    .wb-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .wb-summary-item:last-child { grid-column: 1 / -1; }
+    .wb-card { padding: 14px 13px; }
+    .wb-card-top { align-items: start; }
+    .wb-route { font-size: 17px; }
+    .wb-win { grid-template-columns: 1fr; gap: 3px; }
+    .wb-effort-ticks span:nth-child(even):not(:last-child) { visibility: hidden; }
+    .wb-leg { grid-template-columns: 22px minmax(0, 1fr); }
+    .wb-leg-dist { grid-column: 2; }
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var PLAN_URL = "https://spinoutyachtclub.github.io/spinout-fair-ride/plan.json";
+  var LABEL = { beginner: "Beginner", intermediate: "Intermediate", advanced: "Advanced", expert: "Expert", night_expert: "Night Expert" };
+  var TYPE_LABEL = { loop: "Loop", out_and_back: "Out and back", multi_stop_loop: "Multi-stop loop", route: "Route" };
+  var CHIP = { green: ["c-go", "Go"], yellow: ["c-caution", "Caution"], red: ["c-hold", "Hold"] };
+  var TIER_RANK = { beginner: 0, intermediate: 1, advanced: 2, expert: 3, night_expert: 4 };
+
+  var root = document.getElementById("wbai");
+  var bodyEl = document.getElementById("wb-body");
+  var plan = null;
+  var skill = "intermediate";
+  var view = "cards";
+  var selectedRoute = "all";
+
+  function esc(value) {
+    var d = document.createElement("div");
+    d.textContent = value == null ? "" : String(value);
+    return d.innerHTML;
+  }
+  function number(value, fallback) {
+    var n = Number(value);
+    return Number.isFinite(n) ? n : fallback;
+  }
+  function clamp(value, low, high) { return Math.max(low, Math.min(high, value)); }
+  // The plan describes San Francisco Bay, so every time is shown in Pacific
+  // regardless of where the reader is. Without an explicit timeZone the
+  // browser renders in its own zone and a visitor planning from out of state
+  // reads the wrong launch window.
+  var TZ = "America/Los_Angeles";
+  function time(iso) {
+    var d = new Date(iso);
+    if (isNaN(d)) return String(iso || "");
+    try {
+      return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", timeZone: TZ });
+    } catch (e) {
+      return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    }
+  }
+  function millis(iso) { var d = new Date(iso); return isNaN(d) ? null : d.getTime(); }
+  function startName(route) {
+    // Derived from the route's own first waypoint rather than assumed.
+    var wp = Array.isArray(route.waypoints) ? route.waypoints : [];
+    var name = wp.length ? (wp[0].name || wp[0].id) : null;
+    return name ? "From " + name : "Central Bay";
+  }
+  function routeType(route) { return TYPE_LABEL[route.route_type] || TYPE_LABEL.route; }
+  function winsFor(route, tier) {
+    if (route.windows_by_skill && Array.isArray(route.windows_by_skill[tier])) return route.windows_by_skill[tier];
+    return plan && tier === plan.skill_default ? (route.windows || []) : [];
+  }
+  function statusFor(route, tier) { return (route.status_by_skill && route.status_by_skill[tier]) || route.status || "red"; }
+  function blockedFor(route, tier) {
+    var reasons = route.blocked_by_skill && route.blocked_by_skill[tier];
+    return Array.isArray(reasons) && reasons.length ? reasons : null;
+  }
+  function effortFor(route, tier) {
+    if (route.effort_by_skill && route.effort_by_skill[tier] != null) return number(route.effort_by_skill[tier], 10);
+    return number(route.effort, 10);
+  }
+  function effortPercent(route, tier) { return clamp(Math.round(effortFor(route, tier) * 10), 0, 100); }
+  function plural(n, one, many) { return n === 1 ? one : many; }
+
+  function eligibleRoutes() {
+    return plan.routes.filter(function (route) { return !blockedFor(route, skill); }).sort(function (a, b) {
+      var ar = TIER_RANK[a.min_tier] == null ? 99 : TIER_RANK[a.min_tier];
+      var br = TIER_RANK[b.min_tier] == null ? 99 : TIER_RANK[b.min_tier];
+      return ar - br || number(a.distance_mi, 999) - number(b.distance_mi, 999) || String(a.name).localeCompare(String(b.name));
+    });
+  }
+
+  function displayedRoutes() {
+    var routes = eligibleRoutes();
+    if (selectedRoute === "all") return routes;
+    return routes.filter(function (route) { return route.id === selectedRoute; });
+  }
+
+  function renderRouteSelect() {
+    var select = document.getElementById("wb-route-select");
+    var routes = eligibleRoutes();
+    if (selectedRoute !== "all" && !routes.some(function (route) { return route.id === selectedRoute; })) selectedRoute = "all";
+
+    var groups = {};
+    routes.forEach(function (route) {
+      var tier = route.min_tier || "beginner";
+      (groups[tier] = groups[tier] || []).push(route);
+    });
+    var html = '<option value="all">All ' + routes.length + " routes in range</option>";
+    (plan.skills || []).forEach(function (tier) {
+      if (!groups[tier] || !groups[tier].length) return;
+      html += '<optgroup label="' + esc(LABEL[tier] || tier) + ' floor">';
+      groups[tier].forEach(function (route) {
+        html += '<option value="' + esc(route.id) + '"' + (selectedRoute === route.id ? " selected" : "") + ">" +
+          esc(route.name) + " \u2014 " + esc(number(route.distance_mi, 0).toFixed(2).replace(/\.00$/, "")) + " mi</option>";
+      });
+      html += "</optgroup>";
+    });
+    select.innerHTML = html;
+    select.value = selectedRoute;
+  }
+
+  function summary() {
+    var routes = eligibleRoutes();
+    var counts = { green: 0, yellow: 0, red: 0 };
+    routes.forEach(function (route) { counts[statusFor(route, skill)] = (counts[statusFor(route, skill)] || 0) + 1; });
+    var blocked = plan.routes.length - routes.length;
+    var items = [
+      [routes.length, "In range"],
+      [counts.green, "Go"],
+      [counts.yellow, "Caution"],
+      [counts.red, "Hold"],
+      [blocked, "Above tier"]
+    ];
+    document.getElementById("wb-summary").innerHTML = items.map(function (item) {
+      return '<div class="wb-summary-item"><b>' + item[0] + "</b><span>" + item[1] + "</span></div>";
+    }).join("");
+  }
+
+  function effortMeter(route) {
+    var pct = effortPercent(route, skill);
+    var ticks = "";
+    for (var n = 0; n <= 100; n += 10) ticks += "<span>" + n + "</span>";
+    var segments = "";
+    for (var i = 0; i < 10; i++) segments += '<i class="wb-effort-seg"></i>';
+    return '<div class="wb-effort-box"><div class="wb-effort-head"><b>Effort level</b><span>' + pct + "% \u00b7 " +
+      esc(LABEL[skill] || skill) + '</span></div><div class="wb-effort-track" style="--effort-pct:' + pct + '">' +
+      segments + '<i class="wb-effort-marker" aria-hidden="true"></i></div><div class="wb-effort-ticks">' + ticks + "</div></div>";
+  }
+
+  function timeline(route) {
+    var daylight = route.daylight || {};
+    var start = millis(daylight.sunrise), end = millis(daylight.sunset);
+    var wins = winsFor(route, skill);
+    if (!start || !end || end <= start) return "";
+    var span = end - start, ticks = "";
+    for (var h = 1; h < 24; h++) {
+      // Ticks are drawn at even fractions of the daylight span rather than
+      // wall-clock hours, so they do not shift with the viewer's zone.
+      var p = h / 24 * 100 * (24 * 3600000 / span);
+      if (p >= 100) break;
+      if (p > 0 && p < 100) ticks += '<i class="wb-tl-hour" style="left:' + p.toFixed(2) + '%"></i>';
+    }
+    var bars = wins.map(function (win) {
+      var ws = millis(win.start), we = millis(win.end);
+      if (!ws || !we) return "";
+      var left = clamp((ws - start) / span * 100, 0, 100);
+      var width = Math.max(1, (we - ws) / span * 100);
+      if (left + width > 100) width = 100 - left;
+      return '<i class="wb-tl-win" data-b="' + esc(statusFor(route, skill)) + '" style="left:' + left.toFixed(2) + "%;width:" + width.toFixed(2) + '%"></i>';
+    }).join("");
+    var empty = wins.length ? "" : '<span class="wb-tl-empty">No window today</span>';
+    return '<div class="wb-tl"><div class="wb-tl-track" role="img" aria-label="' +
+      (wins.length ? wins.length + " available " + plural(wins.length, "window", "windows") : "No available window today") + '">' +
+      ticks + bars + empty + '</div><div class="wb-tl-scale"><span>Sunrise ' + time(daylight.sunrise) + "</span><span>Sunset " + time(daylight.sunset) + "</span></div></div>";
+  }
+
+  function windowsBlock(route) {
+    var wins = winsFor(route, skill);
+    if (!wins.length) {
+      return '<p class="wb-hold-note">Nothing clears the ' + esc(LABEL[skill] || skill) + " limits today. Choose another route or check conditions again later.</p>";
+    }
+    return '<div class="wb-wins">' + wins.map(function (win) {
+      var reasons = (win.reasons || []).map(function (reason) { return "<li>" + esc(reason) + "</li>"; }).join("");
+      return '<div class="wb-win"><div class="wb-win-time">' + time(win.start) + " to " + time(win.end) + '</div><ul class="wb-why">' + reasons + "</ul></div>";
+    }).join("") + "</div>";
+  }
+
+  function pointMeta(point) {
+    var bits = [];
+    if (point.access_type && point.access_type !== "none") bits.push(point.access_type);
+    if (point.permit) bits.push(point.permit + " access");
+    if (point.shelters_from_wind) bits.push("wind protection: " + point.shelters_from_wind);
+    if (point.shelters_from_tide) bits.push("current relief: " + point.shelters_from_tide);
+    if (point.access_type === "beach" && point.min_tide_ft == null) bits.push("minimum tide not yet confirmed");
+    if (point.min_tide_ft != null) bits.push("minimum tide " + point.min_tide_ft + " ft");
+    if (point.verified === false) bits.push("operator confirmation pending");
+    return bits.join(" \u00b7 ");
+  }
+
+  function routePathBlock(route) {
+    var points = Array.isArray(route.waypoints) ? route.waypoints : [];
+    var legs = Array.isArray(route.legs) ? route.legs : [];
+    if (!points.length && !legs.length) return "";
+
+    var pointHtml = points.map(function (point, index) {
+      var role = index === 0 ? "Start" : (index === points.length - 1 ? "Return" : "Waypoint");
+      var meta = pointMeta(point);
+      return '<li class="wb-point"><span class="wb-point-num">' + (index + 1) + '</span><div><b>' + esc(point.name || point.id) +
+        '</b><small>' + esc(role + (meta ? " \u00b7 " + meta : "")) + "</small></div></li>";
+    }).join("");
+
+    var legHtml = legs.map(function (leg) {
+      var notes = ["exposure " + number(leg.exposure_index, 0).toFixed(1)];
+      if (leg.bearing != null) notes.push("bearing " + leg.bearing + "\u00b0");
+      if (leg.ferry_crossing) notes.push("ferry lane");
+      return '<li class="wb-leg"><span class="wb-leg-seq">' + esc(leg.seq) + '</span><div><b>' +
+        esc(leg.from_name || leg.from) + " \u2192 " + esc(leg.to_name || leg.to) + '</b><small>' + esc(notes.join(" \u00b7 ")) +
+        '</small></div><span class="wb-leg-dist">' + esc(number(leg.distance_mi, 0).toFixed(2)) + " mi</span></li>";
+    }).join("");
+
+    return '<details class="wb-details"><summary>Route path \u00b7 ' + points.length + " route points \u00b7 " + legs.length + " legs</summary>" +
+      (pointHtml ? '<ol class="wb-point-list">' + pointHtml + "</ol>" : "") +
+      (legHtml ? '<details class="wb-details"><summary>Leg-by-leg details</summary><ol class="wb-leg-list">' + legHtml + "</ol></details>" : "") +
+      "</details>";
+  }
+
+  function bailoutBlock(route) {
+    var bailouts = Array.isArray(route.bailouts) ? route.bailouts : [];
+    if (!bailouts.length) return "";
+    return '<details class="wb-details"><summary>Bailout landings \u00b7 ' + bailouts.length + '</summary><ul class="wb-bail-list">' +
+      bailouts.map(function (item) {
+        var details = [];
+        if (item.landing_type) details.push(item.landing_type);
+        details.push(item.staffed ? "staffed" : "not staffed");
+        return "<li><b>" + esc(item.name) + "</b> <i>" + esc(details.join(" \u00b7 ")) + "</i>" +
+          (item.unusable_when ? "<span>" + esc(item.unusable_when) + "</span>" : "") + "</li>";
+      }).join("") + "</ul></details>";
+  }
+
+  function routeFacts(route) {
+    var legs = Array.isArray(route.legs) ? route.legs.length : number(route.leg_count, 0);
+    var ferries = number(route.ferry_crossing_count, Array.isArray(route.legs) ? route.legs.filter(function (leg) { return leg.ferry_crossing; }).length : 0);
+    var facts = [
+      number(route.distance_mi, 0).toFixed(2).replace(/\.00$/, "") + " mi",
+      routeType(route),
+      (LABEL[route.min_tier] || route.min_tier || "Unrated") + " floor",
+      legs + " " + plural(legs, "leg", "legs")
+    ];
+    if (ferries) facts.push(ferries + " ferry-lane " + plural(ferries, "leg", "legs"));
+    if (route.max_exposure != null) facts.push("max exposure " + number(route.max_exposure, 0).toFixed(1));
+    return '<div class="wb-facts">' + facts.map(function (fact) {
+      return '<span class="wb-tag' + (/ferry/.test(fact) ? " wb-tag-warn" : "") + '">' + esc(fact) + "</span>";
+    }).join("") + "</div>";
+  }
+
+  function routeCard(route) {
+    var status = statusFor(route, skill), chip = CHIP[status] || CHIP.red;
+    return '<article class="wb-card" id="route-' + esc(route.id) + '"><div class="wb-card-top"><div><h3 class="wb-route">' + esc(route.name) +
+      '</h3><p class="wb-route-meta">' + esc(startName(route)) + ' \u00b7 ' + esc(routeType(route)) + '</p></div><span class="wb-chip ' + chip[0] +
+      '"><i class="mk"></i>' + chip[1] + "</span></div>" + routeFacts(route) + effortMeter(route) + timeline(route) + windowsBlock(route) +
+      routePathBlock(route) + bailoutBlock(route) + "</article>";
+  }
+
+  function cards() {
+    var routes = displayedRoutes();
+    if (!routes.length) return '<div class="wb-msg"><b>No route is in range for this tier.</b>Select a higher tier to see more routes.</div>';
+    var blocked = plan.routes.length - eligibleRoutes().length;
+    return '<div class="wb-cards">' + routes.map(routeCard).join("") + "</div>" +
+      (selectedRoute === "all" && blocked ? '<p class="wb-blocked">' + blocked + " routes are above the " + esc(LABEL[skill] || skill) + " tier.</p>" : "");
+  }
+
+  function compare() {
+    var routes = displayedRoutes();
+    if (!routes.length) return '<div class="wb-msg"><b>No routes to compare.</b>Select a higher tier.</div>';
+    var rows = routes.map(function (route) {
+      var status = statusFor(route, skill), chip = CHIP[status] || CHIP.red, pct = effortPercent(route, skill), wins = winsFor(route, skill);
+      return '<button type="button" class="wb-compare-row" data-pick-route="' + esc(route.id) + '"><span class="wb-compare-name"><b>' +
+        esc(route.name) + '</b><small>' + esc(routeType(route)) + " \u00b7 " + esc(LABEL[route.min_tier] || route.min_tier) +
+        ' floor</small></span><span class="wb-compare-cell" data-label="Status"><span class="wb-chip ' + chip[0] + '"><i class="mk"></i>' + chip[1] +
+        '</span></span><span class="wb-compare-cell" data-label="Distance">' + esc(number(route.distance_mi, 0).toFixed(2)) +
+        ' mi</span><span class="wb-compare-cell wb-mini-effort" data-label="Effort"><span class="wb-mini-track" style="--effort-pct:' + pct +
+        '"><i class="wb-mini-marker"></i></span>' + pct + '%</span><span class="wb-compare-cell" data-label="Windows">' + wins.length + " " +
+        plural(wins.length, "window", "windows") + '</span><span class="wb-compare-cell" data-label="Route detail">' +
+        number(route.leg_count, Array.isArray(route.legs) ? route.legs.length : 0) + " legs</span></button>";
+    }).join("");
+    return '<div class="wb-compare"><div class="wb-compare-head"><span>Route</span><span>Status</span><span>Distance</span><span>Effort</span><span>Windows</span><span>Route detail</span></div>' + rows + "</div>";
+  }
+
+  function draw() {
+    renderRouteSelect();
+    summary();
+    bodyEl.innerHTML = view === "compare" ? compare() : cards();
+    document.getElementById("wb-route-count").textContent = eligibleRoutes().length + " of " + plan.routes.length + " routes in range";
+  }
+
+  function wireControls() {
+    var skillBox = document.getElementById("wb-skill");
+    skillBox.innerHTML = (plan.skills || []).map(function (tier) {
+      return '<button type="button" class="wb-seg-btn' + (tier === skill ? " is-on" : "") + '" data-skill="' + esc(tier) +
+        '" aria-pressed="' + (tier === skill) + '">' + esc(LABEL[tier] || tier) + "</button>";
+    }).join("");
+
+    skillBox.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-skill]");
+      if (!button) return;
+      skill = button.getAttribute("data-skill");
+      selectedRoute = "all";
+      Array.prototype.forEach.call(skillBox.children, function (item) {
+        var on = item === button; item.classList.toggle("is-on", on); item.setAttribute("aria-pressed", on);
+      });
+      draw();
+    });
+
+    document.getElementById("wb-route-select").addEventListener("change", function (event) {
+      selectedRoute = event.target.value;
+      view = "cards";
+      Array.prototype.forEach.call(document.getElementById("wb-view").children, function (item) {
+        var on = item.getAttribute("data-view") === view; item.classList.toggle("is-on", on); item.setAttribute("aria-pressed", on);
+      });
+      draw();
+    });
+
+    var viewBox = document.getElementById("wb-view");
+    viewBox.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-view]");
+      if (!button) return;
+      view = button.getAttribute("data-view");
+      Array.prototype.forEach.call(viewBox.children, function (item) {
+        var on = item === button; item.classList.toggle("is-on", on); item.setAttribute("aria-pressed", on);
+      });
+      draw();
+    });
+
+    bodyEl.addEventListener("click", function (event) {
+      var row = event.target.closest("[data-pick-route]");
+      if (!row) return;
+      selectedRoute = row.getAttribute("data-pick-route");
+      view = "cards";
+      Array.prototype.forEach.call(viewBox.children, function (item) {
+        var on = item.getAttribute("data-view") === view; item.classList.toggle("is-on", on); item.setAttribute("aria-pressed", on);
+      });
+      draw();
+      var card = document.getElementById("route-" + selectedRoute);
+      if (card && card.scrollIntoView) card.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  function render(p) {
+    plan = p;
+    root.setAttribute("data-state", "ready");
+    if (p.skills && p.skills.indexOf(skill) === -1) skill = p.skill_default || p.skills[0];
+
+    var generated = new Date(p.generated_at);
+    document.getElementById("wb-stamp").textContent = isNaN(generated)
+      ? p.day
+      : generated.toLocaleDateString([], { weekday: "long", month: "short", day: "numeric", timeZone: TZ }) +
+        ", updated " + time(p.generated_at) + " PT";
+
+    var advisoryEl = document.getElementById("wb-advisory");
+    advisoryEl.hidden = true;
+    if (p.advisory === "small_craft" || p.advisory === "gale") {
+      advisoryEl.hidden = false;
+      advisoryEl.textContent = p.advisory === "gale" ? "Gale warning in effect. Do not launch." : "Small craft advisory in effect. All routes are on hold.";
+    }
+
+    var quality = p.data_quality || {}, estimated = [];
+    if (quality.tide === "estimated") estimated.push("tide");
+    if (quality.wind === "estimated") estimated.push("wind");
+    if (quality.advisory === "unknown") estimated.push("advisory");
+    var estimatedEl = document.getElementById("wb-estimated");
+    estimatedEl.hidden = !estimated.length;
+    if (estimated.length) estimatedEl.textContent = "Modelled, not measured: " + estimated.join(", ") + ". Confirm conditions on site.";
+
+    var hasRouteDetail = p.routes.some(function (route) { return Array.isArray(route.legs) && route.legs.length && Array.isArray(route.waypoints) && route.waypoints.length; });
+    var compatEl = document.getElementById("wb-compat");
+    compatEl.hidden = hasRouteDetail;
+    if (!hasRouteDetail) compatEl.textContent = "Daily windows are available, but route locations and leg details require plan_generator.py v2.6 or later.";
+
+    document.getElementById("wb-controls").hidden = false;
+    document.getElementById("wb-summary").hidden = false;
+    document.getElementById("wb-foot").hidden = false;
+    document.getElementById("wb-foot-meta").textContent = "Plan v" + (p.version || "") + " \u00b7 " + p.routes.length + " routes \u00b7 tide station " +
+      ((((p.routes || [])[0] || {}).data_sources || {}).tide || "NOAA") + " \u00b7 route labels act as minimum tier floors";
+
+    wireControls();
+    draw();
+  }
+
+  function fail(message) {
+    root.setAttribute("data-state", "error");
+    document.getElementById("wb-stamp").textContent = "Plan unavailable";
+    bodyEl.innerHTML = '<div class="wb-msg"><b>Today\u2019s plan did not load.</b>' + esc(message) + "</div>";
+  }
+
+  bodyEl.innerHTML = '<div class="wb-msg">Reading today\u2019s tide, wind, advisory, and route catalog.</div>';
+  fetch(PLAN_URL, { cache: "no-store" })
+    .then(function (response) { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
+    .then(function (data) {
+      if (!data || !Array.isArray(data.routes) || !data.routes.length) throw new Error("empty route plan");
+      render(data);
+    })
+    .catch(function () { fail("Refresh the page and confirm the published plan.json is available."); });
+})();
+</script>
