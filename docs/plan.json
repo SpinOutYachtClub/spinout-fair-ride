@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06T17:18:53.317371-07:00",
-  "version": "2.5.0",
+  "generated_at": "2026-08-06T17:35:00.976730-07:00",
+  "version": "2.6.0",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-06",
   "skill_default": "intermediate",
@@ -16,9 +16,120 @@
     {
       "id": "r01_south_beach_harbor_circuit",
       "name": "South Beach Harbor Circuit",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "beginner",
+      "min_tier": "beginner",
+      "night_difficulty": "not_permitted",
       "distance_mi": 0.51,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to South Beach Harbor Entrance",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "south_beach_harbor_entrance",
+          "to_name": "South Beach Harbor Entrance",
+          "bearing": 54,
+          "distance_mi": 0.16,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "South Beach Harbor Entrance to Pier 40 South Public Dock",
+          "from": "south_beach_harbor_entrance",
+          "from_name": "South Beach Harbor Entrance",
+          "to": "pier_40_south_dock",
+          "to_name": "Pier 40 South Public Dock",
+          "bearing": 219,
+          "distance_mi": 0.25,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Pier 40 South Public Dock to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_40_south_dock",
+          "from_name": "Pier 40 South Public Dock",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 16,
+          "distance_mi": 0.11,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "south_beach_harbor_entrance",
+          "name": "South Beach Harbor Entrance",
+          "lat": 37.7829,
+          "lon": -122.38275,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40_south_dock",
+          "name": "Pier 40 South Public Dock",
+          "lat": 37.78055,
+          "lon": -122.38515,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 3,
+      "ferry_crossing_count": 0,
+      "max_exposure": 0.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -141,7 +252,6 @@
         "Pier 40 / South Beach Harbor Home Harbor",
         "Pier 40 South Public Dock"
       ],
-      "min_tier": "beginner",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -156,9 +266,151 @@
     {
       "id": "r02_mccovey_cove_loop",
       "name": "McCovey Cove Loop",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "beginner",
+      "min_tier": "beginner",
+      "night_difficulty": "not_permitted",
       "distance_mi": 0.89,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Oracle Park Cove",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "oracle_park_cove",
+          "to_name": "Oracle Park Cove",
+          "bearing": 217,
+          "distance_mi": 0.32,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Oracle Park Cove to McCovey Cove",
+          "from": "oracle_park_cove",
+          "from_name": "Oracle Park Cove",
+          "to": "mccovey_cove",
+          "to_name": "McCovey Cove",
+          "bearing": 253,
+          "distance_mi": 0.13,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "McCovey Cove to Pier 40 South Public Dock",
+          "from": "mccovey_cove",
+          "from_name": "McCovey Cove",
+          "to": "pier_40_south_dock",
+          "to_name": "Pier 40 South Public Dock",
+          "bearing": 57,
+          "distance_mi": 0.34,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Pier 40 South Public Dock to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_40_south_dock",
+          "from_name": "Pier 40 South Public Dock",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 16,
+          "distance_mi": 0.11,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "oracle_park_cove",
+          "name": "Oracle Park Cove",
+          "lat": 37.7787,
+          "lon": -122.38765,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mccovey_cove",
+          "name": "McCovey Cove",
+          "lat": 37.77825,
+          "lon": -122.38955,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40_south_dock",
+          "name": "Pier 40 South Public Dock",
+          "lat": 37.78055,
+          "lon": -122.38515,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 4,
+      "ferry_crossing_count": 0,
+      "max_exposure": 0.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -289,7 +541,6 @@
         "McCovey Cove",
         "Oracle Park Cove"
       ],
-      "min_tier": "beginner",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -304,9 +555,116 @@
     {
       "id": "r04_mission_rock_triangle",
       "name": "Mission Rock Triangle",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "beginner",
+      "min_tier": "beginner",
+      "night_difficulty": "not_permitted",
       "distance_mi": 1.81,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Mission Rock North Shore",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "mission_rock_north",
+          "to_name": "Mission Rock North Shore",
+          "bearing": 187,
+          "distance_mi": 0.73,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Mission Rock North Shore to Pier 52 Boat Launch Area",
+          "from": "mission_rock_north",
+          "from_name": "Mission Rock North Shore",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 137,
+          "distance_mi": 0.2,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Pier 52 Boat Launch Area to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 357,
+          "distance_mi": 0.88,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_rock_north",
+          "name": "Mission Rock North Shore",
+          "lat": 37.77285,
+          "lon": -122.3861,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 3,
+      "ferry_crossing_count": 0,
+      "max_exposure": 1.0,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -437,7 +795,6 @@
         "Mission Rock North Shore",
         "Pier 40 / South Beach Harbor Home Harbor"
       ],
-      "min_tier": "beginner",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -452,9 +809,263 @@
     {
       "id": "r03_mission_creek_out_back",
       "name": "Mission Creek Protected Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "beginner",
+      "min_tier": "beginner",
+      "night_difficulty": "not_permitted",
       "distance_mi": 2.03,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Oracle Park Cove",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "oracle_park_cove",
+          "to_name": "Oracle Park Cove",
+          "bearing": 217,
+          "distance_mi": 0.32,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Oracle Park Cove to Mission Creek Mouth",
+          "from": "oracle_park_cove",
+          "from_name": "Oracle Park Cove",
+          "to": "mission_creek_mouth",
+          "to_name": "Mission Creek Mouth",
+          "bearing": 175,
+          "distance_mi": 0.14,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Mission Creek Mouth to Mission Creek Turning Basin",
+          "from": "mission_creek_mouth",
+          "from_name": "Mission Creek Mouth",
+          "to": "mission_creek_turning_basin",
+          "to_name": "Mission Creek Turning Basin",
+          "bearing": 202,
+          "distance_mi": 0.3,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Mission Creek Turning Basin to Mission Creek Boat Launch",
+          "from": "mission_creek_turning_basin",
+          "from_name": "Mission Creek Turning Basin",
+          "to": "mission_creek_launch",
+          "to_name": "Mission Creek Boat Launch",
+          "bearing": 152,
+          "distance_mi": 0.26,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Mission Creek Boat Launch to Mission Creek Turning Basin",
+          "from": "mission_creek_launch",
+          "from_name": "Mission Creek Boat Launch",
+          "to": "mission_creek_turning_basin",
+          "to_name": "Mission Creek Turning Basin",
+          "bearing": 332,
+          "distance_mi": 0.26,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Mission Creek Turning Basin to Mission Creek Mouth",
+          "from": "mission_creek_turning_basin",
+          "from_name": "Mission Creek Turning Basin",
+          "to": "mission_creek_mouth",
+          "to_name": "Mission Creek Mouth",
+          "bearing": 22,
+          "distance_mi": 0.3,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "Mission Creek Mouth to Oracle Park Cove",
+          "from": "mission_creek_mouth",
+          "from_name": "Mission Creek Mouth",
+          "to": "oracle_park_cove",
+          "to_name": "Oracle Park Cove",
+          "bearing": 355,
+          "distance_mi": 0.14,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 8,
+          "name": "Oracle Park Cove to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "oracle_park_cove",
+          "from_name": "Oracle Park Cove",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 37,
+          "distance_mi": 0.32,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "oracle_park_cove",
+          "name": "Oracle Park Cove",
+          "lat": 37.7787,
+          "lon": -122.38765,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_mouth",
+          "name": "Mission Creek Mouth",
+          "lat": 37.77695,
+          "lon": -122.38745,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_turning_basin",
+          "name": "Mission Creek Turning Basin",
+          "lat": 37.77355,
+          "lon": -122.3892,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_launch",
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_turning_basin",
+          "name": "Mission Creek Turning Basin",
+          "lat": 37.77355,
+          "lon": -122.3892,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_mouth",
+          "name": "Mission Creek Mouth",
+          "lat": 37.77695,
+          "lon": -122.38745,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "oracle_park_cove",
+          "name": "Oracle Park Cove",
+          "lat": 37.7787,
+          "lon": -122.38765,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 8,
+      "ferry_crossing_count": 0,
+      "max_exposure": 0.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -585,7 +1196,6 @@
         "Mission Creek Boat Launch",
         "Mission Creek Mouth"
       ],
-      "min_tier": "beginner",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -600,9 +1210,255 @@
     {
       "id": "r05_crane_cove_out_back",
       "name": "Crane Cove Scenic Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "intermediate",
+      "min_tier": "intermediate",
+      "night_difficulty": "not_permitted",
       "distance_mi": 3.28,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Mission Rock North Shore",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "mission_rock_north",
+          "to_name": "Mission Rock North Shore",
+          "bearing": 187,
+          "distance_mi": 0.74,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Mission Rock North Shore to Pier 52 Boat Launch Area",
+          "from": "mission_rock_north",
+          "from_name": "Mission Rock North Shore",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 137,
+          "distance_mi": 0.2,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Pier 52 Boat Launch Area to Crane Cove Inner Refuge",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 194,
+          "distance_mi": 0.59,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Crane Cove Inner Refuge to Crane Cove Park Beach",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "crane_cove_beach",
+          "to_name": "Crane Cove Park Beach",
+          "bearing": 231,
+          "distance_mi": 0.11,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Crane Cove Park Beach to Crane Cove Inner Refuge",
+          "from": "crane_cove_beach",
+          "from_name": "Crane Cove Park Beach",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 51,
+          "distance_mi": 0.11,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Crane Cove Inner Refuge to Pier 52 Boat Launch Area",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 14,
+          "distance_mi": 0.59,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "Pier 52 Boat Launch Area to Mission Rock North Shore",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "mission_rock_north",
+          "to_name": "Mission Rock North Shore",
+          "bearing": 317,
+          "distance_mi": 0.2,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 8,
+          "name": "Mission Rock North Shore to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "mission_rock_north",
+          "from_name": "Mission Rock North Shore",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 7,
+          "distance_mi": 0.74,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_rock_north",
+          "name": "Mission Rock North Shore",
+          "lat": 37.77285,
+          "lon": -122.3861,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_beach",
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "role": [
+            "all"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_rock_north",
+          "name": "Mission Rock North Shore",
+          "lat": 37.77285,
+          "lon": -122.3861,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 8,
+      "ferry_crossing_count": 0,
+      "max_exposure": 1.0,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -720,7 +1576,6 @@
         "Crane Cove Inner Refuge",
         "Crane Cove Park Beach"
       ],
-      "min_tier": "intermediate",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -735,9 +1590,172 @@
     {
       "id": "r06_dogpatch_waterfront_loop",
       "name": "Dogpatch Waterfront Loop",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "intermediate",
+      "min_tier": "intermediate",
+      "night_difficulty": "not_permitted",
       "distance_mi": 3.77,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Mission Rock North Shore",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "mission_rock_north",
+          "to_name": "Mission Rock North Shore",
+          "bearing": 187,
+          "distance_mi": 0.74,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Mission Rock North Shore to Pier 52 Boat Launch Area",
+          "from": "mission_rock_north",
+          "from_name": "Mission Rock North Shore",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 137,
+          "distance_mi": 0.2,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Pier 52 Boat Launch Area to Crane Cove Inner Refuge",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 194,
+          "distance_mi": 0.59,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Crane Cove Inner Refuge to Pier 70 Shoreline",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "pier_70",
+          "to_name": "Pier 70 Shoreline",
+          "bearing": 191,
+          "distance_mi": 0.4,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Pier 70 Shoreline to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_70",
+          "from_name": "Pier 70 Shoreline",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 5,
+          "distance_mi": 1.85,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_rock_north",
+          "name": "Mission Rock North Shore",
+          "lat": 37.77285,
+          "lon": -122.3861,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_70",
+          "name": "Pier 70 Shoreline",
+          "lat": 37.75925,
+          "lon": -122.38735,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 5,
+      "ferry_crossing_count": 0,
+      "max_exposure": 1.2,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -857,7 +1875,6 @@
         "Crane Cove Inner Refuge",
         "Mission Rock North Shore"
       ],
-      "min_tier": "intermediate",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -872,9 +1889,199 @@
     {
       "id": "r22_southern_shelters_circuit",
       "name": "Southern Shelters Circuit",
-      "difficulty": null,
+      "route_type": "multi_stop_loop",
+      "difficulty": "intermediate",
+      "min_tier": "intermediate",
+      "night_difficulty": "not_permitted",
       "distance_mi": 5.91,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Mission Creek Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "mission_creek_launch",
+          "to_name": "Mission Creek Boat Launch",
+          "bearing": 191,
+          "distance_mi": 0.92,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Mission Creek Boat Launch to Crane Cove Park Beach",
+          "from": "mission_creek_launch",
+          "from_name": "Mission Creek Boat Launch",
+          "to": "crane_cove_beach",
+          "to_name": "Crane Cove Park Beach",
+          "bearing": 181,
+          "distance_mi": 0.62,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Crane Cove Park Beach to Islais Creek Landing",
+          "from": "crane_cove_beach",
+          "from_name": "Crane Cove Park Beach",
+          "to": "islais_creek_landing",
+          "to_name": "Islais Creek Landing",
+          "bearing": 189,
+          "distance_mi": 1.41,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Islais Creek Landing to Crane Cove Inner Refuge",
+          "from": "islais_creek_landing",
+          "from_name": "Islais Creek Landing",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 12,
+          "distance_mi": 1.5,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Crane Cove Inner Refuge to Pier 52 Boat Launch Area",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 14,
+          "distance_mi": 0.59,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Pier 52 Boat Launch Area to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 357,
+          "distance_mi": 0.88,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_launch",
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_beach",
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "role": [
+            "all"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_landing",
+          "name": "Islais Creek Landing",
+          "lat": 37.74605,
+          "lon": -122.39085,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 6,
+      "ferry_crossing_count": 0,
+      "max_exposure": 1.2,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -977,7 +2184,7 @@
         "beginner": [
           "route is rated intermediate and above",
           "exposure 1.2 over beginner limit 1.0",
-          "route 5.91 mi over beginner limit 4 mi"
+          "route 5.91 mi over beginner limit 4.0 mi"
         ]
       },
       "windows": [
@@ -1002,7 +2209,6 @@
         "Crane Cove Inner Refuge",
         "Crane Cove Park Beach"
       ],
-      "min_tier": "intermediate",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1017,9 +2223,226 @@
     {
       "id": "r08_southern_waterfront_grand_loop",
       "name": "Southern Waterfront Grand Loop",
-      "difficulty": null,
+      "route_type": "multi_stop_loop",
+      "difficulty": "intermediate",
+      "min_tier": "intermediate",
+      "night_difficulty": "not_permitted",
       "distance_mi": 6.2,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Mission Creek Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "mission_creek_launch",
+          "to_name": "Mission Creek Boat Launch",
+          "bearing": 191,
+          "distance_mi": 0.92,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Mission Creek Boat Launch to Pier 52 Boat Launch Area",
+          "from": "mission_creek_launch",
+          "from_name": "Mission Creek Boat Launch",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 84,
+          "distance_mi": 0.22,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Pier 52 Boat Launch Area to Crane Cove Park Beach",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "crane_cove_beach",
+          "to_name": "Crane Cove Park Beach",
+          "bearing": 200,
+          "distance_mi": 0.68,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Crane Cove Park Beach to Islais Creek Landing",
+          "from": "crane_cove_beach",
+          "from_name": "Crane Cove Park Beach",
+          "to": "islais_creek_landing",
+          "to_name": "Islais Creek Landing",
+          "bearing": 189,
+          "distance_mi": 1.41,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Islais Creek Landing to Crane Cove Inner Refuge",
+          "from": "islais_creek_landing",
+          "from_name": "Islais Creek Landing",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 12,
+          "distance_mi": 1.5,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Crane Cove Inner Refuge to Pier 52 Boat Launch Area",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "pier_52",
+          "to_name": "Pier 52 Boat Launch Area",
+          "bearing": 14,
+          "distance_mi": 0.59,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "Pier 52 Boat Launch Area to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_52",
+          "from_name": "Pier 52 Boat Launch Area",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 357,
+          "distance_mi": 0.88,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "mission_creek_launch",
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_beach",
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "role": [
+            "all"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_landing",
+          "name": "Islais Creek Landing",
+          "lat": 37.74605,
+          "lon": -122.39085,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_52",
+          "name": "Pier 52 Boat Launch Area",
+          "lat": 37.77105,
+          "lon": -122.38395,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "ramp",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 7,
+      "ferry_crossing_count": 0,
+      "max_exposure": 1.2,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1122,7 +2545,7 @@
         "beginner": [
           "route is rated intermediate and above",
           "exposure 1.2 over beginner limit 1.0",
-          "route 6.2 mi over beginner limit 4 mi"
+          "route 6.2 mi over beginner limit 4.0 mi"
         ]
       },
       "windows": [
@@ -1147,7 +2570,6 @@
         "Crane Cove Inner Refuge",
         "Crane Cove Park Beach"
       ],
-      "min_tier": "intermediate",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1162,9 +2584,369 @@
     {
       "id": "r07_islais_creek_out_back",
       "name": "Islais Creek Working Waterfront Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "intermediate",
+      "min_tier": "intermediate",
+      "night_difficulty": "not_permitted",
       "distance_mi": 6.77,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Crane Cove Inner Refuge",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 184,
+          "distance_mi": 1.45,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 2,
+          "name": "Crane Cove Inner Refuge to Pier 70 Shoreline",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "pier_70",
+          "to_name": "Pier 70 Shoreline",
+          "bearing": 191,
+          "distance_mi": 0.4,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Pier 70 Shoreline to Warm Water Cove",
+          "from": "pier_70",
+          "from_name": "Pier 70 Shoreline",
+          "to": "warm_water_cove",
+          "to_name": "Warm Water Cove",
+          "bearing": 173,
+          "distance_mi": 0.38,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Warm Water Cove to Islais Creek Mouth",
+          "from": "warm_water_cove",
+          "from_name": "Warm Water Cove",
+          "to": "islais_creek_mouth",
+          "to_name": "Islais Creek Mouth",
+          "bearing": 165,
+          "distance_mi": 0.68,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Islais Creek Mouth to Islais Creek Basin",
+          "from": "islais_creek_mouth",
+          "from_name": "Islais Creek Mouth",
+          "to": "islais_creek_basin",
+          "to_name": "Islais Creek Basin",
+          "bearing": 247,
+          "distance_mi": 0.27,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Islais Creek Basin to Islais Creek Landing",
+          "from": "islais_creek_basin",
+          "from_name": "Islais Creek Basin",
+          "to": "islais_creek_landing",
+          "to_name": "Islais Creek Landing",
+          "bearing": 286,
+          "distance_mi": 0.21,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "Islais Creek Landing to Islais Creek Basin",
+          "from": "islais_creek_landing",
+          "from_name": "Islais Creek Landing",
+          "to": "islais_creek_basin",
+          "to_name": "Islais Creek Basin",
+          "bearing": 106,
+          "distance_mi": 0.21,
+          "exposure_index": 0.5,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 8,
+          "name": "Islais Creek Basin to Islais Creek Mouth",
+          "from": "islais_creek_basin",
+          "from_name": "Islais Creek Basin",
+          "to": "islais_creek_mouth",
+          "to_name": "Islais Creek Mouth",
+          "bearing": 67,
+          "distance_mi": 0.27,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 9,
+          "name": "Islais Creek Mouth to Warm Water Cove",
+          "from": "islais_creek_mouth",
+          "from_name": "Islais Creek Mouth",
+          "to": "warm_water_cove",
+          "to_name": "Warm Water Cove",
+          "bearing": 345,
+          "distance_mi": 0.68,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 10,
+          "name": "Warm Water Cove to Pier 70 Shoreline",
+          "from": "warm_water_cove",
+          "from_name": "Warm Water Cove",
+          "to": "pier_70",
+          "to_name": "Pier 70 Shoreline",
+          "bearing": 353,
+          "distance_mi": 0.38,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 11,
+          "name": "Pier 70 Shoreline to Crane Cove Inner Refuge",
+          "from": "pier_70",
+          "from_name": "Pier 70 Shoreline",
+          "to": "crane_cove_inner",
+          "to_name": "Crane Cove Inner Refuge",
+          "bearing": 11,
+          "distance_mi": 0.4,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 12,
+          "name": "Crane Cove Inner Refuge to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "crane_cove_inner",
+          "from_name": "Crane Cove Inner Refuge",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 4,
+          "distance_mi": 1.45,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_70",
+          "name": "Pier 70 Shoreline",
+          "lat": 37.75925,
+          "lon": -122.38735,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "warm_water_cove",
+          "name": "Warm Water Cove",
+          "lat": 37.75465,
+          "lon": -122.38665,
+          "role": [
+            "waypoint",
+            "wind_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_mouth",
+          "name": "Islais Creek Mouth",
+          "lat": 37.74665,
+          "lon": -122.38385,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_basin",
+          "name": "Islais Creek Basin",
+          "lat": 37.74535,
+          "lon": -122.38775,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_landing",
+          "name": "Islais Creek Landing",
+          "lat": 37.74605,
+          "lon": -122.39085,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_basin",
+          "name": "Islais Creek Basin",
+          "lat": 37.74535,
+          "lon": -122.38775,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "islais_creek_mouth",
+          "name": "Islais Creek Mouth",
+          "lat": 37.74665,
+          "lon": -122.38385,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "warm_water_cove",
+          "name": "Warm Water Cove",
+          "lat": 37.75465,
+          "lon": -122.38665,
+          "role": [
+            "waypoint",
+            "wind_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_70",
+          "name": "Pier 70 Shoreline",
+          "lat": 37.75925,
+          "lon": -122.38735,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crane_cove_inner",
+          "name": "Crane Cove Inner Refuge",
+          "lat": 37.76405,
+          "lon": -122.3862,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 12,
+      "ferry_crossing_count": 0,
+      "max_exposure": 1.2,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1267,7 +3049,7 @@
         "beginner": [
           "route is rated intermediate and above",
           "exposure 1.2 over beginner limit 1.0",
-          "route 6.77 mi over beginner limit 4 mi"
+          "route 6.77 mi over beginner limit 4.0 mi"
         ]
       },
       "windows": [
@@ -1292,7 +3074,6 @@
         "Crane Cove Inner Refuge",
         "Islais Creek Basin"
       ],
-      "min_tier": "intermediate",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1307,9 +3088,143 @@
     {
       "id": "r09_bay_bridge_ferry_loop",
       "name": "Bay Bridge and Ferry Building Loop",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 2.71,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Bay Bridge West Span Viewpoint",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "bay_bridge_west",
+          "to_name": "Bay Bridge West Span Viewpoint",
+          "bearing": 341,
+          "distance_mi": 0.86,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Bay Bridge West Span Viewpoint to Pier 1.5",
+          "from": "bay_bridge_west",
+          "from_name": "Bay Bridge West Span Viewpoint",
+          "to": "pier_1_5",
+          "to_name": "Pier 1.5",
+          "bearing": 315,
+          "distance_mi": 0.51,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Pier 1.5 to Ferry Building Waterfront",
+          "from": "pier_1_5",
+          "from_name": "Pier 1.5",
+          "to": "ferry_building",
+          "to_name": "Ferry Building Waterfront",
+          "bearing": 142,
+          "distance_mi": 0.15,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Ferry Building Waterfront to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "ferry_building",
+          "from_name": "Ferry Building Waterfront",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 153,
+          "distance_mi": 1.19,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "bay_bridge_west",
+          "name": "Bay Bridge West Span Viewpoint",
+          "lat": 37.79235,
+          "lon": -122.38935,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_1_5",
+          "name": "Pier 1.5",
+          "lat": 37.797,
+          "lon": -122.3952,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "ferry_building",
+          "name": "Ferry Building Waterfront",
+          "lat": 37.7955,
+          "lon": -122.3937,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 4,
+      "ferry_crossing_count": 4,
+      "max_exposure": 1.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1390,7 +3305,6 @@
         "Bay Bridge West Span Viewpoint",
         "Ferry Building Waterfront"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1405,9 +3319,251 @@
     {
       "id": "r10_pier39_waterfront_out_back",
       "name": "Pier 39 Waterfront Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 5.46,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 1.5",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_1_5",
+          "to_name": "Pier 1.5",
+          "bearing": 331,
+          "distance_mi": 1.34,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 1.5 to Pier 27 Cruise Terminal Viewpoint",
+          "from": "pier_1_5",
+          "from_name": "Pier 1.5",
+          "to": "pier_27",
+          "to_name": "Pier 27 Cruise Terminal Viewpoint",
+          "bearing": 331,
+          "distance_mi": 0.74,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Pier 27 Cruise Terminal Viewpoint to Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "from": "pier_27",
+          "from_name": "Pier 27 Cruise Terminal Viewpoint",
+          "to": "pier_33",
+          "to_name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "bearing": 303,
+          "distance_mi": 0.34,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Pier 33 Alcatraz Ferry Terminal Viewpoint to Pier 39 Small Boat Launch",
+          "from": "pier_33",
+          "from_name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 298,
+          "distance_mi": 0.31,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 5,
+          "name": "Pier 39 Small Boat Launch to Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "pier_33",
+          "to_name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "bearing": 118,
+          "distance_mi": 0.31,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 6,
+          "name": "Pier 33 Alcatraz Ferry Terminal Viewpoint to Pier 27 Cruise Terminal Viewpoint",
+          "from": "pier_33",
+          "from_name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "to": "pier_27",
+          "to_name": "Pier 27 Cruise Terminal Viewpoint",
+          "bearing": 123,
+          "distance_mi": 0.34,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 7,
+          "name": "Pier 27 Cruise Terminal Viewpoint to Pier 1.5",
+          "from": "pier_27",
+          "from_name": "Pier 27 Cruise Terminal Viewpoint",
+          "to": "pier_1_5",
+          "to_name": "Pier 1.5",
+          "bearing": 151,
+          "distance_mi": 0.74,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 8,
+          "name": "Pier 1.5 to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_1_5",
+          "from_name": "Pier 1.5",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 151,
+          "distance_mi": 1.34,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_1_5",
+          "name": "Pier 1.5",
+          "lat": 37.797,
+          "lon": -122.3952,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_27",
+          "name": "Pier 27 Cruise Terminal Viewpoint",
+          "lat": 37.80535,
+          "lon": -122.40115,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_33",
+          "name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "lat": 37.80775,
+          "lon": -122.4058,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_33",
+          "name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+          "lat": 37.80775,
+          "lon": -122.4058,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_27",
+          "name": "Pier 27 Cruise Terminal Viewpoint",
+          "lat": 37.80535,
+          "lon": -122.40115,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_1_5",
+          "name": "Pier 1.5",
+          "lat": 37.797,
+          "lon": -122.3952,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 8,
+      "ferry_crossing_count": 8,
+      "max_exposure": 1.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1486,7 +3642,7 @@
         "beginner": [
           "route is rated advanced and above",
           "exposure 1.5 over beginner limit 1.0",
-          "route 5.46 mi over beginner limit 4 mi"
+          "route 5.46 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above"
@@ -1497,7 +3653,6 @@
         "Pier 1.5",
         "Pier 27 Cruise Terminal Viewpoint"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1512,9 +3667,205 @@
     {
       "id": "r16_clipper_cove_out_back",
       "name": "Clipper Cove Cross-Bay Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 6.84,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Bay Bridge West Span Viewpoint",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "bay_bridge_west",
+          "to_name": "Bay Bridge West Span Viewpoint",
+          "bearing": 341,
+          "distance_mi": 0.87,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Bay Bridge West Span Viewpoint to Clipper Cove Beach",
+          "from": "bay_bridge_west",
+          "from_name": "Bay Bridge West Span Viewpoint",
+          "to": "clipper_cove_beach",
+          "to_name": "Clipper Cove Beach",
+          "bearing": 34,
+          "distance_mi": 2.37,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Clipper Cove Beach to Clipper Cove Inner Refuge",
+          "from": "clipper_cove_beach",
+          "from_name": "Clipper Cove Beach",
+          "to": "clipper_cove_inner",
+          "to_name": "Clipper Cove Inner Refuge",
+          "bearing": 166,
+          "distance_mi": 0.18,
+          "exposure_index": 0.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Clipper Cove Inner Refuge to Clipper Cove Beach",
+          "from": "clipper_cove_inner",
+          "from_name": "Clipper Cove Inner Refuge",
+          "to": "clipper_cove_beach",
+          "to_name": "Clipper Cove Beach",
+          "bearing": 346,
+          "distance_mi": 0.18,
+          "exposure_index": 0.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 5,
+          "name": "Clipper Cove Beach to Bay Bridge West Span Viewpoint",
+          "from": "clipper_cove_beach",
+          "from_name": "Clipper Cove Beach",
+          "to": "bay_bridge_west",
+          "to_name": "Bay Bridge West Span Viewpoint",
+          "bearing": 214,
+          "distance_mi": 2.37,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 6,
+          "name": "Bay Bridge West Span Viewpoint to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "bay_bridge_west",
+          "from_name": "Bay Bridge West Span Viewpoint",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 161,
+          "distance_mi": 0.87,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "bay_bridge_west",
+          "name": "Bay Bridge West Span Viewpoint",
+          "lat": 37.79235,
+          "lon": -122.38935,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "clipper_cove_beach",
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "clipper_cove_inner",
+          "name": "Clipper Cove Inner Refuge",
+          "lat": 37.8155,
+          "lon": -122.36705,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "moorage",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "clipper_cove_beach",
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "bay_bridge_west",
+          "name": "Bay Bridge West Span Viewpoint",
+          "lat": 37.79235,
+          "lon": -122.38935,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 6,
+      "ferry_crossing_count": 6,
+      "max_exposure": 1.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1586,7 +3937,7 @@
           "route is rated advanced and above",
           "exposure 1.8 over beginner limit 1.0",
           "longest leg 2.37 mi over beginner limit 1.5 mi",
-          "route 6.84 mi over beginner limit 4 mi"
+          "route 6.84 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above",
@@ -1598,7 +3949,6 @@
         "Bay Bridge West Span Viewpoint",
         "Clipper Cove Beach"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1613,9 +3963,173 @@
     {
       "id": "r11_aquatic_park_loop",
       "name": "Aquatic Park Urban Loop",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 7.59,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 1.5",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_1_5",
+          "to_name": "Pier 1.5",
+          "bearing": 331,
+          "distance_mi": 1.34,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 1.5 to Pier 39 Small Boat Launch",
+          "from": "pier_1_5",
+          "from_name": "Pier 1.5",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 317,
+          "distance_mi": 1.34,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Pier 39 Small Boat Launch to Aquatic Park Cove Beach",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "aquatic_park",
+          "to_name": "Aquatic Park Cove Beach",
+          "bearing": 275,
+          "distance_mi": 0.78,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Aquatic Park Cove Beach to Fort Mason Waterfront",
+          "from": "aquatic_park",
+          "from_name": "Aquatic Park Cove Beach",
+          "to": "fort_mason",
+          "to_name": "Fort Mason Waterfront",
+          "bearing": 258,
+          "distance_mi": 0.55,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Fort Mason Waterfront to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "fort_mason",
+          "from_name": "Fort Mason Waterfront",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 126,
+          "distance_mi": 3.57,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_1_5",
+          "name": "Pier 1.5",
+          "lat": 37.797,
+          "lon": -122.3952,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "aquatic_park",
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "fort_mason",
+          "name": "Fort Mason Waterfront",
+          "lat": 37.8091,
+          "lon": -122.4318,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 5,
+      "ferry_crossing_count": 3,
+      "max_exposure": 1.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1703,7 +4217,7 @@
           "route is rated advanced and above",
           "exposure 1.5 over beginner limit 1.0",
           "longest leg 3.57 mi over beginner limit 1.5 mi",
-          "route 7.59 mi over beginner limit 4 mi"
+          "route 7.59 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above"
@@ -1714,7 +4228,6 @@
         "Aquatic Park Cove Beach",
         "Fort Mason Waterfront"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1729,9 +4242,207 @@
     {
       "id": "r21_three_refuges_circuit",
       "name": "Three Refuges Circuit",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 8.33,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 39 Small Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 324,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 39 Small Boat Launch to Aquatic Park Cove Beach",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "aquatic_park",
+          "to_name": "Aquatic Park Cove Beach",
+          "bearing": 275,
+          "distance_mi": 0.78,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Aquatic Park Cove Beach to San Francisco Marina Small Craft Harbor",
+          "from": "aquatic_park",
+          "from_name": "Aquatic Park Cove Beach",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 249,
+          "distance_mi": 0.72,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "San Francisco Marina Small Craft Harbor to Aquatic Park Cove Beach",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "aquatic_park",
+          "to_name": "Aquatic Park Cove Beach",
+          "bearing": 69,
+          "distance_mi": 0.72,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Aquatic Park Cove Beach to Pier 39 Small Boat Launch",
+          "from": "aquatic_park",
+          "from_name": "Aquatic Park Cove Beach",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 95,
+          "distance_mi": 0.78,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 6,
+          "name": "Pier 39 Small Boat Launch to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 144,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "aquatic_park",
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "aquatic_park",
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 6,
+      "ferry_crossing_count": 4,
+      "max_exposure": 1.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1819,7 +4530,7 @@
           "route is rated advanced and above",
           "exposure 1.5 over beginner limit 1.0",
           "longest leg 2.66 mi over beginner limit 1.5 mi",
-          "route 8.33 mi over beginner limit 4 mi"
+          "route 8.33 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above"
@@ -1830,7 +4541,6 @@
         "Aquatic Park Cove Beach",
         "Pier 39 Small Boat Launch"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1845,9 +4555,261 @@
     {
       "id": "r12_sf_marina_out_back",
       "name": "San Francisco Marina Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 8.39,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 39 Small Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 324,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 39 Small Boat Launch to Aquatic Park Cove Beach",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "aquatic_park",
+          "to_name": "Aquatic Park Cove Beach",
+          "bearing": 275,
+          "distance_mi": 0.78,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Aquatic Park Cove Beach to Fort Mason Waterfront",
+          "from": "aquatic_park",
+          "from_name": "Aquatic Park Cove Beach",
+          "to": "fort_mason",
+          "to_name": "Fort Mason Waterfront",
+          "bearing": 258,
+          "distance_mi": 0.55,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Fort Mason Waterfront to San Francisco Marina Small Craft Harbor",
+          "from": "fort_mason",
+          "from_name": "Fort Mason Waterfront",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 221,
+          "distance_mi": 0.2,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "San Francisco Marina Small Craft Harbor to Fort Mason Waterfront",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "fort_mason",
+          "to_name": "Fort Mason Waterfront",
+          "bearing": 41,
+          "distance_mi": 0.2,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Fort Mason Waterfront to Aquatic Park Cove Beach",
+          "from": "fort_mason",
+          "from_name": "Fort Mason Waterfront",
+          "to": "aquatic_park",
+          "to_name": "Aquatic Park Cove Beach",
+          "bearing": 78,
+          "distance_mi": 0.55,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "Aquatic Park Cove Beach to Pier 39 Small Boat Launch",
+          "from": "aquatic_park",
+          "from_name": "Aquatic Park Cove Beach",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 95,
+          "distance_mi": 0.78,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 8,
+          "name": "Pier 39 Small Boat Launch to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 144,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "aquatic_park",
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "fort_mason",
+          "name": "Fort Mason Waterfront",
+          "lat": 37.8091,
+          "lon": -122.4318,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "fort_mason",
+          "name": "Fort Mason Waterfront",
+          "lat": 37.8091,
+          "lon": -122.4318,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "aquatic_park",
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 8,
+      "ferry_crossing_count": 4,
+      "max_exposure": 1.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -1944,7 +4906,7 @@
           "route is rated advanced and above",
           "exposure 1.5 over beginner limit 1.0",
           "longest leg 2.66 mi over beginner limit 1.5 mi",
-          "route 8.39 mi over beginner limit 4 mi"
+          "route 8.39 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above"
@@ -1955,7 +4917,6 @@
         "Aquatic Park Cove Beach",
         "Fort Mason Waterfront"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -1970,9 +4931,170 @@
     {
       "id": "r18_alcatraz_east_view_loop",
       "name": "Alcatraz East View Loop",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 8.7,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 39 Small Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 324,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 39 Small Boat Launch to Alcatraz South Viewpoint",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "alcatraz_south",
+          "to_name": "Alcatraz South Viewpoint",
+          "bearing": 329,
+          "distance_mi": 1.5,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Alcatraz South Viewpoint to Alcatraz East Viewpoint",
+          "from": "alcatraz_south",
+          "from_name": "Alcatraz South Viewpoint",
+          "to": "alcatraz_east",
+          "to_name": "Alcatraz East Viewpoint",
+          "bearing": 56,
+          "distance_mi": 0.33,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Alcatraz East Viewpoint to Pier 39 Small Boat Launch",
+          "from": "alcatraz_east",
+          "from_name": "Alcatraz East Viewpoint",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 161,
+          "distance_mi": 1.55,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 5,
+          "name": "Pier 39 Small Boat Launch to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 144,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_south",
+          "name": "Alcatraz South Viewpoint",
+          "lat": 37.82615,
+          "lon": -122.42295,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_east",
+          "name": "Alcatraz East Viewpoint",
+          "lat": 37.82855,
+          "lon": -122.41845,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 5,
+      "ferry_crossing_count": 5,
+      "max_exposure": 1.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2060,7 +5182,7 @@
           "route is rated advanced and above",
           "exposure 1.8 over beginner limit 1.0",
           "longest leg 2.66 mi over beginner limit 1.5 mi",
-          "route 8.7 mi over beginner limit 4 mi"
+          "route 8.7 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above",
@@ -2072,7 +5194,6 @@
         "Alcatraz East Viewpoint",
         "Alcatraz South Viewpoint"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2087,9 +5208,260 @@
     {
       "id": "r13_crissy_field_out_back",
       "name": "Crissy Field Shoreline Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "advanced",
+      "min_tier": "advanced",
+      "night_difficulty": "not_permitted",
       "distance_mi": 11.29,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 39 Small Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 324,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 39 Small Boat Launch to San Francisco Marina Small Craft Harbor",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 262,
+          "distance_mi": 1.46,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "San Francisco Marina Small Craft Harbor to Marina Green Shoreline",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "marina_green",
+          "to_name": "Marina Green Shoreline",
+          "bearing": 257,
+          "distance_mi": 0.41,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Marina Green Shoreline to Crissy Field East Beach",
+          "from": "marina_green",
+          "from_name": "Marina Green Shoreline",
+          "to": "crissy_field_east",
+          "to_name": "Crissy Field East Beach",
+          "bearing": 261,
+          "distance_mi": 1.1,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Crissy Field East Beach to Marina Green Shoreline",
+          "from": "crissy_field_east",
+          "from_name": "Crissy Field East Beach",
+          "to": "marina_green",
+          "to_name": "Marina Green Shoreline",
+          "bearing": 81,
+          "distance_mi": 1.1,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Marina Green Shoreline to San Francisco Marina Small Craft Harbor",
+          "from": "marina_green",
+          "from_name": "Marina Green Shoreline",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 77,
+          "distance_mi": 0.41,
+          "exposure_index": 1.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "San Francisco Marina Small Craft Harbor to Pier 39 Small Boat Launch",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 82,
+          "distance_mi": 1.46,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 8,
+          "name": "Pier 39 Small Boat Launch to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 144,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "marina_green",
+          "name": "Marina Green Shoreline",
+          "lat": 37.8059,
+          "lon": -122.4406,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crissy_field_east",
+          "name": "Crissy Field East Beach",
+          "lat": 37.80375,
+          "lon": -122.45845,
+          "role": [
+            "land",
+            "waypoint"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "marina_green",
+          "name": "Marina Green Shoreline",
+          "lat": 37.8059,
+          "lon": -122.4406,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 8,
+      "ferry_crossing_count": 4,
+      "max_exposure": 1.5,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2194,7 +5566,7 @@
           "route is rated advanced and above",
           "exposure 1.5 over beginner limit 1.0",
           "longest leg 2.66 mi over beginner limit 1.5 mi",
-          "route 11.29 mi over beginner limit 4 mi"
+          "route 11.29 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated advanced and above"
@@ -2205,7 +5577,6 @@
         "Crissy Field East Beach",
         "Marina Green Shoreline"
       ],
-      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2220,9 +5591,232 @@
     {
       "id": "r17_yerba_buena_treasure_loop",
       "name": "Yerba Buena and Treasure Island Loop",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "expert",
+      "min_tier": "expert",
+      "night_difficulty": "not_permitted",
       "distance_mi": 8.31,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Bay Bridge West Span Viewpoint",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "bay_bridge_west",
+          "to_name": "Bay Bridge West Span Viewpoint",
+          "bearing": 341,
+          "distance_mi": 0.86,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Bay Bridge West Span Viewpoint to Clipper Cove Inner Refuge",
+          "from": "bay_bridge_west",
+          "from_name": "Bay Bridge West Span Viewpoint",
+          "to": "clipper_cove_inner",
+          "to_name": "Clipper Cove Inner Refuge",
+          "bearing": 37,
+          "distance_mi": 2.25,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Clipper Cove Inner Refuge to Yerba Buena Island East Lee",
+          "from": "clipper_cove_inner",
+          "from_name": "Clipper Cove Inner Refuge",
+          "to": "yerba_buena_east",
+          "to_name": "Yerba Buena Island East Lee",
+          "bearing": 123,
+          "distance_mi": 0.38,
+          "exposure_index": 0.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Yerba Buena Island East Lee to Treasure Island West Shore",
+          "from": "yerba_buena_east",
+          "from_name": "Yerba Buena Island East Lee",
+          "to": "treasure_island_west",
+          "to_name": "Treasure Island West Shore",
+          "bearing": 325,
+          "distance_mi": 1.05,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 5,
+          "name": "Treasure Island West Shore to Clipper Cove Beach",
+          "from": "treasure_island_west",
+          "from_name": "Treasure Island West Shore",
+          "to": "clipper_cove_beach",
+          "to_name": "Clipper Cove Beach",
+          "bearing": 153,
+          "distance_mi": 0.53,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 6,
+          "name": "Clipper Cove Beach to Bay Bridge West Span Viewpoint",
+          "from": "clipper_cove_beach",
+          "from_name": "Clipper Cove Beach",
+          "to": "bay_bridge_west",
+          "to_name": "Bay Bridge West Span Viewpoint",
+          "bearing": 214,
+          "distance_mi": 2.37,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 7,
+          "name": "Bay Bridge West Span Viewpoint to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "bay_bridge_west",
+          "from_name": "Bay Bridge West Span Viewpoint",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 161,
+          "distance_mi": 0.86,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "bay_bridge_west",
+          "name": "Bay Bridge West Span Viewpoint",
+          "lat": 37.79235,
+          "lon": -122.38935,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "clipper_cove_inner",
+          "name": "Clipper Cove Inner Refuge",
+          "lat": 37.8155,
+          "lon": -122.36705,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "moorage",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "yerba_buena_east",
+          "name": "Yerba Buena Island East Lee",
+          "lat": 37.81285,
+          "lon": -122.3619,
+          "role": [
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "treasure_island_west",
+          "name": "Treasure Island West Shore",
+          "lat": 37.82395,
+          "lon": -122.3718,
+          "role": [
+            "land",
+            "waypoint"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "E,NE,SE",
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "clipper_cove_beach",
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "bay_bridge_west",
+          "name": "Bay Bridge West Span Viewpoint",
+          "lat": 37.79235,
+          "lon": -122.38935,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 7,
+      "ferry_crossing_count": 7,
+      "max_exposure": 1.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2284,7 +5878,7 @@
           "route is rated expert and above",
           "exposure 1.8 over beginner limit 1.0",
           "longest leg 2.37 mi over beginner limit 1.5 mi",
-          "route 8.31 mi over beginner limit 4 mi"
+          "route 8.31 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated expert and above",
@@ -2299,7 +5893,6 @@
         "Bay Bridge West Span Viewpoint",
         "Clipper Cove Beach"
       ],
-      "min_tier": "expert",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2314,9 +5907,224 @@
     {
       "id": "r19_alcatraz_circumnavigation",
       "name": "Alcatraz Circumnavigation",
-      "difficulty": null,
+      "route_type": "loop",
+      "difficulty": "expert",
+      "min_tier": "expert",
+      "night_difficulty": "not_permitted",
       "distance_mi": 9.52,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Pier 39 Small Boat Launch",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 324,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Pier 39 Small Boat Launch to Alcatraz East Viewpoint",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "alcatraz_east",
+          "to_name": "Alcatraz East Viewpoint",
+          "bearing": 341,
+          "distance_mi": 1.55,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Alcatraz East Viewpoint to Alcatraz North Viewpoint",
+          "from": "alcatraz_east",
+          "from_name": "Alcatraz East Viewpoint",
+          "to": "alcatraz_north",
+          "to_name": "Alcatraz North Viewpoint",
+          "bearing": 304,
+          "distance_mi": 0.34,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Alcatraz North Viewpoint to Alcatraz West Viewpoint",
+          "from": "alcatraz_north",
+          "from_name": "Alcatraz North Viewpoint",
+          "to": "alcatraz_west",
+          "to_name": "Alcatraz West Viewpoint",
+          "bearing": 235,
+          "distance_mi": 0.43,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 5,
+          "name": "Alcatraz West Viewpoint to Alcatraz South Viewpoint",
+          "from": "alcatraz_west",
+          "from_name": "Alcatraz West Viewpoint",
+          "to": "alcatraz_south",
+          "to_name": "Alcatraz South Viewpoint",
+          "bearing": 110,
+          "distance_mi": 0.38,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 6,
+          "name": "Alcatraz South Viewpoint to Pier 39 Small Boat Launch",
+          "from": "alcatraz_south",
+          "from_name": "Alcatraz South Viewpoint",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 149,
+          "distance_mi": 1.49,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 7,
+          "name": "Pier 39 Small Boat Launch to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 144,
+          "distance_mi": 2.66,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_east",
+          "name": "Alcatraz East Viewpoint",
+          "lat": 37.82855,
+          "lon": -122.41845,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_north",
+          "name": "Alcatraz North Viewpoint",
+          "lat": 37.831,
+          "lon": -122.42305,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_west",
+          "name": "Alcatraz West Viewpoint",
+          "lat": 37.82785,
+          "lon": -122.42885,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_south",
+          "name": "Alcatraz South Viewpoint",
+          "lat": 37.82615,
+          "lon": -122.42295,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 7,
+      "ferry_crossing_count": 7,
+      "max_exposure": 1.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2386,7 +6194,7 @@
           "route is rated expert and above",
           "exposure 1.8 over beginner limit 1.0",
           "longest leg 2.66 mi over beginner limit 1.5 mi",
-          "route 9.52 mi over beginner limit 4 mi"
+          "route 9.52 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated expert and above",
@@ -2401,7 +6209,6 @@
         "Alcatraz East Viewpoint",
         "Alcatraz North Viewpoint"
       ],
-      "min_tier": "expert",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2416,9 +6223,200 @@
     {
       "id": "r20_central_bay_grand_loop",
       "name": "Central Bay Grand Loop",
-      "difficulty": null,
+      "route_type": "multi_stop_loop",
+      "difficulty": "expert",
+      "min_tier": "expert",
+      "night_difficulty": "not_permitted",
       "distance_mi": 10.85,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to Ferry Building Waterfront",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "ferry_building",
+          "to_name": "Ferry Building Waterfront",
+          "bearing": 333,
+          "distance_mi": 1.19,
+          "exposure_index": 1.2,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "Ferry Building Waterfront to Pier 39 Small Boat Launch",
+          "from": "ferry_building",
+          "from_name": "Ferry Building Waterfront",
+          "to": "pier_39",
+          "to_name": "Pier 39 Small Boat Launch",
+          "bearing": 317,
+          "distance_mi": 1.49,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 3,
+          "name": "Pier 39 Small Boat Launch to Alcatraz South Viewpoint",
+          "from": "pier_39",
+          "from_name": "Pier 39 Small Boat Launch",
+          "to": "alcatraz_south",
+          "to_name": "Alcatraz South Viewpoint",
+          "bearing": 329,
+          "distance_mi": 1.49,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 4,
+          "name": "Alcatraz South Viewpoint to Clipper Cove Beach",
+          "from": "alcatraz_south",
+          "from_name": "Alcatraz South Viewpoint",
+          "to": "clipper_cove_beach",
+          "to_name": "Clipper Cove Beach",
+          "bearing": 101,
+          "distance_mi": 3.43,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 5,
+          "name": "Clipper Cove Beach to Bay Bridge West Span Viewpoint",
+          "from": "clipper_cove_beach",
+          "from_name": "Clipper Cove Beach",
+          "to": "bay_bridge_west",
+          "to_name": "Bay Bridge West Span Viewpoint",
+          "bearing": 214,
+          "distance_mi": 2.37,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 6,
+          "name": "Bay Bridge West Span Viewpoint to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "bay_bridge_west",
+          "from_name": "Bay Bridge West Span Viewpoint",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 161,
+          "distance_mi": 0.86,
+          "exposure_index": 1.8,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "ferry_building",
+          "name": "Ferry Building Waterfront",
+          "lat": 37.7955,
+          "lon": -122.3937,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_39",
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "alcatraz_south",
+          "name": "Alcatraz South Viewpoint",
+          "lat": 37.82615,
+          "lon": -122.42295,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "clipper_cove_beach",
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "bay_bridge_west",
+          "name": "Bay Bridge West Span Viewpoint",
+          "lat": 37.79235,
+          "lon": -122.38935,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 6,
+      "ferry_crossing_count": 6,
+      "max_exposure": 1.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2496,7 +6494,7 @@
           "route is rated expert and above",
           "exposure 1.8 over beginner limit 1.0",
           "longest leg 3.43 mi over beginner limit 1.5 mi",
-          "route 10.85 mi over beginner limit 4 mi"
+          "route 10.85 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated expert and above",
@@ -2511,7 +6509,6 @@
         "Alcatraz South Viewpoint",
         "Bay Bridge West Span Viewpoint"
       ],
-      "min_tier": "expert",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2526,9 +6523,207 @@
     {
       "id": "r14_fort_point_out_back",
       "name": "Fort Point Out-and-Back",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "expert",
+      "min_tier": "expert",
+      "night_difficulty": "not_permitted",
       "distance_mi": 11.63,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to San Francisco Marina Small Craft Harbor",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 303,
+          "distance_mi": 3.6,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "San Francisco Marina Small Craft Harbor to Crissy Field East Beach",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "crissy_field_east",
+          "to_name": "Crissy Field East Beach",
+          "bearing": 260,
+          "distance_mi": 1.52,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Crissy Field East Beach to Fort Point",
+          "from": "crissy_field_east",
+          "from_name": "Crissy Field East Beach",
+          "to": "fort_point",
+          "to_name": "Fort Point",
+          "bearing": 321,
+          "distance_mi": 0.7,
+          "exposure_index": 1.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Fort Point to Crissy Field East Beach",
+          "from": "fort_point",
+          "from_name": "Fort Point",
+          "to": "crissy_field_east",
+          "to_name": "Crissy Field East Beach",
+          "bearing": 141,
+          "distance_mi": 0.7,
+          "exposure_index": 1.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Crissy Field East Beach to San Francisco Marina Small Craft Harbor",
+          "from": "crissy_field_east",
+          "from_name": "Crissy Field East Beach",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 80,
+          "distance_mi": 1.52,
+          "exposure_index": 1.2,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "San Francisco Marina Small Craft Harbor to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 123,
+          "distance_mi": 3.6,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "crissy_field_east",
+          "name": "Crissy Field East Beach",
+          "lat": 37.80375,
+          "lon": -122.45845,
+          "role": [
+            "land",
+            "waypoint"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "fort_point",
+          "name": "Fort Point",
+          "lat": 37.8108,
+          "lon": -122.4656,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "crissy_field_east",
+          "name": "Crissy Field East Beach",
+          "lat": 37.80375,
+          "lon": -122.45845,
+          "role": [
+            "land",
+            "waypoint"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 6,
+      "ferry_crossing_count": 2,
+      "max_exposure": 1.8,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2614,7 +6809,7 @@
           "route is rated expert and above",
           "exposure 1.8 over beginner limit 1.0",
           "longest leg 3.6 mi over beginner limit 1.5 mi",
-          "route 11.63 mi over beginner limit 4 mi"
+          "route 11.63 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated expert and above",
@@ -2629,7 +6824,6 @@
         "Crissy Field East Beach",
         "Fort Point"
       ],
-      "min_tier": "expert",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2644,9 +6838,265 @@
     {
       "id": "r15_horseshoe_cove_gate_approach",
       "name": "Horseshoe Cove Gate Approach",
-      "difficulty": null,
+      "route_type": "out_and_back",
+      "difficulty": "expert",
+      "min_tier": "expert",
+      "night_difficulty": "not_permitted",
       "distance_mi": 15.35,
       "estimated_hours": null,
+      "verified": false,
+      "legs": [
+        {
+          "seq": 1,
+          "name": "Pier 40 / South Beach Harbor Home Harbor to San Francisco Marina Small Craft Harbor",
+          "from": "pier_40",
+          "from_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 303,
+          "distance_mi": 3.6,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        },
+        {
+          "seq": 2,
+          "name": "San Francisco Marina Small Craft Harbor to Fort Point",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "fort_point",
+          "to_name": "Fort Point",
+          "bearing": 278,
+          "distance_mi": 1.95,
+          "exposure_index": 1.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 3,
+          "name": "Fort Point to Horseshoe Cove / Fort Baker",
+          "from": "fort_point",
+          "from_name": "Fort Point",
+          "to": "horseshoe_cove",
+          "to_name": "Horseshoe Cove / Fort Baker",
+          "bearing": 340,
+          "distance_mi": 1.75,
+          "exposure_index": 2.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 4,
+          "name": "Horseshoe Cove / Fort Baker to Cavallo Point Waterfront",
+          "from": "horseshoe_cove",
+          "from_name": "Horseshoe Cove / Fort Baker",
+          "to": "cavallo_point",
+          "to_name": "Cavallo Point Waterfront",
+          "bearing": 327,
+          "distance_mi": 0.38,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 5,
+          "name": "Cavallo Point Waterfront to Horseshoe Cove / Fort Baker",
+          "from": "cavallo_point",
+          "from_name": "Cavallo Point Waterfront",
+          "to": "horseshoe_cove",
+          "to_name": "Horseshoe Cove / Fort Baker",
+          "bearing": 147,
+          "distance_mi": 0.38,
+          "exposure_index": 0.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 6,
+          "name": "Horseshoe Cove / Fort Baker to Fort Point",
+          "from": "horseshoe_cove",
+          "from_name": "Horseshoe Cove / Fort Baker",
+          "to": "fort_point",
+          "to_name": "Fort Point",
+          "bearing": 160,
+          "distance_mi": 1.75,
+          "exposure_index": 2.0,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 7,
+          "name": "Fort Point to San Francisco Marina Small Craft Harbor",
+          "from": "fort_point",
+          "from_name": "Fort Point",
+          "to": "sf_marina",
+          "to_name": "San Francisco Marina Small Craft Harbor",
+          "bearing": 98,
+          "distance_mi": 1.95,
+          "exposure_index": 1.8,
+          "ferry_crossing": false
+        },
+        {
+          "seq": 8,
+          "name": "San Francisco Marina Small Craft Harbor to Pier 40 / South Beach Harbor Home Harbor",
+          "from": "sf_marina",
+          "from_name": "San Francisco Marina Small Craft Harbor",
+          "to": "pier_40",
+          "to_name": "Pier 40 / South Beach Harbor Home Harbor",
+          "bearing": 123,
+          "distance_mi": 3.6,
+          "exposure_index": 1.5,
+          "ferry_crossing": true
+        }
+      ],
+      "waypoints": [
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "fort_point",
+          "name": "Fort Point",
+          "lat": 37.8108,
+          "lon": -122.4656,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "horseshoe_cove",
+          "name": "Horseshoe Cove / Fort Baker",
+          "lat": 37.83205,
+          "lon": -122.4752,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "cavallo_point",
+          "name": "Cavallo Point Waterfront",
+          "lat": 37.8362,
+          "lon": -122.47855,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "private",
+          "verified": false
+        },
+        {
+          "id": "horseshoe_cove",
+          "name": "Horseshoe Cove / Fort Baker",
+          "lat": 37.83205,
+          "lon": -122.4752,
+          "role": [
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "beach",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "fort_point",
+          "name": "Fort Point",
+          "lat": 37.8108,
+          "lon": -122.4656,
+          "role": [
+            "waypoint"
+          ],
+          "access_type": "none",
+          "shelters_from_wind": null,
+          "shelters_from_tide": null,
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        },
+        {
+          "id": "sf_marina",
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "role": [
+            "launch",
+            "land",
+            "waypoint",
+            "wind_shelter",
+            "tidal_shelter"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW,N",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "permit",
+          "verified": false
+        },
+        {
+          "id": "pier_40",
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "role": [
+            "all"
+          ],
+          "access_type": "dock",
+          "shelters_from_wind": "W,NW,SW",
+          "shelters_from_tide": "both",
+          "min_tide_ft": null,
+          "permit": "public",
+          "verified": false
+        }
+      ],
+      "leg_count": 8,
+      "ferry_crossing_count": 2,
+      "max_exposure": 2.0,
       "bailouts": [
         {
           "name": "Pier 40 / South Beach Harbor Home Harbor",
@@ -2740,12 +7190,12 @@
           "route is rated expert and above",
           "exposure 2.0 over beginner limit 1.0",
           "longest leg 3.6 mi over beginner limit 1.5 mi",
-          "route 15.35 mi over beginner limit 4 mi"
+          "route 15.35 mi over beginner limit 4.0 mi"
         ],
         "intermediate": [
           "route is rated expert and above",
           "exposure 2.0 over intermediate limit 1.5",
-          "route 15.35 mi over intermediate limit 12 mi"
+          "route 15.35 mi over intermediate limit 12.0 mi"
         ],
         "advanced": [
           "route is rated expert and above",
@@ -2757,7 +7207,6 @@
         "Cavallo Point Waterfront",
         "Fort Point"
       ],
-      "min_tier": "expert",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -2779,7 +7228,7 @@
       "max_adverse_current": 0.6,
       "max_exposure": 1.0,
       "max_leg_mi": 1.5,
-      "max_total_mi": 4
+      "max_total_mi": 4.0
     },
     "intermediate": {
       "comfort_wind": 14.0,
@@ -2788,8 +7237,8 @@
       "squall_tolerance": 6.0,
       "max_adverse_current": 1.0,
       "max_exposure": 1.5,
-      "max_leg_mi": 4,
-      "max_total_mi": 12
+      "max_leg_mi": 4.0,
+      "max_total_mi": 12.0
     },
     "advanced": {
       "comfort_wind": 16.0,
@@ -2798,8 +7247,8 @@
       "squall_tolerance": 7.0,
       "max_adverse_current": 1.2,
       "max_exposure": 1.8,
-      "max_leg_mi": 8,
-      "max_total_mi": 25
+      "max_leg_mi": 8.0,
+      "max_total_mi": 25.0
     },
     "expert": {
       "comfort_wind": 18.0,
@@ -2808,8 +7257,8 @@
       "squall_tolerance": 8.0,
       "max_adverse_current": 1.5,
       "max_exposure": 2.0,
-      "max_leg_mi": 10,
-      "max_total_mi": 50
+      "max_leg_mi": 10.0,
+      "max_total_mi": 50.0
     },
     "night_expert": {
       "comfort_wind": 18.0,
@@ -2818,8 +7267,8 @@
       "squall_tolerance": 8.0,
       "max_adverse_current": 1.5,
       "max_exposure": 2.0,
-      "max_leg_mi": 10,
-      "max_total_mi": 50
+      "max_leg_mi": 10.0,
+      "max_total_mi": 50.0
     }
   },
   "thresholds_source": "config/thresholds.json",
