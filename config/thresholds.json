@@ -1,49 +1,92 @@
 {
   "_comment": [
-    "Waterbike AI skill tier limits. Read at runtime by plan_generator.py.",
-    "This file is the single source of truth for tier limits. If it is",
-    "missing or malformed the engine falls back to identical built-in",
-    "defaults and logs a warning, so a bad edit degrades rather than breaks.",
+    "Waterbike AI tier limits. Read at runtime by plan_generator.py.",
+    "Single source of truth for tier limits. If missing or malformed the engine",
+    "falls back to identical built-in defaults, logs the reason, and still",
+    "produces a plan.",
     "",
-    "Governed by Safety Canon v1.2 section 2. Changing any number here is a",
-    "change to the safety envelope and requires operator sign off.",
+    "Three wind zones per Safety Canon v1.3 section 2:",
+    "  wind <= comfort_wind        no penalty, conditions are pleasant",
+    "  comfort_wind < wind <= max_wind   Caution band, penalty ramps",
+    "  wind > max_wind             Hard No-Go",
     "",
-    "night_expert is listed for reference but is deliberately absent from",
-    "planning_tiers: it is a credential to operate in darkness, not a higher",
-    "daytime tolerance. The engine emits daylight-only plans."
+    "squall_tolerance is judged on gust minus sustained, not absolute gust.",
+    "A 15 mph gust on 11 sustained is ordinary; 26 on 11 is squally.",
+    "",
+    "max_exposure, max_leg_mi and max_total_mi are structural gates. They",
+    "describe the route, not the weather, so they block a tier on a glassy",
+    "day too.",
+    "",
+    "Changing any number is a change to the safety envelope and requires",
+    "operator sign off per Canon section 2."
   ],
-  "canon_version": "1.2",
-  "planning_tiers": ["beginner", "intermediate", "advanced", "expert"],
+  "canon_version": "1.3",
+  "planning_tiers": [
+    "beginner",
+    "intermediate",
+    "advanced",
+    "expert"
+  ],
   "thresholds": {
     "beginner": {
-      "max_wind": 12,
-      "max_gust": 16,
-      "max_adverse_current": 0.6
+      "comfort_wind": 10.0,
+      "max_wind": 14.0,
+      "max_gust": 20.0,
+      "squall_tolerance": 6.0,
+      "max_adverse_current": 0.6,
+      "max_exposure": 1.0,
+      "max_leg_mi": 1.5,
+      "max_total_mi": 4
     },
     "intermediate": {
-      "max_wind": 16,
-      "max_gust": 22,
-      "max_adverse_current": 1.0
+      "comfort_wind": 14.0,
+      "max_wind": 18.0,
+      "max_gust": 22.0,
+      "squall_tolerance": 6.0,
+      "max_adverse_current": 1.0,
+      "max_exposure": 1.5,
+      "max_leg_mi": 4,
+      "max_total_mi": 12
     },
     "advanced": {
-      "max_wind": 19,
-      "max_gust": 26,
-      "max_adverse_current": 1.2
+      "comfort_wind": 16.0,
+      "max_wind": 20.0,
+      "max_gust": 26.0,
+      "squall_tolerance": 7.0,
+      "max_adverse_current": 1.2,
+      "max_exposure": 1.8,
+      "max_leg_mi": 8,
+      "max_total_mi": 25
     },
     "expert": {
-      "max_wind": 22,
-      "max_gust": 30,
-      "max_adverse_current": 1.5
+      "comfort_wind": 18.0,
+      "max_wind": 22.0,
+      "max_gust": 30.0,
+      "squall_tolerance": 8.0,
+      "max_adverse_current": 1.5,
+      "max_exposure": 2.0,
+      "max_leg_mi": 10,
+      "max_total_mi": 50
     },
     "night_expert": {
-      "max_wind": 22,
-      "max_gust": 30,
-      "max_adverse_current": 1.5
+      "comfort_wind": 18.0,
+      "max_wind": 22.0,
+      "max_gust": 30.0,
+      "squall_tolerance": 8.0,
+      "max_adverse_current": 1.5,
+      "max_exposure": 2.0,
+      "max_leg_mi": 10,
+      "max_total_mi": 50
     }
   },
   "units": {
-    "max_wind": "mph sustained",
-    "max_gust": "mph",
-    "max_adverse_current": "knots opposing the outbound leg"
+    "comfort_wind": "mph sustained, no penalty at or below",
+    "max_wind": "mph sustained, Hard No-Go above",
+    "max_gust": "mph, Hard No-Go above",
+    "squall_tolerance": "mph of gust-minus-sustained tolerated before penalty",
+    "max_adverse_current": "knots opposing the outbound leg",
+    "max_exposure": "highest leg exposure index this tier may ride",
+    "max_leg_mi": "longest single leg this tier may ride",
+    "max_total_mi": "total route distance this tier may ride"
   }
 }
