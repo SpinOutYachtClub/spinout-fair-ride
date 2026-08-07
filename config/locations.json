@@ -1,0 +1,594 @@
+{
+  "_comment": [
+    "Locations for Waterbike AI. Central Bay footprint only: Islais Creek to",
+    "Fort Point and Horseshoe Cove, across to Yerba Buena and Treasure Island.",
+    "Locations outside this footprint are deferred until multi-station support",
+    "exists, because the engine's tide, current, wind and advisory sources are",
+    "valid for the central Bay only.",
+    "verified=false on every record. Operator confirmation required."
+  ],
+  "locations": {
+    "pier_40": {
+      "name": "Pier 40 / South Beach Harbor Home Harbor",
+      "lat": 37.7818,
+      "lon": -122.3847,
+      "role": [
+        "all"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_40_south_dock": {
+      "name": "Pier 40 South Public Dock",
+      "lat": 37.78055,
+      "lon": -122.38515,
+      "role": [
+        "launch",
+        "land",
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "south_beach_harbor_entrance": {
+      "name": "South Beach Harbor Entrance",
+      "lat": 37.7829,
+      "lon": -122.38275,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "mccovey_cove": {
+      "name": "McCovey Cove",
+      "lat": 37.77825,
+      "lon": -122.38955,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "oracle_park_cove": {
+      "name": "Oracle Park Cove",
+      "lat": 37.7787,
+      "lon": -122.38765,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "mission_creek_mouth": {
+      "name": "Mission Creek Mouth",
+      "lat": 37.77695,
+      "lon": -122.38745,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "mission_creek_turning_basin": {
+      "name": "Mission Creek Turning Basin",
+      "lat": 37.77355,
+      "lon": -122.3892,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "mission_creek_launch": {
+      "name": "Mission Creek Boat Launch",
+      "lat": 37.77075,
+      "lon": -122.38735,
+      "role": [
+        "all"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "mission_rock_north": {
+      "name": "Mission Rock North Shore",
+      "lat": 37.77285,
+      "lon": -122.3861,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_52": {
+      "name": "Pier 52 Boat Launch Area",
+      "lat": 37.77105,
+      "lon": -122.38395,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "ramp",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "crane_cove_beach": {
+      "name": "Crane Cove Park Beach",
+      "lat": 37.76316,
+      "lon": -122.38757,
+      "role": [
+        "all"
+      ],
+      "access_type": "beach",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "crane_cove_inner": {
+      "name": "Crane Cove Inner Refuge",
+      "lat": 37.76405,
+      "lon": -122.3862,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_70": {
+      "name": "Pier 70 Shoreline",
+      "lat": 37.75925,
+      "lon": -122.38735,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "warm_water_cove": {
+      "name": "Warm Water Cove",
+      "lat": 37.75465,
+      "lon": -122.38665,
+      "role": [
+        "waypoint",
+        "wind_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "islais_creek_mouth": {
+      "name": "Islais Creek Mouth",
+      "lat": 37.74665,
+      "lon": -122.38385,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "islais_creek_basin": {
+      "name": "Islais Creek Basin",
+      "lat": 37.74535,
+      "lon": -122.38775,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "islais_creek_landing": {
+      "name": "Islais Creek Landing",
+      "lat": 37.74605,
+      "lon": -122.39085,
+      "role": [
+        "all"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "bay_bridge_west": {
+      "name": "Bay Bridge West Span Viewpoint",
+      "lat": 37.79235,
+      "lon": -122.38935,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_1_5": {
+      "name": "Pier 1.5",
+      "lat": 37.797,
+      "lon": -122.3952,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "ferry_building": {
+      "name": "Ferry Building Waterfront",
+      "lat": 37.7955,
+      "lon": -122.3937,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_27": {
+      "name": "Pier 27 Cruise Terminal Viewpoint",
+      "lat": 37.80535,
+      "lon": -122.40115,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_33": {
+      "name": "Pier 33 Alcatraz Ferry Terminal Viewpoint",
+      "lat": 37.80775,
+      "lon": -122.4058,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "pier_39": {
+      "name": "Pier 39 Small Boat Launch",
+      "lat": 37.80965,
+      "lon": -122.41025,
+      "role": [
+        "all"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "aquatic_park": {
+      "name": "Aquatic Park Cove Beach",
+      "lat": 37.81055,
+      "lon": -122.423,
+      "role": [
+        "land",
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "beach",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "fort_mason": {
+      "name": "Fort Mason Waterfront",
+      "lat": 37.8091,
+      "lon": -122.4318,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "permit",
+      "verified": false
+    },
+    "sf_marina": {
+      "name": "San Francisco Marina Small Craft Harbor",
+      "lat": 37.80713,
+      "lon": -122.434,
+      "role": [
+        "launch",
+        "land",
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "permit",
+      "verified": false
+    },
+    "marina_green": {
+      "name": "Marina Green Shoreline",
+      "lat": 37.8059,
+      "lon": -122.4406,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "crissy_field_east": {
+      "name": "Crissy Field East Beach",
+      "lat": 37.80375,
+      "lon": -122.45845,
+      "role": [
+        "land",
+        "waypoint"
+      ],
+      "access_type": "beach",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "fort_point": {
+      "name": "Fort Point",
+      "lat": 37.8108,
+      "lon": -122.4656,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "horseshoe_cove": {
+      "name": "Horseshoe Cove / Fort Baker",
+      "lat": 37.83205,
+      "lon": -122.4752,
+      "role": [
+        "land",
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "beach",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "cavallo_point": {
+      "name": "Cavallo Point Waterfront",
+      "lat": 37.8362,
+      "lon": -122.47855,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "dock",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "private",
+      "verified": false
+    },
+    "alcatraz_south": {
+      "name": "Alcatraz South Viewpoint",
+      "lat": 37.82615,
+      "lon": -122.42295,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "alcatraz_east": {
+      "name": "Alcatraz East Viewpoint",
+      "lat": 37.82855,
+      "lon": -122.41845,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "alcatraz_north": {
+      "name": "Alcatraz North Viewpoint",
+      "lat": 37.831,
+      "lon": -122.42305,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "alcatraz_west": {
+      "name": "Alcatraz West Viewpoint",
+      "lat": 37.82785,
+      "lon": -122.42885,
+      "role": [
+        "waypoint"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": null,
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "clipper_cove_beach": {
+      "name": "Clipper Cove Beach",
+      "lat": 37.8178,
+      "lon": -122.3678,
+      "role": [
+        "land",
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "beach",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "clipper_cove_inner": {
+      "name": "Clipper Cove Inner Refuge",
+      "lat": 37.8155,
+      "lon": -122.36705,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "moorage",
+      "shelters_from_wind": "W,NW,SW,N",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "permit",
+      "verified": false
+    },
+    "yerba_buena_east": {
+      "name": "Yerba Buena Island East Lee",
+      "lat": 37.81285,
+      "lon": -122.3619,
+      "role": [
+        "waypoint",
+        "wind_shelter",
+        "tidal_shelter"
+      ],
+      "access_type": "none",
+      "shelters_from_wind": "W,NW,SW",
+      "shelters_from_tide": "both",
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    },
+    "treasure_island_west": {
+      "name": "Treasure Island West Shore",
+      "lat": 37.82395,
+      "lon": -122.3718,
+      "role": [
+        "land",
+        "waypoint"
+      ],
+      "access_type": "beach",
+      "shelters_from_wind": "E,NE,SE",
+      "shelters_from_tide": null,
+      "min_tide_ft": null,
+      "permit": "public",
+      "verified": false
+    }
+  }
+}
