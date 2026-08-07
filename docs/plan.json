@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06T17:12:21.216710-07:00",
-  "version": "2.2.0",
+  "generated_at": "2026-08-06T17:18:53.317371-07:00",
+  "version": "2.5.0",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-06",
   "skill_default": "intermediate",
@@ -14,137 +14,46 @@
   "advisory": "none",
   "routes": [
     {
-      "id": "p40-tiburon",
-      "name": "Pier 40 to Tiburon",
-      "status": "yellow",
-      "status_by_skill": {
-        "beginner": "red",
-        "intermediate": "yellow",
-        "advanced": "yellow",
-        "expert": "yellow"
-      },
-      "skill": "intermediate",
-      "effort": 6,
-      "windows_by_skill": {
-        "beginner": [],
-        "intermediate": [
-          {
-            "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T07:00:00-07:00",
-            "reasons": [
-              "flood current aiding outbound",
-              "wind 11 mph, gust 15"
-            ]
-          }
-        ],
-        "advanced": [
-          {
-            "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T07:30:00-07:00",
-            "reasons": [
-              "flood current aiding outbound",
-              "wind 11 mph, gust 15"
-            ]
-          }
-        ],
-        "expert": [
-          {
-            "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T07:30:00-07:00",
-            "reasons": [
-              "flood current aiding outbound",
-              "wind 11 mph, gust 15"
-            ]
-          },
-          {
-            "start": "2026-08-06T11:00:00-07:00",
-            "end": "2026-08-06T13:00:00-07:00",
-            "reasons": [
-              "near slack water",
-              "wind 15 mph, gust 20"
-            ]
-          },
-          {
-            "start": "2026-08-06T19:00:00-07:00",
-            "end": "2026-08-06T19:44:20.482586-07:00",
-            "reasons": [
-              "near slack water",
-              "wind 14 mph, gust 19"
-            ]
-          }
-        ]
-      },
-      "effort_by_skill": {
-        "beginner": 7,
-        "intermediate": 6,
-        "advanced": 5,
-        "expert": 5
-      },
-      "windows": [
+      "id": "r01_south_beach_harbor_circuit",
+      "name": "South Beach Harbor Circuit",
+      "difficulty": null,
+      "distance_mi": 0.51,
+      "estimated_hours": null,
+      "bailouts": [
         {
-          "start": "2026-08-06T06:30:00-07:00",
-          "end": "2026-08-06T07:00:00-07:00",
-          "reasons": [
-            "flood current aiding outbound",
-            "wind 11 mph, gust 15"
-          ]
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 40 South Public Dock",
+          "lat": 37.78055,
+          "lon": -122.38515,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Confirm gate and dock access."
         }
       ],
-      "exposure": [
-        "Crissy (WNW)",
-        "Raccoon Strait (flood)"
-      ],
-      "data_sources": {
-        "tide": "9414290",
-        "current": "SFB1201",
-        "wind": "OpenWeatherMap"
-      },
-      "daylight": {
-        "sunrise": "2026-08-06T06:17:01.688068-07:00",
-        "sunset": "2026-08-06T20:14:20.482586-07:00"
-      },
-      "notes": "Mind posted ferry windows and verify on-site conditions before launch."
-    },
-    {
-      "id": "p40-cavallo",
-      "name": "Pier 40 to Cavallo Point",
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
-        "beginner": "red",
-        "intermediate": "red",
-        "advanced": "yellow",
-        "expert": "yellow"
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 6,
+      "effort": 2,
       "windows_by_skill": {
-        "beginner": [],
-        "intermediate": [],
-        "advanced": [
+        "beginner": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T07:30:00-07:00",
+            "end": "2026-08-06T10:00:00-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "flood current 0.3 kts, 0.2 adverse",
               "wind 11 mph, gust 15"
-            ]
-          }
-        ],
-        "expert": [
-          {
-            "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T07:30:00-07:00",
-            "reasons": [
-              "flood current aiding outbound",
-              "wind 11 mph, gust 15"
-            ]
-          },
-          {
-            "start": "2026-08-06T11:00:00-07:00",
-            "end": "2026-08-06T13:00:00-07:00",
-            "reasons": [
-              "near slack water",
-              "wind 15 mph, gust 20"
             ]
           },
           {
@@ -155,19 +64,1333 @@
               "wind 14 mph, gust 19"
             ]
           }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current 0.3 kts, 0.2 adverse",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current 0.3 kts, 0.2 adverse",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current 0.3 kts, 0.2 adverse",
+              "wind 11 mph, gust 15"
+            ]
+          }
         ]
       },
       "effort_by_skill": {
-        "beginner": 7,
-        "intermediate": 6,
-        "advanced": 5,
-        "expert": 5
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {},
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current 0.3 kts, 0.2 adverse",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Pier 40 / South Beach Harbor Home Harbor",
+        "Pier 40 South Public Dock"
+      ],
+      "min_tier": "beginner",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r02_mccovey_cove_loop",
+      "name": "McCovey Cove Loop",
+      "difficulty": null,
+      "distance_mi": 0.89,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 40 South Public Dock",
+          "lat": 37.78055,
+          "lon": -122.38515,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Confirm gate and dock access."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {},
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "McCovey Cove",
+        "Oracle Park Cove"
+      ],
+      "min_tier": "beginner",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r04_mission_rock_triangle",
+      "name": "Mission Rock Triangle",
+      "difficulty": null,
+      "distance_mi": 1.81,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 40 South Public Dock",
+          "lat": 37.78055,
+          "lon": -122.38515,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Confirm gate and dock access."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T10:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 3,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {},
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Mission Rock North Shore",
+        "Pier 40 / South Beach Harbor Home Harbor"
+      ],
+      "min_tier": "beginner",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r03_mission_creek_out_back",
+      "name": "Mission Creek Protected Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 2.03,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 40 South Public Dock",
+          "lat": 37.78055,
+          "lon": -122.38515,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Confirm gate and dock access."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {},
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Mission Creek Boat Launch",
+        "Mission Creek Mouth"
+      ],
+      "min_tier": "beginner",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r05_crane_cove_out_back",
+      "name": "Crane Cove Scenic Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 3.28,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        },
+        {
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated intermediate and above"
+        ]
+      },
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Crane Cove Inner Refuge",
+        "Crane Cove Park Beach"
+      ],
+      "min_tier": "intermediate",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r06_dogpatch_waterfront_loop",
+      "name": "Dogpatch Waterfront Loop",
+      "difficulty": null,
+      "distance_mi": 3.77,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        },
+        {
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated intermediate and above",
+          "exposure 1.2 over beginner limit 1.0",
+          "longest leg 1.85 mi over beginner limit 1.5 mi"
+        ]
+      },
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Crane Cove Inner Refuge",
+        "Mission Rock North Shore"
+      ],
+      "min_tier": "intermediate",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r22_southern_shelters_circuit",
+      "name": "Southern Shelters Circuit",
+      "difficulty": null,
+      "distance_mi": 5.91,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        },
+        {
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
+        },
+        {
+          "name": "Islais Creek Landing",
+          "lat": 37.74605,
+          "lon": -122.39085,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Avoid during active industrial vessel movements."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated intermediate and above",
+          "exposure 1.2 over beginner limit 1.0",
+          "route 5.91 mi over beginner limit 4 mi"
+        ]
+      },
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Crane Cove Inner Refuge",
+        "Crane Cove Park Beach"
+      ],
+      "min_tier": "intermediate",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r08_southern_waterfront_grand_loop",
+      "name": "Southern Waterfront Grand Loop",
+      "difficulty": null,
+      "distance_mi": 6.2,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        },
+        {
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
+        },
+        {
+          "name": "Islais Creek Landing",
+          "lat": 37.74605,
+          "lon": -122.39085,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Avoid during active industrial vessel movements."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated intermediate and above",
+          "exposure 1.2 over beginner limit 1.0",
+          "route 6.2 mi over beginner limit 4 mi"
+        ]
+      },
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Crane Cove Inner Refuge",
+        "Crane Cove Park Beach"
+      ],
+      "min_tier": "intermediate",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r07_islais_creek_out_back",
+      "name": "Islais Creek Working Waterfront Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 6.77,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Mission Creek Boat Launch",
+          "lat": 37.77075,
+          "lon": -122.38735,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
+        },
+        {
+          "name": "Crane Cove Park Beach",
+          "lat": 37.76316,
+          "lon": -122.38757,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
+        },
+        {
+          "name": "Islais Creek Landing",
+          "lat": 37.74605,
+          "lon": -122.39085,
+          "landing_type": "dock",
+          "staffed": false,
+          "unusable_when": "Avoid during active industrial vessel movements."
+        }
+      ],
+      "status": "green",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 2,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated intermediate and above",
+          "exposure 1.2 over beginner limit 1.0",
+          "route 6.77 mi over beginner limit 4 mi"
+        ]
+      },
+      "windows": [
+        {
+          "start": "2026-08-06T06:30:00-07:00",
+          "end": "2026-08-06T13:00:00-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 11 mph, gust 15"
+          ]
+        },
+        {
+          "start": "2026-08-06T18:00:00-07:00",
+          "end": "2026-08-06T19:44:20.482586-07:00",
+          "reasons": [
+            "near slack water",
+            "wind 14 mph, gust 19"
+          ]
+        }
+      ],
+      "exposure": [
+        "Crane Cove Inner Refuge",
+        "Islais Creek Basin"
+      ],
+      "min_tier": "intermediate",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Verify on-site conditions before launch."
+    },
+    {
+      "id": "r09_bay_bridge_ferry_loop",
+      "name": "Bay Bridge and Ferry Building Loop",
+      "difficulty": null,
+      "distance_mi": 2.71,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19",
+              "inside a ferry window, expect traffic"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.5 over beginner limit 1.0"
+        ],
+        "intermediate": [
+          "route is rated advanced and above"
+        ]
       },
       "windows": [],
       "exposure": [
-        "Golden Gate mouth",
-        "Horseshoe Bay eddy"
+        "Bay Bridge West Span Viewpoint",
+        "Ferry Building Waterfront"
       ],
+      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -180,43 +1403,55 @@
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
     {
-      "id": "p40-clipper",
-      "name": "Pier 40 to Clipper Cove",
-      "status": "yellow",
+      "id": "r10_pier39_waterfront_out_back",
+      "name": "Pier 39 Waterfront Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 5.46,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        }
+      ],
+      "status": "red",
       "status_by_skill": {
         "beginner": "red",
-        "intermediate": "yellow",
-        "advanced": "yellow",
-        "expert": "yellow"
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 5,
+      "effort": 10,
       "windows_by_skill": {
         "beginner": [],
-        "intermediate": [
-          {
-            "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T10:00:00-07:00",
-            "reasons": [
-              "flood current 0.3 kts, 0.3 adverse",
-              "wind 11 mph, gust 15"
-            ]
-          },
-          {
-            "start": "2026-08-06T19:00:00-07:00",
-            "end": "2026-08-06T19:44:20.482586-07:00",
-            "reasons": [
-              "near slack water",
-              "wind 14 mph, gust 19"
-            ]
-          }
-        ],
+        "intermediate": [],
         "advanced": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T12:00:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
             "reasons": [
-              "flood current 0.3 kts, 0.3 adverse",
+              "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           },
@@ -233,9 +1468,89 @@
         "expert": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T12:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current 0.3 kts, 0.3 adverse",
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.5 over beginner limit 1.0",
+          "route 5.46 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated advanced and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Pier 1.5",
+        "Pier 27 Cruise Terminal Viewpoint"
+      ],
+      "min_tier": "advanced",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r16_clipper_cove_out_back",
+      "name": "Clipper Cove Cross-Bay Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 6.84,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm public landing access and shoreline status before departure."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           },
@@ -248,36 +1563,42 @@
               "inside a ferry window, expect traffic"
             ]
           }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
         ]
       },
       "effort_by_skill": {
-        "beginner": 6,
-        "intermediate": 5,
-        "advanced": 5,
-        "expert": 5
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 3,
+        "expert": 3
       },
-      "windows": [
-        {
-          "start": "2026-08-06T06:30:00-07:00",
-          "end": "2026-08-06T10:00:00-07:00",
-          "reasons": [
-            "flood current 0.3 kts, 0.3 adverse",
-            "wind 11 mph, gust 15"
-          ]
-        },
-        {
-          "start": "2026-08-06T19:00:00-07:00",
-          "end": "2026-08-06T19:44:20.482586-07:00",
-          "reasons": [
-            "near slack water",
-            "wind 14 mph, gust 19"
-          ]
-        }
-      ],
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.8 over beginner limit 1.0",
+          "longest leg 2.37 mi over beginner limit 1.5 mi",
+          "route 6.84 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated advanced and above",
+          "exposure 1.8 over intermediate limit 1.5"
+        ]
+      },
+      "windows": [],
       "exposure": [
-        "Bay Bridge shadow",
-        "Yerba Buena chop"
+        "Bay Bridge West Span Viewpoint",
+        "Clipper Cove Beach"
       ],
+      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -287,32 +1608,293 @@
         "sunrise": "2026-08-06T06:17:01.688068-07:00",
         "sunset": "2026-08-06T20:14:20.482586-07:00"
       },
-      "notes": "Mind posted ferry windows and verify on-site conditions before launch."
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
     {
-      "id": "p40-p39",
-      "name": "Pier 40 to Pier 39",
-      "status": "yellow",
+      "id": "r11_aquatic_park_loop",
+      "name": "Aquatic Park Urban Loop",
+      "difficulty": null,
+      "distance_mi": 7.59,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        }
+      ],
+      "status": "red",
       "status_by_skill": {
-        "beginner": "yellow",
-        "intermediate": "yellow",
+        "beginner": "red",
+        "intermediate": "red",
         "advanced": "green",
         "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 5,
+      "effort": 10,
       "windows_by_skill": {
-        "beginner": [
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T07:00:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19",
+              "inside a ferry window, expect traffic"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.5 over beginner limit 1.0",
+          "longest leg 3.57 mi over beginner limit 1.5 mi",
+          "route 7.59 mi over beginner limit 4 mi"
         ],
         "intermediate": [
+          "route is rated advanced and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Aquatic Park Cove Beach",
+        "Fort Mason Waterfront"
+      ],
+      "min_tier": "advanced",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r21_three_refuges_circuit",
+      "name": "Three Refuges Circuit",
+      "difficulty": null,
+      "distance_mi": 8.33,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19",
+              "inside a ferry window, expect traffic"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.5 over beginner limit 1.0",
+          "longest leg 2.66 mi over beginner limit 1.5 mi",
+          "route 8.33 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated advanced and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Aquatic Park Cove Beach",
+        "Pier 39 Small Boat Launch"
+      ],
+      "min_tier": "advanced",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r12_sf_marina_out_back",
+      "name": "San Francisco Marina Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 8.39,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [
           {
             "start": "2026-08-06T06:30:00-07:00",
             "end": "2026-08-06T09:00:00-07:00",
@@ -323,19 +1905,11 @@
           },
           {
             "start": "2026-08-06T09:30:00-07:00",
-            "end": "2026-08-06T10:00:00-07:00",
-            "reasons": [
-              "ebb current 1.0 kts, 0.3 adverse",
-              "wind 11 mph, gust 15",
-              "inside a ferry window, expect traffic"
-            ]
-          },
-          {
-            "start": "2026-08-06T11:00:00-07:00",
             "end": "2026-08-06T13:00:00-07:00",
             "reasons": [
-              "near slack water",
-              "wind 15 mph, gust 20"
+              "ebb current 1.9 kts, 1.1 adverse",
+              "wind 11 mph, gust 15",
+              "inside a ferry window, expect traffic"
             ]
           },
           {
@@ -348,6 +1922,103 @@
             ]
           }
         ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 2,
+        "expert": 2
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.5 over beginner limit 1.0",
+          "longest leg 2.66 mi over beginner limit 1.5 mi",
+          "route 8.39 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated advanced and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Aquatic Park Cove Beach",
+        "Fort Mason Waterfront"
+      ],
+      "min_tier": "advanced",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r18_alcatraz_east_view_loop",
+      "name": "Alcatraz East View Loop",
+      "difficulty": null,
+      "distance_mi": 8.7,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
         "advanced": [
           {
             "start": "2026-08-06T06:30:00-07:00",
@@ -370,10 +2041,125 @@
         "expert": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T16:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 3,
+        "expert": 3
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.8 over beginner limit 1.0",
+          "longest leg 2.66 mi over beginner limit 1.5 mi",
+          "route 8.7 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated advanced and above",
+          "exposure 1.8 over intermediate limit 1.5"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Alcatraz East Viewpoint",
+        "Alcatraz South Viewpoint"
+      ],
+      "min_tier": "advanced",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r13_crissy_field_out_back",
+      "name": "Crissy Field Shoreline Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 11.29,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        },
+        {
+          "name": "Crissy Field East Beach",
+          "lat": 37.80375,
+          "lon": -122.45845,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only under manageable shore conditions and open access."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "green",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T09:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T09:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "ebb current 2.0 kts, 1.2 adverse",
+              "wind 11 mph, gust 15",
+              "inside a ferry window, expect traffic"
             ]
           },
           {
@@ -385,53 +2171,41 @@
               "inside a ferry window, expect traffic"
             ]
           }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
         ]
       },
       "effort_by_skill": {
-        "beginner": 6,
-        "intermediate": 5,
-        "advanced": 4,
-        "expert": 4
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 2,
+        "expert": 2
       },
-      "windows": [
-        {
-          "start": "2026-08-06T06:30:00-07:00",
-          "end": "2026-08-06T09:00:00-07:00",
-          "reasons": [
-            "flood current aiding outbound",
-            "wind 11 mph, gust 15"
-          ]
-        },
-        {
-          "start": "2026-08-06T09:30:00-07:00",
-          "end": "2026-08-06T10:00:00-07:00",
-          "reasons": [
-            "ebb current 1.0 kts, 0.3 adverse",
-            "wind 11 mph, gust 15",
-            "inside a ferry window, expect traffic"
-          ]
-        },
-        {
-          "start": "2026-08-06T11:00:00-07:00",
-          "end": "2026-08-06T13:00:00-07:00",
-          "reasons": [
-            "near slack water",
-            "wind 15 mph, gust 20"
-          ]
-        },
-        {
-          "start": "2026-08-06T18:00:00-07:00",
-          "end": "2026-08-06T19:44:20.482586-07:00",
-          "reasons": [
-            "near slack water",
-            "wind 14 mph, gust 19",
-            "inside a ferry window, expect traffic"
-          ]
-        }
-      ],
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated advanced and above",
+          "exposure 1.5 over beginner limit 1.0",
+          "longest leg 2.66 mi over beginner limit 1.5 mi",
+          "route 11.29 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated advanced and above"
+        ]
+      },
+      "windows": [],
       "exposure": [
-        "Embarcadero waterfront"
+        "Crissy Field East Beach",
+        "Marina Green Shoreline"
       ],
+      "min_tier": "advanced",
       "data_sources": {
         "tide": "9414290",
         "current": "SFB1201",
@@ -441,37 +2215,615 @@
         "sunrise": "2026-08-06T06:17:01.688068-07:00",
         "sunset": "2026-08-06T20:14:20.482586-07:00"
       },
-      "notes": "Mind posted ferry windows and verify on-site conditions before launch."
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r17_yerba_buena_treasure_loop",
+      "name": "Yerba Buena and Treasure Island Loop",
+      "difficulty": null,
+      "distance_mi": 8.31,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm public landing access and shoreline status before departure."
+        },
+        {
+          "name": "Treasure Island West Shore",
+          "lat": 37.82395,
+          "lon": -122.3718,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Conditional only; confirm shoreline access and construction restrictions."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "red",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 10,
+        "expert": 3
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated expert and above",
+          "exposure 1.8 over beginner limit 1.0",
+          "longest leg 2.37 mi over beginner limit 1.5 mi",
+          "route 8.31 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated expert and above",
+          "exposure 1.8 over intermediate limit 1.5"
+        ],
+        "advanced": [
+          "route is rated expert and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Bay Bridge West Span Viewpoint",
+        "Clipper Cove Beach"
+      ],
+      "min_tier": "expert",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r19_alcatraz_circumnavigation",
+      "name": "Alcatraz Circumnavigation",
+      "difficulty": null,
+      "distance_mi": 9.52,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "red",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 10,
+        "expert": 3
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated expert and above",
+          "exposure 1.8 over beginner limit 1.0",
+          "longest leg 2.66 mi over beginner limit 1.5 mi",
+          "route 9.52 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated expert and above",
+          "exposure 1.8 over intermediate limit 1.5"
+        ],
+        "advanced": [
+          "route is rated expert and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Alcatraz East Viewpoint",
+        "Alcatraz North Viewpoint"
+      ],
+      "min_tier": "expert",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r20_central_bay_grand_loop",
+      "name": "Central Bay Grand Loop",
+      "difficulty": null,
+      "distance_mi": 10.85,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        },
+        {
+          "name": "Clipper Cove Beach",
+          "lat": 37.8178,
+          "lon": -122.3678,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm public landing access and shoreline status before departure."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "red",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 10,
+        "expert": 3
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated expert and above",
+          "exposure 1.8 over beginner limit 1.0",
+          "longest leg 3.43 mi over beginner limit 1.5 mi",
+          "route 10.85 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated expert and above",
+          "exposure 1.8 over intermediate limit 1.5"
+        ],
+        "advanced": [
+          "route is rated expert and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Alcatraz South Viewpoint",
+        "Bay Bridge West Span Viewpoint"
+      ],
+      "min_tier": "expert",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r14_fort_point_out_back",
+      "name": "Fort Point Out-and-Back",
+      "difficulty": null,
+      "distance_mi": 11.63,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        },
+        {
+          "name": "Crissy Field East Beach",
+          "lat": 37.80375,
+          "lon": -122.45845,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only under manageable shore conditions and open access."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "red",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T10:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "ebb current 1.7 kts, 1.4 adverse",
+              "wind 15 mph, gust 20"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 10,
+        "expert": 3
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated expert and above",
+          "exposure 1.8 over beginner limit 1.0",
+          "longest leg 3.6 mi over beginner limit 1.5 mi",
+          "route 11.63 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated expert and above",
+          "exposure 1.8 over intermediate limit 1.5"
+        ],
+        "advanced": [
+          "route is rated expert and above"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Crissy Field East Beach",
+        "Fort Point"
+      ],
+      "min_tier": "expert",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+    },
+    {
+      "id": "r15_horseshoe_cove_gate_approach",
+      "name": "Horseshoe Cove Gate Approach",
+      "difficulty": null,
+      "distance_mi": 15.35,
+      "estimated_hours": null,
+      "bailouts": [
+        {
+          "name": "Pier 40 / South Beach Harbor Home Harbor",
+          "lat": 37.7818,
+          "lon": -122.3847,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm dock access and traffic before return."
+        },
+        {
+          "name": "Pier 39 Small Boat Launch",
+          "lat": 37.80965,
+          "lon": -122.41025,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Confirm marina access; do not pass under Pier 39."
+        },
+        {
+          "name": "Aquatic Park Cove Beach",
+          "lat": 37.81055,
+          "lon": -122.423,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm NPS operating restrictions and beach conditions."
+        },
+        {
+          "name": "San Francisco Marina Small Craft Harbor",
+          "lat": 37.80713,
+          "lon": -122.434,
+          "landing_type": "dock",
+          "staffed": true,
+          "unusable_when": "Locked access area; public access requires request/key coordination."
+        },
+        {
+          "name": "Crissy Field East Beach",
+          "lat": 37.80375,
+          "lon": -122.45845,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Use only under manageable shore conditions and open access."
+        },
+        {
+          "name": "Horseshoe Cove / Fort Baker",
+          "lat": 37.83205,
+          "lon": -122.4752,
+          "landing_type": "beach",
+          "staffed": false,
+          "unusable_when": "Confirm current public landing access before relying on this site."
+        }
+      ],
+      "status": "red",
+      "status_by_skill": {
+        "beginner": "red",
+        "intermediate": "red",
+        "advanced": "red",
+        "expert": "green"
+      },
+      "skill": "intermediate",
+      "effort": 10,
+      "windows_by_skill": {
+        "beginner": [],
+        "intermediate": [],
+        "advanced": [],
+        "expert": [
+          {
+            "start": "2026-08-06T06:30:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T10:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "ebb current 1.8 kts, 1.5 adverse",
+              "wind 15 mph, gust 20"
+            ]
+          }
+        ]
+      },
+      "effort_by_skill": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 10,
+        "expert": 3
+      },
+      "blocked_by_skill": {
+        "beginner": [
+          "route is rated expert and above",
+          "exposure 2.0 over beginner limit 1.0",
+          "longest leg 3.6 mi over beginner limit 1.5 mi",
+          "route 15.35 mi over beginner limit 4 mi"
+        ],
+        "intermediate": [
+          "route is rated expert and above",
+          "exposure 2.0 over intermediate limit 1.5",
+          "route 15.35 mi over intermediate limit 12 mi"
+        ],
+        "advanced": [
+          "route is rated expert and above",
+          "exposure 2.0 over advanced limit 1.8"
+        ]
+      },
+      "windows": [],
+      "exposure": [
+        "Cavallo Point Waterfront",
+        "Fort Point"
+      ],
+      "min_tier": "expert",
+      "data_sources": {
+        "tide": "9414290",
+        "current": "SFB1201",
+        "wind": "OpenWeatherMap"
+      },
+      "daylight": {
+        "sunrise": "2026-08-06T06:17:01.688068-07:00",
+        "sunset": "2026-08-06T20:14:20.482586-07:00"
+      },
+      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     }
   ],
   "thresholds": {
     "beginner": {
-      "max_wind": 12.0,
-      "max_gust": 16.0,
-      "max_adverse_current": 0.6
+      "comfort_wind": 10.0,
+      "max_wind": 14.0,
+      "max_gust": 20.0,
+      "squall_tolerance": 6.0,
+      "max_adverse_current": 0.6,
+      "max_exposure": 1.0,
+      "max_leg_mi": 1.5,
+      "max_total_mi": 4
     },
     "intermediate": {
-      "max_wind": 16.0,
+      "comfort_wind": 14.0,
+      "max_wind": 18.0,
       "max_gust": 22.0,
-      "max_adverse_current": 1.0
+      "squall_tolerance": 6.0,
+      "max_adverse_current": 1.0,
+      "max_exposure": 1.5,
+      "max_leg_mi": 4,
+      "max_total_mi": 12
     },
     "advanced": {
-      "max_wind": 19.0,
+      "comfort_wind": 16.0,
+      "max_wind": 20.0,
       "max_gust": 26.0,
-      "max_adverse_current": 1.2
+      "squall_tolerance": 7.0,
+      "max_adverse_current": 1.2,
+      "max_exposure": 1.8,
+      "max_leg_mi": 8,
+      "max_total_mi": 25
     },
     "expert": {
+      "comfort_wind": 18.0,
       "max_wind": 22.0,
       "max_gust": 30.0,
-      "max_adverse_current": 1.5
+      "squall_tolerance": 8.0,
+      "max_adverse_current": 1.5,
+      "max_exposure": 2.0,
+      "max_leg_mi": 10,
+      "max_total_mi": 50
     },
     "night_expert": {
+      "comfort_wind": 18.0,
       "max_wind": 22.0,
       "max_gust": 30.0,
-      "max_adverse_current": 1.5
+      "squall_tolerance": 8.0,
+      "max_adverse_current": 1.5,
+      "max_exposure": 2.0,
+      "max_leg_mi": 10,
+      "max_total_mi": 50
     }
   },
   "thresholds_source": "config/thresholds.json",
+  "routes_source": "config/routes.json",
   "data_quality": {
     "tide": "live",
     "wind": "estimated",
