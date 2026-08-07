@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Waterbike AI - Daily Plan Generator
-Version: 2.5.0  (central Bay route catalog from config)
+Version: 2.6.0  (widget-ready central Bay route catalog)
 
 Generates a daily plan.json of safety-scored ride windows for SF Bay
 waterbike routes. Pure Python standard library only, so it runs on a
@@ -39,7 +39,7 @@ from zoneinfo import ZoneInfo
 # Constants
 # ----------------------------------------------------------------------------
 
-VERSION = "2.5.0"
+VERSION = "2.6.0"
 APP_ID = "WaterbikeAI"                       # NOAA courtesy identifier
 TZ = ZoneInfo("America/Los_Angeles")         # single source of local time
 SAFETY_WEIGHT = 0.40                         # immutable; see module docstring
@@ -61,7 +61,7 @@ STATIONS = {
     "wind_owm": (37.806, -122.465),  # near Fort Point for wind lat/lon
 }
 
-# Skill profiles. Canonical four-tier ladder, matching Safety Canon v1.2 and
+# Skill profiles. Canonical four-tier ladder, matching Safety Canon v1.3 and
 # data_contracts.csv. Night Expert is a certification overlay, not a fifth
 # condition tier: it carries Expert's environmental limits and adds the
 # qualification to operate in darkness. It is therefore absent here, since
@@ -115,7 +115,8 @@ def load_thresholds():
             continue
         base = dict(merged.get(tier, THRESHOLDS["intermediate"]))
         for key in ("comfort_wind", "max_wind", "max_gust",
-                    "squall_tolerance", "max_adverse_current"):
+                    "squall_tolerance", "max_adverse_current",
+                    "max_exposure", "max_leg_mi", "max_total_mi"):
             if key in limits:
                 try:
                     base[key] = float(limits[key])
@@ -662,6 +663,56 @@ def route_tier_eligibility(route, skill):
     return (not reasons), reasons
 
 
+
+def _location_public_view(location_id):
+    """Return the route-planning fields safe and useful for the public UI."""
+    loc = LOCATIONS.get(location_id) or {}
+    return {
+        "id": location_id,
+        "name": loc.get("name", location_id.replace("_", " ").title()),
+        "lat": loc.get("lat"),
+        "lon": loc.get("lon"),
+        "role": loc.get("role", []),
+        "access_type": loc.get("access_type"),
+        "shelters_from_wind": loc.get("shelters_from_wind"),
+        "shelters_from_tide": loc.get("shelters_from_tide"),
+        "min_tide_ft": loc.get("min_tide_ft"),
+        "permit": loc.get("permit"),
+        "verified": bool(loc.get("verified", False)),
+    }
+
+
+def _route_waypoints(route):
+    """Return the ordered route-point sequence, including the home harbor return."""
+    ids = []
+    for leg in route.get("legs") or []:
+        for location_id in (leg.get("from"), leg.get("to")):
+            if location_id and (not ids or ids[-1] != location_id):
+                ids.append(location_id)
+    return [_location_public_view(location_id) for location_id in ids]
+
+
+def _route_legs_public(route):
+    """Enrich leg references with rider-facing location names."""
+    enriched = []
+    for seq, leg in enumerate(route.get("legs") or [], 1):
+        start = _location_public_view(leg.get("from"))
+        end = _location_public_view(leg.get("to"))
+        enriched.append({
+            "seq": seq,
+            "name": leg.get("name") or f"{start['name']} to {end['name']}",
+            "from": leg.get("from"),
+            "from_name": start["name"],
+            "to": leg.get("to"),
+            "to_name": end["name"],
+            "bearing": leg.get("bearing"),
+            "distance_mi": leg.get("distance_mi"),
+            "exposure_index": leg.get("exposure_index"),
+            "ferry_crossing": bool(leg.get("ferry_crossing", False)),
+        })
+    return enriched
+
+
 def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
     sunrise, sunset = sun_times(date)
     last_launch = sunset - timedelta(minutes=MIN_DAYLIGHT_RETURN_MIN)
@@ -751,30 +802,34 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
             windows_default = skill_windows
             best_effort = _effort_from_score(day_best)
 
+    public_legs = _route_legs_public(route)
+    waypoints = _route_waypoints(route)
+    ferry_crossing_count = sum(1 for leg in public_legs if leg["ferry_crossing"])
+    max_exposure = max((leg.get("exposure_index", 0.5) for leg in public_legs), default=0.5)
+
     return {
         "id": route["id"],
         "name": route["name"],
-        # Native difficulty from the route definition. This is the tier the
-        # route was designed for, independent of today's conditions.
-        "difficulty": route.get("difficulty"),
+        "route_type": route.get("route_type", "route"),
+        "difficulty": min_tier,
+        "min_tier": min_tier,
+        "night_difficulty": route.get("night_difficulty"),
         "distance_mi": route.get("distance_mi"),
         "estimated_hours": route.get("estimated_hours"),
-        # Bailouts are safety information, not decoration: where a rider can
-        # land if conditions turn. Carried through so the UI can show them.
+        "verified": bool(route.get("verified", False)),
+        "legs": public_legs,
+        "waypoints": waypoints,
+        "leg_count": len(public_legs),
+        "ferry_crossing_count": ferry_crossing_count,
+        "max_exposure": max_exposure,
         "bailouts": route.get("bailouts", []),
         "status": status_by_skill[default_skill],
         "status_by_skill": status_by_skill,
         "skill": default_skill,
         "effort": best_effort,
-        # Per-skill windows. A Casual rider must never be shown Intermediate
-        # times: the badge and the listed windows have to agree.
         "windows_by_skill": windows_by_skill,
         "effort_by_skill": effort_by_skill,
-        # Why a tier is structurally excluded, independent of weather.
-        # Empty or absent means the tier is eligible and any Hold is
-        # a conditions call rather than a route mismatch.
         "blocked_by_skill": blocked_by_skill,
-        # Retained for any consumer still reading the flat list.
         "windows": [
             {
                 "start": w["start"].isoformat(),
@@ -783,15 +838,13 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
             }
             for w in windows_default
         ],
-        "exposure": route["exposure"],
-        "min_tier": min_tier,
-        "data_sources": {"tide": STATIONS["tide"], "current": STATIONS["current"], "wind": "OpenWeatherMap"},
+        "exposure": route.get("exposure", []),
+        "data_sources": {
+            "tide": STATIONS["tide"],
+            "current": STATIONS["current"],
+            "wind": "OpenWeatherMap",
+        },
         "daylight": {"sunrise": sunrise.isoformat(), "sunset": sunset.isoformat()},
-        "min_tier": route.get("min_tier"),
-        "distance_mi": route.get("distance_mi"),
-        # Canon section 11: an aborting group returns to the nearest safe
-        # landing. The plan has to be able to say where that is.
-        "bailouts": route.get("bailouts", []),
         "notes": _route_note(route, windows_default),
     }
 
