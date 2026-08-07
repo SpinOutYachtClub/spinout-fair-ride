@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T17:27:04.087414-07:00",
+  "generated_at": "2026-08-06T17:36:55.296020-07:00",
   "version": "2.6.0",
   "timezone": "America/Los_Angeles",
   "day": "2026-08-06",
@@ -11,7 +11,7 @@
     "expert"
   ],
   "safety_weight": 0.4,
-  "advisory": "unknown",
+  "advisory": "none",
   "routes": [
     {
       "id": "r01_south_beach_harbor_circuit",
@@ -160,28 +160,36 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-08-06T08:30:00-07:00",
+            "start": "2026-08-06T06:30:00-07:00",
             "end": "2026-08-06T10:00:00-07:00",
             "reasons": [
-              "flood current 0.5 kts, 0.4 adverse",
+              "flood current 0.3 kts, 0.2 adverse",
               "wind 11 mph, gust 15"
+            ]
+          },
+          {
+            "start": "2026-08-06T18:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
+            "reasons": [
+              "near slack water",
+              "wind 14 mph, gust 19"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-08-06T07:30:00-07:00",
+            "start": "2026-08-06T06:30:00-07:00",
             "end": "2026-08-06T13:00:00-07:00",
             "reasons": [
-              "flood current 1.1 kts, 0.8 adverse",
+              "flood current 0.3 kts, 0.2 adverse",
               "wind 11 mph, gust 15"
             ]
           },
           {
-            "start": "2026-08-06T19:30:00-07:00",
+            "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current 1.2 kts, 1.0 adverse",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -191,7 +199,7 @@
             "start": "2026-08-06T06:30:00-07:00",
             "end": "2026-08-06T13:00:00-07:00",
             "reasons": [
-              "flood current 1.4 kts, 1.1 adverse",
+              "flood current 0.3 kts, 0.2 adverse",
               "wind 11 mph, gust 15"
             ]
           },
@@ -199,7 +207,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current 1.3 kts, 1.1 adverse",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -209,7 +217,7 @@
             "start": "2026-08-06T06:30:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current 1.4 kts, 1.1 adverse",
+              "flood current 0.3 kts, 0.2 adverse",
               "wind 11 mph, gust 15"
             ]
           }
@@ -224,18 +232,18 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-08-06T07:30:00-07:00",
+          "start": "2026-08-06T06:30:00-07:00",
           "end": "2026-08-06T13:00:00-07:00",
           "reasons": [
-            "flood current 1.1 kts, 0.8 adverse",
+            "flood current 0.3 kts, 0.2 adverse",
             "wind 11 mph, gust 15"
           ]
         },
         {
-          "start": "2026-08-06T19:30:00-07:00",
+          "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current 1.2 kts, 1.0 adverse",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -442,7 +450,7 @@
         "beginner": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T10:00:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
@@ -452,7 +460,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -470,7 +478,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -488,7 +496,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -524,7 +532,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -706,7 +714,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -724,7 +732,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -742,7 +750,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -778,7 +786,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -1097,7 +1105,7 @@
         "beginner": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T10:00:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
@@ -1107,7 +1115,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1125,7 +1133,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1143,7 +1151,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1179,7 +1187,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -1501,7 +1509,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1519,7 +1527,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1559,7 +1567,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -1798,7 +1806,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1816,7 +1824,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -1858,7 +1866,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -2132,7 +2140,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -2150,7 +2158,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -2192,7 +2200,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -2493,7 +2501,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -2511,7 +2519,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -2553,7 +2561,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -2997,7 +3005,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -3015,7 +3023,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19"
             ]
           }
@@ -3057,7 +3065,7 @@
           "start": "2026-08-06T18:00:00-07:00",
           "end": "2026-08-06T19:44:20.482586-07:00",
           "reasons": [
-            "flood current aiding outbound",
+            "near slack water",
             "wind 14 mph, gust 19"
           ]
         }
@@ -3260,7 +3268,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -3607,7 +3615,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -3901,7 +3909,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -4181,7 +4189,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -4494,7 +4502,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -4851,17 +4859,26 @@
         "advanced": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T13:00:00-07:00",
+            "end": "2026-08-06T09:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           },
           {
+            "start": "2026-08-06T09:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "ebb current 1.9 kts, 1.1 adverse",
+              "wind 11 mph, gust 15",
+              "inside a ferry window, expect traffic"
+            ]
+          },
+          {
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -5137,7 +5154,7 @@
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -5502,17 +5519,26 @@
         "advanced": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T12:00:00-07:00",
+            "end": "2026-08-06T09:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           },
           {
+            "start": "2026-08-06T09:30:00-07:00",
+            "end": "2026-08-06T13:00:00-07:00",
+            "reasons": [
+              "ebb current 2.0 kts, 1.2 adverse",
+              "wind 11 mph, gust 15",
+              "inside a ferry window, expect traffic"
+            ]
+          },
+          {
             "start": "2026-08-06T18:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "flood current aiding outbound",
+              "near slack water",
               "wind 14 mph, gust 19",
               "inside a ferry window, expect traffic"
             ]
@@ -5521,18 +5547,10 @@
         "expert": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T13:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
-            ]
-          },
-          {
-            "start": "2026-08-06T13:30:00-07:00",
-            "end": "2026-08-06T19:44:20.482586-07:00",
-            "reasons": [
-              "ebb current 1.8 kts, 1.0 adverse",
-              "wind 21 mph, gust 28"
             ]
           }
         ]
@@ -6157,18 +6175,10 @@
         "expert": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T13:00:00-07:00",
+            "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
-            ]
-          },
-          {
-            "start": "2026-08-06T13:30:00-07:00",
-            "end": "2026-08-06T19:44:20.482586-07:00",
-            "reasons": [
-              "ebb current 1.6 kts, 1.0 adverse",
-              "wind 21 mph, gust 28"
             ]
           }
         ]
@@ -6772,18 +6782,18 @@
         "expert": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T11:00:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           },
           {
-            "start": "2026-08-06T14:30:00-07:00",
+            "start": "2026-08-06T10:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "ebb current 1.0 kts, 0.9 adverse",
-              "wind 21 mph, gust 28"
+              "ebb current 1.7 kts, 1.4 adverse",
+              "wind 15 mph, gust 20"
             ]
           }
         ]
@@ -7153,18 +7163,18 @@
         "expert": [
           {
             "start": "2026-08-06T06:30:00-07:00",
-            "end": "2026-08-06T11:00:00-07:00",
+            "end": "2026-08-06T08:30:00-07:00",
             "reasons": [
               "flood current aiding outbound",
               "wind 11 mph, gust 15"
             ]
           },
           {
-            "start": "2026-08-06T14:30:00-07:00",
+            "start": "2026-08-06T10:00:00-07:00",
             "end": "2026-08-06T19:44:20.482586-07:00",
             "reasons": [
-              "ebb current 1.1 kts, 0.9 adverse",
-              "wind 21 mph, gust 28"
+              "ebb current 1.8 kts, 1.5 adverse",
+              "wind 15 mph, gust 20"
             ]
           }
         ]
@@ -7264,9 +7274,9 @@
   "thresholds_source": "config/thresholds.json",
   "routes_source": "config/routes.json",
   "data_quality": {
-    "tide": "estimated",
+    "tide": "live",
     "wind": "estimated",
-    "advisory": "unknown",
+    "advisory": "live",
     "notes": "Estimated sources are modeled fallbacks. Guides make the final call."
   }
 }
