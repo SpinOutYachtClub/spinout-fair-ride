@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Waterbike AI - Daily Plan Generator
-Version: 2.2.0  (four-tier skill ladder)
+Version: 2.5.0  (central Bay route catalog from config)
 
 Generates a daily plan.json of safety-scored ride windows for SF Bay
 waterbike routes. Pure Python standard library only, so it runs on a
@@ -39,10 +39,12 @@ from zoneinfo import ZoneInfo
 # Constants
 # ----------------------------------------------------------------------------
 
-VERSION = "2.2.0"
+VERSION = "2.5.0"
 APP_ID = "WaterbikeAI"                       # NOAA courtesy identifier
 TZ = ZoneInfo("America/Los_Angeles")         # single source of local time
 SAFETY_WEIGHT = 0.40                         # immutable; see module docstring
+SCORE_CURVE = 2.0                            # penalty exponent; see score_step
+WIND_RAMP = 1.3                              # convexity of the comfort-to-ceiling ramp
 HTTP_TIMEOUT = 12                            # seconds, fail fast to fallback
 
 NOAA_DATAGETTER = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter"
@@ -69,10 +71,21 @@ STATIONS = {
 # allowed 35 mph at Expert. Advanced is interpolated between Intermediate
 # and Expert. Any change to these numbers requires operator sign off.
 THRESHOLDS = {
-    "beginner":     {"max_wind": 12, "max_gust": 16, "max_adverse_current": 0.6},
-    "intermediate": {"max_wind": 16, "max_gust": 22, "max_adverse_current": 1.0},
-    "advanced":     {"max_wind": 19, "max_gust": 26, "max_adverse_current": 1.2},
-    "expert":       {"max_wind": 22, "max_gust": 30, "max_adverse_current": 1.5},
+    "beginner":     {"comfort_wind": 10, "max_wind": 14, "max_gust": 20,
+                     "squall_tolerance": 6, "max_adverse_current": 0.6,
+                     "max_exposure": 1.0, "max_leg_mi": 1.5, "max_total_mi": 4},
+    "intermediate": {"comfort_wind": 14, "max_wind": 18, "max_gust": 22,
+                     "squall_tolerance": 6, "max_adverse_current": 1.0,
+                     "max_exposure": 1.5, "max_leg_mi": 4, "max_total_mi": 12},
+    "advanced":     {"comfort_wind": 16, "max_wind": 20, "max_gust": 26,
+                     "squall_tolerance": 7, "max_adverse_current": 1.2,
+                     "max_exposure": 1.8, "max_leg_mi": 8, "max_total_mi": 25},
+    "expert":       {"comfort_wind": 18, "max_wind": 22, "max_gust": 30,
+                     "squall_tolerance": 8, "max_adverse_current": 1.5,
+                     "max_exposure": 2.0, "max_leg_mi": 10, "max_total_mi": 50},
+    "night_expert": {"comfort_wind": 18, "max_wind": 22, "max_gust": 30,
+                     "squall_tolerance": 8, "max_adverse_current": 1.5,
+                     "max_exposure": 2.0, "max_leg_mi": 10, "max_total_mi": 50},
 }
 SKILLS = ["beginner", "intermediate", "advanced", "expert"]
 
@@ -101,7 +114,8 @@ def load_thresholds():
         if not isinstance(limits, dict):
             continue
         base = dict(merged.get(tier, THRESHOLDS["intermediate"]))
-        for key in ("max_wind", "max_gust", "max_adverse_current"):
+        for key in ("comfort_wind", "max_wind", "max_gust",
+                    "squall_tolerance", "max_adverse_current"):
             if key in limits:
                 try:
                     base[key] = float(limits[key])
@@ -126,8 +140,11 @@ load_thresholds()
 # sheltered). Bearings drive the aiding/opposing current projection.
 ROUTES = [
     {
-        "id": "p40-tiburon",
+        "id": "pier40_to_tiburon",
         "name": "Pier 40 to Tiburon",
+        "difficulty": "intermediate",
+        "distance_mi": 7.3,
+        "estimated_hours": 2.5,
         "current_scale": 0.85,
         "exposure": ["Crissy (WNW)", "Raccoon Strait (flood)"],
         "ferry_sensitive": True,
@@ -135,36 +152,60 @@ ROUTES = [
             {"name": "Pier 40 to Fort Point", "bearing": 315, "distance_mi": 3.2, "exposure_index": 1.4},
             {"name": "Fort Point to Tiburon", "bearing": 25, "distance_mi": 4.1, "exposure_index": 1.8},
         ],
+        "bailouts": [
+            {"name": "Crissy Field Beach", "distance_mi": 0.3},
+            {"name": "Ayala Cove Dock", "distance_mi": 0.5},
+        ],
     },
     {
-        "id": "p40-cavallo",
-        "name": "Pier 40 to Cavallo Point",
+        "id": "alcatraz_loop",
+        "name": "Alcatraz Loop",
+        "difficulty": "beginner",
+        "distance_mi": 5.2,
+        "estimated_hours": 1.8,
+        "current_scale": 0.75,
+        "exposure": ["Alcatraz crossing", "mid-bay chop"],
+        "ferry_sensitive": True,
+        "legs": [
+            {"name": "Pier 39 to Alcatraz", "bearing": 350, "distance_mi": 1.3, "exposure_index": 1.2},
+            {"name": "Alcatraz Circuit", "bearing": 90, "distance_mi": 2.6, "exposure_index": 1.5},
+            {"name": "Alcatraz to Pier 39", "bearing": 170, "distance_mi": 1.3, "exposure_index": 1.1},
+        ],
+        "bailouts": [
+            {"name": "Aquatic Park", "distance_mi": 0.4},
+        ],
+    },
+    {
+        "id": "crissy_to_sausalito",
+        "name": "Crissy Field to Sausalito",
+        "difficulty": "intermediate",
+        "distance_mi": 3.8,
+        "estimated_hours": 1.5,
         "current_scale": 1.0,
-        "exposure": ["Golden Gate mouth", "Horseshoe Bay eddy"],
+        "exposure": ["Golden Gate mouth", "Lime Point current"],
+        "ferry_sensitive": True,
+        "legs": [
+            {"name": "Crissy Field to Lime Point", "bearing": 340, "distance_mi": 1.9, "exposure_index": 1.8},
+            {"name": "Lime Point to Sausalito", "bearing": 10, "distance_mi": 1.9, "exposure_index": 1.3},
+        ],
+        "bailouts": [
+            {"name": "Fort Baker Beach", "distance_mi": 0.2},
+        ],
+    },
+    {
+        "id": "south_beach_loop",
+        "name": "South Beach Harbor Loop",
+        "difficulty": "beginner",
+        "distance_mi": 2.5,
+        "estimated_hours": 0.8,
+        "current_scale": 0.35,
+        "exposure": ["South Beach Harbor", "sheltered water"],
         "ferry_sensitive": False,
         "legs": [
-            {"name": "Pier 40 to Fort Point", "bearing": 315, "distance_mi": 3.2, "exposure_index": 1.4},
-            {"name": "Fort Point to Horseshoe Bay", "bearing": 300, "distance_mi": 1.6, "exposure_index": 2.0},
+            {"name": "Pier 40 Circuit", "bearing": 45, "distance_mi": 2.5, "exposure_index": 0.8},
         ],
-    },
-    {
-        "id": "p40-clipper",
-        "name": "Pier 40 to Clipper Cove",
-        "current_scale": 0.5,
-        "exposure": ["Bay Bridge shadow", "Yerba Buena chop"],
-        "ferry_sensitive": True,
-        "legs": [
-            {"name": "Pier 40 to Clipper Cove", "bearing": 70, "distance_mi": 2.4, "exposure_index": 1.1},
-        ],
-    },
-    {
-        "id": "p40-p39",
-        "name": "Pier 40 to Pier 39",
-        "current_scale": 0.4,
-        "exposure": ["Embarcadero waterfront"],
-        "ferry_sensitive": True,
-        "legs": [
-            {"name": "Pier 40 to Pier 39", "bearing": 340, "distance_mi": 1.5, "exposure_index": 0.8},
+        "bailouts": [
+            {"name": "South Beach Harbor Dock", "distance_mi": 0.1},
         ],
     },
 ]
@@ -189,6 +230,64 @@ STEP_MIN = 30  # window sampling resolution
 # ----------------------------------------------------------------------------
 # HTTP helper (never raises)
 # ----------------------------------------------------------------------------
+
+
+ROUTES_PATH = "config/routes.json"
+LOCATIONS_PATH = "config/locations.json"
+ROUTES_SOURCE = "built-in defaults"
+LOCATIONS = {}
+
+
+def load_routes():
+    """Load routes and locations from config, keeping built-ins as fallback.
+
+    Same defensive contract as thresholds: a missing or malformed config must
+    degrade to a working plan rather than stop one being generated. A route
+    missing coordinates or legs is skipped individually so one bad record
+    cannot take the whole file down.
+    """
+    global ROUTES, ROUTES_SOURCE, LOCATIONS
+    try:
+        with open(LOCATIONS_PATH, encoding="utf-8") as fh:
+            LOCATIONS = (json.load(fh) or {}).get("locations", {})
+    except FileNotFoundError:
+        LOCATIONS = {}
+    except Exception as exc:  # noqa: BLE001
+        sys.stderr.write(f"[config] {LOCATIONS_PATH} unusable ({exc})\n")
+        LOCATIONS = {}
+
+    try:
+        with open(ROUTES_PATH, encoding="utf-8") as fh:
+            cfg = json.load(fh)
+    except FileNotFoundError:
+        return
+    except Exception as exc:  # noqa: BLE001
+        sys.stderr.write(f"[config] {ROUTES_PATH} unusable ({exc}); using defaults\n")
+        return
+
+    loaded = []
+    for r in cfg.get("routes") or []:
+        legs = r.get("legs") or []
+        if not legs or not r.get("id"):
+            sys.stderr.write(f"[config] route {r.get('id', '?')} has no legs; skipped\n")
+            continue
+        ok = True
+        for l in legs:
+            if l.get("bearing") is None or l.get("distance_mi") is None:
+                ok = False
+        if not ok:
+            sys.stderr.write(f"[config] route {r['id']} has incomplete legs; skipped\n")
+            continue
+        loaded.append(r)
+
+    if loaded:
+        ROUTES = loaded
+        ROUTES_SOURCE = ROUTES_PATH
+    else:
+        sys.stderr.write(f"[config] {ROUTES_PATH} produced no usable routes; using defaults\n")
+
+
+load_routes()
 
 def _get(url, params=None, headers=None):
     """Return (parsed_or_text, ok). Any failure returns (None, False)."""
@@ -446,21 +545,51 @@ def score_step(route, when, wind, gust, cur_phase, cur_speed, skill, advisory):
         reasons.append("Small Craft Advisory in effect" if advisory == "small_craft" else "Gale warning in effect")
     if wind > th["max_wind"]:
         hard_nogo = True
-        reasons.append(f"wind {wind} mph over {skill} limit {th['max_wind']}")
+        reasons.append(f"wind {wind} mph over {skill} ceiling {th['max_wind']}")
     if gust > th["max_gust"]:
         hard_nogo = True
-        reasons.append(f"gust {gust} mph over {skill} limit {th['max_gust']}")
+        reasons.append(f"gust {gust} mph over {skill} gust ceiling {th['max_gust']}")
     if adverse_component > th["max_adverse_current"]:
         hard_nogo = True
         reasons.append(f"adverse current {adverse_component:.1f} kts over {skill} limit {th['max_adverse_current']}")
 
     # Soft score from available factors (0-100). Wave height is not modeled
     # (no wave source wired in), so it is intentionally excluded.
-    wind_pen = min(1.0, wind / max(1, th["max_wind"]))
-    gust_pen = min(1.0, gust / max(1, th["max_gust"]))
-    cur_pen = min(1.0, adverse_component / max(0.1, th["max_adverse_current"]))
+    #
+    # Wind uses a three zone model (Safety Canon v1.3 section 2), replacing
+    # the old ratio-to-ceiling curve. That curve charged a Beginner 32 of 52
+    # wind points for a glassy 7 mph morning, because it measured distance to
+    # the ceiling rather than departure from comfort. Zones:
+    #
+    #   wind <= comfort            no penalty. Conditions are pleasant.
+    #   comfort < wind <= ceiling  ramp from 0 to full. The Caution band.
+    #   wind > ceiling             Hard No-Go, gated above.
+    #
+    # The ramp is slightly convex so the lower half of the band stays easy
+    # and the penalty bites as the ceiling approaches.
+    comfort = th.get("comfort_wind", th["max_wind"])
+    ceiling = th["max_wind"]
+    if wind <= comfort or ceiling <= comfort:
+        wind_pen = 0.0
+    else:
+        wind_pen = min(1.0, (wind - comfort) / (ceiling - comfort)) ** WIND_RAMP
+
+    # Gusts are judged by differential, not absolute value. A 15 mph gust on
+    # 11 sustained is ordinary Bay texture; a 26 mph gust on 11 sustained is
+    # squally and is the condition that puts a rider over. Absolute gust is
+    # still a Hard No-Go gate above; this scores the squalliness.
+    squall_tol = th.get("squall_tolerance", 6)
+    gust_diff = max(0.0, gust - wind)
+    if gust_diff <= squall_tol:
+        gust_pen = 0.0
+    else:
+        gust_pen = min(1.0, (gust_diff - squall_tol) / max(1.0, squall_tol * 1.5))
+
+    cur_pen = min(1.0, adverse_component / max(0.1, th["max_adverse_current"])) ** SCORE_CURVE
     exposure = max(l["exposure_index"] for l in route["legs"])
-    exp_pen = min(1.0, (exposure - 0.8) / 1.2)  # 0.8 -> 0, 2.0 -> 1.0
+    # Exposure scale runs 0.5 (inside a harbor) to 2.0 (Gate mouth). Anchored
+    # at 0.8 previously, which made a 0.5 rating produce a negative penalty.
+    exp_pen = max(0.0, min(1.0, (exposure - 0.5) / 1.5))
     ferry_pen = 1.0 if (route["ferry_sensitive"] and _in_ferry_window(when)) else 0.0
 
     penalty = (
@@ -497,6 +626,42 @@ def badge(score, hard_nogo):
 # Per-route computation
 # ----------------------------------------------------------------------------
 
+
+def route_tier_eligibility(route, skill):
+    """Can this tier ride this route at all, ignoring today's weather?
+
+    Exposure, leg length, and total distance are properties of the route, not
+    of the conditions. A Beginner on a Gate-mouth leg is a mismatch on a
+    glassy day as much as a rough one, so these are structural Hard No-Go
+    gates rather than score deductions. Returns (eligible, reasons).
+
+    This exists because wind scoring was previously carrying the weight of
+    constraints that did not exist. Once wind was calibrated honestly, a
+    Beginner scored Green on a 7.3 mile Gate-adjacent route.
+    """
+    th = THRESHOLDS[skill]
+    reasons = []
+
+    legs = route.get("legs", [])
+    max_exp = max((l.get("exposure_index", 1.0) for l in legs), default=1.0)
+    longest = max((l.get("distance_mi", 0.0) for l in legs), default=0.0)
+    total = route.get("distance_mi") or sum(l.get("distance_mi", 0.0) for l in legs)
+
+    cap_exp = th.get("max_exposure")
+    if cap_exp is not None and max_exp > cap_exp:
+        reasons.append(f"exposure {max_exp} over {skill} limit {cap_exp}")
+
+    cap_leg = th.get("max_leg_mi")
+    if cap_leg is not None and longest > cap_leg:
+        reasons.append(f"longest leg {longest} mi over {skill} limit {cap_leg} mi")
+
+    cap_tot = th.get("max_total_mi")
+    if cap_tot is not None and total > cap_tot:
+        reasons.append(f"route {total} mi over {skill} limit {cap_tot} mi")
+
+    return (not reasons), reasons
+
+
 def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
     sunrise, sunset = sun_times(date)
     last_launch = sunset - timedelta(minutes=MIN_DAYLIGHT_RETURN_MIN)
@@ -504,10 +669,43 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
     status_by_skill = {}
     windows_by_skill = {}
     effort_by_skill = {}
+    blocked_by_skill = {}
     windows_default = []
     best_effort = 5
 
+    # Route difficulty gate. Conditions are not the only constraint: some
+    # water is unsuitable for a tier regardless of how calm it is. A route
+    # carries a min_tier and any rider below it is a Hard No-Go, scored or
+    # not. Without this a Beginner can be offered a calm-morning window
+    # through the Golden Gate mouth.
+    min_tier = route.get("min_tier", "beginner")
+    try:
+        min_rank = SKILLS.index(min_tier)
+    except ValueError:
+        min_rank = 0
+
     for skill in SKILLS:
+        # Structural gates: min_tier plus the exposure and distance caps.
+        # These are properties of the route, not of today's weather, so a
+        # blocked tier is blocked on a glassy morning too. The reasons are
+        # carried through to the output so the interface can explain that
+        # this is a route mismatch, not a bad-weather day.
+        blocked = []
+        if SKILLS.index(skill) < min_rank:
+            blocked.append(f"route is rated {min_tier} and above")
+        eligible, cap_reasons = route_tier_eligibility(route, skill)
+        if not eligible:
+            blocked.extend(cap_reasons)
+
+        if blocked:
+            status_by_skill[skill] = "red"
+            effort_by_skill[skill] = 10
+            windows_by_skill[skill] = []
+            blocked_by_skill[skill] = blocked
+            if skill == default_skill:
+                windows_default = []
+                best_effort = 10
+            continue
         step = sunrise.replace(minute=0, second=0, microsecond=0)
         open_win = None
         skill_windows = []
@@ -556,6 +754,14 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
     return {
         "id": route["id"],
         "name": route["name"],
+        # Native difficulty from the route definition. This is the tier the
+        # route was designed for, independent of today's conditions.
+        "difficulty": route.get("difficulty"),
+        "distance_mi": route.get("distance_mi"),
+        "estimated_hours": route.get("estimated_hours"),
+        # Bailouts are safety information, not decoration: where a rider can
+        # land if conditions turn. Carried through so the UI can show them.
+        "bailouts": route.get("bailouts", []),
         "status": status_by_skill[default_skill],
         "status_by_skill": status_by_skill,
         "skill": default_skill,
@@ -564,6 +770,10 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
         # times: the badge and the listed windows have to agree.
         "windows_by_skill": windows_by_skill,
         "effort_by_skill": effort_by_skill,
+        # Why a tier is structurally excluded, independent of weather.
+        # Empty or absent means the tier is eligible and any Hold is
+        # a conditions call rather than a route mismatch.
+        "blocked_by_skill": blocked_by_skill,
         # Retained for any consumer still reading the flat list.
         "windows": [
             {
@@ -574,8 +784,14 @@ def plan_route(route, date, tides, wind_hourly, advisory, default_skill):
             for w in windows_default
         ],
         "exposure": route["exposure"],
+        "min_tier": min_tier,
         "data_sources": {"tide": STATIONS["tide"], "current": STATIONS["current"], "wind": "OpenWeatherMap"},
         "daylight": {"sunrise": sunrise.isoformat(), "sunset": sunset.isoformat()},
+        "min_tier": route.get("min_tier"),
+        "distance_mi": route.get("distance_mi"),
+        # Canon section 11: an aborting group returns to the nearest safe
+        # landing. The plan has to be able to say where that is.
+        "bailouts": route.get("bailouts", []),
         "notes": _route_note(route, windows_default),
     }
 
@@ -616,6 +832,7 @@ def build_plan(date, owm_key, default_skill):
         "routes": routes,
         "thresholds": THRESHOLDS,
         "thresholds_source": THRESHOLD_SOURCE,
+        "routes_source": ROUTES_SOURCE,
         "data_quality": {
             "tide": "live" if tides_live else "estimated",
             "wind": "live" if wind_live else "estimated",
