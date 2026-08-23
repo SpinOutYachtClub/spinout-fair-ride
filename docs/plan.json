@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-22T06:30:33.868636-07:00",
+  "generated_at": "2026-08-23T06:31:35.027361-07:00",
   "version": "2.6.0",
   "timezone": "America/Los_Angeles",
-  "day": "2026-08-22",
+  "day": "2026-08-23",
   "skill_default": "intermediate",
   "skills": [
     "beginner",
@@ -11,7 +11,7 @@
     "expert"
   ],
   "safety_weight": 0.4,
-  "advisory": "small_craft",
+  "advisory": "none",
   "routes": [
     {
       "id": "r01_south_beach_harbor_circuit",
@@ -148,29 +148,90 @@
           "unusable_when": "Confirm gate and dock access."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
-        "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
-        "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "beginner": [
+          {
+            "start": "2026-08-23T09:30:00-07:00",
+            "end": "2026-08-23T16:30:00-07:00",
+            "reasons": [
+              "flood current 0.7 kts, 0.6 adverse",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-23T08:30:00-07:00",
+            "end": "2026-08-23T17:30:00-07:00",
+            "reasons": [
+              "flood current 1.1 kts, 0.9 adverse",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T19:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current 1.2 kts, 0.9 adverse",
+              "wind 10 mph, gust 12"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current 1.4 kts, 1.1 adverse",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current 1.4 kts, 1.1 adverse",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
-        "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {},
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T08:30:00-07:00",
+          "end": "2026-08-23T17:30:00-07:00",
+          "reasons": [
+            "flood current 1.1 kts, 0.9 adverse",
+            "wind 4 mph, gust 4"
+          ]
+        },
+        {
+          "start": "2026-08-23T19:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current 1.2 kts, 0.9 adverse",
+            "wind 10 mph, gust 12"
+          ]
+        }
+      ],
       "exposure": [
         "Pier 40 / South Beach Harbor Home Harbor",
         "Pier 40 South Public Dock"
@@ -181,10 +242,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r02_mccovey_cove_loop",
@@ -360,29 +421,82 @@
           "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
-        "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
-        "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "beginner": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T12:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T14:30:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "ebb current 0.6 kts, 0.4 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
-        "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {},
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "McCovey Cove",
         "Oracle Park Cove"
@@ -393,10 +507,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r04_mission_rock_triangle",
@@ -537,29 +651,74 @@
           "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
-        "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
-        "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "beginner": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
-        "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {},
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Mission Rock North Shore",
         "Pier 40 / South Beach Harbor Home Harbor"
@@ -570,10 +729,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r03_mission_creek_out_back",
@@ -861,29 +1020,82 @@
           "unusable_when": "Daylight access; avoid after storm runoff or posted closure."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
-        "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "beginner": "green",
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
-        "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "beginner": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T12:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T14:30:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "ebb current 0.6 kts, 0.4 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
-        "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "beginner": 2,
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {},
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Mission Creek Boat Launch",
         "Mission Creek Mouth"
@@ -894,10 +1106,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r05_crane_cove_out_back",
@@ -1177,33 +1389,69 @@
           "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
         "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
         "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
           "route is rated intermediate and above"
         ]
       },
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Crane Cove Inner Refuge",
         "Crane Cove Park Beach"
@@ -1214,10 +1462,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r06_dogpatch_waterfront_loop",
@@ -1414,26 +1662,53 @@
           "unusable_when": "Use only when beach access is open; remain shoreside of Port markers."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
         "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
         "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -1442,7 +1717,16 @@
           "longest leg 1.85 mi over beginner limit 1.5 mi"
         ]
       },
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Crane Cove Inner Refuge",
         "Mission Rock North Shore"
@@ -1453,10 +1737,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r22_southern_shelters_circuit",
@@ -1688,26 +1972,53 @@
           "unusable_when": "Avoid during active industrial vessel movements."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
         "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
         "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -1716,7 +2027,16 @@
           "route 5.91 mi over beginner limit 4.0 mi"
         ]
       },
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Crane Cove Inner Refuge",
         "Crane Cove Park Beach"
@@ -1727,10 +2047,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r08_southern_waterfront_grand_loop",
@@ -1989,26 +2309,53 @@
           "unusable_when": "Avoid during active industrial vessel movements."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
         "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
         "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -2017,7 +2364,16 @@
           "route 6.2 mi over beginner limit 4.0 mi"
         ]
       },
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Crane Cove Inner Refuge",
         "Crane Cove Park Beach"
@@ -2028,10 +2384,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r07_islais_creek_out_back",
@@ -2433,26 +2789,53 @@
           "unusable_when": "Avoid during active industrial vessel movements."
         }
       ],
-      "status": "red",
+      "status": "green",
       "status_by_skill": {
         "beginner": "red",
-        "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "intermediate": "green",
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
-      "effort": 10,
+      "effort": 2,
       "windows_by_skill": {
         "beginner": [],
-        "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "intermediate": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
-        "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "intermediate": 2,
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -2461,7 +2844,16 @@
           "route 6.77 mi over beginner limit 4.0 mi"
         ]
       },
-      "windows": [],
+      "windows": [
+        {
+          "start": "2026-08-23T07:00:00-07:00",
+          "end": "2026-08-23T19:23:19.336794-07:00",
+          "reasons": [
+            "flood current aiding outbound",
+            "wind 4 mph, gust 4"
+          ]
+        }
+      ],
       "exposure": [
         "Crane Cove Inner Refuge",
         "Islais Creek Basin"
@@ -2472,10 +2864,10 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
-      "notes": "Hold today. No window clears the safety thresholds for the selected skill."
+      "notes": "Verify on-site conditions before launch."
     },
     {
       "id": "r09_bay_bridge_ferry_loop",
@@ -2639,22 +3031,40 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -2676,8 +3086,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -2959,22 +3369,40 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -2997,8 +3425,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3226,22 +3654,40 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 3,
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -3266,8 +3712,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3479,22 +3925,40 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -3518,8 +3982,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3765,22 +4229,40 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -3804,8 +4286,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4105,22 +4587,48 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T13:30:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "ebb current 1.9 kts, 1.1 adverse",
+              "wind 7 mph, gust 7"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -4144,8 +4652,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4354,22 +4862,40 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 3,
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -4394,8 +4920,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4702,22 +5228,48 @@
       "status_by_skill": {
         "beginner": "red",
         "intermediate": "red",
-        "advanced": "red",
-        "expert": "red"
+        "advanced": "green",
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
       "windows_by_skill": {
         "beginner": [],
         "intermediate": [],
-        "advanced": [],
-        "expert": []
+        "advanced": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T13:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T13:30:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "ebb current 2.0 kts, 1.2 adverse",
+              "wind 7 mph, gust 7"
+            ]
+          }
+        ],
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
-        "advanced": 10,
-        "expert": 10
+        "advanced": 2,
+        "expert": 2
       },
       "blocked_by_skill": {
         "beginner": [
@@ -4741,8 +5293,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5006,7 +5558,7 @@
         "beginner": "red",
         "intermediate": "red",
         "advanced": "red",
-        "expert": "red"
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
@@ -5014,13 +5566,22 @@
         "beginner": [],
         "intermediate": [],
         "advanced": [],
-        "expert": []
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
         "advanced": 10,
-        "expert": 10
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -5048,8 +5609,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5313,7 +5874,7 @@
         "beginner": "red",
         "intermediate": "red",
         "advanced": "red",
-        "expert": "red"
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
@@ -5321,13 +5882,22 @@
         "beginner": [],
         "intermediate": [],
         "advanced": [],
-        "expert": []
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
         "advanced": 10,
-        "expert": 10
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -5355,8 +5925,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5604,7 +6174,7 @@
         "beginner": "red",
         "intermediate": "red",
         "advanced": "red",
-        "expert": "red"
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
@@ -5612,13 +6182,22 @@
         "beginner": [],
         "intermediate": [],
         "advanced": [],
-        "expert": []
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
         "advanced": 10,
-        "expert": 10
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -5646,8 +6225,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5902,7 +6481,7 @@
         "beginner": "red",
         "intermediate": "red",
         "advanced": "red",
-        "expert": "red"
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
@@ -5910,13 +6489,30 @@
         "beginner": [],
         "intermediate": [],
         "advanced": [],
-        "expert": []
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T12:30:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T14:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "ebb current 1.7 kts, 1.4 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
         "advanced": 10,
-        "expert": 10
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -5944,8 +6540,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6266,7 +6862,7 @@
         "beginner": "red",
         "intermediate": "red",
         "advanced": "red",
-        "expert": "red"
+        "expert": "green"
       },
       "skill": "intermediate",
       "effort": 10,
@@ -6274,13 +6870,30 @@
         "beginner": [],
         "intermediate": [],
         "advanced": [],
-        "expert": []
+        "expert": [
+          {
+            "start": "2026-08-23T07:00:00-07:00",
+            "end": "2026-08-23T12:00:00-07:00",
+            "reasons": [
+              "flood current aiding outbound",
+              "wind 4 mph, gust 4"
+            ]
+          },
+          {
+            "start": "2026-08-23T14:00:00-07:00",
+            "end": "2026-08-23T19:23:19.336794-07:00",
+            "reasons": [
+              "ebb current 1.7 kts, 1.5 adverse",
+              "wind 8 mph, gust 9"
+            ]
+          }
+        ]
       },
       "effort_by_skill": {
         "beginner": 10,
         "intermediate": 10,
         "advanced": 10,
-        "expert": 10
+        "expert": 3
       },
       "blocked_by_skill": {
         "beginner": [
@@ -6310,8 +6923,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-08-22T06:30:49.372735-07:00",
-        "sunset": "2026-08-22T19:54:41.878127-07:00"
+        "sunrise": "2026-08-23T06:31:40.305147-07:00",
+        "sunset": "2026-08-23T19:53:19.336794-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     }
