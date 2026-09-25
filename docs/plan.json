@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-24T10:44:58.540182-07:00",
+  "generated_at": "2026-09-25T10:46:23.086958-07:00",
   "version": "2.6.0",
   "timezone": "America/Los_Angeles",
-  "day": "2026-09-24",
+  "day": "2026-09-25",
   "skill_default": "intermediate",
   "skills": [
     "beginner",
@@ -181,8 +181,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -393,8 +393,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -570,8 +570,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -894,8 +894,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -1214,8 +1214,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -1453,8 +1453,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -1727,8 +1727,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -2028,8 +2028,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -2472,8 +2472,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -2676,8 +2676,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -2997,8 +2997,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3266,8 +3266,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3518,8 +3518,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3804,8 +3804,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4144,8 +4144,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4394,8 +4394,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4741,8 +4741,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5048,8 +5048,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5355,8 +5355,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5646,8 +5646,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5944,8 +5944,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6310,8 +6310,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-09-24T06:58:12.382860-07:00",
-        "sunset": "2026-09-24T19:04:33.645966-07:00"
+        "sunrise": "2026-09-25T06:59:03.142140-07:00",
+        "sunset": "2026-09-25T19:02:59.425205-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     }
