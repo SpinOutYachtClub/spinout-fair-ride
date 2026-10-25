@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-24T09:26:27.711646-07:00",
+  "generated_at": "2026-10-25T09:57:47.235552-07:00",
   "version": "2.6.0",
   "timezone": "America/Los_Angeles",
-  "day": "2026-10-24",
+  "day": "2026-10-25",
   "skill_default": "intermediate",
   "skills": [
     "beginner",
@@ -160,41 +160,41 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-24T09:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T10:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current 0.7 kts, 0.6 adverse",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-24T08:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T09:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current 1.2 kts, 1.0 adverse",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current 1.4 kts, 1.1 adverse",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current 1.4 kts, 1.1 adverse",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -208,11 +208,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-24T08:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T09:00:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current 1.2 kts, 1.0 adverse",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -226,8 +226,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -417,49 +417,49 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T12:30:00-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T13:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-24T15:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T16:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
-              "ebb current 0.9 kts, 0.5 adverse",
-              "wind 6 mph, gust 9"
+              "ebb current 0.9 kts, 0.6 adverse",
+              "wind 6 mph, gust 10"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -473,11 +473,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -491,8 +491,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -647,41 +647,41 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -695,11 +695,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -713,8 +713,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1016,49 +1016,49 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T12:30:00-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T13:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-24T15:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T16:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
-              "ebb current 0.9 kts, 0.5 adverse",
-              "wind 6 mph, gust 9"
+              "ebb current 0.9 kts, 0.6 adverse",
+              "wind 6 mph, gust 10"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -1072,11 +1072,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -1090,8 +1090,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1386,31 +1386,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -1428,11 +1428,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -1446,8 +1446,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1659,31 +1659,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -1703,11 +1703,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -1721,8 +1721,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1969,31 +1969,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -2013,11 +2013,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -2031,8 +2031,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -2306,31 +2306,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -2350,11 +2350,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -2368,8 +2368,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -2786,31 +2786,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -2830,11 +2830,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-24T07:30:00-07:00",
-          "end": "2026-10-24T17:51:08.821651-07:00",
+          "start": "2026-10-25T07:30:00-07:00",
+          "end": "2026-10-25T17:49:54.826212-07:00",
           "reasons": [
             "flood current aiding outbound",
-            "wind 1 mph, gust 5"
+            "wind 3 mph, gust 6"
           ]
         }
       ],
@@ -2848,8 +2848,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -3025,21 +3025,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -3070,8 +3070,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3363,21 +3363,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -3409,8 +3409,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3648,21 +3648,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -3696,8 +3696,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3919,21 +3919,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -3966,8 +3966,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4223,21 +4223,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -4270,8 +4270,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4581,21 +4581,30 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T14:30:00-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
+            ]
+          },
+          {
+            "start": "2026-10-25T15:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
+            "reasons": [
+              "ebb current 1.9 kts, 1.1 adverse",
+              "wind 5 mph, gust 8",
+              "inside a ferry window, expect traffic"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -4628,8 +4637,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4848,21 +4857,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -4896,8 +4905,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5214,29 +5223,30 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T13:30:00-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T14:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-24T14:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T15:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "ebb current 2.0 kts, 1.2 adverse",
-              "wind 5 mph, gust 8"
+              "wind 5 mph, gust 8",
+              "inside a ferry window, expect traffic"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -5269,8 +5279,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5544,11 +5554,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -5585,8 +5595,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5860,11 +5870,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -5901,8 +5911,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6160,11 +6170,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           }
         ]
@@ -6201,8 +6211,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6467,19 +6477,19 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T12:30:00-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T13:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-24T15:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T16:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
-              "ebb current 1.5 kts, 1.2 adverse",
-              "wind 6 mph, gust 9",
+              "ebb current 1.6 kts, 1.3 adverse",
+              "wind 6 mph, gust 10",
               "inside a ferry window, expect traffic"
             ]
           }
@@ -6517,8 +6527,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6849,19 +6859,19 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-24T07:30:00-07:00",
-            "end": "2026-10-24T12:30:00-07:00",
+            "start": "2026-10-25T07:30:00-07:00",
+            "end": "2026-10-25T13:00:00-07:00",
             "reasons": [
               "flood current aiding outbound",
-              "wind 1 mph, gust 5"
+              "wind 3 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-24T15:30:00-07:00",
-            "end": "2026-10-24T17:51:08.821651-07:00",
+            "start": "2026-10-25T16:00:00-07:00",
+            "end": "2026-10-25T17:49:54.826212-07:00",
             "reasons": [
-              "ebb current 1.6 kts, 1.3 adverse",
-              "wind 6 mph, gust 9",
+              "ebb current 1.6 kts, 1.4 adverse",
+              "wind 6 mph, gust 10",
               "inside a ferry window, expect traffic"
             ]
           }
@@ -6901,8 +6911,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-24T07:26:05.618564-07:00",
-        "sunset": "2026-10-24T18:21:08.821651-07:00"
+        "sunrise": "2026-10-25T07:27:07.714443-07:00",
+        "sunset": "2026-10-25T18:19:54.826212-07:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     }
