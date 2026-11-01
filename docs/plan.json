@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-31T10:30:40.411703-07:00",
+  "generated_at": "2026-11-01T10:15:53.087922-08:00",
   "version": "2.6.0",
   "timezone": "America/Los_Angeles",
-  "day": "2026-10-31",
+  "day": "2026-11-01",
   "skill_default": "intermediate",
   "skills": [
     "beginner",
@@ -160,57 +160,57 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T11:00:00-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T11:30:00-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-31T15:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T15:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "flood current 0.5 kts, 0.4 adverse",
-              "wind 8 mph, gust 14"
+              "flood current 0.7 kts, 0.6 adverse",
+              "wind 8 mph, gust 13"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T12:00:00-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T12:30:00-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           },
           {
-            "start": "2026-10-31T14:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T14:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "flood current 1.1 kts, 0.9 adverse",
-              "wind 8 mph, gust 14"
+              "flood current 1.0 kts, 0.8 adverse",
+              "wind 4 mph, gust 10"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -224,19 +224,19 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T12:00:00-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T12:30:00-08:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 6 mph, gust 11"
+            "wind 1 mph, gust 6"
           ]
         },
         {
-          "start": "2026-10-31T14:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T14:30:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
-            "flood current 1.1 kts, 0.9 adverse",
-            "wind 8 mph, gust 14"
+            "flood current 1.0 kts, 0.8 adverse",
+            "wind 4 mph, gust 10"
           ]
         }
       ],
@@ -250,8 +250,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -441,41 +441,41 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-31T09:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T09:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current 0.8 kts, 0.5 adverse",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.6 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.6 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.6 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -489,11 +489,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
-            "ebb current 1.4 kts, 0.8 adverse",
-            "wind 6 mph, gust 11"
+            "ebb current 1.1 kts, 0.6 adverse",
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -507,8 +507,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -663,41 +663,41 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -711,11 +711,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 6 mph, gust 11"
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -729,8 +729,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1032,41 +1032,41 @@
       "windows_by_skill": {
         "beginner": [
           {
-            "start": "2026-10-31T09:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T09:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current 0.8 kts, 0.5 adverse",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.6 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.6 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.6 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -1080,11 +1080,11 @@
       "blocked_by_skill": {},
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
-            "ebb current 1.4 kts, 0.8 adverse",
-            "wind 6 mph, gust 11"
+            "ebb current 1.1 kts, 0.6 adverse",
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -1098,8 +1098,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1394,31 +1394,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -1436,11 +1436,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 6 mph, gust 11"
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -1454,8 +1454,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1667,31 +1667,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -1711,11 +1711,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 6 mph, gust 11"
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -1729,8 +1729,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -1977,31 +1977,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.2 kts, 0.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current aiding outbound",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.2 kts, 0.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current aiding outbound",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.2 kts, 0.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current aiding outbound",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -2021,11 +2021,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
-            "ebb current 1.2 kts, 0.2 adverse",
-            "wind 6 mph, gust 11"
+            "ebb current aiding outbound",
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -2039,8 +2039,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -2314,31 +2314,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.1 kts, 0.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current aiding outbound",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.1 kts, 0.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current aiding outbound",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.1 kts, 0.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current aiding outbound",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -2358,11 +2358,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
-            "ebb current 1.1 kts, 0.2 adverse",
-            "wind 6 mph, gust 11"
+            "ebb current aiding outbound",
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -2376,8 +2376,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -2794,31 +2794,31 @@
         "beginner": [],
         "intermediate": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current aiding outbound",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -2838,11 +2838,11 @@
       },
       "windows": [
         {
-          "start": "2026-10-31T08:00:00-07:00",
-          "end": "2026-10-31T17:42:56.153449-07:00",
+          "start": "2026-11-01T07:00:00-08:00",
+          "end": "2026-11-01T16:41:50.861648-08:00",
           "reasons": [
             "ebb current aiding outbound",
-            "wind 6 mph, gust 11"
+            "wind 1 mph, gust 6"
           ]
         }
       ],
@@ -2856,8 +2856,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Verify on-site conditions before launch."
     },
@@ -3033,21 +3033,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.5 kts, 0.5 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.2 kts, 0.4 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.5 kts, 0.5 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.2 kts, 0.4 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -3078,8 +3078,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3371,21 +3371,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.7 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.4 kts, 0.7 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.7 kts, 0.8 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.4 kts, 0.7 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -3417,8 +3417,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3656,21 +3656,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.3 kts, 0.4 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.0 kts, 0.3 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.3 kts, 0.4 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.0 kts, 0.3 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -3704,8 +3704,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -3927,21 +3927,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.9 kts, 0.9 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.5 kts, 0.7 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.9 kts, 0.9 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.5 kts, 0.7 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -3974,8 +3974,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4231,21 +4231,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.9 kts, 1.1 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.5 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.9 kts, 1.1 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.5 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -4278,8 +4278,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4589,21 +4589,29 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T08:00:00-08:00",
+            "reasons": [
+              "ebb current 1.6 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
+            ]
+          },
+          {
+            "start": "2026-11-01T08:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current 2.0 kts, 1.2 adverse",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 2.0 kts, 1.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.6 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -4636,8 +4644,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -4856,21 +4864,21 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.9 kts, 1.1 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.5 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.9 kts, 1.1 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.5 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -4904,8 +4912,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5222,21 +5230,29 @@
         "intermediate": [],
         "advanced": [
           {
-            "start": "2026-10-31T08:30:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T08:00:00-08:00",
             "reasons": [
-              "ebb current 1.8 kts, 1.0 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.6 kts, 1.0 adverse",
+              "wind 1 mph, gust 6"
+            ]
+          },
+          {
+            "start": "2026-11-01T08:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
+            "reasons": [
+              "ebb current 2.0 kts, 1.2 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 2.1 kts, 1.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.6 kts, 1.0 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -5269,8 +5285,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5544,11 +5560,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.3 kts, 0.4 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.1 kts, 0.3 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -5585,8 +5601,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -5860,11 +5876,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 2.0 kts, 1.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.6 kts, 0.9 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -5901,8 +5917,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6160,11 +6176,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-31T08:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.3 kts, 0.6 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.0 kts, 0.5 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -6201,8 +6217,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6467,11 +6483,19 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-31T09:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T07:00:00-08:00",
+            "end": "2026-11-01T07:30:00-08:00",
+            "reasons": [
+              "ebb current 1.8 kts, 1.5 adverse",
+              "wind 1 mph, gust 6"
+            ]
+          },
+          {
+            "start": "2026-11-01T09:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
               "ebb current 1.3 kts, 1.1 adverse",
-              "wind 6 mph, gust 11"
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -6508,8 +6532,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     },
@@ -6840,11 +6864,11 @@
         "advanced": [],
         "expert": [
           {
-            "start": "2026-10-31T09:00:00-07:00",
-            "end": "2026-10-31T17:42:56.153449-07:00",
+            "start": "2026-11-01T09:30:00-08:00",
+            "end": "2026-11-01T16:41:50.861648-08:00",
             "reasons": [
-              "ebb current 1.4 kts, 1.2 adverse",
-              "wind 6 mph, gust 11"
+              "ebb current 1.4 kts, 1.1 adverse",
+              "wind 1 mph, gust 6"
             ]
           }
         ]
@@ -6883,8 +6907,8 @@
         "wind": "OpenWeatherMap"
       },
       "daylight": {
-        "sunrise": "2026-10-31T07:33:27.933357-07:00",
-        "sunset": "2026-10-31T18:12:56.153449-07:00"
+        "sunrise": "2026-11-01T06:34:32.427106-08:00",
+        "sunset": "2026-11-01T17:11:50.861648-08:00"
       },
       "notes": "Hold today. No window clears the safety thresholds for the selected skill."
     }
